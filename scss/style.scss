@@ -1,3 +1,8 @@
-//layout
-@import '/layout/layout';
+// Importing partials
 
+//layout
+//@import "partials/layout/container";
+
+@import "partials/layout/footer";
+
+//@import "partials/mixins/"
