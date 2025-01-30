@@ -3,14 +3,23 @@
     color: #fff;
     padding: 30px 0 0;
     position: relative;
+    margin-bottom: 30px;
  
+    .welcome-section-btn {
+        background-color: $ws-btn-color;
+        height: 40px;
+        color: #fff;
+        padding: 10px 40px;
+        margin-right: 10px;
+        border: 0px solid ;
+        border-radius: 5px;
+    }
+
     .welcome-section-row {
         display: flex;
         flex-wrap: wrap;
  
-        .footer-menu {   
-            flex: 100%;   
-            margin-bottom: 30px;
+        
            
             @media (min-width: $breakpoint-sm) {
                flex: 50%;
@@ -29,6 +38,6 @@
                 font-size: 1rem;
                 margin-bottom: 26px;	
             }
-       }	  
+       } 
     }
- }
+ 
