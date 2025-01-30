@@ -1,10 +1,10 @@
-// Importing partials
+// First import variables
+@import "partials/variables/variables";
 
-//layout
+// Then import other partials
 @import "partials/layout/container";
 
-//variables
-@import "partials/variables/variables";
+
 
 //footer
 @import "partials/footer";

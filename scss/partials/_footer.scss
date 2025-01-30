@@ -12,15 +12,15 @@ footer {
            flex: 100%;   
            margin-bottom: 30px;
           
-           @media (min-width: 768px) {
+           @media (min-width: $breakpoint-sm) {
               flex: 50%;
            }
 
-           @media (min-width: 992px) {
+           @media (min-width: $breakpoint-md) {
               flex: 25%;
            }
 
-           @media (min-width: 1260px) {
+           @media (min-width: $breakpoint-lg) {
               margin-bottom: 40px;
            }
 

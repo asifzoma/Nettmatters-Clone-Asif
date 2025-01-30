@@ -12,15 +12,15 @@ body {
     padding-left: 15px;
     padding-right: 15px;
 
-    @media (min-width: 768px) {
+    @media (min-width: $breakpoint-sm) {
         width: 750px;
     }
 
-    @media (min-width: 992px) {
+    @media (min-width: $breakpoint-md) {
         width: 970px;
     }
 
-    @media (min-width: 1260px) {
+    @media (min-width: $breakpoint-lg) {
         width: 1200px;
     }
 }
