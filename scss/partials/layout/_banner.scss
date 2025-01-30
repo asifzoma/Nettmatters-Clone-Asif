@@ -1,17 +1,17 @@
-.banner {
+.banner { 
     img {
-        display:flex;
+        display: flex;
         width: 100%;
         height: auto;
-    
     }
+
     .banner-btn {
         background-color: lightgreen;
         height: 40px;
         color: #fff;
         padding: 10px 40px;
         margin-right: 10px;
-        border: 0px solid ;
+        border: 0px solid;
         border-radius: 5px;
     }
 
@@ -19,24 +19,23 @@
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
- 
-        
            
-            @media (min-width: $breakpoint-sm) {
-               flex: 50%;
-            }
- 
-            @media (min-width: $breakpoint-md) {
-               flex: 25%;
-            }
- 
-            @media (min-width: $breakpoint-lg) {
-               margin-bottom: 40px;
-            }
- 
-            h4 {
-                text-transform: uppercase;
-                font-size: 1rem;
-                margin-bottom: 26px;	
-            }
+        @media (min-width: $breakpoint-sm) {
+            flex: 50%;
+        }
+
+        @media (min-width: $breakpoint-md) {
+            flex: 25%;
+        }
+
+        @media (min-width: $breakpoint-lg) {
+            margin-bottom: 40px;
+        }
+
+        h4 {
+            text-transform: uppercase;
+            font-size: 1rem;
+            margin-bottom: 26px;	
+        }
+    }
 }
