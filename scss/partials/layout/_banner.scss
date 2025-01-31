@@ -1,11 +1,40 @@
 .banner { 
+    background-image: url(../img/home-banner1.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+   
+   
+    .banner-text {  
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        justify-content: center;
+        color: #fff;
+        text-align: start;
+        margin-top: 100px;
+        margin-bottom: 100px;
 
-    .banner-btn {
+        padding: 0 20px;
+
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+        p {
+            font-size: 1.2rem;
+        }   
+        }
+
+
+
+
+
+    .btn {
         background-color: lightgreen;
         height: 40px;
         color: #fff;
         padding: 10px 40px;
-        margin-right: 10px;
         border: 0px solid ;
         border-radius: 5px;
         margin-top: 20px;
@@ -15,13 +44,6 @@
         flex-wrap: wrap;
         justify-content: center;
         align-items: center;
-
-    img {
-        display: flex;
-        width: 100%;
-        height: auto;
-    }
-
 
         @media (min-width: $breakpoint-sm) {
             flex: 50%;
