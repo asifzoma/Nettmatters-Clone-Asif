@@ -1,26 +1,17 @@
-.welcome-section {      
-    background-color: $background-color;
-    background-size: cover;
+.client-section {      
+    background-color:$background-color;
     color: #fff;
     padding: 30px 0 0;
     position: relative;
     margin-bottom: 30px;
-    
+    background-size: cover;
  
-    .welcome-section-btn {
-        background-color: $ws-btn-color;
-        height: 40px;
-        color: #fff;
-        padding: 10px 40px;
-        margin-right: 10px;
-        border: 0px solid ;
-        border-radius: 5px;
-    }
-
-    .welcome-section-row {
+    .client-row {
         display: flex;
         flex-wrap: wrap;   
         width:auto;
+        margin-right: 10px;
+        border: 0px solid ;
  
         
            
