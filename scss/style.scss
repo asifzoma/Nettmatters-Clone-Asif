@@ -1,6 +1,8 @@
 // First import variables
 @import "partials/variables/variables";
 
+//Header
+@import "partials/layout/header";
 //Text Box
 @import "partials/layout/text-block";
 
@@ -24,7 +26,8 @@
 //footer
 @import "partials/footer";
 
-@import "partials/layout/_partner_images";
+//Partner banner images
+@import "partials/layout/partner_images";
 
 //mixins
 @import "partials/mixins/mixins";

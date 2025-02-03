@@ -1,0 +1,23 @@
+.header-container {
+    display:flex;
+    margin: 5px,5px,5px,5px;
+    padding:5px;
+    background-color: white;
+
+
+
+.headerlogo{
+        max-width: 414px;
+        max-height:76px;
+        justify-items: left;
+        }
+
+        .searchbar {
+            background-color: grey;
+            justify-items: flex-end;
+        }
+        .menu-icon{
+            justify-items: end;
+        }
+
+}

@@ -1,1 +1,1 @@
-.header .headerlogo{max-width:414px;max-height:76px}
+.header{display:flex}.header .headerlogo{max-width:414px;max-height:76px;justify-items:left}.header .searchbar{justify-items:flex-end}.header .menu-icon{justify-content:end}
