@@ -1,4 +1,7 @@
 .text-block {      
+    display:flex;
+    flex-direction: row;
+    justify-content: flex-start;
     background-color: $background-color;
     background-size: cover;
     color: #fff;
