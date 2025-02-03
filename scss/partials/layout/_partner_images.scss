@@ -1,0 +1,26 @@
+.partner_images {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 0;
+    overflow:visible
+}
+
+.partners_row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px; 
+    flex-wrap: nowrap; 
+    overflow-x: visible; 
+    white-space: nowrap;
+    height: 70px;
+}
+
+.partners_row img {
+    max-height: 70px;
+    width: auto;
+    display: inline-block;
+    object-fit:fill; 
+    margin: 0;
+}
