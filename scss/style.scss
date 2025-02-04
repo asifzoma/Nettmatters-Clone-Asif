@@ -3,6 +3,7 @@
 
 //Header
 @import "partials/layout/header";
+
 //Text Box
 @import "partials/layout/text-block";
 
@@ -10,15 +11,18 @@
 //Container
 @import "partials/layout/container";
 
+
+//Banner - rotating
+@import "partials/layout/banner";
+
+//Our Services - cards
+@import "partials/layout/our_services_1";
+
 //Welcome section
 @import "partials/layout/welcome-section";
 
 //Client Section
 @import "partials/layout/client";
-
-//Banner
-@import "partials/layout/banner";
-
 
 // Partners and Case Studies
 @import "partials/Partners_Case_Studies";
