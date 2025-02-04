@@ -4,19 +4,22 @@
 //Header
 @import "partials/layout/header";
 
-//Text Box
-@import "partials/layout/text-block";
+//Banner - rotating
+@import "partials/layout/banner";
 
-// Then import other partials
+//Welcome and Client Section
+@import "partials/layout/welcome-cient-section";
+
+
 //Container
 @import "partials/layout/container";
 
 
-//Banner - rotating
-@import "partials/layout/banner";
-
-//Our Services - cards
+//Our Services 
 @import "partials/layout/our_services_1";
+
+//Service cards - individual styles
+@import "partials/layout/service_cards";
 
 //Welcome section
 @import "partials/layout/welcome-section";

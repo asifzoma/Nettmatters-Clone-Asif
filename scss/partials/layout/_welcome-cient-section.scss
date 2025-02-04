@@ -1,0 +1,17 @@
+.welcome-client-section {
+    padding: 40px 0;
+    background-color: #f8f8f8;
+
+    .welcome-client-container {
+        display: flex;
+        justify-content: space-between;
+        gap: 20px;
+        max-width: 1200px;
+        margin: 0 auto;
+
+        @media (max-width: 768px) {
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+}

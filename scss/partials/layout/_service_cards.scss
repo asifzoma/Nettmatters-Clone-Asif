@@ -1,0 +1,75 @@
+.service-card {
+    flex: 0 1 calc(33.333% - 20px);
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    text-align: center;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+
+    &:hover {
+        transform: scale(1.05);
+    }
+
+    .icon-container {
+        background-color: #007BFF;
+        border-radius: 50%;
+        width: 80px;
+        height: 80px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto 15px;
+        transition: background-color 0.3s ease;
+    }
+
+    .OS_Card_Header {
+        font-size: 1.5rem;
+        margin: 15px 0;
+        color: #333;
+    }
+
+    .OS_card_para {
+        font-size: 1rem;
+        color: #555;
+        margin: 10px 0;
+    }
+
+    .read-more-btn {
+        display: inline-block;
+        margin-top: 10px;
+        color: #007BFF;
+        text-decoration: none;
+        font-weight: bold;
+        transition: text-decoration 0.2s ease;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+}
+
+// Card hover effects for different service categories
+.bespoke-software:hover {
+    background-color: #f5f5f5;
+
+    .icon-container {
+        background-color: #333;
+    }
+}
+
+.it-support:hover {
+    background-color: #d8eafd;
+
+    .icon-container {
+        background-color: #0056b3;
+    }
+}
+
+.digital-marketing:hover {
+    background-color: #d8f5d8;
+
+    .icon-container {
+        background-color: #004d00;
+    }
+}
