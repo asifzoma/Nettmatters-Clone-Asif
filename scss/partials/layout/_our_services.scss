@@ -1,0 +1,49 @@
+.our_services_1{      
+    background-color: white;
+    background-size: cover;
+    color: #fff;
+    padding: 30px 0 0;
+    position: relative;
+    margin-bottom: 30px;
+    display: flex;
+    flex-wrap: wrap;   
+    width:auto;
+    
+
+    .our_services_1 .container {
+        height: ;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        flex-grow: initial;
+
+    }
+ 
+    .read-more-btn{
+        background-color: $ws-btn-color;
+        height: 40px;
+        color: #fff;
+        padding: 10px 40px;
+        margin-right: 10px;
+        border: 0px solid ;
+        border-radius: 5px;
+    }
+
+
+        
+           
+            @media (min-width: $breakpoint-sm) {
+               flex: 50%;
+            }
+ 
+            @media (min-width: $breakpoint-md) {
+               flex: 25%;
+            }
+ 
+            @media (min-width: $breakpoint-lg) {
+               margin-bottom: 40px;
+            }
+ 
+
+       } 
+ 
