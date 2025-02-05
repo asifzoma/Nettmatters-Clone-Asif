@@ -1,55 +1,56 @@
 .client-section {
     flex: 1;
-    background: #fff;
-    border: 1px solid #ddd;
+    background: $background-color;
+    border: 1px solid $background-color;
     padding: 20px;
     border-radius: 8px;
     text-align: center;
+    color: white;
+}
 
-    h2 {
-        font-size: 1.8rem;
-    }
+.client-section h2 {
+    font-size: 1.8rem;
+}
 
-    .client-testimonial {
-        background: #f5f5f5;
+.client-section .client-testimonial {
+    background: $background-color;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    font-style: italic;
+    color: white;
+}
+
+.client-section p {
+    font-size: 1rem;
+}
+
+.client-section .client-section-Google-btn {
+    background-color: #007BFF;
+    color: #fff;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+}
+
+.client-section .client-section-Google-btn:hover {
+    background-color: #0056b3;
+}
+
+.client-section .client-section-Google-btn.alternate {
+    background-color: #0bb81d;
+}
+
+.client-section .client-section-Google-btn.alternate:hover {
+    background-color: #0056b3;
+}
+
+@media (max-width: 768px) {
+    .client-section {
         padding: 15px;
-        border-radius: 5px;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        font-style: italic;
-        color: #333;
     }
 
-    p {
-        font-size: 1rem;
+    .client-section h2 {
+        font-size: 1.5rem;
     }
-
-
-
-    .client-section-Google-btn {
-        background-color: #007BFF;
-        color: #fff;
-        padding: 10px 15px;
-        border-radius: 5px;
-        transition: background 0.3s ease;
-
-        &:hover {
-            background-color: #0056b3;
-        }
-
-        .client-section-Google-btn {
-            background-color: #0bb81d;
-            color: #fff;
-            padding: 10px 15px;
-            border-radius: 5px;
-            transition: background 0.3s ease;
-    
-            &:hover {
-                background-color: #0056b3;
-            }
-
-    @media (max-width: 768px) {
-        padding: 15px;
-        h2 {
-            font-size: 1.5rem;
-        }
-    }
+}
