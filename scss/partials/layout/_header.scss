@@ -13,7 +13,23 @@
         height: 76px;
     }
 
-        .search-container {
+    .header-buton-section-container {
+        display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            gap: 5px;
+    } 
+            //Hides the two buttons on the website
+
+            @media (max-width: 726px){
+                .contact-button, 
+                .support-button{
+                        display: none;
+
+                }
+            }
+
+     .search-container {
             display: flex;
             align-items: center;
             justify-content: flex-end;
@@ -62,6 +78,7 @@
                     height: 46px;
                 }
             }
+
         
             // Smallest Viewport - Full Search Bar with Magnifying Glass
             @media (max-width: 576px) {
@@ -76,10 +93,11 @@
                     margin-bottom: 10px;
                 }
         
-                .search-button {
+                .support-button {
+                    display: flex;
                     width: 46px;
                     height: 46px;
-                    flex-wrap: wrap;
+                    align-items: center;
                     }
             }
         }
