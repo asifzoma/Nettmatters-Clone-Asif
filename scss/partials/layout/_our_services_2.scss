@@ -1,46 +1,25 @@
 .our_services_2 {
-   padding: 40px 0;
-   background-color: #f8f8f8;
-   text-align: center;
+    padding: 40px 0;
+    background-color: #f8f8f8;
 
-   .os2-container {
-       display: flex;
-       flex-wrap: wrap;
-       justify-content: space-between;
-       gap: 20px;
-       max-width: 1200px;
-       margin: 0 auto;
-   }
+    .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 15px;
+    }
 
-   .service-card {
-       flex: 0 1 calc(25% - 20px);
-       background: #fff;
-       border: 1px solid #ddd;
-       border-radius: 8px;
-       padding: 20px;
-       text-align: center;
-       transition: background-color 0.3s ease, transform 0.3s ease;
+    .os2-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 20px;
+    }
 
-       &:hover {
-           transform: scale(1.05);
-       }
-   }
+    @media (max-width: 768px) {
+        .os2-container {
+            flex-direction: column;
+            align-items: center;
+        }
+    }
 }
 
-// Responsive Design
-@media (max-width: 768px) {
-   .os2-container {
-       flex-direction: column;
-       align-items: center;
-   }
-
-   .service-card {
-       flex: 0 1 100%;
-   }
-}
-
-@media (min-width: 1200px) {
-   .os2-container {
-       justify-content: space-between;
-   }
-}
