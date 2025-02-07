@@ -9,8 +9,9 @@
     .headerlogo {
         padding: 5px;
         margin: 10px;
-        width: 373px;
-        height: 63px;
+        width: 3
+        463px;
+        height: 53px;
         margin-right: 79px;
     }
 
@@ -25,7 +26,7 @@
     .header-buton-section-container {
         .support-button {
           .support {
-            background-color: #4ba036; // Green color
+            background-color: #2a6ec6; 
             color: white;
             padding: 10px 20px;
             border: none;
@@ -33,14 +34,14 @@
             cursor: pointer;
             
             &:hover {
-              background-color: darken(#4ba036, 10%);
+              background-color: darken(#2a6ec6, 10%);
             }
           }
         }
       
         .contact-button {
           .contact {
-            background-color: #2c7ac3; // Blue color
+            background-color: #999aa2; 
             color: white;
             padding: 10px 20px;
             border: none;
@@ -48,7 +49,7 @@
             cursor: pointer;
       
             &:hover {
-              background-color: darken(#2c7ac3, 10%);
+              background-color: darken(#999aa2, 10%);
             }
           }
         }
