@@ -24,3 +24,18 @@ body {
         width: 1200px;
     }
 }
+
+.above-cards{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    margin-top: 1rem;
+
+    margin-bottom: 1rem;
+}

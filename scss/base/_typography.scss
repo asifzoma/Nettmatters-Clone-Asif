@@ -1,0 +1,36 @@
+h1,
+h2 {
+  font-family: 'Abolition Regular', Helvetica, Arial, sans-serif;
+}
+
+h2 {
+  font-size: 3.3125em;
+  font-weight: normal;
+  line-height: 1.1;
+  margin: 0 0 .5em;
+}
+
+h3 {
+  font-size: 1.25em;
+  color: #48525c;
+  line-height: 1.2;
+  margin-bottom: 1.7em;
+}
+
+/* Pseudo-classes ------------------ */
+a:link {
+  color: rgb(255, 169, 73);
+  text-decoration: none;
+}
+
+a:visited {
+  color: lightblue;
+}
+
+a:hover {
+  color: rgba(255, 169, 73, .4);
+}
+
+a:active {
+  color: lightcoral;
+} 

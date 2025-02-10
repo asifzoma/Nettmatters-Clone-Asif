@@ -1,59 +1,30 @@
-//Textt above cards
-.container .above-cards {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    padding: 0 20px;
-    
-    h1 {
-        margin: 0;
-    }
-}
+// Abstracts
+@import 'abstracts/variables';
+@import 'abstracts/mixins';
 
-// First import variables
-@import "partials/variables/variables";
+// Base
+@import 'base/fonts';
+@import 'base/reset';
+@import 'base/typography';
+@import 'base/container';
 
-//Header
-@import "partials/layout/header";
+// Components
+@import 'components/menu-icon';
+@import 'components/banner';
+@import 'components/service_cards_1';
+@import 'components/service_cards_2';
+@import 'components/media';
+@import 'components/text_above_cards';
 
-//Banner - rotating
-@import "partials/layout/banner";
+// Layout
+@import 'layout/header';
+@import 'layout/footer';
 
-//Welcome and Client Section
-@import "partials/layout/welcome-cient-section";
-
-
-//Container
-@import "partials/layout/container";
-
-
-//Our Services 1 -3 cards
-@import "partials/layout/our_services_1";
-
-//Our Services 2 -4 cards
-@import "partials/layout/our_services_2";
-
-//Service cards 2 - individual styles
-@import "partials/layout/service_cards_1";
-
-//Service cards 1 - individual styles
-@import "partials/layout/service_cards_2";
-
-//Welcome section
-@import "partials/layout/welcome-section";
-
-//Client Section
-@import "partials/layout/client";
-
-// Partners and Case Studies
-@import "partials/Partners_Case_Studies";
-
-//footer
-@import "partials/footer";
-
-//Partner banner images
-@import "partials/layout/partner_images";
-
-//mixins
-@import "partials/mixins/mixins";
+// Sections
+@import 'sections/client';
+@import 'sections/our_services_1';
+@import 'sections/our_services_2';
+@import 'sections/partner_images';
+@import 'sections/welcome-client-section';
+@import 'sections/welcome-section';
+@import 'sections/case_studies';

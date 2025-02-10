@@ -1,23 +1,14 @@
 .our_services_1{      
     background-color: white;
     background-size: cover;
-    color: #fff;
+    color: blue;
     padding: 30px 0 0;
-    position: relative;
     margin-bottom: 30px;
     display: flex;
-    flex-wrap: wrap;   
-    width:auto;
-    
+    flex-wrap: wrap;  
+    justify-content: center; 
+    width: 100%;
 
-    .our_services_1 .container {
-        height: ;
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        flex-grow: initial;
-
-    }
  
     .read-more-btn{
         background-color: $ws-btn-color;
@@ -28,9 +19,25 @@
         border: 0px solid ;
         border-radius: 5px;
     }
+}
 
+.above-cards{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    margin-top: 1rem;
 
-        
+    margin-bottom: 1rem;
+    
+}
+
+// Responsive Design
            
             @media (min-width: $breakpoint-sm) {
                flex: 50%;
@@ -45,5 +52,5 @@
             }
  
 
-       } 
+       
  

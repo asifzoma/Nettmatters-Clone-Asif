@@ -1,0 +1,25 @@
+.menu-icon {
+    width: 58px;
+    height: 58px;
+    background-color: #000;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 6px;
+    cursor: pointer;
+    position: absolute;
+    right: 98%;
+    top: 98%;
+    transform: translateY(-50%); // Centers vertically
+    
+
+
+    span {
+        width: 26px;
+        height: 2px;
+        background-color: #fff;
+        display: block;
+        transition: all 0.3s ease;
+    }
+}
