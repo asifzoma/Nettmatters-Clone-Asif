@@ -8,6 +8,9 @@
     padding: 20px;
     text-align: center;
     transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
 
     &:hover {
         transform: scale(1.05);
@@ -31,13 +34,15 @@
     }
 
     .OS_card_para {
+        flex-grow: 1;
         font-size: 1rem;
         color: #555;
         margin: 10px 0;
     }
 
     .read-more-btn {
-        display: inline-block;
+        margin-top: auto;
+        display:inline-block;
         margin-top: 10px;
         padding: 10px 20px;
         font-weight: bold;

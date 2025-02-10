@@ -1,3 +1,5 @@
+
+
 .menu-icon {
     width: 58px;
     height: 58px;
@@ -8,18 +10,22 @@
     align-items: center;
     gap: 6px;
     cursor: pointer;
-    position: absolute;
-    right: 98%;
-    top: 98%;
-    transform: translateY(-50%); // Centers vertically
-    
+
+    position: absolute; /* Absolutely positioned relative to the nearest positioned ancestor */
+    top: 10px; /* Adjust distance from the top */
+    right: 10px; /* Adjust distance from the right */
+
+    transform: translate(0, 0); /* No need for vertical centering in this case */
+    padding: 5px;
+    margin: 0; /* Remove unnecessary margin */
+}
 
 
-    span {
+.menu-icon span {
         width: 26px;
         height: 2px;
         background-color: #fff;
         display: block;
         transition: all 0.3s ease;
     }
-}
+
