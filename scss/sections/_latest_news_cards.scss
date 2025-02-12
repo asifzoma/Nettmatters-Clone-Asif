@@ -10,10 +10,11 @@
         display: flex;
         flex-wrap: wrap;
         justify-content: center;  
-        gap: 30px;               
+        gap: 30px;   
+        margin-bottom: 30px;
 
  
-        .service-card {
+        .news_story_card {
             flex: 1 1 100%;      
             max-width: none;     
             

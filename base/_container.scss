@@ -1,0 +1,27 @@
+body {
+    margin: 0;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.container {
+    margin-right: auto;
+    margin-left: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+
+    @media (min-width: $breakpoint-sm) {
+        width: 750px;
+    }
+
+    @media (min-width: $breakpoint-md) {
+        width: 970px;
+    }
+
+    @media (min-width: $breakpoint-lg) {
+        width: 90%;
+        max-width: 1700px;
+    }
+} 
