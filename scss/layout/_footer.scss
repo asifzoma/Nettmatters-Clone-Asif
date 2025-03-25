@@ -50,3 +50,25 @@
      margin-bottom: 10px;
    }
  }
+
+ .footer .container {
+  /* Full-width until desktop */
+  @media (max-width: 991px) {
+    padding: 0 20px;
+  }
+
+  /* Desktop */
+  @media (min-width: 992px) {
+    max-width: 960px;
+  }
+
+  /* Large Desktop */
+  @media (min-width: 1200px) {
+    max-width: 1140px;
+  }
+
+  /* Extra Large */
+  @media (min-width: 1400px) {
+    max-width: 1320px;
+  }
+}
