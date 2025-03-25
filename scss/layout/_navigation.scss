@@ -1,0 +1,64 @@
+.main-nav {
+    background: #333;
+    border-top: 1px solid rgba(255,255,255,0.1);
+
+    .nav-list {
+        display: flex;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+
+        .nav-item {
+            flex: 1;
+            
+            a {
+                display: flex;
+                align-items: center;
+                gap: 10px;
+                padding: 20px 15px;
+                color: white;
+                text-decoration: none;
+                text-align: center;
+                transition: background-color 0.3s;
+
+                i {
+                    font-size: 24px;
+                }
+
+                span {
+                    display: flex;
+                    flex-direction: column;
+                    
+                    small {
+                        font-size: 12px;
+                        opacity: 0.8;
+                    }
+                }
+            }
+
+            // Navigation item colors
+            &.software a:hover { background: #67809f; }
+            &.support a:hover { background: #4183d7; }
+            &.marketing a:hover { background: #2ecc71; }
+            &.telecoms a:hover { background: #d64541; }
+            &.web a:hover { background: #926fb1; }
+            &.security a:hover { background: #f62459; }
+            &.course a:hover { background: #ce4125; }
+        }
+    }
+}
+
+// Mobile styles
+@media (max-width: $breakpoint-md) {
+    .main-nav {
+        display: none; // Hide by default on mobile
+        
+        &.active {
+            display: block;
+        }
+
+        .nav-list {
+            flex-direction: column;
+        }
+    }
+}
