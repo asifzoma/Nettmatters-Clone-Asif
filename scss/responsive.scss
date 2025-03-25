@@ -1,0 +1,14 @@
+// Mobile-first responsive adjustments
+
+// X-Small devices (portrait phones)
+@media (max-width: map-get($breakpoints, 'xsmall')) {
+    .hero {
+      padding: 80px 0;
+      
+      h1 {
+        font-size: 1.8rem;
+      }
+    }
+    
+    .btn {
+      padding: 8px 15px

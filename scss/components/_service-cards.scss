@@ -1,0 +1,41 @@
+// =============================================
+// Service Cards (Colored with icons)
+// =============================================
+
+.service-card {
+    @extend .card; // Inherits base styles
+    text-align: center;
+    color: $white;
+    padding: $spacing-lg;
+  
+    // Color variations using service variables
+    &--bespoke {
+      background: $bespoke-software;
+      .card-icon { color: lighten($bespoke-software, 15%); }
+    }
+    &--it-support {
+      background: $it-support;
+      .card-icon { color: lighten($it-support, 15%); }
+    }
+    // ... other service types
+  
+    &-icon {
+      font-size: 2.5rem;
+      margin-bottom: $spacing-md;
+      transition: $transition-base;
+    }
+  
+    &:hover &-icon {
+      transform: scale(1.1);
+    }
+  
+    .btn {
+      background: rgba($black, 0.2);
+      border: 1px solid rgba($white, 0.3);
+      margin-top: $spacing-md;
+  
+      &:hover {
+        background: rgba($black, 0.3);
+      }
+    }
+  }

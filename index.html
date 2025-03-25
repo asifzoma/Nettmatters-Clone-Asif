@@ -1,287 +1,345 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title>Netmatters</title>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-          <meta name="ROBOTS" content="NOINDEX,NOFOLLOW">
-    <link rel="stylesheet" href="css/style.css">
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+    <meta name="theme-color" content="#272e6d">
+    <title>Netmatters | Full Service Digital Agency | Norwich, Norfolk</title>
+    
+    <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-  </head>    
-    <body>
-      <header class="header">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Roboto:wght@500;700&display=swap" rel="stylesheet">
+    
+    <!-- Slick Slider CSS -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Top Bar -->
+    <div class="top-bar">
         <div class="container">
-          <div class="header-container">
-            <div class="headerlogo">
-              <img src="img/logo.png" alt="Netmatters Logo">
-          </div>
-            <div class="header-buton-section-container">
-              <div class="support-button">
-                <button class="support">Support
-                  <i class="mouse-icon"></i>
-                </button>
-              </div>
-              <div class="contact-button">
-                <button class="contact">Contact
-                  <i class="contact-icon"></i>
-                </button>
-              </div>
-            </div>
-            <div class="search-container">
-              <input type="text" class="search-box" placeholder="Search..." />
-              <button class="search-button">
-                <i class="search-icon">🔍</i>
-              </button>
-            </div>
-            <div class="menu-icon-container">
-            <button class="menu-icon">
-              <span></span>
-              <span></span>
-              <span></span>
-          </button>
-            </div>
-          </div>
-        </div>
-      </header>
-        <section   class="banner">
-          <div class="container">
-            <div class="banner-row">
-              <div class="banner-text">
-                <h1>Digital Marketing</h1>
-                <p>Generating you new business through
-                  results driven marketing activities
-                </p>
-                <a href="#" class="btn">Find Out More</a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      </section>
-
-      <div class="container">
-        <div class="above-cards">
-          <h1 class="text-our-services">Our Services</h1>
-          <h1 class="text-v-our-work">View our Work</h1>
-        </div>
-    </div>
-</div>
-      </div>
-
-  <section class="our_services_1">
-  <div class="container">
-        <div class="os1-container">  
-            <div class="service-card bespoke-software">
-                <div class="icon-container">
-                    <img src="placeholder-icon.png" alt="Icon for Bespoke Software">
+            <div class="top-bar-content">
+                <div class="logo">
+                    <a href="#">
+                        <img src="assets/images/logo.png" alt="Netmatters" class="logo-img">
+                    </a>
                 </div>
-                <h2 class="OS_Card_Header">Bespoke Software</h2>
-                <p class="OS_card_para">Bespoke software solutions for your business needs including integrations and reporting.</p>
-                <a href="#" class="read-more-btn">Read more</a>
-            </div>
-
-            <div class="service-card it-support">
-                <div class="icon-container">
-                    <img src="placeholder-icon.png" alt="Icon for IT Support">
+                <div class="actions">
+                    <!-- Desktop Actions -->
+                    <button class="btn support-btn">
+                        <i class="fas fa-mouse-pointer"></i> <span class="btn-text">Support</span>
+                    </button>
+                    <button class="btn contact-btn">
+                        <i class="fas fa-paper-plane"></i> <span class="btn-text">Contact</span>
+                    </button>
+                    
+                    <div class="search-box">
+                        <input type="text" class="search-input" placeholder="Search..." aria-label="Search website">
+                        <button class="search-btn" aria-label="Submit search">
+                            <i class="fas fa-search"></i>
+                        </button>
+                    </div>
+                    
+                    <!-- Mobile Actions -->
+                    <button class="search-toggle" aria-label="Toggle search">
+                        <i class="fas fa-search"></i>
+                    </button>
+                    <button class="menu-toggle" aria-label="Toggle menu">
+                        <i class="fas fa-bars"></i>
+                    </button>
                 </div>
-                <h2 class="OS_Card_Header">IT Support</h2>
-                <p class="OS_card_para">Proactive IT support and maintenance to keep your business running smoothly.</p>
-                <a href="#" class="read-more-btn">Read more</a>
-            </div>
-
-            <div class="service-card digital-marketing">
-                <div class="icon-container">
-                    <img src="placeholder-icon.png" alt="Icon for Digital Marketing">
-                </div>
-                <h2 class="OS_Card_Header">Digital Marketing</h2>
-                <p class="OS_card_para">Results-driven digital marketing to help grow your business and reach new customers.</p>
-                <a href="#" class="read-more-btn">Read more</a>
             </div>
         </div>
     </div>
-</section>
 
-<section class="our_services_2">
-  <div class="container">
-      <div class="os2-container">
+    <!-- Main Navigation -->
+    <nav class="main-nav">
+        <div class="container">
+            <ul class="nav-list">
+                <li>
+                    <a href="#">
+                        <i class="fas fa-laptop-code"></i>
+                        <span>Bespoke Software</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fas fa-desktop"></i>
+                        <span>IT Support</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fas fa-signal"></i>
+                        <span>Digital Marketing</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fas fa-phone-alt"></i>
+                        <span>Telecoms Services</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fas fa-code"></i>
+                        <span>Web Design</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fas fa-shield-alt"></i>
+                        <span>Cyber Security</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fas fa-graduation-cap"></i>
+                        <span>Developer Training</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
 
-          <!-- Telecoms Services -->
-          <div class="service-card telecoms-services">
-              <div class="icon-container">
-                  <img src="img/icons/telecoms-icon.png" alt="Icon for Telecoms Services">
-              </div>
-              <h2 class="OS_Card_Header">Telecoms Services</h2>
-              <p class="OS_card_para">
-                  Business telephony solutions including mobile & connectivity solutions.
-              </p>
-              <a href="#" class="read-more-btn">Read More</a>
-          </div>
+    <!-- Hero Banner -->
+    <section class="hero" style="background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('assets/images/hero/home-banner.png');">
+        <div class="container">
+            <div class="hero-content">
+                <h1>The East of England's Leading Technology Company</h1>
+                <p>Performance-driven digital and technology services<br>with complete transparency.</p>
+                <a href="#" class="btn btn-large">
+                    <span>Why Choose Us?</span>
+                    <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+        </div>
+    </section>
 
-          <!-- Web Design -->
-          <div class="service-card web-design">
-              <div class="icon-container">
-                  <img src="img/icons/web-design-icon.png" alt="Icon for Web Design">
-              </div>
-              <h2 class="OS_Card_Header">Web Design</h2>
-              <p class="OS_card_para">
-                  User-centric design for businesses looking to make a lasting impression.
-              </p>
-              <a href="#" class="read-more-btn">Read More</a>
-          </div>
+    <!-- Services Section -->
+    <section class="services">
+        <div class="container">
+            <div class="services-grid">
+                <div class="service-card bespoke-software">
+                    <div class="icon"><i class="fas fa-laptop-code"></i></div>
+                    <h3>Bespoke Software</h3>
+                    <p>Tailored software solutions to improve business productivity and online profits.</p>
+                    <a href="#" class="btn">Read More</a>
+                </div>
+                <div class="service-card it-support">
+                    <div class="icon"><i class="fas fa-desktop"></i></div>
+                    <h3>IT Support</h3>
+                    <p>Remotely managed IT services that is proactive and effective.</p>
+                    <a href="#" class="btn">Read More</a>
+                </div>
+                <div class="service-card digital-marketing">
+                    <div class="icon"><i class="fas fa-signal"></i></div>
+                    <h3>Digital Marketing</h3>
+                    <p>Driving brand awareness and ROI through creative digital marketing campaigns.</p>
+                    <a href="#" class="btn">Read More</a>
+                </div>
+                <div class="service-card telecoms">
+                    <div class="icon"><i class="fas fa-phone-alt"></i></div>
+                    <h3>Telecoms Services</h3>
+                    <p>A new approach to connectivity, see how we can help your business.</p>
+                    <a href="#" class="btn">Read More</a>
+                </div>
+            </div>
+        </div>
+    </section>
 
-          <!-- Cyber Security -->
-          <div class="service-card cyber-security">
-              <div class="icon-container">
-                  <img src="img/icons/cyber-security-icon.png" alt="Icon for Cyber Security">
-              </div>
-              <h2 class="OS_Card_Header">Cyber Security</h2>
-              <p class="OS_card_para">
-                  Prevention, testing, consultancy & breach management services.
-              </p>
-              <a href="#" class="read-more-btn">Read More</a>
-          </div>
+    <!-- About Section -->
+    <section class="about">
+        <div class="container">
+            <div class="about-content">
+                <h2>Netmatters</h2>
+                <p><strong>Netmatters Ltd is a leading web design, IT support and digital marketing agency based in Wymondham, Norfolk.</strong></p>
+                <p>Founded in 2008, we work with businesses from a variety of industries to gain new prospects, nurture existing leads and further grow their sales.</p>
+                <p>We provide cost effective, reliable solutions to a range of services; from bespoke cloud-based management systems, workflow and IT solutions through to creative website development and integrated digital campaigning.</p>
+                <a href="#" class="btn">
+                    <span>Our Culture</span>
+                    <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+        </div>
+    </section>
 
-          <!-- Developer Training -->
-          <div class="service-card developer-training">
-              <div class="icon-container">
-                  <img src="img/icons/developer-training-icon.png" alt="Icon for Developer Training">
-              </div>
-              <h2 class="OS_Card_Header">Developer Training</h2>
-              <p class="OS_card_para">
-                  Web design & software training courses designed to secure a job in tech.
-              </p>
-              <a href="#" class="read-more-btn">Read More</a>
-          </div>
-
-      </div>
-  </div>
-</section>
-
-         
-
-              <section class="welcome-client-section">
-                <div class="container">
-                    <div class="welcome-client-container">
-                        <div class="welcome-section">
-                            <h2>Welcome to Netmatters</h2>
-                            <p>Netmatters is a leading Bespoke Software, 
-                              IT Support, and Digital Marketing company 
-                              based in the East of England with offices 
-                              in Cambridge, Wymondham, and Great Yarmouth.
-                
-                              We aren't tied into contracts with third-party 
-                              providers, so you know that our recommendations 
-                              for your business are based purely with one 
-                              benefit in mind: to help improve your business 
-                              with the most appropriate solutions.
-                              
-                              We pride ourselves on being an ethical business 
-                              and have a unique business offering and cost model
-                               that ensures you get the most from our relationship
-                                in an upfront manner..</p>
-                            <button class="welcome-section-btn">Why Choose Us?</button>
-                            <button class="welcome-section-btn">Our Culture</button>
-                        </div>
-                        <div class="client-section">
-                            <h2>What Our Clients Think</h2>
-                            <div class="client-testimonial">
-                                <p>Netmatters stood out from the start. Great guys and very easy to work with. Both the build and digital marketing teams are clearly skilled - they know their stuff! They delivered a website to our (high!) expectations and went over and above to ensure we were satisfied clients - and we are!</p>
-                                <p><strong>Eleanor Bishop, Head of Marketing - Ashcroft Partnership LLP</strong></p>
-                                <button class="client-section-Google-btn">Google Reviews</button>
-                            <button class="client-section-Trust-Pilot-btn">Trust Pilot Reviews</button>
+    <!-- Latest News Section -->
+    <section class="latest-news">
+        <div class="container">
+            <div class="section-header">
+                <h2>Latest News</h2>
+                <a href="#" class="view-all">
+                    <span>View All</span>
+                    <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+            <div class="news-grid">
+                <article class="news-card">
+                    <div class="news-category">News</div>
+                    <img src="assets/images/news/employee-month.jpg" alt="Employee of the Month" class="news-image">
+                    <div class="news-content">
+                        <h3><a href="#">Employee of the Month - September 2023</a></h3>
+                        <p>This month we are pleased to announce that our Employee of the Month for September 2023 is...</p>
+                        <a href="#" class="btn">Read More</a>
+                        <div class="news-meta">
+                            <div class="author">
+                                <img src="assets/images/logo-icon.png" alt="Netmatters" class="author-img">
+                                <span>Posted by Netmatters Ltd</span>
                             </div>
+                            <div class="date">4th October 2023</div>
                         </div>
                     </div>
-                </div>
-            </section>
-
-            <div class="container">
-              <div class="above-cards">
-                <h1 class="text-our-services">Latest News</h1>
-                <h1 class="text-v-our-work">View All</h1>
-              </div>
-          </div>
-
-            <section class="latest_news_cards">
-              <div class="container">
-                <div class="latest_news_cards-container">
-                  <div class="news_story_card">
-                    <div class="news_story_card-image">
-                      <img src="img/news/news-image-1.jpg" alt="News Image 1">
+                </article>
+                <article class="news-card">
+                    <div class="news-category">News</div>
+                    <img src="assets/images/news/norfolk-broads.jpg" alt="Norfolk Broads" class="news-image">
+                    <div class="news-content">
+                        <h3><a href="#">The Norfolk Broads Direct Website Launch</a></h3>
+                        <p>Norfolk Broads Direct are the leading UK boat hire company, providing boating holidays...</p>
+                        <a href="#" class="btn">Read More</a>
+                        <div class="news-meta">
+                            <div class="author">
+                                <img src="assets/images/logo-icon.png" alt="Netmatters" class="author-img">
+                                <span>Posted by Netmatters Ltd</span>
+                            </div>
+                            <div class="date">20th September 2023</div>
+                        </div>
                     </div>
-                    <div class="news_story_card-content">
-                      <h3>Case Study: Langley School Website Rebuild</h3>
-                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                      <a href="#" class="read-more-btn">Read More</a>
+                </article>
+                <article class="news-card">
+                    <div class="news-category">News</div>
+                    <img src="assets/images/news/employee-month-2.jpg" alt="Employee of the Month" class="news-image">
+                    <div class="news-content">
+                        <h3><a href="#">Employee of the Month - August 2023</a></h3>
+                        <p>This month we are pleased to announce that our Employee of the Month for August 2023 is...</p>
+                        <a href="#" class="btn">Read More</a>
+                        <div class="news-meta">
+                            <div class="author">
+                                <img src="assets/images/logo-icon.png" alt="Netmatters" class="author-img">
+                                <span>Posted by Netmatters Ltd</span>
+                            </div>
+                            <div class="date">5th September 2023</div>
+                        </div>
                     </div>
-                  </div>
-                </div>
-              </div>
-              <div class="container">
-                <div class="latest_news_cards-container">
-                  <div class="news_story_card">
-                    <div class="news_story_card-image">
-                      <img src="img/news/news-image-2.jpg" alt="News Image 2">
-                    </div>
-                    <div class="news_story_card-content">
-                      <h3>3rd Line Support Technician</h3>
-                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                      <a href="#" class="read-more-btn">Read More</a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="container">
-                <div class="latest_news_cards-container">
-                  <div class="news_story_card">
-                    <div class="news_story_card-image">
-                      <img src="img/news/news-image-3.jpg" alt="News Image 3">
-                    </div>
-                    <div class="news_story_card-content">
-                      <h3>January Notables 2025 - Celebrating Our Team</h3>
-                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                      <a href="#" class="read-more-btn">Read More</a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </section>
-
-      <section class="partner_images">
-        <div class ="container">
-          <div class ="partners_row" >
-            <img src="img/partners/ashcroftlogo_landscape_goldblack_DP60P-small.png" alt=""/>
-            <img src="img/partners/black_swan_logo.png" alt="">
-            <img src="img/partners/busseys_logo.png" alt="">
-            <img src="img/partners/crane_logo.png" alt="">
-            <img src="img/partners/girls_day_school_trust_logob.png" alt="">
-            <img src="img/partners/cyber-essentials-colour.jpeg" alt="">
-            <img src="img/partners/google-partner.jpeg" alt="" />
-            <img src="img/partners/howespercivallogo.png" alt="" />
+                </article>
+            </div>
         </div>
-      </div>
-      </section>
-            <footer>
+    </section>
+
+    <!-- Clients Section -->
+    <section class="clients">
         <div class="container">
-            <div class="footer-row">
-                <div class="footer-menu">
-                    <h4>About Netmatters</h4>
+            <div class="clients-slider">
+                <div class="client">
+                    <img src="assets/images/clients/busseys.png" alt="Busseys">
                 </div>
-
-                <div class="footer-menu">
-                    <h4>Our Services</h4>
+                <div class="client">
+                    <img src="assets/images/clients/crane.png" alt="Crane Garden Buildings">
                 </div>
-
-                <div class="footer-menu">
-                    <h4>Our Industries</h4>
+                <div class="client">
+                    <img src="assets/images/clients/beat.png" alt="Beat">
                 </div>
+                <div class="client">
+                    <img src="assets/images/clients/northern-diver.png" alt="Northern Diver">
+                </div>
+            </div>
+        </div>
+    </section>
 
-                <div class="footer-menu">
-                    <h4>Locations</h4>
+    <!-- Newsletter Section -->
+    <section class="newsletter">
+        <div class="container">
+            <div class="newsletter-content">
+                <h2>Email Newsletter Sign-Up</h2>
+                <p>Keep up to date with our latest news and promotions by signing up to our newsletter.</p>
+                <form class="newsletter-form">
+                    <input type="email" class="newsletter-input" placeholder="Your Email Address" required>
+                    <button type="submit" class="btn newsletter-submit">Subscribe</button>
+                </form>
+                <div class="privacy-policy">
+                    <p>Please see our <a href="#">Privacy Policy</a> for more information on how we use your data.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col about">
+                    <h3>About Netmatters</h3>
+                    <ul>
+                        <li><a href="#">News</a></li>
+                        <li><a href="#">Our Careers</a></li>
+                        <li><a href="#">Our Team</a></li>
+                        <li><a href="#">Our Office Tour</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Cookie Policy</a></li>
+                        <li><a href="#">Terms & Conditions</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col services">
+                    <h3>Our Services</h3>
+                    <ul>
+                        <li><a href="#">Bespoke Software</a></li>
+                        <li><a href="#">IT Support</a></li>
+                        <li><a href="#">Digital Marketing</a></li>
+                        <li><a href="#">Telecoms Services</a></li>
+                        <li><a href="#">Web Design</a></li>
+                        <li><a href="#">Cyber Security</a></li>
+                        <li><a href="#">Developer Training</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col contact">
+                    <h3>Contact Us</h3>
+                    <address>
+                        <p>11 Penfold Drive<br>Wymondham<br>Norfolk<br>NR18 0WZ</p>
+                        <p>Tel: <a href="tel:01603704020">01603 70 40 20</a></p>
+                        <p>Email: <a href="mailto:sales@netmatters.com">sales@netmatters.com</a></p>
+                    </address>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="copyright">
+                    <p>&copy; Copyright Netmatters Ltd. 2023. All rights reserved.</p>
+                </div>
+                <div class="social-links">
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
                 </div>
             </div>
         </div>
     </footer>
-  </body>
+
+    <!-- Cookie Popup -->
+    <div class="cookie-popup">
+        <div class="cookie-content">
+            <p>We use cookies to enhance your experience on our website. By continuing to browse, you agree to our use of cookies.</p>
+            <button class="btn accept-cookies">Accept</button>
+            <a href="#" class="cookie-policy">Cookie Policy</a>
+        </div>
+    </div>
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    
+    <!-- Main JavaScript -->
+    <script src="js/script.js"></script>
+    
+    <!-- Component Scripts -->
+    <script src="js/components/mobile-menu.js"></script>
+    <script src="js/components/sticky-header.js"></script>
+    <script src="js/components/search.js"></script>
+    <script src="js/components/cookie-popup.js"></script>
+    <script src="js/components/banner-slider.js"></script>
+</body>
 </html>

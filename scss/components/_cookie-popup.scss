@@ -1,0 +1,53 @@
+.cookie-popup {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: $primary-color;
+    color: $white;
+    padding: 15px 0;
+    @include z-index('cookie');
+    transform: translateY(100%);
+    animation: slideUp 0.5s ease-out forwards;
+    
+    .cookie-content {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      
+      p {
+        flex: 1 1 100%;
+        margin-bottom: 10px;
+        
+        @include respond-to('small') {
+          flex: 1 1 auto;
+          margin-bottom: 0;
+          margin-right: 20px;
+        }
+      }
+      
+      .btn {
+        margin: 5px 0;
+        
+        @include respond-to('small') {
+          margin: 0 10px;
+        }
+      }
+      
+      a {
+        color: $white;
+        text-decoration: underline;
+        @include transition();
+        
+        &:hover {
+          color: $accent-color;
+        }
+      }
+    }
+  }
+  
+  @keyframes slideUp {
+    from { transform: translateY(100%); }
+    to { transform: translateY(0); }
+  }

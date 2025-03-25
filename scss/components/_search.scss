@@ -1,0 +1,73 @@
+// scss/components/_search.scss
+
+.search {
+  &-box {
+    position: relative;
+    display: flex;
+    align-items: center;
+    transition: $transition-base;
+
+    // Mobile expanded state
+    &.expanded {
+      position: absolute;
+      top: 100%;
+      right: 20px;
+      width: calc(100% - 40px);
+      z-index: map-get($z-layers, 'dropdown');
+      @include box-shadow(2);
+    }
+  }
+
+  &-input {
+    padding: $spacing-sm $spacing-md;
+    border: 1px solid $medium-gray;
+    border-radius: $border-radius-sm 0 0 $border-radius-sm;
+    width: 200px;
+    transition: $transition-base;
+
+    @include respond-to('large') {
+      width: 250px;
+    }
+
+    &:focus {
+      border-color: $accent-color;
+      outline: none;
+      box-shadow: $input-focus-shadow;
+    }
+  }
+
+  &-btn {
+    background-color: $primary-color;
+    color: $white;
+    border: none;
+    padding: 0 $spacing-md;
+    border-radius: 0 $border-radius-sm $border-radius-sm 0;
+    height: 100%;
+    cursor: pointer;
+    transition: $transition-base;
+
+    &:hover {
+      background-color: darken($primary-color, 10%);
+    }
+
+    &:focus {
+      outline: none;
+      box-shadow: $input-focus-shadow;
+    }
+  }
+
+  // Mobile toggle button (magnifying glass icon)
+  &-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: $primary-color;
+    font-size: 1.2rem;
+    padding: $spacing-xs;
+    cursor: pointer;
+
+    @media (max-width: map-get($breakpoints, 'medium') - 1) {
+      display: block;
+    }
+  }
+}

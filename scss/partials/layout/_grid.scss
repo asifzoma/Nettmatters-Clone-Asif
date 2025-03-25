@@ -1,0 +1,40 @@
+.container {
+    width: 100%;
+    padding: 0 20px;
+    margin: 0 auto;
+    
+    @include respond-to('small') {
+      padding: 0 30px;
+    }
+    
+    @include respond-to('medium') {
+      max-width: 960px;
+      padding: 0 15px;
+    }
+    
+    @include respond-to('large') {
+      max-width: 1140px;
+    }
+    
+    @include respond-to('xlarge') {
+      max-width: 1320px;
+    }
+  }
+  
+  .grid {
+    display: grid;
+    gap: $base-spacing;
+  }
+  
+  .flex {
+    display: flex;
+    
+    &-column {
+      flex-direction: column;
+    }
+    
+    &-center {
+      justify-content: center;
+      align-items: center;
+    }
+  }

@@ -1,0 +1,170 @@
+// =============================================
+// Form Components (Responsive)
+// =============================================
+
+.form {
+    &-group {
+      margin-bottom: $spacing-md;
+      position: relative;
+  
+      @include respond-to('medium') {
+        margin-bottom: $spacing-lg;
+      }
+    }
+  
+    &-label {
+      display: block;
+      margin-bottom: $spacing-xs;
+      font-weight: $font-weight-semibold;
+      color: $text-color;
+  
+      &--required::after {
+        content: '*';
+        color: $danger-color;
+        margin-left: $spacing-xxs;
+      }
+    }
+  
+    &-control {
+      width: 100%;
+      padding: $spacing-sm $spacing-md;
+      border: 1px solid $medium-gray;
+      border-radius: $border-radius-sm;
+      font-family: $font-primary;
+      font-size: $font-size-md;
+      transition: $transition-base;
+  
+      &:focus {
+        outline: none;
+        border-color: $accent-color;
+        box-shadow: 0 0 0 3px rgba($accent-color, 0.1);
+      }
+  
+      &--textarea {
+        min-height: 120px;
+        resize: vertical;
+      }
+    }
+  
+    // Validation States
+    &-control {
+      &.is-valid {
+        border-color: $success-color;
+        
+        &:focus {
+          box-shadow: 0 0 0 3px rgba($success-color, 0.1);
+        }
+      }
+  
+      &.is-invalid {
+        border-color: $danger-color;
+        
+        &:focus {
+          box-shadow: 0 0 0 3px rgba($danger-color, 0.1);
+        }
+      }
+    }
+  
+    &-feedback {
+      display: block;
+      margin-top: $spacing-xs;
+      font-size: $font-size-sm;
+  
+      &--valid {
+        color: $success-color;
+      }
+  
+      &--invalid {
+        color: $danger-color;
+      }
+    }
+  
+    // Radio & Checkbox
+    &-check {
+      display: flex;
+      align-items: center;
+      margin-bottom: $spacing-xs;
+  
+      &-input {
+        margin-right: $spacing-xs;
+      }
+  
+      &-label {
+        font-weight: $font-weight-regular;
+      }
+    }
+  
+    // Newsletter Specific Styles
+    .newsletter-form {
+      display: flex;
+      flex-direction: column;
+      gap: $spacing-sm;
+  
+      @include respond-to('small') {
+        flex-direction: row;
+      }
+  
+      .newsletter-input {
+        flex: 1;
+        padding: $spacing-md;
+        border: 2px solid $medium-gray;
+        border-radius: $border-radius-sm;
+        font-size: $font-size-md;
+        transition: $transition-base;
+  
+        &:focus {
+          border-color: $accent-color;
+          outline: none;
+        }
+  
+        @include respond-to('medium') {
+          padding: $spacing-md $spacing-lg;
+        }
+      }
+  
+      .newsletter-submit {
+        padding: $spacing-md $spacing-lg;
+        white-space: nowrap;
+        font-weight: $font-weight-semibold;
+  
+        @include respond-to('small') {
+          flex: 0 0 auto;
+        }
+      }
+    }
+  
+    // Privacy Policy Link (Newsletter)
+    .privacy-policy {
+      margin-top: $spacing-sm;
+      font-size: $font-size-sm;
+      color: $text-light;
+  
+      a {
+        color: $accent-color;
+        text-decoration: underline;
+  
+        &:hover {
+          text-decoration: none;
+        }
+      }
+    }
+  
+    // Form Group Variations
+    &-group--inline {
+      @include respond-to('medium') {
+        display: flex;
+        align-items: center;
+  
+        .form-label {
+          flex: 0 0 30%;
+          max-width: 200px;
+          margin-bottom: 0;
+          margin-right: $spacing-md;
+        }
+  
+        .form-control {
+          flex: 1;
+        }
+      }
+    }
+  }

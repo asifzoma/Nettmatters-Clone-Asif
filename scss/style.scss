@@ -1,32 +1,34 @@
-// Abstracts
-@import 'abstracts/variables';
-@import 'abstracts/mixins';
+// First import variables
+@import "scss/partials/variables";
 
-// Base
-@import 'base/fonts';
+// Then import mixins
+@import "scss/partials/mixins";
+
+// Then import other partials
+@import "scss/partials/layout/container";
+@import "partials/layout/banner";
+@import "partials/layout/welcome-section";
+@import "partials/layout/footer";
+
+// Import base styles
 @import 'base/reset';
 @import 'base/typography';
-@import 'base/container';
 
-// Components
-@import 'components/menu-icon';
-@import 'components/banner';
-@import 'components/service_cards_1';
-@import 'components/service_cards_2';
-@import 'components/media';
-@import 'components/text_above_cards';
-
-
-// Layout
+// Import layout
+@import 'layout/grid';
 @import 'layout/header';
 @import 'layout/footer';
 
-// Sections
-@import 'sections/client';
-@import 'sections/our_services_1';
-@import 'sections/our_services_2';
-@import 'sections/partner_images';
-@import 'sections/welcome-client-section';
-@import 'sections/welcome-section';
-@import 'sections/case_studies';
-@import 'sections/latest_news_cards';
+// Import components
+@import 'components/buttons';
+@import 'components/navigation';
+@import 'components/search';
+@import 'components/service-cards';
+@import 'components/news-cards';
+@import 'components/cookie-popup';
+
+// Import pages
+@import 'pages/home';
+
+// Import responsive adjustments last
+@import 'responsive';

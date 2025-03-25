@@ -1,0 +1,47 @@
+// =============================================
+// News Story Cards (With meta footer)
+// =============================================
+
+.news-card {
+    @extend .card; // Inherits base styles
+    position: relative;
+  
+    &-badge {
+      position: absolute;
+      top: $spacing-md;
+      left: $spacing-md;
+      background: $primary-color;
+      color: $white;
+      padding: $spacing-xxs $spacing-sm;
+      border-radius: $border-radius-sm;
+      font-size: $font-size-xs;
+      font-weight: $font-weight-bold;
+      text-transform: uppercase;
+    }
+  
+    &-meta {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: $font-size-sm;
+      color: $text-light;
+  
+      &-author {
+        display: flex;
+        align-items: center;
+        
+        img {
+          width: 30px;
+          height: 30px;
+          border-radius: 50%;
+          margin-right: $spacing-xs;
+        }
+      }
+    }
+  
+    &:hover {
+      .card-title {
+        color: $accent-color;
+      }
+    }
+  }

@@ -1,0 +1,52 @@
+.footer {
+   background-color: $primary-color;
+   color: $white;
+   padding: 40px 0 20px;
+   
+   &-grid {
+     display: grid;
+     grid-template-columns: 1fr;
+     gap: 30px;
+     margin-bottom: 30px;
+     
+     @include respond-to('medium') {
+       grid-template-columns: repeat(2, 1fr);
+     }
+     
+     @include respond-to('large') {
+       grid-template-columns: repeat(3, 1fr);
+     }
+   }
+   
+   h3 {
+     color: $white;
+     margin-bottom: 20px;
+     position: relative;
+     padding-bottom: 10px;
+     
+     &::after {
+       content: '';
+       position: absolute;
+       bottom: 0;
+       left: 0;
+       width: 50px;
+       height: 2px;
+       background-color: $accent-color;
+     }
+   }
+   
+   a {
+     display: block;
+     padding: 8px 0;
+     @include transition();
+     
+     &:hover {
+       color: $accent-color;
+       padding-left: 5px;
+     }
+   }
+   
+   address p {
+     margin-bottom: 10px;
+   }
+ }
