@@ -1,0 +1,27 @@
+.hero .container {
+    /* Full-bleed on mobile */
+    @media (max-width: 767px) {
+      padding: 0 20px;
+    }
+  
+    /* Tablet */
+    @media (min-width: 768px) {
+      max-width: 720px;
+      padding: 0 15px;
+    }
+  
+    /* Desktop */
+    @media (min-width: 992px) {
+      max-width: 960px;
+    }
+  
+    /* Large Desktop (Netmatters' exact breakpoint) */
+    @media (min-width: 1200px) {
+      max-width: 1140px;
+    }
+  
+    /* Extra Large (for wide monitors) */
+    @media (min-width: 1400px) {
+      max-width: 1320px;
+    }
+  }
