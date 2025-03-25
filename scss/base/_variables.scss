@@ -99,13 +99,21 @@ $spacing-xxl: 3rem;    // 48px
 // Breakpoints
 // -------------------------
 
+// Breakpoints (must match Netmatters exactly)
 $breakpoints: (
-  'xsmall': 480px,     // Mobile portrait
-  'small': 768px,      // Mobile landscape / tablet portrait
-  'medium': 992px,     // Tablet landscape / small desktop
-  'large': 1200px,     // Desktop
-  'xlarge': 1440px,    // Large desktop
-  'xxlarge': 1600px    // Extra large screens
+  'mobile': 576px,
+  'tablet': 768px,
+  'desktop': 992px,
+  'xl': 1200px,
+  'xxl': 1400px
+);
+
+// Container widths (critical!)
+$container-max-widths: (
+  'tablet': 720px,
+  'desktop': 960px,
+  'xl': 1140px,
+  'xxl': 1320px
 );
 
 // -------------------------

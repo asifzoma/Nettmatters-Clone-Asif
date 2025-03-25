@@ -12,6 +12,9 @@
 @import 'components/cards';
 @import 'components/search';
 @import 'components/cookie-popup';
+@import 'components/navigation'; // Mobile/desktop nav
+@import 'components/service-cards'; // Specific service grid styles
+@import 'components/news-cards'; // News article styling
 
 @import 'pages/home';
 
