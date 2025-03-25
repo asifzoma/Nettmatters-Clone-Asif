@@ -1,34 +1,17 @@
-// First import variables
-@import "scss/partials/variables";
-
-// Then import mixins
-@import "scss/partials/mixins";
-
-// Then import other partials
-@import "scss/partials/layout/container";
-@import "partials/layout/banner";
-@import "partials/layout/welcome-section";
-@import "partials/layout/footer";
-
-// Import base styles
+@import 'base/variables';
+@import 'base/mixins';
 @import 'base/reset';
 @import 'base/typography';
 
-// Import layout
 @import 'layout/grid';
 @import 'layout/header';
 @import 'layout/footer';
 
-// Import components
 @import 'components/buttons';
-@import 'components/navigation';
+@import 'components/cards';
 @import 'components/search';
-@import 'components/service-cards';
-@import 'components/news-cards';
 @import 'components/cookie-popup';
 
-// Import pages
 @import 'pages/home';
 
-// Import responsive adjustments last
 @import 'responsive';

@@ -1,40 +1,39 @@
+// 1. Base Reset (REQUIRED)
+body {
+  margin: 0;
+  overflow-x: hidden; // Prevents horizontal scroll
+}
+
+*, *::before, *::after {
+  box-sizing: border-box; // Critical for padding behavior
+}
+
+// 2. Container Styles (Matches Netmatters exactly)
 .container {
-    width: 100%;
-    padding: 0 20px;
-    margin: 0 auto;
-    
-    @include respond-to('small') {
-      padding: 0 30px;
-    }
-    
-    @include respond-to('medium') {
-      max-width: 960px;
-      padding: 0 15px;
-    }
-    
-    @include respond-to('large') {
-      max-width: 1140px;
-    }
-    
-    @include respond-to('xlarge') {
-      max-width: 1320px;
-    }
+  width: 100%;
+  padding: 0 15px;
+  margin: 0 auto;
+
+  // Netmatters' exact breakpoints:
+  @media (min-width: 768px) {
+    max-width: 720px; // Matches their .container-sm
   }
-  
-  .grid {
-    display: grid;
-    gap: $base-spacing;
+
+  @media (min-width: 992px) {
+    max-width: 960px; // Matches .container-md
   }
-  
-  .flex {
-    display: flex;
-    
-    &-column {
-      flex-direction: column;
-    }
-    
-    &-center {
-      justify-content: center;
-      align-items: center;
-    }
+
+  @media (min-width: 1200px) {
+    max-width: 1140px; // Primary desktop container
   }
+
+  @media (min-width: 1400px) {
+    max-width: 1320px; // Large screens
+  }
+}
+
+// 3. Utility Classes (Optional but recommended)
+.full-width-container {
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
+}
