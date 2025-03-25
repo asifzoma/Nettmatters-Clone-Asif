@@ -540,71 +540,79 @@ footer .footer-row .footer-menu h4 {
 
 .main-nav {
   background: #333;
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 0;
 }
 .main-nav .nav-list {
   display: flex;
   margin: 0;
   padding: 0;
   list-style: none;
+  justify-content: space-between;
 }
 .main-nav .nav-list .nav-item {
   flex: 1;
+  text-align: center;
 }
 .main-nav .nav-list .nav-item a {
   display: flex;
+  flex-direction: column;
   align-items: center;
-  gap: 10px;
-  padding: 20px 15px;
   color: white;
   text-decoration: none;
-  text-align: center;
+  padding: 20px 10px;
+  height: 100%;
   transition: background-color 0.3s;
 }
-.main-nav .nav-list .nav-item a i {
+.main-nav .nav-list .nav-item a .icon-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 10px;
+  width: 100%;
+}
+.main-nav .nav-list .nav-item a .icon-container i {
   font-size: 24px;
 }
-.main-nav .nav-list .nav-item a span {
+.main-nav .nav-list .nav-item a .text-container {
   display: flex;
   flex-direction: column;
+  align-items: center;
+  width: 100%;
 }
-.main-nav .nav-list .nav-item a span small {
+.main-nav .nav-list .nav-item a .text-container .top-text {
   font-size: 12px;
+  margin-bottom: 4px;
   opacity: 0.8;
 }
-.main-nav .nav-list .nav-item.software a:hover {
-  background: #67809f;
+.main-nav .nav-list .nav-item a .text-container .bottom-text {
+  font-size: 14px;
+  font-weight: bold;
 }
-.main-nav .nav-list .nav-item.support a:hover {
-  background: #4183d7;
+.main-nav .nav-list .nav-item:hover a {
+  background-color: #444;
 }
-.main-nav .nav-list .nav-item.marketing a:hover {
-  background: #2ecc71;
+.main-nav .nav-list .software:hover a {
+  background-color: #67809f;
 }
-.main-nav .nav-list .nav-item.telecoms a:hover {
-  background: #d64541;
+.main-nav .nav-list .it-support:hover a {
+  background-color: #4183d7;
 }
-.main-nav .nav-list .nav-item.web a:hover {
-  background: #926fb1;
+.main-nav .nav-list .digital:hover a {
+  background-color: #2ecc71;
 }
-.main-nav .nav-list .nav-item.security a:hover {
-  background: #f62459;
+.main-nav .nav-list .telecoms:hover a {
+  background-color: #d64541;
 }
-.main-nav .nav-list .nav-item.course a:hover {
-  background: #ce4125;
+.main-nav .nav-list .web:hover a {
+  background-color: #926fb1;
+}
+.main-nav .nav-list .security:hover a {
+  background-color: #f62459;
+}
+.main-nav .nav-list .training:hover a {
+  background-color: #ce4125;
 }
 
-@media (max-width: 992px) {
-  .main-nav {
-    display: none;
-  }
-  .main-nav.active {
-    display: block;
-  }
-  .main-nav .nav-list {
-    flex-direction: column;
-  }
-}
 .client-section {
   flex: 1;
   background: #323544;
