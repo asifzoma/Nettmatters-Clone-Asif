@@ -531,18 +531,18 @@ body {
   background: gray;
 }
 .header .header-actions .hamburger-menu {
+  position: relative;
   margin-left: 20px;
   width: 45px;
   height: 45px;
-  position: relative;
   background-color: #333;
   border: none;
   border-radius: 3px;
   cursor: pointer;
   display: flex;
-  align-items: center;
+  align-items: right;
   justify-content: center;
-  margin-left: 10px;
+  margin-left: 20px;
   z-index: 1;
 }
 .header .header-actions .hamburger-menu .hamburger-box {
