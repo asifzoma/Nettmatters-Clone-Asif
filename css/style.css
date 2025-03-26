@@ -513,8 +513,9 @@ body {
   border-radius: 3px 0 0 3px;
 }
 .header .header-actions .search-box .search-btn {
-  width: 53px;
-  height: 53px;
+  padding: 3px 20px 3px 20px;
+  width: 65px;
+  height: 55px;
   background: #999;
   color: white;
   border: none;
