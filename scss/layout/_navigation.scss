@@ -1,73 +1,64 @@
 .main-nav {
     background: #333;
-    padding: 0;
+    border-top: 1px solid rgba(255,255,255,0.1);
 
     .nav-list {
         display: flex;
         margin: 0;
         padding: 0;
         list-style: none;
-        justify-content: space-between;
 
         .nav-item {
             flex: 1;
-            text-align: center;
             
             a {
                 display: flex;
-                flex-direction: column;
                 align-items: center;
+                gap: 10px;
+                padding: 20px 15px;
                 color: white;
                 text-decoration: none;
-                padding: 20px 10px;
-                height: 100%;
+                text-align: center;
                 transition: background-color 0.3s;
 
-                .icon-container {
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                    margin-bottom: 10px;
-                    width: 100%;
-                    
-                    i {
-                        font-size: 24px;
-                    }
+                i {
+                    font-size: 24px;
                 }
 
-                .text-container {
+                span {
                     display: flex;
                     flex-direction: column;
-                    align-items: center;
-                    width: 100%;
-
-                    .top-text {
+                    
+                    small {
                         font-size: 12px;
-                        margin-bottom: 4px;
                         opacity: 0.8;
                     }
-
-                    .bottom-text {
-                        font-size: 14px;
-                        font-weight: bold;
-                    }
                 }
             }
 
-            &:hover {
-                a {
-                    background-color: #444;
-                }
-            }
+            // Navigation item colors
+            &.software a:hover { background: #67809f; }
+            &.support a:hover { background: #4183d7; }
+            &.marketing a:hover { background: #2ecc71; }
+            &.telecoms a:hover { background: #d64541; }
+            &.web a:hover { background: #926fb1; }
+            &.security a:hover { background: #f62459; }
+            &.course a:hover { background: #ce4125; }
+        }
+    }
+}
+
+// Mobile styles
+@media (max-width: $breakpoint-md) {
+    .main-nav {
+        display: none; // Hide by default on mobile
+        
+        &.active {
+            display: block;
         }
 
-        // Specific hover colors for each nav item
-        .software:hover a { background-color: #67809f; }
-        .it-support:hover a { background-color: #4183d7; }
-        .digital:hover a { background-color: #2ecc71; }
-        .telecoms:hover a { background-color: #d64541; }
-        .web:hover a { background-color: #926fb1; }
-        .security:hover a { background-color: #f62459; }
-        .training:hover a { background-color: #ce4125; }
+        .nav-list {
+            flex-direction: column;
+        }
     }
 }

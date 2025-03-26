@@ -223,80 +223,211 @@ footer .footer-row .footer-menu h4 {
 
 .main-nav {
   background: #333;
-  padding: 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
 .main-nav .nav-list {
   display: flex;
   margin: 0;
   padding: 0;
   list-style: none;
-  justify-content: space-between;
 }
 .main-nav .nav-list .nav-item {
   flex: 1;
-  text-align: center;
 }
 .main-nav .nav-list .nav-item a {
   display: flex;
-  flex-direction: column;
   align-items: center;
+  gap: 10px;
+  padding: 20px 15px;
   color: white;
   text-decoration: none;
-  padding: 20px 10px;
-  height: 100%;
+  text-align: center;
   transition: background-color 0.3s;
 }
-.main-nav .nav-list .nav-item a .icon-container {
+.main-nav .nav-list .nav-item a i {
+  font-size: 24px;
+}
+.main-nav .nav-list .nav-item a span {
+  display: flex;
+  flex-direction: column;
+}
+.main-nav .nav-list .nav-item a span small {
+  font-size: 12px;
+  opacity: 0.8;
+}
+.main-nav .nav-list .nav-item.software a:hover {
+  background: #67809f;
+}
+.main-nav .nav-list .nav-item.support a:hover {
+  background: #4183d7;
+}
+.main-nav .nav-list .nav-item.marketing a:hover {
+  background: #2ecc71;
+}
+.main-nav .nav-list .nav-item.telecoms a:hover {
+  background: #d64541;
+}
+.main-nav .nav-list .nav-item.web a:hover {
+  background: #926fb1;
+}
+.main-nav .nav-list .nav-item.security a:hover {
+  background: #f62459;
+}
+.main-nav .nav-list .nav-item.course a:hover {
+  background: #ce4125;
+}
+
+<<<<<<< HEAD
+* {
+=======
+@media (max-width: 992px) {
+  .main-nav {
+    display: none;
+  }
+  .main-nav.active {
+    display: block;
+  }
+  .main-nav .nav-list {
+    flex-direction: column;
+  }
+}
+.client-section {
+  flex: 1;
+  background: #323544;
+  border: 1px solid #323544;
+  padding: 20px;
+  border-radius: 8px;
+  text-align: center;
+  color: white;
+}
+
+.client-section h2 {
+  font-size: 1.8rem;
+}
+
+.client-section .client-testimonial {
+  background: #323544;
+  padding: 15px;
+  border-radius: 5px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  font-style: italic;
+  color: white;
+}
+
+.client-section p {
+  font-size: 1rem;
+}
+
+.client-section .client-section-Google-btn {
+  background-color: #007BFF;
+  color: #fff;
+  padding: 10px 15px;
+  border-radius: 5px;
+  transition: background 0.3s ease;
+}
+
+.client-section .client-section-Google-btn:hover {
+  background-color: #0056b3;
+}
+
+.client-section .client-section-Google-btn.alternate {
+  background-color: #0bb81d;
+}
+
+.client-section .client-section-Google-btn.alternate:hover {
+  background-color: #0056b3;
+}
+
+@media (max-width: 768px) {
+  .client-section {
+    padding: 15px;
+  }
+  .client-section h2 {
+    font-size: 1.5rem;
+  }
+}
+.our_services_1 .container {
+  max-width: 1700px;
+  width: 90%;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+.our_services_1 .os1-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+.our_services_1 .os1-container .service-card {
+  flex: 1 1 100%;
+  max-width: none;
+}
+@media (min-width: 768px) {
+  .our_services_1 .os1-container .service-card {
+    flex: 0 1 calc(50% - 15px);
+    min-width: 340px;
+  }
+}
+@media (min-width: 992px) {
+  .our_services_1 .os1-container .service-card {
+    flex: 0 1 calc(33.333% - 20px);
+    min-width: 380px;
+  }
+}
+@media (min-width: 1260px) {
+  .our_services_1 .os1-container .service-card {
+    flex: 0 1 calc(33.333% - 30px);
+    min-width: 400px;
+  }
+}
+
+.our_services_2 {
+  padding: 40px 0;
+  background-color: #f8f8f8;
+}
+.our_services_2 .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+.our_services_2 .os2-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 20px;
+}
+@media (max-width: 768px) {
+  .our_services_2 .os2-container {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.partner_images {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-bottom: 10px;
-  width: 100%;
-}
-.main-nav .nav-list .nav-item a .icon-container i {
-  font-size: 24px;
-}
-.main-nav .nav-list .nav-item a .text-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 100%;
-}
-.main-nav .nav-list .nav-item a .text-container .top-text {
-  font-size: 12px;
-  margin-bottom: 4px;
-  opacity: 0.8;
-}
-.main-nav .nav-list .nav-item a .text-container .bottom-text {
-  font-size: 14px;
-  font-weight: bold;
-}
-.main-nav .nav-list .nav-item:hover a {
-  background-color: #444;
-}
-.main-nav .nav-list .software:hover a {
-  background-color: #67809f;
-}
-.main-nav .nav-list .it-support:hover a {
-  background-color: #4183d7;
-}
-.main-nav .nav-list .digital:hover a {
-  background-color: #2ecc71;
-}
-.main-nav .nav-list .telecoms:hover a {
-  background-color: #d64541;
-}
-.main-nav .nav-list .web:hover a {
-  background-color: #926fb1;
-}
-.main-nav .nav-list .security:hover a {
-  background-color: #f62459;
-}
-.main-nav .nav-list .training:hover a {
-  background-color: #ce4125;
+  padding: 10px 0;
+  overflow: visible;
 }
 
-* {
+.partners_row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  flex-wrap: nowrap;
+  overflow-x: visible;
+  white-space: nowrap;
+  height: 70px;
+}
+
+.partners_row img {
+  max-height: 70px;
+  width: auto;
+  display: inline-block;
+  object-fit: fill;
+>>>>>>> parent of 46cf0db (centered nav items in nav bar)
   margin: 0;
   padding: 0;
   box-sizing: border-box;
