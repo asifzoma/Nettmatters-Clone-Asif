@@ -1,0 +1,135 @@
+/* Main Navigation Styling */
+.main-nav {
+    background: #000000; /* Black background */
+    border-bottom: 4px solid #eeeeee;
+    padding: 15px 0;
+}
+
+.nav-list {
+    display: flex;
+    justify-content: space-between;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.nav-item {
+    text-align: center;
+    position: relative;
+    flex: 1;
+}
+
+.nav-item a {
+    text-decoration: none;
+    display: block;
+    padding: 15px 10px;
+    transition: all 0.3s ease;
+    color: #ffffff; /* White text */
+}
+
+/* Netmatters Color Scheme */
+.nav-item.software a:hover,
+.nav-item.software.active a {
+    background: #2c9cdb; /* Blue */
+    border-bottom: 4px solid #2c9cdb;
+}
+
+.nav-item.support a:hover,
+.nav-item.support.active a {
+    background: #2d9d2c; /* Green */
+    border-bottom: 4px solid #2d9d2c;
+}
+
+.nav-item.digital a:hover,
+.nav-item.digital.active a {
+    background: #d22d89; /* Pink */
+    border-bottom: 4px solid #d22d89;
+}
+
+.nav-item.telecoms a:hover,
+.nav-item.telecoms.active a {
+    background: #e67e22; /* Orange */
+    border-bottom: 4px solid #e67e22;
+}
+
+.nav-item.web a:hover,
+.nav-item.web.active a {
+    background: #9b59b6; /* Purple */
+    border-bottom: 4px solid #9b59b6;
+}
+
+.nav-item.cyber a:hover,
+.nav-item.cyber.active a {
+    background: #3498db; /* Light Blue */
+    border-bottom: 4px solid #3498db;
+}
+
+.nav-item.developer a:hover,
+.nav-item.developer.active a {
+    background: #e74c3c; /* Red */
+    border-bottom: 4px solid #e74c3c;
+}
+
+/* Icon Styling */
+.nav-item .fas {
+    font-size: 24px;
+    display: block;
+    margin-bottom: 8px;
+    color: #ffffff;
+    transition: color 0.3s ease;
+}
+
+/* Text Styling */
+.nav-item span {
+    display: block;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 14px;
+    line-height: 1.2;
+}
+
+.nav-item small {
+    display: block;
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 2px;
+}
+
+/* Hover Effects */
+.nav-item:hover a {
+    color: #ffffff;
+}
+
+/* Active State */
+.nav-item.active {
+    border-bottom: 4px solid;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+    .nav-list {
+        flex-wrap: wrap;
+    }
+    
+    .nav-item {
+        flex: 1 1 25%;
+        padding: 10px 0;
+    }
+}
+
+@media (max-width: 768px) {
+    .nav-item {
+        flex: 1 1 33%;
+    }
+    
+    .nav-item span {
+        font-size: 12px;
+    }
+    
+    .nav-item .fas {
+        font-size: 20px;
+    }
+}
