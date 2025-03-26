@@ -444,43 +444,122 @@ body {
   }
 }
 .header {
-  background-color: #ffffff;
-  color: #000000;
-  padding: 10px 0;
+  background: white;
+  padding: 20px 0;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
-
-.header-container {
-  position: relative;
+.header .header-content {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-
-.headerlogo {
-  width: 376px;
-  height: 62px;
+.header .logo {
+  margin-left: 57px;
 }
-
-.header-button-section-container {
+.header .logo img {
+  width: 370px;
+  height: 64px;
+}
+@media (max-width: 1260px) {
+  .header .logo img {
+    width: auto;
+    height: 25px;
+  }
+}
+.header .header-actions {
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  gap: 10px;
+  width: 856px;
+  height: 82px;
 }
-
-.header-buttons {
+.header .header-actions .btn {
+  height: 53px;
+  padding: 0 20px;
+  border: none;
+  border-radius: 3px;
   display: flex;
-  gap: 1rem;
-  align-items: flex-start;
+  align-items: center;
+  gap: 8px;
+  font-weight: 600;
+  transition: background-color 0.3s;
 }
-
-.menu-icon-container {
+.header .header-actions .btn.btn-support {
+  margin-left: 83px;
+  background: #4183d7;
+  color: white;
+}
+.header .header-actions .btn.btn-support:hover {
+  background: #286abd;
+}
+.header .header-actions .btn.btn-contact {
+  background: #999;
+  color: white;
+}
+.header .header-actions .btn.btn-contact:hover {
+  background: gray;
+}
+.header .header-actions .search-box {
   display: flex;
-  justify-content: space-between;
-  align-items: flex-end;
-  margin-top: 1rem;
-  margin-bottom: 1rem;
+  width: 142px;
+  height: 53px;
+}
+.header .header-actions .search-box input {
+  flex: 1;
+  height: 100%;
+  padding: 0 15px;
+  border: 1px solid #ddd;
+  border-right: none;
+  border-radius: 3px 0 0 3px;
+}
+.header .header-actions .search-box .search-btn {
+  width: 53px;
+  height: 53px;
+  background: #999;
+  color: white;
+  border: none;
+  border-radius: 0 3px 3px 0;
+  cursor: pointer;
+}
+.header .header-actions .search-box .search-btn:hover {
+  background: gray;
+}
+.header .header-actions .menu-toggle {
+  display: none;
+  width: 53px;
+  height: 53px;
+  background: #333;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 4px;
+}
+.header .header-actions .menu-toggle span {
+  display: block;
+  width: 25px;
+  height: 2px;
+  background: white;
+}
+@media (max-width: 1260px) {
+  .header .header-actions .menu-toggle {
+    display: flex;
+  }
 }
 
+@media (max-width: 1260px) {
+  .header .header-actions {
+    width: auto;
+    height: auto;
+  }
+}
+@media (max-width: 1260px) and (max-width: 992px) {
+  .header .header-actions .btn, .header .header-actions .search-box {
+    display: none;
+  }
+}
 @media (max-width: 768px) {
   .header-container {
     flex-direction: column;
