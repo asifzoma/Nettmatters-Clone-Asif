@@ -1,3 +1,9 @@
+@import 'abstracts/_variables';
+@import 'abstracts/_mixins';
+@import 'abstracts/_media';
+
+
+
 // Variables
 $primary-color: #272e6d;
 $secondary-color: #2a3683;
@@ -25,19 +31,19 @@ $danger-color: #d64541;
     box-shadow: $x $y $blur $spread $color;
 }
 
-<<<<<<< Updated upstream:scss/style.scss
+
 // Layout
 @import 'layout/header';
 @import 'layout/footer';
 @import 'layout/navigation';
-=======
+
+
 // Base Styles
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
->>>>>>> Stashed changes:scss/styles.scss
 
 body {
     font-family: 'Open Sans', Arial, sans-serif;
@@ -210,4 +216,6 @@ body {
         display: grid;
         grid-template-columns: repeat(4, 1fr);
         gap: 20px;
-   
+
+    }
+}
