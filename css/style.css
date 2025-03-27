@@ -122,22 +122,59 @@ body {
   transition: all 0.3s ease;
 }
 
+.hero-slider {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+}
+.hero-slider .slick-dots {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  z-index: 2;
+}
+.hero-slider .slick-dots li {
+  margin: 0 6px;
+}
+.hero-slider .slick-dots li button {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: #ccc;
+  border: none;
+  font-size: 0;
+}
+.hero-slider .slick-dots li.slick-active button {
+  background-color: #95252f;
+}
+
 .slider-item {
-  height: 80vh;
+  height: 100vh;
   background-size: cover;
   background-position: center;
+  background-repeat: no-repeat;
   display: flex;
   align-items: center;
-  position: relative;
+  justify-content: flex-start;
 }
 .slider-item::before {
   content: "";
   position: absolute;
   top: 0;
   left: 0;
-  width: 60%;
+  width: 100%;
   height: 100%;
-  background: linear-gradient(90deg, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.5) 60%, rgba(0, 0, 0, 0) 100%);
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.2));
+  z-index: 1;
+}
+.slider-item .slider-content {
+  position: relative;
+  z-index: 2;
 }
 
 /* ===== Text Container ===== */
