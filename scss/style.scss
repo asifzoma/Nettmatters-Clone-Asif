@@ -3,36 +3,18 @@
 @import 'abstracts/_media';
 
 
+// Components
+@import 'components/menu-icon';
+@import 'components/slider';
+@import 'components/service_cards_1';
+@import 'components/service_cards_2';
+@import 'components/media';
+@import 'components/text_above_cards';
 
-// Variables
-$primary-color: #272e6d;
-$secondary-color: #2a3683;
-$accent-color: #00a0e3;
-$text-color: #333;
-$light-gray: #f5f5f5;
-$white: #ffffff;
-$black: #000000;
-$success-color: #7dbb00;
-$warning-color: #ffb900;
-$danger-color: #d64541;
-
-// Mixins
-@mixin transition($property: all, $duration: 0.3s, $ease: ease-in-out) {
-    transition: $property $duration $ease;
-}
-
-@mixin flex-center {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-@mixin box-shadow($x: 0, $y: 5px, $blur: 10px, $spread: 0, $color: rgba(0,0,0,0.1)) {
-    box-shadow: $x $y $blur $spread $color;
-}
 
 
 // Layout
+@import 'layout/_navigation';
 @import 'layout/header';
 @import 'layout/footer';
 @import 'layout/navigation';
@@ -217,5 +199,14 @@ body {
         grid-template-columns: repeat(4, 1fr);
         gap: 20px;
 
-    }
-}
+// Sections
+@import 'sections/client';
+@import 'sections/our_services_1';
+@import 'sections/our_services_2';
+@import 'sections/partner_images';
+@import 'sections/welcome-client-section';
+@import 'sections/welcome-section';
+@import 'sections/case_studies';
+@import 'sections/latest_news_cards';
+
+
