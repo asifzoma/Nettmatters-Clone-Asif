@@ -60,3 +60,57 @@
     max-width: 600px;
     text-shadow: 0 1px 2px rgba(0,0,0,0.2);
   }
+
+  .slider-btn {
+  display: inline-block;
+  padding: 16px 38px;
+  background: $web-design-color;
+  color: white;
+  font-size: 1.1rem;
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: 3px;
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+.slider-btn:hover {
+    background: $web-design-color;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+  }
+  
+  @media (max-width: 992px) {
+    .slider-item::before {
+      width: 80%;
+    }
+    
+    .slider-content {
+      padding-left: 5%;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .hero-slider {
+      height: 70vh;
+      min-height: 500px;
+    }
+    
+    .slider-item::before {
+      width: 100%;
+      background: linear-gradient(
+        to bottom, 
+        rgba(0,0,0,0.7) 0%, 
+        rgba(0,0,0,0.3) 100%
+      );
+    }
+    
+    .slider-title span {
+      margin-top: 0.3rem;
+    }
+    
+    .slider-btn {
+      padding: 14px 30px;
+    }
+  }
