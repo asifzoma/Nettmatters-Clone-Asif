@@ -8,7 +8,7 @@
           <meta name="ROBOTS" content="NOINDEX,NOFOLLOW">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-    
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
   </head>    
     <body>
       <header class="header">
@@ -117,20 +117,23 @@
             </ul>
         </div>
     </nav>
-        <section   class="banner">
-          <div class="container">
-            <div class="banner-row">
-              <div class="banner-text">
-                <h1>Digital Marketing</h1>
-                <p>Generating you new business through
-                  results driven marketing activities
-                </p>
-                <a href="#" class="btn">Find Out More</a>
-              </div>
-            </div>
-          </div>
+    <div class="slider-item" style="background-image: url('img/slide1.jpg')">
+      <div class="slider-content">
+        <h1 class="slider-title">
+          The East Of England's Leading<br>
+          <span>Technology Company</span>
+        </h1>
+        
+        <p class="slider-desc">
+          Performance-driven digital and technology services<br>
+          with complete transparency.
+        </p>
+        
+        <div class="slider-buttons">
+          <a href="#" class="slider-btn">WHY CHOOSE US?</a>
         </div>
       </div>
+    </div>
       </section>
 
       <div class="container">
@@ -356,5 +359,9 @@
             </div>
         </div>
     </footer>
+    <!-- Add after all HTML content, before </body> -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+<script src="js/app.js"></script>
   </body>
 </html>

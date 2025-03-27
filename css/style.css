@@ -122,64 +122,31 @@ body {
   transition: all 0.3s ease;
 }
 
-.banner {
-  background-image: url(../img/home-banner1.png);
+/* ===== Core Slider Styles ===== */
+.hero-slider {
+  position: relative;
+  height: 80vh;
+  min-height: 600px;
+  overflow: hidden;
+}
+
+.slider-item {
+  height: 100%;
   background-size: cover;
   background-position: center;
-  background-repeat: no-repeat;
-}
-.banner .banner-text {
-  display: flex;
-  flex-direction: column;
-  align-items: start;
-  justify-content: center;
-  color: #fff;
-  text-align: start;
-  margin-top: 100px;
-  margin-bottom: 100px;
-  padding: 0 20px;
-}
-.banner .banner-text h1 {
-  font-size: 2.5rem;
-  margin-bottom: 20px;
-}
-.banner .banner-text p {
-  font-size: 1.2rem;
-}
-.banner .btn {
-  background-color: lightgreen;
-  height: 40px;
-  color: #fff;
-  padding: 10px 40px;
-  border: 0px solid;
-  border-radius: 5px;
-  margin-top: 20px;
-}
-.banner .banner-row {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+  display: flex !important;
   align-items: center;
 }
-@media (min-width: 768px) {
-  .banner .banner-row {
-    flex: 50%;
-  }
-}
-@media (min-width: 992px) {
-  .banner .banner-row {
-    flex: 25%;
-  }
-}
-@media (min-width: 1260px) {
-  .banner .banner-row {
-    margin-bottom: 40px;
-  }
-}
-.banner .banner-row h4 {
-  text-transform: uppercase;
-  font-size: 1rem;
-  margin-bottom: 26px;
+
+/* Gradient Overlay  */
+.slider-item::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 60%;
+  height: 100%;
+  background: linear-gradient(90deg, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.5) 60%, rgba(0, 0, 0, 0) 100%);
 }
 
 .service-card {
