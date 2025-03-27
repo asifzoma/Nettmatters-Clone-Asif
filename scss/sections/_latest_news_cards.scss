@@ -1,18 +1,19 @@
 .latest_news_cards {    
     .container {
-        @media (min-width: $breakpoint-lg) {
-            width: 90% !important;
-            max-width: 1700px;
-        }
+        max-width: 1700px;  
+        width: 90%;         
+        margin: 0 auto;
+        padding: 0 15px;
     }
-
+ 
     .latest_news_cards-container {   
         display: flex;
         flex-wrap: wrap;
         justify-content: center;  
         gap: 30px;   
-        margin: 0 auto;
+        margin-bottom: 30px;
 
+ 
         .news_story_card {
             flex: 1 1 100%;      
             max-width: none;     
@@ -20,7 +21,7 @@
             @media (min-width: $breakpoint-sm) {  
                 flex: 0 1 calc(50% - 15px);     
                 min-width: 340px;                
-            }
+                        }
     
             @media (min-width: $breakpoint-md) {  
                 flex: 0 1 calc(33.333% - 20px);   
@@ -33,4 +34,4 @@
             }
         }
     }
-} 
+ }

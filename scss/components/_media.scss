@@ -4,13 +4,7 @@
   .secondary-content {
     width: 90%;
   }
-  .wildlife {
-    padding: 10% 12%;
-    margin: 50px 0 20px;
-  }
-}
-
-@media (max-width: 768px) {
+  @media (max-width: 768px) {
   .primary-content,
   .secondary-content {
     width: 100%;
@@ -35,7 +29,7 @@
   .intro {
     font-size: 1rem;
   }
-  .resorts,
+ 
   .tips {
     float: none;
     width: 100%;
@@ -44,3 +38,4 @@
     padding: 20px 0;
   }
 } 
+}
