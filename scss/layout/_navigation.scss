@@ -122,6 +122,87 @@
     }
 }
 
+
+//styling for the sidebar menu
+
+/* Sidebar off-canvas menu */
+.sidebar-menu {
+    width: 250px;
+    position: fixed;
+    top: 0;
+    right: -($sidebar-width);
+    height: 100%;
+    width: 80%;               // cover 80% of screen width
+    max-width: $sidebar-width;         
+    background: $background-color; 
+    box-shadow: -2px 0 5px rgba(0,0,0,0.1);
+    transform: translateX(100%);   // hidden off-screen to the right
+    transition: transform 0.3s ease;
+    z-index: 1;            // above overlay (which is 0), but below header/hamburger
+    padding: 20px 15px;
+    overflow-y: auto;         // scrollable if content is taller than viewport
+}
+/* Ensure the sidebar nav list is vertical */
+.sidebar-menu .nav-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;   // stack menu items vertically
+}
+
+.sidebar-menu .nav-item {
+    margin: 1rem 0;           // spacing between menu items
+  }
+  .sidebar-menu .nav-item a {
+    display: flex;
+    align-items: center;
+    color: #333;
+    text-decoration: none;
+    font-weight: 600;
+  }
+  .sidebar-menu .nav-item a i {
+    margin-right: 0.5rem;     // space between icon and text
+  }
+  
+  // Overlay that covers the page when menu is open //
+  .overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);  // semi-transparent black overlay (gradient effect)
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: 0;                  // behind the sidebar menu
+    pointer-events: none;           // inactive until menu opens
+  }
+  
+  /* Open state: revealed sidebar and active overlay */
+  body.menu-open .sidebar-menu {
+    transform: translateX(0);       // slide in from right
+  }
+  body.menu-open .overlay {
+    opacity: 1;
+    pointer-events: auto;          // activate overlay (so it can be clicked to close)
+  }
+  body.menu-open .main-content {
+    transform: translateX(-250px);  // push main content slightly left
+    transition: transform 1s ease;
+          
+  }
+
+  .main-container {
+    transition: transform 1s ease;
+    will-change: transform;
+  }
+  
+  body.menu-open .main-container {
+    transform: translateX(-($sidebar-width)); 
+  }
+  
+
 @media (max-width: 768px) {
     .nav-item {
         flex: 1 1 33%;
