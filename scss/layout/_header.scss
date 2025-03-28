@@ -1,7 +1,7 @@
 .header {
     height: 100px;
     background: white;
-    z-index: 4;
+    
 
     padding: 20px 0;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
@@ -63,7 +63,7 @@
             display: flex;
             position: relative;
             height: 55px;
-            z-index: 4;
+           
 
             input {
                 flex: 1;
@@ -102,7 +102,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    z-index: 4000; // so it sits above overlay and sidebar
+   
   
     .hamburger-box {
       width: 23px;
@@ -140,7 +140,7 @@
 
   .header {
     position: relative;
-    z-index: 4;  // below overlay
+   
   }
   .hamburger-menu {
     z-index: 4;  // ensure the hamburger/X is on top of everything
