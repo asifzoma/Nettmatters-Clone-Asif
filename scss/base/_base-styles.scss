@@ -9,7 +9,7 @@
 
 body {
     font-family: 'Open Sans', Arial, sans-serif;
-    color: $text-color;
+    color: #fff;
     line-height: 1.6;
 }
 
@@ -24,16 +24,17 @@ body {
     display: inline-block;
     padding: 10px 20px;
     background-color: $primary-color;
-    color: $white;
+    color: white;
     text-decoration: none;
     border: none;
     border-radius: 3px;
     cursor: pointer;
+
     @include transition();
     
     &:hover {
         background-color: darken($primary-color, 10%);
-        color: $white;
+        color: white;
     }
     
     &-large {
@@ -44,7 +45,7 @@ body {
 
 // Top Bar
 .top-bar {
-    background-color: $white;
+    background-color: white;
     padding: 10px 0;
     @include box-shadow();
     
@@ -87,7 +88,7 @@ body {
             
             button {
                 background-color: $primary-color;
-                color: $white;
+                color: white;
                 border: none;
                 padding: 0 15px;
                 border-radius: 0 3px 3px 0;
@@ -178,3 +179,5 @@ body {
         display: grid;
         grid-template-columns: repeat(4, 1fr);
         gap: 20px;
+    }
+}
