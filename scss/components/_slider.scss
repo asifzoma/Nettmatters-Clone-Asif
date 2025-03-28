@@ -67,6 +67,8 @@
   
   /* ===== Title Styling ===== */
   .slider-title {
+
+    margin-left: 10%;
     font-family: 'Roboto', sans-serif;
     font-size: clamp(2rem, 6vw, 3rem);
     font-weight: 600;
@@ -75,15 +77,10 @@
     margin-top: 1.93rem;
     text-shadow: 0 2px 4px rgba(0,0,0,0.3);
   }
-  
-  .slider-title span {
-    display: block;
-    margin-top: 0.5rem;
-    font-weight: 700;
-  }
-  
+   
   /* ===== Description ===== */
   .slider-desc {
+    margin-left: 10%;
     font-family: 'Roboto', sans-serif;
     font-size: clamp(1.1rem, 2.2vw, 1.4rem);
     line-height: 1.5;
@@ -94,6 +91,7 @@
   }
 
   .slider-btn {
+    margin-left: 10%;
   display: inline-block;
   padding: 16px 38px;
   background: $web-design-color;
@@ -106,6 +104,7 @@
   box-shadow: 0 2px 5px rgba(0,0,0,0.2);
   text-transform: uppercase;
   letter-spacing: 0.5px;
+  margin-bottom: 2.8rem;
 }
 .slider-btn:hover {
     background: $web-design-color;

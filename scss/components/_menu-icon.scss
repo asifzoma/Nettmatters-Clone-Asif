@@ -1,31 +1,31 @@
 
 
-.menu-icon {
-    width: 58px;
-    height: 58px;
-    background-color: #000;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 6px;
-    cursor: pointer;
+// .menu-icon {
+//     width: 58px;
+//     height: 58px;
+//     background-color: #000;
+//     display: flex;
+//     flex-direction: column;
+//     justify-content: center;
+//     align-items: center;
+//     gap: 6px;
+//     cursor: pointer;
 
-    position: absolute; /* Absolutely positioned relative to the nearest positioned ancestor */
-    top: 10px; /* Adjust distance from the top */
-    right: 10px; /* Adjust distance from the right */
+//     position: absolute; /* Absolutely positioned relative to the nearest positioned ancestor */
+//     top: 10px; /* Adjust distance from the top */
+//     right: 10px; /* Adjust distance from the right */
 
-    transform: translate(0, 0); /* No need for vertical centering in this case */
-    padding: 5px;
-    margin: 0; /* Remove unnecessary margin */
-}
+//     transform: translate(0, 0); /* No need for vertical centering in this case */
+//     padding: 5px;
+//     margin: 0; /* Remove unnecessary margin */
+// }
 
 
-.menu-icon span {
-        width: 26px;
-        height: 2px;
-        background-color: #fff;
-        display: block;
-        transition: all 0.3s ease;
-    }
+// .menu-icon span {
+//         width: 26px;
+//         height: 2px;
+//         background-color: #fff;
+//         display: block;
+//         transition: all 0.3s ease;
+//     }
 

@@ -11,6 +11,7 @@
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
   </head>    
  <body>
+  <div class="main-container"> <!-- Main Container wraps whole page so i can shift it to the left and apply a gradient to it when the sidebar pops out -->
               <section>
                 <header class="header">
                   <div class="container">
@@ -386,6 +387,55 @@
                           <div class="footer-menu">
                               <h4>Our Industries</h4>
                           </div>
+  </div>
+      <!-- Sidebar Menu - outside of main container and before footer, so it can be used and styled independently of the main container -->
+        <nav class="sidebar-menu">
+          <ul class="sidebar-links">
+            <li class="menu-heading">SERVICES</li>
+            <li><a href="#">Bespoke Software</a></li>
+            <li><a href="#">IT Support</a></li>
+            <li><a href="#">Digital Marketing</a></li>
+            <li><a href="#">Telecoms Services</a></li>
+            <li><a href="#">Web Design</a></li>
+            <li><a href="#">Cyber Security</a></li>
+
+            <li class="menu-heading">OUR WORK</li>
+            <li><a href="#">Case Studies</a></li>
+            <li><a href="#">Our Digital Marketing Clients</a></li>
+            <li><a href="#">Our Website Clients</a></li>
+            <li><a href="#">Our IT Clients</a></li>
+            <li><a href="#">Our Bespoke Software Clients</a></li>
+            <li><a href="#">Our Telecoms Clients</a></li>
+
+            <li class="menu-heading">OUR KNOWLEDGE</li>
+            <li><a href="#">Technologies</a></li>
+            <li><a href="#">Industries</a></li>
+            <li><a href="#">News</a></li>
+            <li><a href="#">Insights</a></li>
+
+            <li class="menu-heading">TRAINING</li>
+            <li><a href="#">Train for a Career in Tech</a></li>
+            <li><a href="#">Skills Bootcamp</a></li>
+            <li><a href="#">SCS Frequently Asked Questions</a></li>
+            <li><a href="#">Scion Collaborators</a></li>
+
+            <li class="menu-heading">OUR COMPANY</li>
+            <li><a href="#">Why Choose Us?</a></li>
+            <li><a href="#">Our Culture</a></li>
+            <li><a href="#">Our Team</a></li>
+            <li><a href="#">Our Careers</a></li>
+            <li><a href="#">Our Benefits</a></li>
+            <li><a href="#">Our Accreditations</a></li>
+
+            <li class="menu-heading">CONTACT US</li>
+            <li><a href="#">Cambridge Office</a></li>
+            <li><a href="#">Wymondham Office</a></li>
+            <li><a href="#">Great Yarmouth Office</a></li>
+          </ul>
+        </nav>
+
+        <!-- Page Overlay -->
+        <div class="overlay"></div>
 
                           <div class="footer-menu">
                               <h4>Locations</h4>
