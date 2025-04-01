@@ -147,46 +147,119 @@
   }
   
 
-// Responsive adjustments
-@media (max-width: $breakpoint-lg) {
-    .header {
-        .header-actions {
-            width: auto;
-            height: auto;
-            
-            .btn, .search-box {
-                @media (max-width: $breakpoint-md) {
-                    display: none;
-                }
-            }
-        }
+// === Mobile Layout ===
+@media (max-width: $breakpoint-xs) {
+    .header-content {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 15px;
     }
-}
-
-
-
-
-// Media Queries For Header
-
-.header-container {
-
-@media (max-width: $breakpoint-sm) {
-    flex-direction: column; // Stack items vertically
-    align-items: stretch; // Allow children to stretch full width
-}
-}
-
-.support-button, .contact-button, .search-icon{
-@media (max-width: $breakpoint-sm) {
+  
+    .logo {
+      width: 410px;
+      max-width: 100%;
+      display: flex;
+      align-items: center;
+      margin-left: 0;
+  
+      img {
+        width: 100%;
+        height: auto;
+        display: block;
+      }
+    }
+  
+    .header-actions {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 10px;
+  
+      .btn-support,
+      .btn-contact {
         display: none;
+      }
+  
+      .phone-icon {
+        display: inline-block;
+        font-size: 20px;
+        color: #333;
+      }
+  
+      .hamburger-menu {
+        margin-left: auto;
+      }
     }
+  
+    .search-box {
+      width: 100%;
+      margin-top: 10px;
+  
+      input {
+        width: 100%;
+      }
+  
+      .search-btn {
+        padding: 0 10px;
+      }
+    }
+    .main-nav {
+  display: none;
 }
-
-.search-box {
-    @media (max-width: $breakpoint-sm) {    
-        order:2;
-        width: 100%;    
-            margin-top: 1rem;
-            margin-bottom: 1rem;
-        }
+.btn-support {
+  display: none;
+}
+.btn-contact {
+  display: none;
+}
+  }
+  
+  // === Small Tablet Layout ===
+@media (min-width: $breakpoint-sm) and (max-width: $breakpoint-md - 1) {
+    .header-content {
+      flex-wrap: wrap;
+      justify-content: space-between;
+      padding: 0 30px;
     }
+  
+    .logo {
+      width: 300px;
+  
+      img {
+        width: 100%;
+        height: auto;
+      }
+    }
+  
+    .header-actions {
+      width: 100%;
+      justify-content: flex-end;
+      gap: 15px;
+  
+      .btn-support,
+      .btn-contact {
+        display: flex;
+      }
+  
+      .phone-icon {
+        display: none;
+      }
+  
+      .hamburger-menu {
+        display: flex;
+      }
+    }
+  
+    .search-box {
+      width: 100%;
+      margin-top: 10px;
+    }
+
+    .main-nav {
+        display: none;
+      }
+  }
+  
