@@ -209,13 +209,13 @@
     .main-nav {
   display: none;
 }
-.btn-support {
-  display: none;
+.header-actions .btn-support,
+.header-actions .btn-contact {
+  display: none !important; //due to confilcts, spoted debgging css
 }
-.btn-contact {
-  display: none;
+
 }
-  }
+
   
   // === Small Tablet Layout ===
 @media (min-width: $breakpoint-sm) and (max-width: $breakpoint-md - 1) {
