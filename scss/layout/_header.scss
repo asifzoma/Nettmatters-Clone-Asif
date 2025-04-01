@@ -1,9 +1,10 @@
 .header {
     height: 100px;
     background: white;
+    margin-bottom: 40px;
     
 
-    padding: 20px 0;
+    padding: 20px 15px 20px 15px; // 20px top and bottom, 15px left and right smaller view ports appear better
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 
     .header-content {
@@ -11,7 +12,7 @@
         justify-content: space-between;
         align-items: center;
         width: 100%;
-    }
+            }
 
     .logo {
         margin-left: 57px; //to maintain spaceing as per netmatters ws
@@ -147,119 +148,155 @@
   }
   
 
-// === Mobile Layout ===
-@media (max-width: $breakpoint-xs) {
+// === XS Breakpoint - Mobile Layout ===
+
+@media (max-width: 576px) {
+    .header {
+      height: auto; /* Allow header to expand for multiple rows */
+    }
+  
     .header-content {
       display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
-      align-items: center;
+      justify-content: flex-start;
+      align-items: flex-start;
+      flex-wrap: nowrap;
       padding: 0 15px;
     }
   
     .logo {
-      width: 410px;
-      max-width: 100%;
-      display: flex;
-      align-items: center;
       margin-left: 0;
-  
-      img {
-        width: 100%;
-        height: auto;
-        display: block;
-      }
-    }
-  
-    .header-actions {
-      width: 100%;
       display: flex;
-      justify-content: space-between;
       align-items: center;
-      margin-top: 10px;
-  
-      .btn-support,
-      .btn-contact {
-        display: none;
-      }
-  
-      .phone-icon {
-        display: inline-block;
-        font-size: 20px;
-        color: #333;
-      }
-  
-      .hamburger-menu {
-        margin-left: auto;
-      }
     }
   
-    .search-box {
-      width: 100%;
-      margin-top: 10px;
-  
-      input {
-        width: 100%;
-      }
-  
-      .search-btn {
-        padding: 0 10px;
-      }
-    }
-    .main-nav {
-  display: none;
-}
-.header-actions .btn-support,
-.header-actions .btn-contact {
-  display: none !important; //due to confilcts, spoted debgging css
-}
-
-}
-
-  
-  // === Small Tablet Layout ===
-@media (min-width: $breakpoint-sm) and (max-width: $breakpoint-md - 1) {
-    .header-content {
-      flex-wrap: wrap;
-      justify-content: space-between;
-      padding: 0 30px;
-    }
-  
-    .logo {
-      width: 300px;
-  
-      img {
-        width: 100%;
-        height: auto;
-      }
+    .phone-icon {
+      display: inline-block;
+      font-size: 20px;
+      color: #333;
+      margin-left: 10px;
     }
   
     .header-actions {
-      width: 100%;
-      justify-content: flex-end;
-      gap: 15px;
+      margin-left: auto;
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      width: auto;
+    }
   
-      .btn-support,
-      .btn-contact {
-        display: flex;
-      }
-  
-      .phone-icon {
-        display: none;
-      }
-  
-      .hamburger-menu {
-        display: flex;
-      }
+    .header-actions .btn-support,
+    .header-actions .btn-contact {
+      display: none !important;
     }
   
     .search-box {
       width: 100%;
       margin-top: 10px;
+      display: flex;
+      align-items: center;
+      background: #f0f0f0;
+      border-radius: 3px;
+      padding: 0 8px;
     }
-
-    .main-nav {
-        display: none;
-      }
+  
+    .search-box input {
+      flex: 1;
+      height: 100%;
+      border: none;
+      border-radius: 0;
+      padding: 0 8px;
+      background: transparent;
+    }
+  
+    .search-box .search-btn {
+      border: none;
+      border-radius: 0;
+      height: 100%;
+      width: 50px;
+      background: #999;
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+    }
   }
   
+  
+  // === Small Tablet Layout ===
+@media (max-width: $breakpoint-sm) {
+        .header {
+          height: 100px; // consistent height
+        }
+      
+        .header-content {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          padding: 0 16px;
+          flex-wrap: wrap;
+        }
+      
+        .logo {
+          flex: 1 1 auto;
+      
+          img {
+            width: 370px;
+            height: auto;
+          }
+        }
+      
+        .phone-icon {
+          display: inline-block;
+          font-size: 20px;
+          color: #333;
+          margin-left: 10px;
+        }
+      
+        .header-actions {
+          display: flex;
+          align-items: center;
+          margin-left: auto;
+          gap: 10px;
+      
+          .btn-support,
+          .btn-contact {
+            display: none !important;
+          }
+      
+          .hamburger-menu {
+            display: flex;
+          }
+        }
+      
+        .search-box {
+          width: 100%;
+          margin-top: 10px;
+          padding: 0 16px;
+          display: flex;
+          background: #e4e4e4;
+          border-radius: 3px;
+      
+          input {
+            flex: 1;
+            padding: 10px;
+            border: none;
+            background: transparent;
+            font-size: 1rem;
+          }
+      
+          .search-btn {
+            width: 50px;
+            background: #6c757d;
+            color: white;
+            border: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+          }
+        }
+      }
+      
+    
+    
