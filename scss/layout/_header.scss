@@ -2,10 +2,10 @@
     height: 100px;
     background: white;
     margin-bottom: 40px;
-    
+    display: flex;
 
     padding: 20px 15px 20px 15px; // 20px top and bottom, 15px left and right smaller view ports appear better
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    // box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 
     .header-content {
         display: flex;
@@ -15,17 +15,17 @@
             }
 
     .logo {
-        margin-left: 57px; //to maintain spaceing as per netmatters ws
-        img {
-            width: 370px;
-            height: 64px;
+        margin-left: 55px; //to maintain spaceing as per netmatters ws
+        // img {
+        //     width: 370px;
+        //     height: 64px;
             
-            @media (max-width: $breakpoint-lg) {
+            // @media (max-width: $breakpoint-lg) {
                 width: auto;
-                height: 25px;
-            }
+                height: 64px;
+            // }
         }
-    }
+    // }
 
     .header-actions {
         display: flex;
@@ -154,8 +154,14 @@
     .header {
       height: auto; /* Allow header to expand for multiple rows */
     }
-  
+    
+    .container {
+        max-width: 375px;
+        width: 100%;
+    }
+
     .header-content {
+      max-width: 375px;
       display: flex;
       justify-content: flex-start;
       align-items: flex-start;
@@ -164,6 +170,8 @@
     }
   
     .logo {
+        max-width: 375px;
+        width: 100%;
       margin-left: 0;
       display: flex;
       align-items: center;

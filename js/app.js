@@ -31,3 +31,28 @@ overlay.addEventListener('click', () => {
 });
 
 
+// Cookie Popup
+document.addEventListener('DOMContentLoaded', () => {
+  const popup = document.getElementById('cookie-popup');
+  const acceptBtn = document.getElementById('accept-cookies');
+  const changeBtn = document.getElementById('change-settings');
+
+  // Only show if not already accepted
+  if (!localStorage.getItem('cookiesAccepted')) {
+    popup.style.display = 'block';
+  }
+
+  // Accept button - store consent
+  acceptBtn.addEventListener('click', () => {
+    localStorage.setItem('cookiesAccepted', 'true');
+    popup.style.display = 'none';
+  });
+
+  // Change Settings - redirect or open modal
+  changeBtn.addEventListener('click', () => {
+    // You can replace this with a modal later
+    window.location.href = '/cookie-settings';
+  });
+});
+
+
