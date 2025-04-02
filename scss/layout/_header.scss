@@ -1,7 +1,7 @@
 .header {
     height: 100px;
     background: white;
-    padding:clamp(10px, 2vw, 20px) 0;
+    padding:0 clamp(10px, 2vw, 20px);
     // box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 
     .header-content {
@@ -9,7 +9,7 @@
         justify-content: space-between;
         align-items: center;
         width: 100%;
-        padding: 0 clamp(10px, 2vw, 20px);
+        padding: 10px clamp(10px, 2vw, 20px);
     }
 
     .logo {
@@ -26,7 +26,7 @@
         align-items: center;
         gap: 10px;
         width: 856px;
-        height: 82px;
+        height: auto;
 
         .btn {
             height: 53px;
@@ -99,6 +99,7 @@
     align-items: right;
     justify-content: center;
     margin-left: 20px;
+    margin-right: 20px;
     z-index: 1;
 
     .hamburger-box {
