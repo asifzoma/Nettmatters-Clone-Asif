@@ -8,27 +8,51 @@ $(document).ready(function () {
       autoplaySpeed: 3000,
       speed: 600,
       arrows: false,
-      fade: true,
+      fade: false,
       cssEase: 'linear'    });
   });
   
 
-  // Hamburger Menu
+  /// grab the hamburger button
 const hamburger = document.querySelector('.hamburger-menu');
+
+// grab the <body> so we can add/remove the .menu-open class
 const body = document.body;
+
+// grab the overlay so we can detect when user clicks outside menu
 const overlay = document.querySelector('.overlay');
 
-// Toggle sidebar open/close on hamburger click
+// when user clicks hamburger:
+// - toggle .menu-open class on body (which triggers sidebar & overlay in SCSS)
+// - also toggle .scroll-lock to prevent background from scrolling
+// - toggle .open class on the hamburger icon (for animation if needed)
 hamburger.addEventListener('click', () => {
-  hamburger.classList.toggle('open');       // animate hamburger to X or back
-  body.classList.toggle('menu-open');       // open or close the sidebar/overlay
+  hamburger.classList.toggle('open');       // animate hamburger icon (if styles exist need to add)
+  body.classList.toggle('menu-open');       // triggers slide-left + overlay fade
+  body.classList.toggle('scroll-lock');     // stops body from scrolling when menu is open
 });
 
-// close the menu when clicking the overlay
+// when user clicks the overlay:
+// - remove .menu-open from body to close menu
+// - remove .scroll-lock to allow scrolling again
+// - remove .open class from hamburger to reset icon
 overlay.addEventListener('click', () => {
   hamburger.classList.remove('open');
   body.classList.remove('menu-open');
+  body.classList.remove('scroll-lock');
 });
+
+// optional: close cookie popup on click
+const cookieCloseBtn = document.querySelector('.cookie-close-btn');
+const cookieNotice = document.querySelector('.cookie-notice');
+
+// when the user clicks the cookie banner close button, hide the cookie notice
+if (cookieCloseBtn && cookieNotice) {
+  cookieCloseBtn.addEventListener('click', () => {
+    cookieNotice.style.display = 'none';
+  });
+}
+
 
 
 // Cookie Popup
