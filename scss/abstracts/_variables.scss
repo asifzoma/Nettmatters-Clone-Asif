@@ -15,6 +15,7 @@ $developer-training-color: #d35400; // Orange
 $inverse-color: #ffffff; // White for inverse hover
 
 $white: #ffffff;
+$black: #000000;
 
 //Buttons
 
@@ -52,10 +53,11 @@ $dark-color: #333;
 // $link-color: #fff;
 
 //Breakpoints
-$breakpoint-xs: 576px;
+$breakpoint-xs: 0;       // below 768px
 $breakpoint-sm: 768px;
 $breakpoint-md: 992px;
 $breakpoint-lg: 1260px;
+
 
 
 // Navigation colors
@@ -67,3 +69,10 @@ $nav-web: #926fb1;
 $nav-security: #f62459;
 $nav-course: #ce4125;
 $nav-main: #333645;
+
+$color-white: #ffffff;
+$color-background: #333645;
+$color-button-grey: #999aa2;
+$color-blue: #2e86de;
+$color-border: #e5e5e5;
+$color-form-focus: #66afe9;
