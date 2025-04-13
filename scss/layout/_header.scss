@@ -1,238 +1,222 @@
-// ============================================
-// _header.scss – Mobile-First Header Styles
-// ============================================
-
+// Header section – Mobile-first approach with full responsive breakpoints
 .header {
-  // Base styles (mobile-first: XS)
-  background-color: $color-white;
-  padding: 10px 0;
+  // Base header styles (mobile-first)
+  background-color: $color-white;           // Header background from variables
+  padding: 20px 0;                          // Vertical padding for header
 
-  // Main container for header content
+  // Container for header content
   .header-content {
     display: flex;
-    flex-direction: column;    // Stacked rows on mobile
-    align-items: flex-start;
-    gap: 10px;
-    padding-left: 10px;
-    padding-right: 10px;
+    flex-direction: column;                 // Stack rows on mobile
+    padding: 10px;                          // General inner padding
+    max-width: 100%;
   }
 
-  // Top row: contains logo and icon group (phone icon + hamburger)
+  // Top row: contains logo and icon group (phone icon and hamburger menu)
   .header-top {
-    width: 100%;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-between;         // Spread content across
     align-items: center;
-    margin-bottom: 10px;
-
-    // Logo styles
+    width: 100%;
+    margin-bottom: 10px;                    // Space below top row
+    
+    // Logo styling – ensure it has proper padding
     .logo {
-      padding: 10px;
+      padding: 10px;                        // Padding around logo for breathing room
+      
       img {
-        display: block;
-        max-width: 170px;    // Default for XS (adjust later)
-        width: 100%;
+        width: 100%;                        // Responsive scaling
+        max-width: 200px;                   // Set max width per design (adjust as needed)
         height: auto;
         object-fit: contain;
       }
     }
 
+    // Header buttons container
+    .header-top-buttons {
+      display: none;                        // Hidden by default on mobile
+      gap: 10px;
+      align-items: center;
+    }
+
+    .btn-support {
+      @include button-support;
+      display: none;
+    }
+
+    .btn-contact {
+      @include button-contact;
+      display: none;
+    }
+    
     // Icon group: phone icon and hamburger menu
     .icon-group {
       display: flex;
       align-items: center;
       gap: 10px;
-      margin-left: auto;
 
+      // Phone icon styling using Font Awesome
       .phone-icon {
-        font-size: rems(20px);
-        color: $color-background;
+        font-size: rems(22px);              
+        color: $color-background;           
         cursor: pointer;
       }
 
-     
-      
+      // Hamburger menu 
+      .hamburger-menu {
+        background: none;                  
+        border: none;
+        padding: 0;
+        cursor: pointer;
+        
+        // Outer container that gives the black box
+        .hamburger-box {
+          width: 63px;                     // Box width 
+          height: 56px;                    // Box height 
+          background-color: #000;          
+          border-radius: 3px;              
+          display: flex;
+          flex-direction: column;
+          justify-content: space-evenly;   // Evenly space three lines
+          align-items: center;             // Center lines horizontally
+        }
+        
+        // Each of the three horizontal lines
+        .hamburger-line {
+          width: 33px;                     // Width of each line
+          height: 4px;                     // Thickness of each line
+          background-color: $color-white;   // White lines (or use #fff)
+        }
+      }
     }
   }
 
-  // Support & Contact buttons – hidden by default on XS
-  .btn-support,
-  .btn-contact {
-    display: none; // Show them on MD and above
+  .search-box-2 {
+    display: none;
   }
 
-  // For MD and up, we style these buttons using our button mixin
-  @media (min-width: $breakpoint-md) {
-    .btn-support {
-      display: inline-block;
-      @include button($color-blue);
-    }
-    .btn-contact {
-      display: inline-block;
-      @include button($color-button-grey);
-      margin-left: 20px; // Add space between buttons
-    }
-  }
-
-  // Search Box – default full input on XS
-  .search-box {
+  // Search box row: located below the top row (logo and icons)
+  .search-box-1 {
     display: flex;
     align-items: center;
     width: 100%;
-    background-color: $white;
-    border: 1px solid $color-border;
-    border-radius: 2px;
+    background-color: lighten($color-border, 15%); // A subtle background tint for the search area
+    border: 1px solid $color-border;        
+    border-radius: 2px;                     // Slightly rounded corners for the search input container
     padding: 5px;
-
+    
     input {
-      flex: 1;
-      padding: 10px;
-      font-size: rems(14px);
+      flex: 1;                             // Take up available horizontal space
+      border: none;                        // Remove inner border
+      padding: 10px;                       // Internal padding
+      font-size: rems(16px);                // Font size as needed
       background: transparent;
-      border: none;
-      color: $color-background;
+      color: $color-background;             // Input text colour from variable
       &:focus {
-        outline: none;
+        outline: none;                     // Remove browser default outline
       }
     }
-
+    
     .search-btn {
-      background: none;
+      background: none;                    // Transparent background for button
       border: none;
-      font-size: rems(18px);
-      color: $color-background;
-      padding: 0 8px;
+      font-size: rems(20px);                // Icon size
+      color: $color-background;             // Use your variable for colour
+      padding: 0 8px;                      // Horizontal padding around the button
       cursor: pointer;
     }
   }
 
- // Hamburger menu always visible
- .hamburger-menu {
-  background: none;
-  border: none;
-  cursor: pointer;
-  padding: 0;
-  margin-left: 20px; // spacing from search box or buttons, optional
-
-  .hamburger-box {
-    width: 63px;
-    height: 56px;
-    background-color: #000; // Use $color-black if defined
-    border-radius: 4px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    align-items: center;
-  }
-
-  .hamburger-line {
-    width: 33px;
-    height: 4px;
-    background-color: $color-white;
-  }
-}
-
-  // f SM BREAKPOINT ===========================
+  // ----------- Media Queries for Larger Viewports ------------------
+  
+  // At small breakpoint ($breakpoint-sm),.
   @media (min-width: $breakpoint-sm) {
-    .header-container {
-      max-width: 750px;
-      margin: 0 auto;
-    }
-    
-    // Hide the phone icon from SM upward
-    .icon-group .phone-icon {
+    .search-box-1 {
       display: none;
     }
-    
-    // Optionally adjust search-box max-width
-    .search-box {
-      max-width: 350px;
-    }
-    // Support & Contact buttons remain hidden on SM
-  }
 
-  //  MD BREAKPOINT
-  @media (min-width: $breakpoint-md) {
-    .header-container {
-      max-width: 970px;
-      margin: 0 auto;
+    .phone-icon {
+      display: none;
     }
-    
-    // Switch header-content to row layout
-    .header-content {
-      flex-direction: row;
-      align-items: center;
-      justify-content: space-between;
-    }
-    
-    // Increase logo size for MD
-    .header-top .logo img {
-      max-width: 200px;
-    }
-    
-    // Show Support & Contact buttons (styled via mixin above)
-    
-    // Change the search box into an icon-only button if needed
-    .search-box {
+
+    // Search box 2 for small breakpoint
+    .search-box-2 {
       display: flex;
       align-items: center;
-      width: auto;
-      background: $color-button-grey;
-      border: none;
-      padding: 0;
-      
-      input {
-        display: none; // Hide input at MD if using icon-only variant
-      }
-      
-      .search-btn {
-        background-color: $color-background;
-        color: $color-white;
-        width: 56px;
-        height: 56px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        border-radius: 3px;
-        font-size: rems(20px);
-      }
-    }
-  }
-
-  //  LG BREAKPOINT 
-  @media (min-width: 1260px) {
-    .header-container {
-      max-width: 1200px;
-      margin: 0 auto;
-    }
-    
-    // For LG, revert search box to full input again
-    .search-box {
-      display: flex;
-      align-items: center;
-      background-color: $color-white;
-      border: 1px solid $color-border;
-      border-radius: 2px;
+      width: 174px;
+      height: 56px;
+      background-color: lighten($color-border, 15%); // A subtle background tint for the search area
+      border: 1px solid $color-border;        
+      border-radius: 2px;                     // Slightly rounded corners for the search input container
       padding: 5px;
       
       input {
-        display: inline-block;
-        width: 240px;   // As per Netmatters spec
-        padding: 10px;
-        font-size: rems(14px);
+        flex: 1;                             // Take up available horizontal space
+        border: none;                        // Remove inner border
+        padding: 10px;                       // Internal padding
+        font-size: rems(16px);                // Font size as needed
+        background: transparent;
+        color: $color-background;             // Input text colour from variable
+        &:focus {
+          outline: none;                     // Remove browser default outline
+        }
       }
       
       .search-btn {
-        background-color: $color-button-grey;
-        color: $color-white;
-        width: 63px;    // Matching spec
-        border-radius: 0 3px 3px 0;
+        background: none;                    // Transparent background for button
+        border: none;
+        font-size: rems(20px);                // Icon size
+        color: $color-background;             // Use your variable for colour
+        padding: 0 8px;                      // Horizontal padding around the button
+        cursor: pointer;
       }
     }
+  }
+
+  // At medium breakpoint
+  @media (min-width: $breakpoint-md) {
+    .header-content {
+      flex-direction: row;                // Switch from column to row
+      justify-content: space-between;
+      align-items: center;
+    }
     
-    // Increase the logo size further for LG
-    .header-top .logo img {
-      max-width: 370px;
+    .header-top {
+      margin-bottom: 0;                   // Remove bottom margin on larger screens 
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+    }
+
+    // Show the buttons at medium breakpoint
+    .header-top-buttons {
+      display: flex;
+      gap: 10px;
+      margin-left: auto;  // Push buttons to the right
+    }
+
+    .btn-support,
+    .btn-contact {
+      display: inline-block !important;  // Force display
+      @include button-support;  // Apply the button mixin
+    }
+
+    .btn-contact {
+      @include button-contact;  // Apply the contact button mixin
+    }
+
+    // Hide both search boxes at medium breakpoint
+    .search-box-1,
+    .search-box-2 {
+      display: none;
+    }
+  }
+  
+  // At large breakpoint
+  @media (min-width: $breakpoint-lg) {
+    .logo {
+      padding: 15px;                     // More padding on large screens
     }
   }
 }

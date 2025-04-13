@@ -40,10 +40,16 @@
 
 /* Main Navigation Styling */
 .main-nav {
+    display: none;  // Hide by default
     background: $nav-main;
     border-bottom: 4px solid #eeeeee;
     padding: 15px 0;
     max-height: 100px;
+
+    // Show at large breakpoint
+    @media (min-width: $breakpoint-lg) {
+        display: block;
+    }
 }
 
 .nav-list {

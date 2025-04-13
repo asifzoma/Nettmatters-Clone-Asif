@@ -1,56 +1,132 @@
 .client-section {
-    flex: 1;
-    background: $background-color;
-    border: 1px solid $background-color;
-    padding: 20px;
-    border-radius: 8px;
-    text-align: center;
-    color: white;
-}
+    color: $color-white;
 
-.client-section h2 {
-    font-size: 1.8rem;
-}
-
-.client-section .client-testimonial {
-    background: $background-color;
-    padding: 15px;
-    border-radius: 5px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    font-style: italic;
-    color: white;
-}
-
-.client-section p {
-    font-size: 1rem;
-}
-
-.client-section .client-section-Google-btn {
-    background-color: #007BFF;
-    color: #fff;
-    padding: 10px 15px;
-    border-radius: 5px;
-    transition: background 0.3s ease;
-}
-
-.client-section .client-section-Google-btn:hover {
-    background-color: #0056b3;
-}
-
-.client-section .client-section-Google-btn.alternate {
-    background-color: #0bb81d;
-}
-
-.client-section .client-section-Google-btn.alternate:hover {
-    background-color: #0056b3;
-}
-
-@media (max-width: 768px) {
-    .client-section {
-        padding: 15px;
+    @media (min-width: $breakpoint-md) {
+        flex: 0 0 48%;  // Equal width sections with gap
     }
 
-    .client-section h2 {
-        font-size: 1.5rem;
+    .container {
+        padding: 0;
+        text-align: left;
+    }
+
+    h2 {
+        font-size: 2.8rem;  // Match welcome section heading size
+        margin-bottom: 25px;
+        font-weight: 600;
+    }
+
+    .stars {
+        margin-bottom: 30px;
+        
+        i {
+            color: #ffa500;
+            font-size: 2.5rem;
+            margin-right: 5px;
+            &:last-child {
+                margin-right: 0;
+            }
+        }
+    }
+
+    .client-testimonial {
+        font-size: 1.2rem;
+        font-style: italic;
+        line-height: 1.6;
+        margin-bottom: 25px;
+    }
+
+    .client-info {
+        margin-bottom: 40px;
+        
+        .client-name {
+            color: #9fa3b0;
+            font-size: 1.1rem;
+            display: block;
+            line-height: 1.5;
+        }
+    }
+
+    .review-buttons {
+        display: flex;
+        gap: 15px;
+        margin-top: 40px;
+
+        // Default (mobile) - buttons side by side
+        flex-direction: row;
+
+        // Medium breakpoint only - stack buttons
+        @media (min-width: $breakpoint-md) and (max-width: #{$breakpoint-lg - 1}) {
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        a {
+            display: inline-flex;
+            align-items: center;
+            padding: 15px 25px;
+            border-radius: 3px;
+            text-transform: uppercase;
+            font-weight: 500;
+            font-size: 0.9rem;
+            letter-spacing: 0.5px;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            white-space: nowrap;
+
+            i {
+                margin-left: 8px;
+                font-size: 0.9rem;
+            }
+
+            &.google-reviews {
+                background-color: #4285f4;
+                color: $color-white;
+
+                &:hover {
+                    background-color: darken(#4285f4, 10%);
+                }
+            }
+
+            &.trustpilot-reviews {
+                background-color: #00b67a;
+                color: $color-white;
+
+                &:hover {
+                    background-color: darken(#00b67a, 10%);
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: $breakpoint-sm) {
+    .client-section {
+        margin-top: 40px;
+
+        .container {
+            padding: 0;
+        }
+
+        h2 {
+            font-size: 2rem;
+        }
+
+        .client-testimonial {
+            font-size: 1.1rem;
+        }
+
+        .review-buttons {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            justify-content: flex-start;
+            gap: 10px;
+            
+            a {
+                width: auto;
+                flex: 0 0 auto;
+            }
+        }
     }
 }

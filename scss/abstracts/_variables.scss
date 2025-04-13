@@ -19,7 +19,7 @@ $black: #000000;
 
 //Buttons
 
-$hd_btn_color:blue;
+$color-button-blue:blue;
 $ws-btn-color: black;
 $primary-color: #e74c3c;
 $secondary-color: #6c757d;
@@ -53,7 +53,7 @@ $dark-color: #333;
 // $link-color: #fff;
 
 //Breakpoints
-$breakpoint-xs: 0;       // below 768px
+$breakpoint-xs: 0px;       // below 768px
 $breakpoint-sm: 768px;
 $breakpoint-md: 992px;
 $breakpoint-lg: 1260px;

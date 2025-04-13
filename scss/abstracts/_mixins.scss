@@ -31,7 +31,34 @@
       margin-right: 8px;
     }
   }
-  
+
+
+  @mixin button-support {
+    background-color: $color-button-blue;
+    color: $color-white;
+    font-size: rems(18px);
+    padding: 14px 20px;
+    display: inline-block;
+    border: none;
+    cursor: pointer;
+    font-weight: 600;
+    text-transform: uppercase;
+    border-radius: 3px;
+    
+  }
+
+  @mixin button-contact {
+    background-color: $color-button-grey;
+    color: $color-white;
+    font-size: rems(18px);
+    padding: 14px 20px;
+    display: inline-block;
+    border: none;
+    cursor: pointer;
+    font-weight: 600;
+    text-transform: uppercase;
+    border-radius: 3px;
+  }
 
 
 
