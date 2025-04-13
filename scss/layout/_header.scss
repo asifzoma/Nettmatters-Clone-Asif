@@ -26,7 +26,7 @@
       
       img {
         width: 100%;                        // Responsive scaling
-        max-width: 200px;                   // Set max width per design (adjust as needed)
+        // max-width: 200px;                   // Set max width per design (adjust as needed)
         height: auto;
         object-fit: contain;
       }
@@ -37,16 +37,14 @@
       display: none;                        // Hidden by default on mobile
       gap: 10px;
       align-items: center;
-    }
 
-    .btn-support {
-      @include button-support;
-      display: none;
-    }
+      .btn-support {
+        @include button-support;
+      }
 
-    .btn-contact {
-      @include button-contact;
-      display: none;
+      .btn-contact {
+        @include button-contact;
+      }
     }
     
     // Icon group: phone icon and hamburger menu
@@ -180,6 +178,9 @@
       justify-content: space-between;
       align-items: center;
     }
+ .search-btn {
+    display: flex !important;
+    }
     
     .header-top {
       margin-bottom: 0;                   // Remove bottom margin on larger screens 
@@ -187,26 +188,14 @@
       align-items: center;
       justify-content: space-between;
       width: 100%;
-    }
 
-    // Show the buttons at medium breakpoint
-    .header-top-buttons {
-      display: flex;
-      gap: 10px;
-      margin-left: auto;  // Push buttons to the right
-    }
-
-    .btn-support,
-    .btn-contact {
-      display: inline-block !important;  // Force display
-      @include button-support;  // Apply the button mixin
-    }
-
-    .btn-contact {
-      @include button-contact;  // Apply the contact button mixin
+      .header-top-buttons {
+        display: flex;                    // Show buttons from medium breakpoint up
+      }
     }
 
     // Hide both search boxes at medium breakpoint
+     
     .search-box-1,
     .search-box-2 {
       display: none;
@@ -215,8 +204,13 @@
   
   // At large breakpoint
   @media (min-width: $breakpoint-lg) {
-    .logo {
-      padding: 15px;                     // More padding on large screens
+    .header-top {
+      .logo {
+        padding: 15px;                     // More padding on large screens
+              }
+        .search-box-2 {
+          display: flex;
+        }
     }
   }
 }
