@@ -17,7 +17,6 @@
         padding: 0 15px; // Match padding from os1
 
         .service-card {
-            // --- Base card styles copied from _our_services_1.scss --- 
             width: 100%;
             padding: 30px;
             background: #fff;
@@ -27,6 +26,9 @@
             transition: all 0.3s ease;
             position: relative;
             overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            min-height: 315px;
             
             &:hover {
                 transform: scale(1.05);
@@ -45,9 +47,6 @@
                 i { font-size: 35px; color: #fff; line-height: 1; }
             }
 
-            .OS_Card_Header { /* ... styles copied ... */ }
-            .OS_card_para { /* ... styles copied ... */ }
-            .read-more-btn { /* ... styles copied ... */ }
             .OS_Card_Header {
                 font-size: 1.8rem;
                 margin-bottom: 31px;
@@ -61,10 +60,13 @@
                 color: #666;
                 margin-bottom: 31px;
                 padding: 0 31px;
+                flex-grow: 1;
             }
 
             .read-more-btn {
-                display: inline-block;
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
                 padding: 12px 32px;
                 color: white;
                 text-decoration: none;
@@ -73,54 +75,78 @@
                 font-size: 0.9rem;
                 text-transform: uppercase;
                 transition: all 0.3s ease;
+                white-space: nowrap;
+                margin-top: auto;
+                align-self: center;
             }
-            // --- End of copied base styles ---
 
-            // Define specific styles for OS2 cards
-            
-            // Telecoms Services - Orange
+            // Telecoms Services - Red/Orange Button
             &.telecoms-services {
-                $telecoms-color: #F39C12; // Example color
-                border-top: 5px solid $telecoms-color;
+                $telecoms-color: #CD6155; // Adjusted Red/Orange
                 .icon-container { background-color: $telecoms-color; }
-                .read-more-btn { background-color: $telecoms-color; }
-                &:hover { background-color: $telecoms-color; }
+                .read-more-btn { background-color: $telecoms-color; color: #fff; }
+                &:hover {
+                    background-color: $telecoms-color;
+                    .OS_Card_Header, .OS_card_para { color: #fff; }
+                    .read-more-btn {
+                        background-color: #fff;
+                        color: $telecoms-color;
+                    }
+                }
                 // Add specific icon in HTML: <i class="fas fa-phone-volume"></i>
             }
 
-            // Web Design - Purple
+            // Web Design - Purple Button
             &.web-design {
-                $web-color: #8E44AD; // Example color
-                border-top: 5px solid $web-color;
+                $web-color: #8E44AD; // Kept Purple
                 .icon-container { background-color: $web-color; }
-                .read-more-btn { background-color: $web-color; }
-                &:hover { background-color: $web-color; }
+                .read-more-btn { background-color: $web-color; color: #fff; }
+                &:hover {
+                    background-color: $web-color;
+                    .OS_Card_Header, .OS_card_para { color: #fff; }
+                    .read-more-btn {
+                        background-color: #fff;
+                        color: $web-color;
+                    }
+                }
                 // Add specific icon in HTML: <i class="fas fa-pencil-ruler"></i>
             }
 
-            // Cyber Security - Red
+            // Cyber Security - Bright Pink/Red Button
             &.cyber-security {
-                $cyber-color: #E74C3C; // Example color
-                border-top: 5px solid $cyber-color;
+                $cyber-color: #EC407A; // Adjusted Bright Pink/Red
                 .icon-container { background-color: $cyber-color; }
-                .read-more-btn { background-color: $cyber-color; }
-                &:hover { background-color: $cyber-color; }
+                .read-more-btn { background-color: $cyber-color; color: #fff; }
+                &:hover {
+                    background-color: $cyber-color;
+                    .OS_Card_Header, .OS_card_para { color: #fff; }
+                    .read-more-btn {
+                        background-color: #fff;
+                        color: $cyber-color;
+                    }
+                }
                 // Add specific icon in HTML: <i class="fas fa-shield-alt"></i>
             }
 
-            // Developer Training - Dark Blue/Gray
+            // Developer Training - Dark Orange/Brown Button
             &.developer-training {
-                $dev-color: #34495E; // Example color
-                border-top: 5px solid $dev-color;
+                $dev-color: #D35400; // Adjusted Dark Orange/Brown
                 .icon-container { background-color: $dev-color; }
-                .read-more-btn { background-color: $dev-color; }
-                &:hover { background-color: $dev-color; }
-                // Add specific icon in HTML: <i class="fas fa-graduation-cap"></i>
+                .read-more-btn { background-color: $dev-color; color: #fff; }
+                &:hover {
+                    background-color: $dev-color;
+                    .OS_Card_Header, .OS_card_para { color: #fff; }
+                    .read-more-btn {
+                        background-color: #fff;
+                        color: $dev-color;
+                    }
+                }
+                
             }
         }
 
         // Media query for larger screens
-        // Adjust breakpoint and columns as needed (e.g., 4 columns)
+        
         @media (min-width: $breakpoint-lg) { // Using lg breakpoint for 4 columns
             grid-template-columns: repeat(4, 1fr);
             max-width: 1500px; // Adjust max-width for 4 columns
@@ -129,7 +155,6 @@
             .service-card {
                  // Adjust max-width/height if needed for 4 columns
                  max-width: 300px; 
-                 max-height: 315px; // Keep height consistent?
                  margin: 0 auto;
             }
         }
@@ -142,7 +167,6 @@
              
              .service-card {
                  max-width: 100%; // Allow card to fill 2 columns
-                 max-height: none; // Remove height restriction if needed
                  margin: 0;
              }
         }
