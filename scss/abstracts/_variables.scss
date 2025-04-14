@@ -76,3 +76,31 @@ $color-button-grey: #999aa2;
 $color-blue: #2e86de;
 $color-border: #e5e5e5;
 $color-form-focus: #66afe9;
+
+// Variables for news cards
+$news-card-border-radius: 8px;
+$news-card-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+$news-card-padding: 25px;
+
+$tag-news-bg: #8E44AD;    // Purple
+$tag-careers-bg: #4183D7; // Blue
+$tag-case-study-bg: #4CAF50; // Green )
+$tag-text-color: #fff;
+$tag-padding: 5px 15px;
+$tag-border-radius: 4px;
+$tag-font-size: 0.8rem;
+
+$btn-news-bg: #8E44AD;    // Purple
+$btn-careers-bg: #4183D7; // Blue
+$btn-case-study-bg: #F5B041; // Gold/Yellow
+$btn-text-color: #fff;
+$btn-padding: 10px 25px;
+$btn-border-radius: 4px;
+$btn-font-size: 0.9rem;
+$btn-font-weight: 600;
+$btn-text-transform: uppercase;
+
+$author-avatar-size: 40px;
+$author-text-color: #666;
+$author-name-weight: 600;
+$date-font-size: 0.85rem;
