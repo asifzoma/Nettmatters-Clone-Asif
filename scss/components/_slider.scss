@@ -1,9 +1,13 @@
 
 .hero-slider {
   position: relative;
-  height: inherit;
+  // height: inherit; Testing
   overflow: hidden;
 
+
+  .slick-slide {
+    height: 554px;
+  } 
   .slick-dots {
     position: absolute;
     bottom: 20px;
@@ -37,7 +41,7 @@
 .slider-item {
   position: relative;
   z-index: 0;
-  height: 90vh;
+  height: 554px;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -125,7 +129,7 @@
   
   @media (max-width: 768px) {
     .hero-slider {
-      height: 70vh;
+      // height: 70vh; Testing
       min-height: 500px;
     }
     
