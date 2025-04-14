@@ -1,37 +1,177 @@
-.latest_news_cards {    
-    .container {
-        max-width: 1700px;  
-        width: 90%;         
-        margin: 0 auto;
-        padding: 0 15px;
-    }
- 
-    .latest_news_cards-container {   
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;  
-        gap: 30px;   
-        margin-bottom: 30px;
+// Variables (consider moving to _variables.scss if not already there)
+$news-card-border-radius: 8px;
+$news-card-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+$news-card-padding: 25px;
 
- 
-        .news_story_card {
-            flex: 1 1 100%;      
-            max-width: none;     
-            
-            @media (min-width: $breakpoint-sm) {  
-                flex: 0 1 calc(50% - 15px);     
-                min-width: 340px;                
-                        }
-    
-            @media (min-width: $breakpoint-md) {  
-                flex: 0 1 calc(33.333% - 20px);   
-                min-width: 380px;                 
-            }
-    
-            @media (min-width: $breakpoint-lg) {  
-                flex: 0 1 calc(33.333% - 30px);   
-                min-width: 400px;                 
-            }
+$tag-news-bg: #8E44AD;    // Purple
+$tag-careers-bg: #4183D7; // Blue
+$tag-case-study-bg: #4CAF50; // Green (Adjusted slightly from screenshot for better contrast)
+$tag-text-color: #fff;
+$tag-padding: 5px 15px;
+$tag-border-radius: 4px;
+$tag-font-size: 0.8rem;
+
+$btn-news-bg: #8E44AD;    // Purple
+$btn-careers-bg: #4183D7; // Blue
+$btn-case-study-bg: #F5B041; // Gold/Yellow
+$btn-text-color: #fff;
+$btn-padding: 10px 25px;
+$btn-border-radius: 4px;
+$btn-font-size: 0.9rem;
+$btn-font-weight: 600;
+$btn-text-transform: uppercase;
+
+$author-avatar-size: 40px;
+$author-text-color: #666;
+$author-name-weight: 600;
+$date-font-size: 0.85rem;
+
+.latest-news-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); // Responsive grid
+    gap: 30px;
+    padding-top: 20px; // Space below 'Latest News' title row
+}
+
+.news-card {
+    background-color: #fff;
+    border-radius: $news-card-border-radius;
+    box-shadow: $news-card-shadow;
+    overflow: hidden; // Clip image corners
+    display: flex;
+    flex-direction: column;
+    color: #333; // Default text color for card content
+
+    .news-card-image-container {
+        position: relative; // For positioning the tag
+        width: 100%;
+        // height: 180px; // Optional: Set a fixed height for images
+        // overflow: hidden; // Optional: If using fixed height
+
+        .news-card-image {
+            display: block;
+            width: 100%;
+            height: 100%; // Fill container height if set
+            object-fit: cover; // Cover the area, cropping if needed
+        }
+
+        .category-tag {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            padding: $tag-padding;
+            border-radius: $tag-border-radius;
+            color: $tag-text-color;
+            font-size: $tag-font-size;
+            font-weight: $btn-font-weight;
+            text-transform: $btn-text-transform;
+            line-height: 1;
+
+            &.news { background-color: $tag-news-bg; }
+            &.careers { background-color: $tag-careers-bg; }
+            &.case-study { background-color: $tag-case-study-bg; }
         }
     }
- }
+
+    .news-card-content {
+        padding: $news-card-padding;
+        display: flex;
+        flex-direction: column;
+        flex-grow: 1; // Allow content to push author info down
+    }
+
+    .news-card-title {
+        font-size: 1.3rem;
+        font-weight: 600;
+        margin-bottom: 15px;
+        line-height: 1.3;
+
+        // Specific title colors matching tags
+        &.news { color: $tag-news-bg; }
+        &.careers { color: $tag-careers-bg; }
+        &.case-study { color: $tag-case-study-bg; }
+
+        small {
+            font-size: 0.85em;
+            color: #888;
+            font-weight: 400;
+            text-transform: uppercase;
+        }
+    }
+
+    .news-card-description {
+        font-size: 0.95rem;
+        color: $author-text-color;
+        line-height: 1.6;
+        margin-bottom: 20px;
+        flex-grow: 1; // Push button down
+    }
+
+    .read-more-btn {
+        display: inline-flex; // Use flex for centering
+        align-items: center;
+        justify-content: center;
+        padding: $btn-padding;
+        border-radius: $btn-border-radius;
+        color: $btn-text-color;
+        font-size: $btn-font-size;
+        font-weight: $btn-font-weight;
+        text-transform: $btn-text-transform;
+        text-decoration: none;
+        transition: background-color 0.3s ease;
+        align-self: flex-start; // Align button to the left
+        white-space: nowrap;
+
+        &.news { background-color: $btn-news-bg; }
+        &.careers { background-color: $btn-careers-bg; }
+        &.case-study { background-color: $btn-case-study-bg; }
+
+        &:hover {
+            filter: brightness(90%); // Simple hover effect
+        }
+    }
+
+    .card-separator {
+        border: 0;
+        height: 1px;
+        background-color: #eee;
+        margin: 25px 0; // Space above and below separator
+    }
+
+    .author-info {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        margin-top: auto; // Push to bottom if needed (though separator usually handles this)
+    }
+
+    .author-avatar {
+        width: $author-avatar-size;
+        height: $author-avatar-size;
+        border-radius: 50%;
+        object-fit: cover;
+    }
+
+    .author-details {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .author-name {
+        font-weight: $author-name-weight;
+        color: #333;
+        font-size: 0.95rem;
+    }
+
+    .post-date {
+        font-size: $date-font-size;
+        color: $author-text-color;
+    }
+}
+
+// Responsive adjustments (optional, based on your needs)
+@media (max-width: 768px) {
+    .latest-news-container {
+        grid-template-columns: 1fr; // Stack cards on smaller screens
+    }
+}
