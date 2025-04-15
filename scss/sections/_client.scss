@@ -56,7 +56,7 @@
         flex-direction: row;
 
         // Medium breakpoint only - stack buttons
-        @media (min-width: $breakpoint-md) and (max-width: #{$breakpoint-lg - 1}) {
+        @media (min-width: $breakpoint-md) and (max-width: ($breakpoint-lg - 1)) {
             flex-direction: column;
             gap: 10px;
         }
@@ -64,6 +64,7 @@
         a {
             display: inline-flex;
             align-items: center;
+            justify-content: center;
             padding: 15px 25px;
             border-radius: 3px;
             text-transform: uppercase;
@@ -78,23 +79,27 @@
                 margin-left: 8px;
                 font-size: 0.9rem;
             }
+        }
 
-            &.google-reviews {
-                background-color: #4285f4;
-                color: $color-white;
+        .google-reviews {
+            width: 263px;
+            height: 54px;
+            background-color: #4285f4;
+            color: $color-white;
 
-                &:hover {
-                    background-color: darken(#4285f4, 10%);
-                }
+            &:hover {
+                background-color: darken(#4285f4, 10%);
             }
+        }
 
-            &.trustpilot-reviews {
-                background-color: #00b67a;
-                color: $color-white;
+        .trustpilot-reviews {
+            width: 293px;
+            height: 54px;
+            background-color: #00b67a;
+            color: $color-white;
 
-                &:hover {
-                    background-color: darken(#00b67a, 10%);
-                }
+            &:hover {
+                background-color: darken(#00b67a, 10%);
             }
         }
     }
