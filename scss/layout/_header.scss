@@ -2,7 +2,7 @@
 .header {
   // Base header styles (mobile-first)
   background-color: $color-white;           // Header background from variables
-  padding: 20px 0;                          // Vertical padding for header
+  padding: 9px 0;                          // Vertical padding for header
 
   // Container for header content
   .header-content {
@@ -89,40 +89,70 @@
     }
   }
 
-  .search-box-2 {
-    display: none;
+  // Search button base styles
+  .search-btn {
+    color: $color-white;
+    font-size: rems(23px);
+    padding: 0;
+    text-transform: uppercase;
+    display: none; // Hidden by default
+    width: 60px;
+    height: 56px;
+    border-radius: 3px;  // All corners rounded when standalone
+    border: none;
+    background-color: $color-button-grey;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+
+    i {
+      font-size: rems(23px);
+    }
+
+    &:hover {
+      background-color: darken($color-button-grey, 8%);
+    }
   }
 
-  // Search box row: located below the top row (logo and icons)
-  .search-box-1 {
+  // Search box styles
+  .search-box-1, .search-box-2 {
+    position: relative;
     display: flex;
     align-items: center;
-    width: 100%;
-    background-color: lighten($color-border, 15%); // A subtle background tint for the search area
-    border: 1px solid $color-border;        
-    border-radius: 2px;                     // Slightly rounded corners for the search input container
-    padding: 5px;
+    background-color: lighten($color-border, 15%);
+    border: 1px solid $color-border;
+    border-radius: 2px;
+    padding: 0;
+    height: 56px;
     
     input {
-      flex: 1;                             // Take up available horizontal space
-      border: none;                        // Remove inner border
-      padding: 10px;                       // Internal padding
-      font-size: rems(16px);                // Font size as needed
+      flex: 1;
+      border: none;
+      padding: 10px;
+      font-size: rems(16px);
       background: transparent;
-      color: $color-background;             // Input text colour from variable
+      color: $color-background;
+      height: 100%;
       &:focus {
-        outline: none;                     // Remove browser default outline
+        outline: none;
       }
     }
-    
+
+    // When button is inside search box
     .search-btn {
-      background: none;                    // Transparent background for button
-      border: none;
-      font-size: rems(20px);                // Icon size
-      color: $color-background;             // Use your variable for colour
-      padding: 0 8px;                      // Horizontal padding around the button
-      cursor: pointer;
+      position: absolute;
+      right: 0;
+      top: 0;
+      border-radius: 0 3px 3px 0;  // Only right corners rounded when in search box
     }
+  }
+
+  .search-box-1 {
+    width: 100%;
+  }
+
+  .search-box-2 {
+    display: none;
   }
 
   // ----------- Media Queries for Larger Viewports ------------------
@@ -137,36 +167,12 @@
       display: none;
     }
 
-    // Search box 2 for small breakpoint
     .search-box-2 {
       display: flex;
-      align-items: center;
       width: 174px;
-      height: 56px;
-      background-color: lighten($color-border, 15%); // A subtle background tint for the search area
-      border: 1px solid $color-border;        
-      border-radius: 2px;                     // Slightly rounded corners for the search input container
-      padding: 5px;
-      
-      input {
-        flex: 1;                             // Take up available horizontal space
-        border: none;                        // Remove inner border
-        padding: 10px;                       // Internal padding
-        font-size: rems(16px);                // Font size as needed
-        background: transparent;
-        color: $color-background;             // Input text colour from variable
-        &:focus {
-          outline: none;                     // Remove browser default outline
-        }
-      }
-      
+
       .search-btn {
-        background: none;                    // Transparent background for button
-        border: none;
-        font-size: rems(20px);                // Icon size
-        color: $color-background;             // Use your variable for colour
-        padding: 0 8px;                      // Horizontal padding around the button
-        cursor: pointer;
+        display: flex;
       }
     }
   }
@@ -174,43 +180,76 @@
   // At medium breakpoint
   @media (min-width: $breakpoint-md) {
     .header-content {
-      flex-direction: row;                // Switch from column to row
+      flex-direction: row;
       justify-content: space-between;
       align-items: center;
     }
- .search-btn {
-    display: flex !important;
-    }
     
     .header-top {
-      margin-bottom: 0;                   // Remove bottom margin on larger screens 
+      margin-bottom: 0;
       display: flex;
       align-items: center;
       justify-content: space-between;
       width: 100%;
 
       .header-top-buttons {
-        display: flex;                    // Show buttons from medium breakpoint up
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+
+      // Show standalone search button
+      .search-btn {
+        display: flex;
       }
     }
 
-    // Hide both search boxes at medium breakpoint
-     
-    .search-box-1,
-    .search-box-2 {
+    // Hide both search boxes
+    .search-box-1, .search-box-2 {
       display: none;
+    }
+  }
+  
+  // Add specific breakpoint for 992px-1200px
+  @media (min-width: $breakpoint-md) and (max-width: $breakpoint-lg) {
+    .header-top {     
+
+        .search-btn {
+          display: flex;
+        }
+      }
     }
   }
   
   // At large breakpoint
   @media (min-width: $breakpoint-lg) {
-    .header-top {
-      .logo {
-        padding: 15px;                     // More padding on large screens
-              }
-        .search-box-2 {
-          display: flex;
+    .header {
+      .header-top {
+        .logo {
+          padding: 15px;
         }
+
+        .search-btn {
+          display: none;
+        }
+      }
+      
+      .search-box-2 {
+        display: flex;
+        width: 300px;
+
+        .search-btn {
+          display: flex;
+          position: absolute;
+          right: 0;
+          top: 0;
+        }
+
+        input {
+          padding-right: 70px;
+        }
+      }
     }
   }
-}
+
+

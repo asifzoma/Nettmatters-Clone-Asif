@@ -153,23 +153,6 @@
             }
         }
 
-        @media (min-width: 768px) {
-            grid-template-columns: repeat(3, 1fr);
-            max-width: 992px;
-            padding: 15px;
-            gap: 10px;
-
-            .service-card {
-                padding: 20px;
-                max-width: none;
-                margin: 0;
-
-                .OS_card_para {
-                    padding: 0 15px;
-                }
-            }
-        }
-
         @media (min-width: 992px) {
             grid-template-columns: repeat(3, 1fr);
             max-width: 1200px;
