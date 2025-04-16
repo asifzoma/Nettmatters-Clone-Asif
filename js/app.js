@@ -79,16 +79,30 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 });
 
-// Initialize partners slider
-$(document).ready(function(){
-    $('.partners_row').slick({
-        slidesToShow: 8,
-        slidesToScroll: 1,
+// Initialize both sliders with their specific settings
+$(document).ready(function() {
+    // Hero slider initialization
+    $('.hero-slider').slick({
+        dots: true,
+        infinite: true,
         autoplay: true,
         autoplaySpeed: 3000,
+        speed: 600,
+        arrows: false,
+        fade: false,
+        cssEase: 'linear'
+    });
+
+    // Partners slider initialization with different settings
+    $('.partner_images').slick({
+        slidesToShow: 10,
+        slidesToScroll: 1,
+        autoplay: true,
+        autoplaySpeed: 2000,
         arrows: false,
         dots: false,
-        pauseOnHover: false,
+        pauseOnHover: true,
+        infinite: true,
         responsive: [
             {
                 breakpoint: 1024,

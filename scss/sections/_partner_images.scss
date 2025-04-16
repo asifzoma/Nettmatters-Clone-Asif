@@ -11,11 +11,7 @@
     }
 
     .partners_row {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
         height: 69.95px;
-        gap: 30px;
 
         img {
             max-height: 100%;
@@ -28,21 +24,21 @@
                 filter: grayscale(0%);
             }
         }
-    }
-}
 
-// Slick slider specific styles
-.slick-track {
-    display: flex !important;
-    align-items: center;
-}
+        // Scoped Slick styles for partners
+        .slick-track {
+            display: flex !important;
+            align-items: center;
+        }
 
-.slick-slide {
-    height: auto;
-    padding: 0 20px;
-    
-    img {
-        display: block;
-        margin: 0 auto;
+        .slick-slide {
+            height: auto;
+            padding: 0 20px;
+            
+            img {
+                display: block;
+                margin: 0 auto;
+            }
+        }
     }
 }

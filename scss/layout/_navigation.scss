@@ -66,88 +66,103 @@
     text-align: center;
     position: relative;
     flex: 1;
+    background: $nav-main;
+
+    a {
+        text-decoration: none;
+        display: block;
+        padding: 15px 10px;
+        transition: all 0.3s ease;
+    }
+
+    .fas {
+        font-size: 24px;
+        display: block;
+        margin-bottom: 8px;
+        transition: color 0.3s ease;
+    }
+
+    span, small {
+        display: block;
+        color: $color-white;
+        text-transform: uppercase;
+        transition: color 0.3s ease;
+    }
+
+    span {
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 1.2;
+    }
+
+    small {
+        font-size: 10px;
+        letter-spacing: 0.5px;
+        margin-bottom: 2px;
+    }
 }
 
-.nav-item a {
-    text-decoration: none;
-    display: block;
-    padding: 15px 10px;
-    transition: all 0.3s ease;
-    color: #ffffff; /* White text */
+/* Section-specific colors */
+.nav-item.software .fas {
+    color: $nav-software;
 }
 
-/* Netmatters Color Scheme */
-.nav-item.software a:hover,
-.nav-item.software.active a {
-    background: #2c9cdb; /* Blue */
-    border-bottom: 4px solid #2c9cdb;
+.nav-item.support .fas {
+    color: $nav-support;
 }
 
-.nav-item.support a:hover,
-.nav-item.support.active a {
-    background: #2d9d2c; /* Green */
-    border-bottom: 4px solid #2d9d2c;
+.nav-item.digital .fas {
+    color: $nav-marketing;
 }
 
-.nav-item.digital a:hover,
-.nav-item.digital.active a {
-    background: #d22d89; /* Pink */
-    border-bottom: 4px solid #d22d89;
+.nav-item.telecoms .fas {
+    color: $nav-telecoms;
 }
 
-.nav-item.telecoms a:hover,
-.nav-item.telecoms.active a {
-    background: #e67e22; /* Orange */
-    border-bottom: 4px solid #e67e22;
+.nav-item.web .fas {
+    color: $nav-web;
 }
 
-.nav-item.web a:hover,
-.nav-item.web.active a {
-    background: #9b59b6; /* Purple */
-    border-bottom: 4px solid #9b59b6;
+.nav-item.cyber .fas {
+    color: $nav-security;
 }
 
-.nav-item.cyber a:hover,
-.nav-item.cyber.active a {
-    background: #3498db; /* Light Blue */
-    border-bottom: 4px solid #3498db;
+.nav-item.developer .fas {
+    color: $nav-course;
 }
 
-.nav-item.developer a:hover,
-.nav-item.developer.active a {
-    background: #e74c3c; /* Red */
-    border-bottom: 4px solid #e74c3c;
+/* Hover states */
+.nav-item.software:hover {
+    background: $nav-software;
 }
 
-/* Icon Styling */
-.nav-item .fas {
-    font-size: 24px;
-    display: block;
-    margin-bottom: 8px;
-    color: #ffffff;
-    transition: color 0.3s ease;
+.nav-item.support:hover {
+    background: $nav-support;
 }
 
-/* Text Styling */
-.nav-item span {
-    display: block;
-    font-weight: 600;
-    text-transform: uppercase;
-    font-size: 14px;
-    line-height: 1.2;
+.nav-item.digital:hover {
+    background: $nav-marketing;
 }
 
-.nav-item small {
-    display: block;
-    font-size: 10px;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-    margin-bottom: 2px;
+.nav-item.telecoms:hover {
+    background: $nav-telecoms;
 }
 
-/* Hover Effects */
-.nav-item:hover a {
-    color: #ffffff;
+.nav-item.web:hover {
+    background: $nav-web;
+}
+
+.nav-item.cyber:hover {
+    background: $nav-security;
+}
+
+.nav-item.developer:hover {
+    background: $nav-course;
+}
+
+/* Hover effect for icons */
+.nav-item:hover .fas {
+    color: $color-white;
 }
 
 /* Active State */
@@ -286,7 +301,6 @@ body.menu-open .sidebar-menu {
     transform: translateX(-($sidebar-width)); 
   }
   
-
 @media (max-width: 768px) {
     .nav-item {
         flex: 1 1 33%;
