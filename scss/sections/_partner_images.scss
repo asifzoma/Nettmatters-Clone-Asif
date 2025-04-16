@@ -1,26 +1,48 @@
 .partner_images {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 10px 0;
-    overflow:visible
+    padding: 50px 0;
+    background-color: #fff;
+    width: 100%;
+    overflow: hidden;
+
+    .container {
+        max-width: 2281px;
+        margin: 0 auto;
+        padding: 0 15px;
+    }
+
+    .partners_row {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 69.95px;
+        gap: 30px;
+
+        img {
+            max-height: 100%;
+            width: auto;
+            filter: grayscale(100%);
+            transition: filter 0.3s ease;
+            object-fit: contain;
+
+            &:hover {
+                filter: grayscale(0%);
+            }
+        }
+    }
 }
 
-.partners_row {
-    display: flex;
-    justify-content: center;
+// Slick slider specific styles
+.slick-track {
+    display: flex !important;
     align-items: center;
-    gap: 30px; 
-    flex-wrap: nowrap; 
-    overflow-x: visible; 
-    white-space: nowrap;
-    height: 70px;
 }
 
-.partners_row img {
-    max-height: 70px;
-    width: auto;
-    display: inline-block;
-    object-fit:fill; 
-    margin: 0;
+.slick-slide {
+    height: auto;
+    padding: 0 20px;
+    
+    img {
+        display: block;
+        margin: 0 auto;
+    }
 }

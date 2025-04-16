@@ -79,4 +79,37 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 });
 
+// Initialize partners slider
+$(document).ready(function(){
+    $('.partners_row').slick({
+        slidesToShow: 8,
+        slidesToScroll: 1,
+        autoplay: true,
+        autoplaySpeed: 3000,
+        arrows: false,
+        dots: false,
+        pauseOnHover: false,
+        responsive: [
+            {
+                breakpoint: 1024,
+                settings: {
+                    slidesToShow: 6
+                }
+            },
+            {
+                breakpoint: 768,
+                settings: {
+                    slidesToShow: 4
+                }
+            },
+            {
+                breakpoint: 480,
+                settings: {
+                    slidesToShow: 2
+                }
+            }
+        ]
+    });
+});
+
 
