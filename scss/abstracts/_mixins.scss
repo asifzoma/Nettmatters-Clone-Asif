@@ -181,7 +181,7 @@
   padding: 15px 0;
   max-height: 100px;
 
-  @media (min-width: 992px) {
+  @media (min-width: $breakpoint-lg) {
     display: block;
   }
 }

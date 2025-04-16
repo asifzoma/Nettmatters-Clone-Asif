@@ -9,7 +9,7 @@
 
         .service-card {
             width: 100%;
-            padding: 15px;
+            padding: 30px;
             background: #fff;
             border-radius: 15px;
             box-shadow: 0 3px 35px rgba(0, 0, 0, 0.1);
@@ -160,9 +160,8 @@
             gap: 10px;
 
             .service-card {
-                padding: 14px;
-                max-width: 697px;
-                height: 269px;
+                padding: 20px;
+                max-width: none;
                 margin: 0;
 
                 .OS_card_para {
