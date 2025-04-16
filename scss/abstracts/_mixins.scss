@@ -108,3 +108,267 @@
     background-color: darken($bg-color, 10%);
   }
 }
+
+// Navigation Mixins
+@mixin nav-item-base {
+  text-align: center;
+  position: relative;
+  flex: 1;
+  max-width: 167px;
+  background: $nav-main;
+  transition: background-color 0.3s ease;
+
+  a {
+    @include clickable;
+    text-decoration: none;
+    display: block;
+    padding: 0;
+    transition: all 0.3s ease;
+    height: 98px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .fas {
+    font-size: 24px;
+    display: block;
+    margin-bottom: 8px;
+    transition: color 0.3s ease;
+  }
+
+  span, small {
+    display: block;
+    color: $color-white;
+    text-transform: uppercase;
+    transition: color 0.3s ease;
+  }
+
+  span {
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 1.2;
+  }
+
+  small {
+    font-size: 10px;
+    letter-spacing: 0.5px;
+    margin-bottom: 2px;
+  }
+}
+
+@mixin nav-item-theme($color) {
+  .fas {
+    color: $color;
+  }
+
+  &:hover {
+    background: $color;
+    .fas {
+      color: $color-white;
+    }
+  }
+
+  &.active {
+    border-bottom: 4px solid $color;
+  }
+}
+
+@mixin nav-container {
+  display: none;
+  background: $nav-main;
+  border-bottom: 4px solid #eeeeee;
+  padding: 15px 0;
+  max-height: 100px;
+
+  @media (min-width: $breakpoint-lg) {
+    display: block;
+  }
+}
+
+@mixin nav-list {
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+  padding: 0;
+  list-style: none;
+  max-width: 2281px;
+  gap: 0;
+
+  @media (max-width: 1200px) {
+    flex-wrap: wrap;
+  }
+}
+
+// Updated Button Mixin
+@mixin button-base($bg-color, $height: 54px, $width: auto) {
+  @include clickable;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: $width;
+  height: $height;
+  padding: 15px;
+  border-radius: 3px;
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 0.9rem;
+  letter-spacing: 0.5px;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  white-space: nowrap;
+  color: $color-white;
+  background-color: $bg-color;
+  border: none;
+
+  i {
+    margin-left: 8px;
+    font-size: 0.9rem;
+  }
+
+  &:hover {
+    filter: brightness(85%);
+  }
+}
+
+// Clickable elements mixin
+@mixin clickable {
+  cursor: pointer;
+}
+
+// Update nav-item-base mixin
+@mixin nav-item-base {
+  text-align: center;
+  position: relative;
+  flex: 1;
+  max-width: 167px;
+  background: $nav-main;
+  transition: background-color 0.3s ease;
+
+  a {
+    @include clickable;
+    text-decoration: none;
+    display: block;
+    padding: 0;
+    transition: all 0.3s ease;
+    height: 98px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .fas {
+    font-size: 24px;
+    display: block;
+    margin-bottom: 8px;
+    transition: color 0.3s ease;
+  }
+
+  span, small {
+    display: block;
+    color: $color-white;
+    text-transform: uppercase;
+    transition: color 0.3s ease;
+  }
+
+  span {
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 1.2;
+  }
+
+  small {
+    font-size: 10px;
+    letter-spacing: 0.5px;
+    margin-bottom: 2px;
+  }
+}
+
+// Update button-base mixin
+@mixin button-base($bg-color, $height: 54px, $width: auto) {
+  @include clickable;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: $width;
+  height: $height;
+  padding: 15px;
+  border-radius: 3px;
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 0.9rem;
+  letter-spacing: 0.5px;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  white-space: nowrap;
+  color: $color-white;
+  background-color: $bg-color;
+  border: none;
+
+  i {
+    margin-left: 8px;
+    font-size: 0.9rem;
+  }
+
+  &:hover {
+    filter: brightness(85%);
+  }
+}
+
+// Update button mixin
+@mixin button(
+  $bg-color, 
+  $text-color: $color-white, 
+  $font-size: rems(18px), 
+  $padding-y: 6px, 
+  $padding-x: 16px, 
+  $height: 56px, 
+  $border-radius: 4px, 
+  $border-width: 2px
+) {
+  @include clickable;
+  background-color: $bg-color;
+  color: $text-color;
+  font-size: $font-size;
+  padding: $padding-y $padding-x;
+  height: $height;
+  border: $border-width solid $bg-color;
+  border-radius: $border-radius;
+  text-transform: uppercase;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  
+  &:hover {
+    background-color: darken($bg-color, 10%);
+  }
+}
+
+// Update button-support mixin
+@mixin button-support {
+  @include clickable;
+  background-color: $color-button-blue;
+  color: $color-white;
+  font-size: rems(18px);
+  padding: 14px 20px;
+  display: inline-block;
+  border: none;
+  font-weight: 600;
+  text-transform: uppercase;
+  border-radius: 3px;
+}
+
+// Update button-contact mixin
+@mixin button-contact {
+  @include clickable;
+  background-color: $color-button-grey;
+  color: $color-white;
+  font-size: rems(18px);
+  padding: 14px 20px;
+  display: inline-block;
+  border: none;
+  font-weight: 600;
+  text-transform: uppercase;
+  border-radius: 3px;
+}

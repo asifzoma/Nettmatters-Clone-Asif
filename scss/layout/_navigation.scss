@@ -40,95 +40,44 @@
 
 /* Main Navigation Styling */
 .main-nav {
-    display: none;  // Hide by default
-    background: $nav-main;
-    border-bottom: 4px solid #eeeeee;
-    padding: 15px 0;
-    max-height: 100px;
-
-    // Show at large breakpoint
-    @media (min-width: $breakpoint-lg) {
-        display: block;
-    }
+  @include nav-container;
 }
 
 .nav-list {
-    display: flex;
-    justify-content: space-between;
-    margin: 0;
-    padding: 0;
-    list-style: none;
-    max-width: 1200px;
-    margin: 0 auto;
+  @include nav-list;
 }
 
 .nav-item {
-    text-align: center;
-    position: relative;
-    flex: 1;
-    background: $nav-main;
-
-    a {
-        text-decoration: none;
-        display: block;
-        padding: 15px 10px;
-        transition: all 0.3s ease;
-    }
-
-    .fas {
-        font-size: 24px;
-        display: block;
-        margin-bottom: 8px;
-        transition: color 0.3s ease;
-    }
-
-    span, small {
-        display: block;
-        color: $color-white;
-        text-transform: uppercase;
-        transition: color 0.3s ease;
-    }
-
-    span {
-        font-weight: 600;
-        font-size: 14px;
-        line-height: 1.2;
-    }
-
-    small {
-        font-size: 10px;
-        letter-spacing: 0.5px;
-        margin-bottom: 2px;
-    }
+  @include nav-item-base;
 }
 
 /* Section-specific colors */
-.nav-item.software .fas {
-    color: $nav-software;
+.nav-item.software {
+  @include nav-item-theme($nav-software);
 }
 
-.nav-item.support .fas {
-    color: $nav-support;
+.nav-item.support {
+  @include nav-item-theme($nav-support);
 }
 
-.nav-item.digital .fas {
-    color: $nav-marketing;
+.nav-item.digital {
+  @include nav-item-theme($nav-marketing);
 }
 
-.nav-item.telecoms .fas {
-    color: $nav-telecoms;
+.nav-item.telecoms {
+  @include nav-item-theme($nav-telecoms);
 }
 
-.nav-item.web .fas {
-    color: $nav-web;
+.nav-item.web {
+  @include nav-item-theme($nav-web);
 }
 
-.nav-item.cyber .fas {
-    color: $nav-security;
+.nav-item.cyber {
+  @include nav-item-theme($nav-security);
 }
 
-.nav-item.developer .fas {
-    color: $nav-course;
+.nav-item.developer {
+  @include nav-item-theme($nav-course);
 }
 
 /* Hover states */
@@ -172,10 +121,6 @@
 
 /* Responsive Design */
 @media (max-width: 1200px) {
-    .nav-list {
-        flex-wrap: wrap;
-    }
-    
     .nav-item {
         flex: 1 1 25%;
         padding: 10px 0;
