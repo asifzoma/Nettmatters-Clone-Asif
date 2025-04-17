@@ -41,72 +41,58 @@
 /* Main Navigation Styling */
 .main-nav {
   @include nav-container;
+  position: relative;
+  z-index: 1000; // Higher z-index to ensure navigation and dropdowns appear above other content
+  background: $nav-main;
+  display: block; // Always show the navigation
+  
+  @media (max-width: 768px) {
+    display: none; // Hide on mobile
+  }
 }
 
 .nav-list {
   @include nav-list;
+  position: relative;
 }
 
 .nav-item {
   @include nav-item-base;
-}
-
-/* Section-specific colors */
-.nav-item.software {
-  @include nav-item-theme($nav-software);
-}
-
-.nav-item.support {
-  @include nav-item-theme($nav-support);
-}
-
-.nav-item.digital {
-  @include nav-item-theme($nav-marketing);
-}
-
-.nav-item.telecoms {
-  @include nav-item-theme($nav-telecoms);
-}
-
-.nav-item.web {
-  @include nav-item-theme($nav-web);
-}
-
-.nav-item.cyber {
-  @include nav-item-theme($nav-security);
-}
-
-.nav-item.developer {
-  @include nav-item-theme($nav-course);
-}
-
-/* Hover states */
-.nav-item.software:hover {
-    background: $nav-software;
-}
-
-.nav-item.support:hover {
-    background: $nav-support;
-}
-
-.nav-item.digital:hover {
-    background: $nav-marketing;
-}
-
-.nav-item.telecoms:hover {
-    background: $nav-telecoms;
-}
-
-.nav-item.web:hover {
-    background: $nav-web;
-}
-
-.nav-item.cyber:hover {
-    background: $nav-security;
-}
-
-.nav-item.developer:hover {
-    background: $nav-course;
+  
+  &.software {
+    @include nav-item-theme($nav-software);
+  }
+  
+  &.support {
+    @include nav-item-theme($nav-support);
+  }
+  
+  &.digital {
+    @include nav-item-theme($nav-marketing);
+  }
+  
+  &.telecoms {
+    @include nav-item-theme($nav-telecoms);
+  }
+  
+  &.web {
+    @include nav-item-theme($nav-web);
+  }
+  
+  &.cyber {
+    @include nav-item-theme($nav-security);
+  }
+  
+  &.developer {
+    @include nav-item-theme($nav-course);
+  }
+  
+  // Remove duplicate hover states that might be conflicting
+  &:hover {
+    .fas, span, small {
+      color: $color-white;
+    }
+  }
 }
 
 /* Hover effect for icons */
@@ -126,7 +112,6 @@
         padding: 10px 0;
     }
 }
-
 
 //styling for the sidebar menu
 
@@ -262,4 +247,58 @@ body.menu-open .sidebar-menu {
       display: none;
     }
     
+}
+
+// Make sure navigation is visible at larger screens
+@media (min-width: $breakpoint-md) {
+  .main-nav {
+    display: block;
+  }
+}
+
+/* Dropdown Menu Styling */
+.dropdown-menu {
+  .container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+  }
+
+  h2 {
+    color: $color-white;
+    font-size: 24px;
+    margin-bottom: 20px;
+    font-weight: 600;
+  }
+
+  .dropdown-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+  }
+
+  .dropdown-column {
+    a {
+      color: $color-white;
+      text-decoration: none;
+      font-size: 16px;
+      display: flex;
+      align-items: center;
+      padding: 8px 0;
+      transition: opacity 0.2s ease;
+      height: auto;
+      
+      i {
+        margin-right: 15px;
+        font-size: 18px;
+        width: 20px;
+        text-align: center;
+      }
+      
+      &:hover {
+        opacity: 0.8;
+      }
+    }
+  }
 }

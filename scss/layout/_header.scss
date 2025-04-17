@@ -40,10 +40,12 @@
 
       .btn-support {
         @include button-support;
+        margin-left: 67px;  // Add 67px space to the left of support button
       }
 
       .btn-contact {
         @include button-contact;
+        margin-left: 20px;  // Maintain existing spacing for contact button
       }
     }
     
@@ -66,6 +68,7 @@
         border: none;
         padding: 0;
         cursor: pointer;
+        margin-left: 20px;  // Added 20px space to the left
         
         // Outer container that gives the black box
         .hamburger-box {
@@ -227,6 +230,12 @@
       .header-top {
         .logo {
           padding: 15px;
+          
+          img {
+            width: 364px;  // Set fixed width for largest breakpoint
+            height: 64px;  // Set fixed height for largest breakpoint
+            object-fit: contain;  // Maintain aspect ratio while fitting within dimensions
+          }
         }
 
         .search-btn {
