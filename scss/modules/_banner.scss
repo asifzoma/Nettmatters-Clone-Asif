@@ -1,64 +1,41 @@
 // ==========================================================================
 // Banner Styles
-// These styles apply to the main banner/hero image slider at the top of the page.
 // ==========================================================================
 
-// Styles for the background of each banner slide.
+// .banner-outer-container {
+
+// }
+
 .banner-background {
-    // Make sure slides are treated as flex items (important might be needed due to slider library styles).
     display: flex !important;
-    // Make the background image cover the entire slide area.
     background-size: cover;
-    // Center the content horizontally within the slide.
     justify-content: center;
-    // Center the text horizontally.
     text-align: center;
-    // Center the content vertically.
     align-items: center;
-    // Allow content to wrap if it doesn't fit horizontally.
     flex-wrap: wrap;
-    // Center the slide container itself if needed (useful if the container has a fixed width).
     margin: auto;
-    // Set a minimum height for the banner slides.
     min-height: 550px !important;
-    // Position the background image in the center.
     background-position: center;
-    // Prevent the background image from repeating.
     background-repeat: no-repeat;
-    // Example of gradient overlay (commented out): adds a dark fade from the right.
     //background-image: linear-gradient(270deg, transparent 25%, #000), url('../img/banner-img/home-YLei.png');
 }
 
-// Styles for the content container within each banner slide.
 .banner {
-    // Set the text color to white.
     color: #fff;
-    // Center the container.
     margin: auto;
-    // Use flexbox for content layout.
     display: flex;
     flex-wrap: wrap;
-    // Arrange content (title, paragraph, button) vertically.
     flex-direction: column;
-        // Styles for links within the banner content.
         a {
-            // Remove default underline from links.
             text-decoration: none;
         }
-        // Styles for the main heading (<h1>).
         h1 {
-            // Set font size.
             font-size: 2.5rem;
-            // Set line height.
             line-height: 3rem;
-            // Add space below the heading.
             margin: 0 0 1.25rem;
-            // Set font weight (boldness).
             font-weight: 600;
         }
-        // Styles for the paragraph text (<p>).
         p {
-            // Add space below the paragraph.
             margin-bottom: .375rem;
             font-size: 1.25rem;
             line-height: 1.75rem;
@@ -66,9 +43,7 @@
         }
 }
 
-// Banner Background Image Definitions
-// Each rule applies a specific background image (with a gradient overlay) to a banner slide.
-// The linear-gradient darkens the image slightly from the right for better text readability.
+// Banner Backgrounds 
 .banner-background-1 {
     background-image: linear-gradient(270deg, transparent 25%, #000), url('../img/banner-img/home-YLei.png');
 }
@@ -97,13 +72,10 @@
     background-image: linear-gradient(270deg, transparent 25%, #000), url('../img/banner-img/home-MSxH.png');
 }
 
-// Media Queries for Responsive Banner Styles
+//Media Queries
 .banner {
-    // When the screen width is 992px or wider (laptops/desktops)...
     @media (min-width: 992px) {
-        // Align text to the left instead of center.
-        text-align: left;
-        // Increase font sizes and line heights for larger screens.
+    text-align: left;
         h1 {
             font-size: 4rem;
             line-height: 5rem;
@@ -116,4 +88,4 @@
             font-weight: 600;
         }
     }
-}
+} 
