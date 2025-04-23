@@ -7,28 +7,99 @@
 // Components
 @import 'components/menu-icon';
 @import 'components/slider';
-@import 'components/service_cards_1';
-@import 'components/service_cards_2';
 @import 'components/media';
-@import 'components/text_above_cards';
 @import 'components/cookie-popup';
 
 
 // Layout
 @import 'layout/_navigation';
-@import 'layout/header';
-@import 'layout/footer';
-@import 'layout/middle';
+@import 'layout/_header';
+@import 'layout/_footer';
+@import 'layout/_middle';
 
 // Sections
-@import 'sections/client';
-@import 'sections/our_services_1';
-@import 'sections/our_services_2';
-@import 'sections/partner_images';
-@import 'sections/welcome-client-section';
-@import 'sections/welcome-section';
+@import 'sections/_our_services_1';
+@import 'sections/_partner_images';
+@import 'sections/_welcome-section';
 @import 'sections/case_studies';
-@import 'sections/latest_news_cards';
+@import 'sections/_latest_news_cards';
+
+// ==========================================================================
+//  Layout
+// ==========================================================================
+
+// Layout
+@import "layout/layout.scss";
+
+// ==========================================================================
+//  Modules
+// ==========================================================================
+
+// Header
+
+@import "modules/header";
+
+// Drop Down Menu
+
+@import "modules/drop-down-menu";
+
+// Banner
+
+@import "modules/banner";
+
+// Our services
+
+@import "modules/our-services";
+
+// Partners
+
+@import "modules/partners";
+
+// Welcome Section
+
+@import "modules/welcome";
+
+// Latest News
+
+@import "modules/latest-news";
+
+// Case Studies
+
+@import "modules/case-studies";
+
+// Footer
+
+@import "modules/footer.scss";
+
+// Buttons
+
+@import "modules/buttons";
+
+// Icons
+
+@import "modules/icons";
+
+// Sidebar
+@import "modules/sidebar";
+
+// ==========================================================================
+//  Utilities
+// ==========================================================================
+
+// Global config
+
+@import "utilities/config.scss";
+
+// Mixins
+
+@import "utilities/mixins";
+
+
+// ==========================================================================
+//  JavaScript Styles
+// ==========================================================================
+
+@import "modules/jsstyles.scss"
 
 
     

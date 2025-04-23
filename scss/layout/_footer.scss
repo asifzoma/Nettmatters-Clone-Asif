@@ -1,34 +1,194 @@
+// Netmatters-Clone-Asif/scss/layout/_footer.scss
+
+// Source: NetMatters-Website-Assessment-2/scss/modules/_footer.scss
+// ==========================================================================
+// Footer Styles
+// ==========================================================================
+
 footer {
-   background-color: $background-color;
-   color: #fff;
-   padding: 30px 0 0;
+    background-color: #323544; // Consider using a variable like $footer-bg-color
+    color: #fff; // Consider using a variable like $footer-text-color
+    padding: 30px 0 0;
+    position: relative;
+    .footer-row {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        flex-direction: column;
+        .footer-logo {
+         width: auto;
+               img {
+                  width: 100%;
+                  vertical-align: middle;
+                  border: 0;
+               }
+               h4 {
+                  font-weight: 400;
+               }
+        }
+        .footer-company-info {
+            display: flex;
+            justify-content: space-between;
+            h4 {
+               margin-top: 24px;
+            }
+         .footer-company-socials-logos {
+               display: flex;
+               flex-wrap: wrap;
+               flex-direction: row;
+                  a {
+                     margin-right: 10px;
+                     margin-bottom: 10px;
+                  }
+            }
+         }
+        .footer-menu {
+            margin-bottom: 30px;
+               a {
+                  color: #fff; // Consider using a variable like $footer-link-color
+                  text-decoration: none;
+               }
+            h4 {
+                text-transform: uppercase;
+                font-size: 1rem;
+                font-weight: 400;
+                margin-bottom: 26px;
+                line-height: 1.1;
+            }
+            .footer-menu-list li:hover {
+               text-decoration: underline;
+            }
+       }
+
+       ul {
+         list-style-type: none;
+         margin: auto;
+      }
+
+      h4 {
+         color: #fff; // Consider using a variable like $footer-heading-color
+         text-transform: uppercase;
+         font-size: 1rem;
+         margin-bottom: 26px;
+      }
+   }
+}
+    .footer-menu-list {
+      padding-left: 0;
+      li {
+         font-size: .8125rem; // 13px
+         line-height: 1.375rem; // 22px
+      }
+    }
+
+   .footer-logo-container {
+      align-self: center;
+      margin-bottom: 30px;
+   }
+// Sticky footer element
+.container-sticky-footer {
+   width: 100%;
+   background-color: #212330; // Consider using a variable like $sticky-footer-bg-color
+   margin: 0;
+   overflow-y: hidden;
+   p {
+      padding: 5px 0 10px;
+      margin-bottom: 0;
+      margin-top: 0;
+      line-height: 1.42857143; // Default Bootstrap line-height?
+   }
+   a {
+      font-size: .8125rem; // 13px
+      line-height: 1.375rem; // 22px
+   }
+}
+.sticky-footer {
    position: relative;
+   margin-left: auto;
+   margin-right: auto;
+   bottom: 0;
+   width: 100%;
+   color: #fff; // Consider using a variable like $sticky-footer-text-color
+   text-align: left;
+   font-size: .8125rem; // 13px
+   a {
+      text-decoration: none;
+      color: #fff; // Consider using a variable like $sticky-footer-link-color
+   }
+   a:hover {
+      text-decoration: underline;
+      color: #fff; // Consider using a variable like $sticky-footer-link-hover-color
+      list-style: none;
+   }
+}
 
+//Media Queries
+// Consider using variables/mixins for breakpoints (e.g., $breakpoint-xs, $breakpoint-sm, $breakpoint-md, $breakpoint-lg)
+.container-sticky-footer {
+   @media (max-width: 767px) { // $breakpoint-xs-max?
+      padding-top: 10px;
+   }
+   @media (min-width: 769px) { // $breakpoint-sm?
+      flex-direction: row;
+      flex-wrap: wrap;
+   }
+   br {
+      @media (min-width: 769px) { // $breakpoint-sm?
+         display: none;
+      }
+   }
+}
+footer {
    .footer-row {
-       display: flex;
-       flex-wrap: wrap;
+      @media (min-width: 767px) { // $breakpoint-sm-min? (Typo in original? 767px vs 769px above)
+         flex-direction: row;
+      }
+   }
+}
+.sticky-footer {
+   @media (max-width: 767px) { // $breakpoint-xs-max?
+      flex-direction: column;
+   }
+}
 
-       .footer-menu {   
-           flex: 100%;   
-           margin-bottom: 30px;
-          
-           @media (min-width: $breakpoint-sm) {
-              flex: 50%;
-           }
+.footer-menu {
+   @media (min-width: 767px) { // $breakpoint-sm-min?
+      width: 50%;
+   }
+   @media (min-width: 992px) { // $breakpoint-md-min?
+      width: 25%;
+   }
+   @media (min-width: 1260px) { // $breakpoint-lg-min? (Or custom breakpoint?)
+      width: 15%;
+   }
+}
 
-           @media (min-width: $breakpoint-md) {
-              flex: 25%;
-           }
+ .footer-company-info {
+   @media (min-width: 767px) { // $breakpoint-sm-min?
+      width: 100%;
+   }
+   @media (min-width: 992px) { // $breakpoint-md-min?
+      width: 100%;
+   }
+   @media (min-width: 1260px) { // $breakpoint-lg-min? (Or custom breakpoint?)
+      width:400px; // Consider using a variable
+   }
+}
 
-           @media (min-width: $breakpoint-lg) {
-              margin-bottom: 40px;
-           }
+.footer-logo-container {
+   @media (max-width: 480px) { // Custom breakpoint?
+      width: 35%;
+      padding-top: 10px;
+      padding-bottom: 30px;
+      margin-bottom: 0;
+   }
+}
 
-           h4 {
-               text-transform: uppercase;
-               font-size: 1rem;
-               margin-bottom: 26px;	
-           }
-      }	  
+.footer-company-socials-logos {
+   a {
+      @media (max-width: 480px) { // Custom breakpoint?
+         padding-right: 40px;
+         padding-left: 40px;
+      }
    }
 }

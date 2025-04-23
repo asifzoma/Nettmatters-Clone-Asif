@@ -1,173 +1,312 @@
-.latest-news-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); // Responsive grid
-    gap: 30px;
-    padding-top: 20px; // Space below 'Latest News' title row
-}
+// ==========================================================================
+//  Latest News Styles
+//  Styles for the section displaying recent news articles or blog posts.
+// ==========================================================================
 
-.news-card {
-    background-color: #fff;
-    border-radius: $news-card-border-radius;
-    box-shadow: $news-card-shadow;
-    overflow: hidden; // Clip image corners
+// Styles for the container at the top of the Latest News section (holding title and View All link).
+.container-latest-news-top {
+    // Use flexbox for layout.
     display: flex;
-    flex-direction: column;
-    color: #333; // Default text color for card content
+    flex-wrap: wrap;
+    // Space out the title and the link.
+    justify-content: space-between;
+    // Center the container horizontally.
+    margin-right: auto;
+    margin-left: auto;
+    // Add horizontal padding.
+    padding-left: 15px;
+    padding-right: 15px;
 
-    .news-card-image-container {
-        position: relative; // For positioning the tag
-        width: 100%;
-        
-
-        .news-card-image {
-            display: block;
-            width: 100%;
-            height: 100%; // Fill container height 
-            object-fit: cover; 
-        }
-
-        .category-tag {
-            position: absolute;
-            top: 15px;
-            right: 15px;
-            padding: $tag-padding;
-            border-radius: $tag-border-radius;
-            color: $tag-text-color;
-            font-size: $tag-font-size;
-            font-weight: $btn-font-weight;
-            text-transform: $btn-text-transform;
-            line-height: 1;
-
-            &.news { background-color: $tag-news-bg; }
-            &.careers { background-color: $tag-careers-bg; }
-            &.case-study { background-color: $tag-case-study-bg; }
-        }
-    }
-
-    .news-card-content {
-        padding: $news-card-padding;
-        display: flex;
-        flex-direction: column;
-        flex-grow: 1; // Allow content to push author info down
-    }
-
-    .news-card-title {
-        font-size: 1.3rem;
-        font-weight: 600;
-        margin-bottom: 15px;
-        line-height: 1.3;
-
-        // title colors matching tags
-        &.news { color: $tag-news-bg; }
-        &.careers { color: $tag-careers-bg; }
-        &.case-study { color: $tag-case-study-bg; }
-
-        small {
-            font-size: 0.85em;
-            color: #888;
+        // Styles for the main title (h2).
+        h2 {
+            display: flex;
+            flex-wrap: wrap;
+            line-height: 1.1;
+            font-size: 2.25rem;
             font-weight: 400;
-            text-transform: uppercase;
+            color: #333645;
+            // Style the <strong> tag if used within the title.
+            strong {
+                font-weight: 600;
+            }
         }
-    }
 
-    .news-card-description {
-        font-size: 0.95rem;
-        color: $author-text-color;
-        line-height: 1.6;
-        margin-bottom: 20px;
-        flex-grow: 1; // Push button down
-    }
-
-    .read-more-btn {
-        display: inline-flex; // flex for centering
-        align-items: center;
-        justify-content: center;
-        padding: $btn-padding;
-        border-radius: $btn-border-radius;
-        color: $btn-text-color;
-        font-size: $btn-font-size;
-        font-weight: $btn-font-weight;
-        text-transform: $btn-text-transform;
-        text-decoration: none;
-        transition: background-color 0.3s ease;
-        align-self: flex-start; // Align button to the left
-        white-space: nowrap;
-
-        &.news { background-color: $btn-news-bg; }
-        &.careers { background-color: $btn-careers-bg; }
-        &.case-study { background-color: $btn-case-study-bg; }
-
-        &:hover {
-            filter: brightness(90%); 
+        // Styles for the "View All" link container (h3).
+        h3 {
+            display: flex;
+            flex-wrap: wrap;
+            font-size: 1.625rem;
+            font-weight: 600;
+            color: #333645;
+            // Vertically center the link with the title.
+            align-self: center;
+                // Style the actual link (<a>) inside the h3.
+                a {
+                    color: #333645;
+                    text-decoration: none;
+                }
         }
-    }
 
-    .card-separator {
-        border: 0;
-        height: 1px;
-        background-color: #eee;
-        margin: 25px 0; // Space above and below separator
-    }
+        // Styles for the mobile-specific "View All" link container.
+        .view-all-mobile {
+            // Center horizontally.
+            margin: auto;
+            display: flex;
+            flex-wrap: wrap;
+        }
 
-    .author-info {
-        display: flex;
-        align-items: center;
-        gap: 10px;
-        margin-top: auto; // Push to bottom 
+    // Media queries to set container width based on screen size.
+    @media (min-width: 768px) {
+         width: 750px;
     }
+    @media (min-width: 992px) {
+        width: 970px;
+    }
+    @media (min-width: 1260px) {
+        width: 1200px;
+    }
+}
 
-    .author-avatar {
-        width: $author-avatar-size;
-        height: $author-avatar-size;
+// Styles for the mobile "View All" link container.
+.view-all-mobile {
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    // Center the link text horizontally.
+    justify-content: center;
+    a {
+        font-size: 1.625rem;
+        font-weight: 600;
+        color: #333645;
+    }
+    h3 {
+        margin: 0; // Remove default heading margin.
+    }
+}
+
+// Container for the list of news articles.
+.news-list {
+    // Use flexbox.
+    display: flex;
+    flex-wrap: wrap;
+    // Stack articles vertically on mobile.
+    flex-direction: column;
+    // Add space at the bottom.
+    padding-bottom: 50px;
+}
+
+// Styles for each individual news article container.
+.news-article {
+    // Don't allow shrinking or growing initially.
+    flex: 0 0 auto;
+    // Ensure it doesn't exceed 100% width.
+    max-width: 100%;
+    // Set initial position for hover effect.
+    top: 0;
+    position: relative;
+}
+
+// Styles for the content block within each news article.
+.article {
+    // Needed for positioning elements inside.
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    // Stack elements vertically.
+    flex-direction: column;
+    width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+    font-size: .8125rem;
+    // Add space above each article.
+    margin-top: 30px;
+    position: relative;
+    top: 0;
+}
+
+// Container for the article image.
+.article-img-container {
+    position: relative; // Needed for positioning the category tag.
+    display: flex;
+    margin: auto; // Center the image container if needed.
+}
+
+// Styles for the category tags (e.g., "Careers", "Insights") on the image.
+.article-img-btn {
+    // Position the tag absolutely within the image container.
+    position: absolute;
+    right: 0;
+    color: #fff;
+    font-size: .75rem;
+    padding: 0 10px;
+    line-height: 1.438rem;
+    top: 10px;
+    // Ensure the tag is above the image.
+    z-index: 1;
+    text-transform: uppercase;
+}
+
+/* Specific background colors for tags (commented out, assumes classes like .art-btn-1 exist) */
+// .art-btn-1 { background-color: #db8c0d; }
+// .art-btn-2 { background-color: #2ecc71; }
+// .art-btn-3 { background-color: #926fb1; }
+
+// Styles for the article image link/container.
+.article-img {
+    padding: 0;
+    margin: 0;
+    // Styles for the actual image (<img>) tag.
+    img {
+        max-width: 100%;
+        max-height: 100%;
+        display: flex; // Use flex to handle potential alignment issues.
+    }
+}
+
+// Styles for the text content block below the image.
+.article-block {
+    max-width: 100%;
+    border-top: 0; // Remove top border if any.
+    // Add border around the text block.
+    border: 1px solid #ccc;
+    // Add padding inside the block.
+    padding: 30px;
+    // Add shadow effect.
+    box-shadow: 0 3px 35px rgba(0, 0, 0, .1);
+
+    // Specific title colors based on category (requires classes h3-1, h3-2, etc.).
+    .h3-1 { color: #db8c0d; }
+    .h3-2 { color: #2ecc71; }
+    .h3-3 { color: #926fb1; }
+
+    // Styles for headings (<h3>) within the article block.
+    h3 {
+        font-size: 1rem;
+        line-height: 1.5rem;
+        margin: 0 0 15px;
+    }
+    // Styles for paragraph text (<p>).
+    p {
+        line-height: 1.375rem;
+        font-size: .8125rem;
+    }
+}
+
+// Styles for the author information section at the bottom of the article block.
+.user {
+    // Add space above.
+    margin-top: 30px;
+    padding-top: 30px;
+    // Add a separator line.
+    border-top: 1px solid #ccc;
+    // Arrange avatar and details horizontally.
+    display: flex;
+    font-size: .875rem;
+}
+
+// Container for the author's avatar image.
+.user-img {
+    img {
+        // Make the avatar image circular.
         border-radius: 50%;
-        object-fit: cover;
-    }
-
-    .author-details {
-        display: flex;
-        flex-direction: column;
-    }
-
-    .author-name {
-        font-weight: $author-name-weight;
-        color: #333;
-        font-size: 0.95rem;
-    }
-
-    .post-date {
-        font-size: $date-font-size;
-        color: $author-text-color;
     }
 }
 
-// Responsive 
-@media (min-width: 812px) {
-    .latest-news-container {
-        
+// Styles for the author's name and post date.
+.article-date {
+    // Add space to the left of the avatar.
+    padding-left: 20px;
+    line-height: 20px;
+    // Style the author's name (<strong> tag).
+    strong {
+        font-weight: 600;
+        color: #333645;
     }
 }
 
-// Between 420px and 912px: Show only first 2 cards in 2 columns
-@media (min-width: 420px) and (max-width: 912px) {
-    .latest-news-container {
-        grid-template-columns: repeat(2, 1fr); // Force 2 columns
+// Styles for the main container of the entire latest news section.
+.latest-news {
+    padding-top: 50px;
+}
 
-        .news-card:nth-child(n+3) { // Target 3rd card and onwards
-            display: none; // Hide them
+// Hover Effects
+
+// Move the entire article card up slightly on hover.
+.news-article:hover {
+    top: -10px;
+    transition: .5s ease;
+}
+
+// Add underline to category tag on hover.
+.article-img-btn:hover {
+    text-decoration: underline;
+}
+
+// Add underline to "View All" link on hover.
+.latest-news-view-all-link:hover {
+    text-decoration: underline;
+}
+
+// Media Queries for Responsive Layout
+
+.news-list {
+    // When screen width is 767px or more...
+    @media (min-width: 767px) {
+        // Arrange articles horizontally.
+        flex-direction: row;
+        // Prevent wrapping (ensure they stay in a single row).
+        flex-wrap: nowrap;
+    }
+}
+
+.news-article {
+    // When screen width is 767px or more...
+    @media (min-width: 767px) {
+        // Allow articles to grow and shrink as needed.
+        flex: auto;
+        // Aim for 3 articles per row.
+        width: 33.33333333%;
+        // Add horizontal padding between articles.
+        padding: 0px 10px 0 10px;
+    }
+    // When screen width is 1260px or more...
+    @media (min-width: 1260px) {
+        // Explicitly set width for 3 per row.
+        width: 33.33333333%;
+    }
+}
+
+// Hide the mobile "View All" link on larger screens.
+.view-all-mobile, .view-all-mobile-container {
+    @media (min-width: 767px) {
+        display: none;
+    }
+}
+
+// Hide the desktop "View All" link container on smaller screens.
+.container-latest-news-top {
+    a{
+        @media (max-width: 767px) {
+            display: none;
         }
     }
 }
 
-// Default stacking for smaller screens (if needed, adjust breakpoint)
-@media (max-width: 419px) { // Adjust if needed based on the range above
-    .latest-news-container {
-        grid-template-columns: 1fr; // Stack cards 
-        
-        // Ensure all cards are visible when stacked
-        .news-card:nth-child(n+3) {
-            display: flex; // Or block, depending on .news-card display type
-        }
+// Hide the third news article on medium screens (tablets).
+.article-hidden {
+    @media (min-width: 768px) and (max-width: 1259px) { // Changed max-width slightly
+        display: none;
+    }
+    // Make sure it's visible again on small screens (mobile).
+    @media (max-width: 767px) {
+        display: flex; // Or block, depending on how .article is styled.
     }
 }
 
-// Larger screens will use the auto-fit grid defined earlier
+// Ensure consistent height for article titles on larger screens to prevent alignment issues.
+.h3-1, .h3-2, .h3-3 { // Assuming these classes exist on the h3 elements
+    @media (min-width: 1260px) {
+        min-height: 3rem; // Set a minimum height.
+        display: flex; // Helps with vertical alignment if needed.
+    }
+}

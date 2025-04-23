@@ -341,6 +341,37 @@ header {
 // Adjustments for the logo container on larger screens.
 .header-logo-container {
     @media (min-width:768px) {
-        // Potentially add styles here if needed for tablets and up.
+        width: 50%;
+    }
+    @media (min-width:992px) {
+        width: 41.66666667% // (5/12)
+    }
+    @media (min-width:1260px) {
+        width: 33.33333333%; // (4/12)
+    }
+}
+
+// Adjust large search form width based on breakpoint
+.header-form-large {
+    @media (min-width: 766px) {
+        width: 174px;
+        border-radius: 0;
+    }
+    // Hide on medium screens (tablet)
+    @media (min-width: 992px) {
+        display: none;
+    }
+    // Show again on large screens (desktop)
+    @media (min-width: 1260px) {
+        display: inline;
+        border-radius: 0;
+        width: 240px;
+    }
+}
+
+// Adjust search icon container radius on medium screens
+.large-form-icon-container {
+    @media (min-width: 992px) and (max-width: 1259px) {
+        border-radius: 3px;
     }
 }

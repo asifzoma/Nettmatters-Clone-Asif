@@ -1,158 +1,119 @@
-.hero-slider {
-  position: relative;
-  // height: inherit; Testing
-  overflow: hidden;
+// ==========================================================================
+// Banner Styles
+// These styles apply to the main banner/hero image slider at the top of the page.
+// ==========================================================================
 
-
-  .slick-slide {
-    height: 554px;
-  } 
-  .slick-dots {
-    position: absolute;
-    bottom: 20px;
-    left: 50%;
-    transform: translateX(-50%);
-    display: flex;
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    z-index: 2;
-
-    li {
-      margin: 0 6px;
-
-      button {
-        width: 12px;
-        height: 12px;
-        border-radius: 50%;
-        background-color: #ccc;
-        border: none;
-        font-size: 0;
-      }
-
-      &.slick-active button {
-        background-color: #95252f;
-      }
-    }
-  }
+// Styles for the background of each banner slide.
+.banner-background {
+    // Make sure slides are treated as flex items (important might be needed due to slider library styles).
+    display: flex !important;
+    // Make the background image cover the entire slide area.
+    background-size: cover;
+    // Center the content horizontally within the slide.
+    justify-content: center;
+    // Center the text horizontally.
+    text-align: center;
+    // Center the content vertically.
+    align-items: center;
+    // Allow content to wrap if it doesn't fit horizontally.
+    flex-wrap: wrap;
+    // Center the slide container itself if needed (useful if the container has a fixed width).
+    margin: auto;
+    // Set a minimum height for the banner slides.
+    min-height: 550px !important;
+    // Position the background image in the center.
+    background-position: center;
+    // Prevent the background image from repeating.
+    background-repeat: no-repeat;
+    // Example of gradient overlay (commented out): adds a dark fade from the right.
+    //background-image: linear-gradient(270deg, transparent 25%, #000), url('../img/banner-img/home-YLei.png');
 }
 
-.slider-item {
-  position: relative;
-  z-index: 0;
-  height: 554px;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-
-  &::before {
-    content: "";
-    position: absolute;
-    top: 0; left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(to right, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.2));
-    z-index: 1;
-  }
-
-  .slider-content {
-    position: relative;
-    z-index: 2; // Ensures content appears above the gradient
-    padding: 60px 0; // Add 60px padding to top and bottom
-  }
-}
-
-
-
-
-  
-  /* ===== Title Styling ===== */
-  .slider-title {
-
-    margin-left: 10%;
-    font-family: 'Roboto', sans-serif;
-    font-size: clamp(2rem, 6vw, 3rem);
-    font-weight: 600;
-    line-height: 1.15;
+// Styles for the content container within each banner slide.
+.banner {
+    // Set the text color to white.
     color: #fff;
-    margin-top: 1.93rem;
-    text-shadow: 0 2px 4px rgba(0,0,0,0.3);
-  }
-   
-  /* ===== Description ===== */
-  .slider-desc {
-    margin-left: 10%;
-    font-family: 'Roboto', sans-serif;
-    font-size: clamp(1.1rem, 2.2vw, 1.4rem);
-    line-height: 1.5;
-    color: rgba(255,255,255,0.9);
-    margin-bottom: 2.8rem;
-    max-width: 600px;
-    text-shadow: 0 1px 2px rgba(0,0,0,0.2);
-  }
-
-  .slider-btn {
-    margin-left: 10%;
-  display: inline-block;
-  padding: 16px 38px;
-  background: $web-design-color;
-  color: white;
-  font-size: 1.1rem;
-  font-weight: 600;
-  text-decoration: none;
-  border-radius: 3px;
-  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
-  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
-  margin-bottom: 2.8rem;
+    // Center the container.
+    margin: auto;
+    // Use flexbox for content layout.
+    display: flex;
+    flex-wrap: wrap;
+    // Arrange content (title, paragraph, button) vertically.
+    flex-direction: column;
+        // Styles for links within the banner content.
+        a {
+            // Remove default underline from links.
+            text-decoration: none;
+        }
+        // Styles for the main heading (<h1>).
+        h1 {
+            // Set font size.
+            font-size: 2.5rem;
+            // Set line height.
+            line-height: 3rem;
+            // Add space below the heading.
+            margin: 0 0 1.25rem;
+            // Set font weight (boldness).
+            font-weight: 600;
+        }
+        // Styles for the paragraph text (<p>).
+        p {
+            // Add space below the paragraph.
+            margin-bottom: .375rem;
+            font-size: 1.25rem;
+            line-height: 1.75rem;
+            font-weight: 600;
+        }
 }
-.slider-btn:hover {
-    background: $web-design-color;
-    transform: translateY(-2px);
-    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
-  }
-  
-  @media (max-width: 992px) {
-    .slider-item::before {
-      width: 80%;
-    }
-    
-    .slider-content {
-      padding-left: 5%;
-    }
-  }
 
-  
-  @media (max-width: 768px) {
-    .hero-slider {
-      // height: 70vh; Testing
-      min-height: 500px;
-    }
-    
-    .slider-item::before {
-      width: 100%;
-      background: linear-gradient(
-        to bottom, 
-        rgba(0,0,0,0.7) 0%, 
-        rgba(0,0,0,0.3) 100%
-      );
-    }
-    
-    .slider-title span {
-      margin-top: 0.3rem;
-    }
-    
-    .slider-btn {
-      padding: 14px 30px;
-    }
-  }
+// Banner Background Image Definitions
+// Each rule applies a specific background image (with a gradient overlay) to a banner slide.
+// The linear-gradient darkens the image slightly from the right for better text readability.
+.banner-background-1 {
+    background-image: linear-gradient(270deg, transparent 25%, #000), url('../img/banner-img/home-YLei.png');
+}
 
-  @media (max-width: 576px) {
-    .hero-slider {
-      margin-top: 20px;
+.banner-background-2 {
+    background-image: linear-gradient(270deg, transparent 25%, #000), url('../img/banner-img/home-O67Y.png');
+}
+
+.banner-background-3 {
+    background-image: linear-gradient(270deg, transparent 25%, #000), url('../img/banner-img/home-gay8.png');
+}
+
+.banner-background-4 {
+    background-image: linear-gradient(270deg, transparent 25%, #000), url('../img/banner-img/home-6yTp.png');
+}
+
+.banner-background-5 {
+    background-image: linear-gradient(270deg, transparent 25%, #000), url('../img/banner-img/home-J8Xx.png');
+}
+
+.banner-background-6 {
+    background-image: linear-gradient(270deg, transparent 25%, #000), url('../img/banner-img/home-K0pn.png');
+}
+
+.banner-background-7 {
+    background-image: linear-gradient(270deg, transparent 25%, #000), url('../img/banner-img/home-MSxH.png');
+}
+
+// Media Queries for Responsive Banner Styles
+.banner {
+    // When the screen width is 992px or wider (laptops/desktops)...
+    @media (min-width: 992px) {
+        // Align text to the left instead of center.
+        text-align: left;
+        // Increase font sizes and line heights for larger screens.
+        h1 {
+            font-size: 4rem;
+            line-height: 5rem;
+            margin: 0 0 1.25rem;
+            font-weight: 600;
+        }
+        p {
+            font-size: 1.625rem;
+            line-height: 2.5rem;
+            font-weight: 600;
+        }
     }
-  }
+}
