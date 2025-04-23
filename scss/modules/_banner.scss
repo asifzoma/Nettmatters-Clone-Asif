@@ -2,9 +2,13 @@
 // Banner Styles
 // ==========================================================================
 
-// .banner-outer-container {
-
-// }
+.banner-outer-container {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    margin: 0;
+    padding: 0;
+}
 
 .banner-background {
     display: flex !important;
@@ -45,31 +49,31 @@
 
 // Banner Backgrounds 
 .banner-background-1 {
-    background-image: linear-gradient(270deg, transparent 25%, #000), url('../img/banner-img/home-YLei.png');
+    background-image: linear-gradient(270deg, transparent 25%, #000), url('../img/slides/slide1.webp');
 }
 
 .banner-background-2 {
-    background-image: linear-gradient(270deg, transparent 25%, #000), url('../img/banner-img/home-O67Y.png');
+    background-image: linear-gradient(270deg, transparent 25%, #000), url('../img/slides/slide2.webp');
 }
 
 .banner-background-3 {
-    background-image: linear-gradient(270deg, transparent 25%, #000), url('../img/banner-img/home-gay8.png');
+    background-image: linear-gradient(270deg, transparent 25%, #000), url('../img/slides/slide3.webp');
 }
 
 .banner-background-4 {
-    background-image: linear-gradient(270deg, transparent 25%, #000), url('../img/banner-img/home-6yTp.png');
+    background-image: linear-gradient(270deg, transparent 25%, #000), url('../img/slides/slide4.webp');
 }
 
 .banner-background-5 {
-    background-image: linear-gradient(270deg, transparent 25%, #000), url('../img/banner-img/home-J8Xx.png');
+    background-image: linear-gradient(270deg, transparent 25%, #000), url('../img/slides/slide5.webp');
 }
 
 .banner-background-6 {
-    background-image: linear-gradient(270deg, transparent 25%, #000), url('../img/banner-img/home-K0pn.png');
+    background-image: linear-gradient(270deg, transparent 25%, #000), url('../img/slides/slide6.webp');
 }
 
 .banner-background-7 {
-    background-image: linear-gradient(270deg, transparent 25%, #000), url('../img/banner-img/home-MSxH.png');
+    background-image: linear-gradient(270deg, transparent 25%, #000), url('../img/slides/slide7.webp');
 }
 
 //Media Queries

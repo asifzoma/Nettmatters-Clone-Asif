@@ -2,21 +2,23 @@
 //  Side Menu Styles
 // ==========================================================================
 .sidebar {
+  height: 100%;
+  width: 30rem;
   position: fixed;
   top: 0;
-  right: 0;
-  bottom: 0;
-  z-index: -1;
-  height: 100%;
-  width: 275px;
-  background: #333645;
-  overflow: auto;
-  overflow-x: auto;
-  overflow-y: auto;
-  ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
+  right: -30rem;
+  background-color: #333645;
+  overflow-x: hidden;
+  visibility: hidden;
+  transition: 0.3s;
+  z-index: 10001;
+  padding: 0;
+  color: white;
+  margin-top: 0;
+  
+  &.active {
+    right: 0;
+    visibility: visible;
   }
 }
 
@@ -185,4 +187,152 @@
   .main-sidebar {
     display: none;
   }
+}
+
+// Sidebar links styling
+.sidebar-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar-item {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  border-top: 1px solid rgba(0, 0, 0, 0.25);
+  
+  &:first-child {
+    border-top: none;
+  }
+  
+  &:last-child {
+    border-bottom: none;
+  }
+}
+
+.sidebar-link {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px 10px;
+  color: #fff;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+  
+  small {
+    font-size: 10px;
+    text-transform: uppercase;
+    display: block;
+    line-height: 1;
+    margin-bottom: 5px;
+  }
+}
+
+// Software
+.sidebar-item:nth-child(1) .sidebar-link:hover {
+  background-color: #67809f;
+}
+
+// IT Support
+.sidebar-item:nth-child(2) .sidebar-link:hover {
+  background-color: #4183d7;
+}
+
+// Digital Marketing
+.sidebar-item:nth-child(3) .sidebar-link:hover {
+  background-color: #2ecc71;
+}
+
+// Telecoms
+.sidebar-item:nth-child(4) .sidebar-link:hover {
+  background-color: #d64541;
+}
+
+// Web Design
+.sidebar-item:nth-child(5) .sidebar-link:hover {
+  background-color: #926fb1;
+}
+
+// Cyber Security
+.sidebar-item:nth-child(6) .sidebar-link:hover {
+  background-color: #f62459;
+}
+
+// Developer Training
+.sidebar-item:nth-child(7) .sidebar-link:hover {
+  background-color: #ce4125;
+}
+
+// Contact button
+.sidebar-contact {
+  padding: 20px;
+}
+
+.sidebar-btn {
+  display: block;
+  width: 100%;
+  padding: 12px 0;
+  background-color: #999aa2;
+  color: #fff;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 3px;
+  font-weight: 600;
+  text-transform: uppercase;
+  transition: background-color 0.3s ease;
+  
+  &:hover {
+    background-color: #7e808a;
+  }
+}
+
+// Overlay
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 9998;
+  display: none;
+  
+  &.active {
+    display: block;
+  }
+}
+
+// Hamburger animation
+.hamburger-inner.active {
+  transform: rotate(45deg);
+  
+  &::before {
+    opacity: 0;
+  }
+  
+  &::after {
+    transform: rotate(-90deg);
+    bottom: 0;
+  }
+}
+
+// Body lock when sidebar is active
+body.no-scroll {
+  overflow: hidden;
+}
+
+// Add Font Awesome icon styles for sidebar
+.sidebar-link {
+  i {
+    font-size: 30px;
+    color: #fff;
+    margin-bottom: 8px;
+    display: block;
+    text-align: center;
+  }
+}
+
+// Make sure sidebar items have proper styling for items with Font Awesome icons
+.sidebar-item {
+  text-align: center;
 } 

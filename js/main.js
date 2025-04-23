@@ -13,8 +13,9 @@ var delta = 5;
 var navbarHeight = $('.fake-header').outerHeight();
 
 // Side Menu Variables
-// set's variables for the sidebar
-const sideMenu = document.querySelector('.sidebar');
+const $sidebar = $('.sidebar');
+const $overlay = $('.overlay');
+const $hamburger = $('.hamburger-inner');
 
 // Cookie Variables
 const $cookies_policy = $('#cookie-consent');
@@ -40,6 +41,7 @@ else{
 $cookies_accept.on('click', function(){
     $cookies_policy.removeClass('cookie-show').addClass('cookie-hide');
     localStorage.setItem("cAccepted", "true");
+    $cookies_manage.addClass('cookie-show');
 });
 
 //Cookies Manage Consent Function on Click
@@ -50,6 +52,7 @@ $cookies_manage.on('click', function(){
 //Cookies Settings Function on Click
 $cookies_settings.on('click', function(){
     $cookies_policy.removeClass('cookie-show').addClass('cookie-hide');
+    $cookies_manage.addClass('cookie-show');
 });
 
 ////////
@@ -95,30 +98,58 @@ function hasScrolled() {
 
 // Banner Carousel
 $(document).ready(function(){
-    $('.slides').slick({
+    $('.banner-slider').slick({
         slidesToShow: 1,
         slidesToScroll: 1,
         autoplay: true,
-        autoplaySpeed: 4000,
+        autoplaySpeed: 5000,
         arrows: false,
         dots: true,
-        appendDots: $('.slides'),
+        fade: true,
+        appendDots: $('.banner-slider')
     });
 });
 
 // Partner Carousel
 $(document).ready(function(){
-    $('.partners').slick({
-        slidesToShow:       3,
-        slidesToScroll:     1,
-        autoplay:           true,
-        arrows:             false,
-        infinite:           true,
-        variableWidth:      true,
-        swipe:              false,
-        draggable:          false,
-        pauseOnHover:       true,
-        pauseOnFocus:       true,
+    $('.partners .container').slick({
+        slidesToShow: 12,
+        slidesToScroll: 1,
+        autoplay: true,
+        autoplaySpeed: 3000,
+        arrows: false,
+        infinite: true,
+        variableWidth: true,
+        swipe: false,
+        draggable: false,
+        pauseOnHover: true,
+        pauseOnFocus: true,
+        responsive: [
+            {
+                breakpoint: 1260,
+                settings: {
+                    slidesToShow: 8
+                }
+            },
+            {
+                breakpoint: 992,
+                settings: {
+                    slidesToShow: 6
+                }
+            },
+            {
+                breakpoint: 768,
+                settings: {
+                    slidesToShow: 4
+                }
+            },
+            {
+                breakpoint: 480,
+                settings: {
+                    slidesToShow: 2
+                }
+            }
+        ]
     });
 });
 
@@ -143,44 +174,26 @@ $(document).ready(function(){
 // Side Menu
 ////////
 
-// Side menu show/hide on click
-// Animation for the wrapper moving the page content and burger animation on click of the burger menu
-
+// Toggle sidebar
 $(document).ready(function() {
-    $('.header-icon-menu-container').click(function(e) {
-        var mySideBar = $('.sidebar');
-        mySideBar.addClass('active-sidebar').removeClass('hide-sidebar');
-        $('.wrapper').addClass('wrapper-right').removeClass('wrapper-center');
-        $('.hamburger-box').addClass('burger-active');
-        //  $(".wrapper").animate({
-        //       right: `${sideMenu.offsetWidth}px`
-        //  })
-        $('.wrapper').click(function() {
-        $('.active-sidebar').removeClass('active-sidebar');
-        $('.wrapper').addClass('wrapper-center').removeClass('wrapper-right');
-        $('.hamburger-box').removeClass('burger-active');
-        //   $(".wrapper").animate({
-        //       right: '0px'
-        //  })
-        $('.wrapper').off('click'); // cancel the wrappers click handler when it's used
-      });
-      e.stopPropagation(); 
+    // Toggle sidebar on hamburger click
+    $('.header-icon-menu-container').on('click', function() {
+        $sidebar.toggleClass('active');
+        $overlay.toggleClass('active');
+        $hamburger.toggleClass('active');
+        $('body').toggleClass('no-scroll');
+    });
+    
+    // Close sidebar when clicking on overlay
+    $overlay.on('click', function() {
+        $sidebar.removeClass('active');
+        $overlay.removeClass('active');
+        $hamburger.removeClass('active');
+        $('body').removeClass('no-scroll');
     });
 });
 
-// function execute(){
-//     if(screen.width > 992) {
-//         $('.wrapper').addClass('wrapper-right-large').removeClass('wrapper-right-small');
-//         $(".wrapper").animate({
-//             right: `${sideMenu.offsetWidth}px`
-//        })
-//       }
-//  }
-//  function execute(){
-//     if(screen.width < 992) {
-//         $('.wrapper').addClass('wrapper-right-small').removeClass('wrapper-right-large');
-//         $(".wrapper").animate({
-//             right: `${sideMenu.offsetWidth}px`
-//        })
-//       }
-//  }
+// Prevent clicking inside the sidebar from closing it
+$('.sidebar').click(function(e) {
+    e.stopPropagation();
+});

@@ -1,0 +1,19 @@
+// Add Font Awesome icon styles for service sections
+.service {
+  i {
+    font-size: 40px;
+    color: #fff;
+    margin-bottom: 20px;
+    display: block;
+  }
+}
+
+// Style the view our work links with Font Awesome icons
+.view-our-work {
+  i {
+    font-size: 14px;
+    margin-left: 5px;
+    position: relative;
+    top: 1px;
+  }
+} 

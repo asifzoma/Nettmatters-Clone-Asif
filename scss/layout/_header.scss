@@ -33,24 +33,24 @@ header {
 }
 
 // Styles for rows within the header (used for alignment).
-.row {
+      .row {
     // Arrange items horizontally.
-    display: flex;
+        display: flex;
     flex-direction: row;
     // Take up the full width available.
     width: 100%;
     // Distribute space between items.
-    justify-content: space-between;
+        justify-content: space-between;
     // Add space below the row.
-    padding-bottom: 20px;
-}
+        padding-bottom: 20px;
+      }
 
 // Container for the logo.
-.header-logo-container {
+      .header-logo-container {
     // Use flexbox to align the logo.
-    display: flex;
+        display: flex;
     // Center the logo vertically.
-    align-items: center;
+        align-items: center;
 }
 
 // Container for action items like buttons and search.
@@ -59,20 +59,32 @@ header {
     display: flex;
     // Add some padding top and bottom.
     padding: 7px 0;
+
+    .btn-header-support, .btn-header-contact {
+        i {
+            margin-right: 8px;
+            font-size: 16px;
+        }
+    }
 }
 
 // Styles for the phone icon.
-.header-phone-icon {
+      .header-phone-icon {
     // Ensure it doesn't exceed its container width.
     max-width: 100%;
     // Set the icon size.
-    font-size: 32px;
+        font-size: 32px;
     // Add space to the left.
-    margin-left: 15px;
+        margin-left: 15px;
     // Set the icon color.
     color: #333645;
     // Center the icon vertically within its flex container.
     align-self: center;
+
+    i {
+        font-size: 24px;
+        color: #333645;
+    }
 }
 
 // Container for the hamburger menu icon.
@@ -82,7 +94,7 @@ header {
     // Add space to the left.
     margin-left: 20px;
     // Use flexbox (useful if more icons were added).
-    display: flex;
+        display: flex;
 
     // Styles applied when hovering over the container.
     :hover {
@@ -102,7 +114,7 @@ header {
 .icon-menu {
     // Set the line height to vertically center text/icons.
     line-height: 46px !important; // !important overrides other styles.
-    display: flex;
+          display: flex;
     max-width: 100%;
     color: #fff;
     padding: 5px 15px;
@@ -111,8 +123,8 @@ header {
     font-size: 2rem;
     align-self: center;
     width: 100%;
-    height: 56px;
-}
+          height: 56px;
+        }
 
 // Styles for the clickable area (box) of the hamburger menu.
 .hamburger-box {
@@ -123,37 +135,37 @@ header {
     // Make it a block element.
     display: block;
     // Needed for positioning the lines inside.
-    position: relative;
+          position: relative;
     font-size: 1.438rem;
     line-height: 45px;
     color: #fff;
     background-color: #333645;
     border-color: #333645;
-    height: 56px;
+            height: 56px;
     line-height: 46px;
     font-size: 1.125rem;
     border-radius: 3px;
 }
 
 // Styles for the middle line of the hamburger icon.
-.hamburger-inner {
+            .hamburger-inner {
     background-color: #fff;
     border-radius: 0;
     font-size: 1.438rem;
     line-height: 45px;
     // Dimensions of the line.
-    width: 33px;
-    height: 4px;
+              width: 33px;
+              height: 4px;
     border-radius: 0;
     // Allows precise positioning.
-    position: absolute;
+              position: absolute;
     // Smooth transition effect for changes.
     transition-property: transform;
     transition-duration: .15s;
     transition-timing-function: ease;
     display: block;
     // Position the line in the center.
-    top: 50%;
+              top: 50%;
     margin-top: -1.5px; // Adjust slightly for perfect centering.
     transition-duration: .22s;
     transition-timing-function: cubic-bezier(.55,.055,.675,.19); // Custom animation curve.
@@ -168,9 +180,9 @@ header {
     // Inherit styles from .hamburger-inner.
     background-color: #fff;
     border-radius: 0;
-    width: 33px;
-    height: 4px;
-    position: absolute;
+                width: 33px;
+                height: 4px;
+                position: absolute;
     transition-property: transform;
     transition-duration: .15s;
     transition-timing-function: ease;
@@ -203,18 +215,18 @@ header {
     // Allows positioning the search icon inside.
     position: relative;
     // Add space above.
-    margin-top: 11px;
+        margin-top: 11px;
     color: #888;
     opacity: 1;
     display: inline-block;
-    width: 100%;
-    height: 47px;
-    padding: 5px 15px;
+            width: 100%;
+            height: 47px;
+            padding: 5px 15px;
     background-color: rgba(0, 0, 0, .1); // Semi-transparent black background.
     transition: none; // No transition effect.
     outline: none; // Remove default browser outline.
     border: 2px solid rgba(0, 0, 0, .1);
-    border-radius: 2px;
+            border-radius: 2px;
     // Inner shadow effect.
     box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
     // Leave space on the right for the icon.
@@ -222,15 +234,15 @@ header {
 }
 
 // Styles for the small search icon.
-.icon-search-small {
+          .icon-search-small {
     background: none;
     color: #333645;
     // Position inside the form container.
-    position: absolute;
-    right: 5px;
+            position: absolute;
+            right: 5px;
     // Vertically center the icon.
     line-height: 47px;
-    font-size: 30px;
+            font-size: 30px;
     // Add space above (adjust as needed).
     margin-top: 20px;
 }
@@ -239,6 +251,15 @@ header {
 .form-container {
     position: relative;
     padding-bottom: 20px;
+
+    i.icon-search-small {
+        font-size: 16px;
+        color: #999;
+        position: absolute;
+        right: 10px;
+        top: 50%;
+        transform: translateY(-50%);
+    }
 }
 
 // Container for the larger search form (visible on larger screens).
@@ -282,6 +303,11 @@ header {
     // Style change on hover.
     :hover {
         background-color: #7e808a;
+    }
+
+    i {
+        font-size: 18px;
+        color: #fff;
     }
 }
 
@@ -330,6 +356,13 @@ header {
     }
 }
 
+// Make phone icon visible again on large screens
+.header-phone-icon {
+    @media (min-width:1260px) {
+        display: inline-block;
+    }
+}
+
 .header-form-large, .icon-search-large, .large-form-icon-container {
     // When screen width is 765px or less...
     @media (max-width:765px) {
@@ -358,7 +391,7 @@ header {
         border-radius: 0;
     }
     // Hide on medium screens (tablet)
-    @media (min-width: 992px) {
+  @media (min-width: 992px) {
         display: none;
     }
     // Show again on large screens (desktop)
@@ -374,4 +407,25 @@ header {
     @media (min-width: 992px) and (max-width: 1259px) {
         border-radius: 3px;
     }
+}
+
+// Update existing styles for the search icon in mobile view
+@media (max-width: 766px) {
+    .icon-search-small {
+        display: inline-block;
+    }
+}
+
+// Make sure the Support and Contact buttons have proper styling
+.btn-header-support, .btn-header-contact {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+// Style the search button in header
+.large-form-icon-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }

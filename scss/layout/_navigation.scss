@@ -45,6 +45,13 @@
     // Make the text uppercase.
     text-transform: uppercase;
 
+    // Styles for Font Awesome icons
+    i {
+        font-size: 30px;
+        margin-bottom: 10px;
+        color: #fff;
+    }
+
     // Styles for the small text (Bespoke, IT, Digital, etc.).
     small {
         // Set the font size for the small text.
@@ -116,10 +123,12 @@
     // Align text to the left.
     text-align: left;
 
-    // Styles for icons (<span>) within list items.
-    span {
+    // Styles for Font Awesome icons within list items.
+    i {
         // Add space to the right of the icon.
         margin-right: 10px;
+        color: #fff;
+        font-size: 16px;
     }
 
     // Styles for list items (<li>).
@@ -160,6 +169,8 @@
 
 // Hover effect for the first main nav item (Bespoke Software).
 .main-nav-ddm-1 {
+    background-color: #67809f;
+    
     // Styles applied when hovering over this specific nav item.
     :hover {
         // Keep the main nav item text white.
@@ -172,7 +183,7 @@
             display: block;
         }
         // Ensure all elements within the sub-menu inherit the background color.
-        ul,li,a,span {
+        ul,li,a,span,i {
             background-color: #526781;
         }
         // Keep the icon color white.
@@ -196,13 +207,15 @@
 
 // Hover effect for the second main nav item (IT Support).
 .main-nav-ddm-2 {
+    background-color: #4183d7;
+    
     :hover {
         color: #fff;
         .sub-menu-container {
             background-color: #286abd;
             display: block;
         }
-        ul,li,a,span {
+        ul,li,a,span,i {
             background-color: #286abd;
         }
         .icon-it-support-ddm {
@@ -221,13 +234,15 @@
 
 // Hover effect for the third main nav item (Digital Marketing).
 .main-nav-ddm-3 {
+    background-color: #2ecc71;
+    
     :hover {
         color: #fff;
         .sub-menu-container {
             background-color: #25a25a;
             display: block;
         }
-        ul,li,a,span {
+        ul,li,a,span,i {
             background-color: #25a25a;
         }
         .icon-digital-marketing-ddm {
@@ -238,7 +253,7 @@
             color: #fff;
         }
         // Note: This targets the generic .triangle class. It assumes triangle-3 exists in HTML.
-        .triangle {
+        .triangle-3 {
             display: inline-flex;
             border-color: #2ecc71 transparent transparent transparent;
         }
@@ -247,6 +262,8 @@
 
 // Hover effect for the fourth main nav item (Telecoms Services).
 .main-nav-ddm-4 {
+    background-color: #d64541;
+    
     :hover {
         // Set the background color of the main nav item itself on hover.
         background-color: #d64541;
@@ -255,7 +272,7 @@
             background-color: #bc2c28;
             display: block;
         }
-        ul,li,a,span {
+        ul,li,a,span,i {
             background-color: #bc2c28;
         }
         // Ensure icon background/color is set correctly.
@@ -267,7 +284,7 @@
             text-transform: none;
             color: #fff;
         }
-        .triangle {
+        .triangle-4 {
             display: inline-flex;
             border-color: #d64541 transparent transparent transparent;
         }
@@ -276,13 +293,15 @@
 
 // Hover effect for the fifth main nav item (Web Design).
 .main-nav-ddm-5 {
+    background-color: #926fb1;
+    
     :hover {
         color: #fff;
         .sub-menu-container {
             background-color: #79539a;
             display: block;
         }
-        ul,li,a,span {
+        ul,li,a,span,i {
             background-color: #79539a;
         }
         .icon-web-design-ddm {
@@ -292,7 +311,7 @@
             text-transform: none;
             color: #fff;
         }
-        .triangle {
+        .triangle-5 {
             display: inline-flex;
             border-color: #926fb1 transparent transparent transparent;
         }
@@ -301,13 +320,15 @@
 
 // Hover effect for the sixth main nav item (Cyber Security).
 .main-nav-ddm-6 {
+    background-color: #f62459;
+    
     :hover {
         color: #fff;
         .sub-menu-container {
             background-color: #de093f;
             display: block;
         }
-        ul,li,a,span {
+        ul,li,a,span,i {
             background-color: #de093f;
         }
         .icon-cyber-security-ddm {
@@ -317,7 +338,7 @@
             text-transform: none;
             color: #fff;
         }
-        .triangle {
+        .triangle-6 {
             display: inline-flex;
             border-color: #f62459 transparent transparent transparent;
         }
@@ -326,13 +347,15 @@
 
 // Hover effect for the seventh main nav item (Developer Course).
 .main-nav-ddm-7 {
+    background-color: #cf442a;
+    
     :hover {
         color: #fff;
         .sub-menu-container {
             background-color: #a3331d;
             display: block;
         }
-        ul,li,a,span {
+        ul,li,a,span,i {
             background-color: #a3331d;
         }
         .icon-developer-training-ddm {
@@ -342,7 +365,7 @@
             text-transform: none;
             color: #fff;
         }
-        .triangle {
+        .triangle-7 {
             display: inline-flex;
             border-color: #cf442a transparent transparent transparent;
         }
@@ -365,4 +388,91 @@
     .drop-down-menu-main-nav-container {
         display: none;
     }
+}
+
+// Main navigation background color
+.drop-down-menu-main-nav-container {
+  background-color: #333645;
+  margin-bottom: 0;
+}
+
+// Updated styles for main-nav structure to match screenshot
+.main-nav {
+  ul {
+    display: flex;
+    list-style: none;
+    justify-content: space-between;
+    margin: 0;
+    padding: 0;
+    background-color: #333645;
+  }
+  
+  .nav-item {
+    flex: 1;
+    text-align: center;
+    
+    a {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      text-decoration: none;
+      padding: 20px 0;
+      height: 100%;
+      
+      i {
+        font-size: 28px;
+        margin-bottom: 8px;
+      }
+      
+      small {
+        font-size: 0.625rem;
+        text-transform: uppercase;
+        display: block;
+        line-height: 1;
+      }
+      
+      span {
+        text-transform: uppercase;
+        font-weight: 600;
+        font-size: 1rem;
+      }
+    }
+    
+    &.software a {
+      background-color: #67809f;
+      &:hover { background-color: #526781; }
+    }
+    
+    &.support a {
+      background-color: #4183d7;
+      &:hover { background-color: #286abd; }
+    }
+    
+    &.digital a {
+      background-color: #2ecc71;
+      &:hover { background-color: #25a25a; }
+    }
+    
+    &.telecoms a {
+      background-color: #d64541;
+      &:hover { background-color: #bc2c28; }
+    }
+    
+    &.web a {
+      background-color: #926fb1;
+      &:hover { background-color: #79539a; }
+    }
+    
+    &.cyber a {
+      background-color: #f62459;
+      &:hover { background-color: #de093f; }
+    }
+    
+    &.developer a {
+      background-color: #cf442a;
+      &:hover { background-color: #a3331d; }
+    }
+  }
 } 
