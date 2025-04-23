@@ -1,0 +1,235 @@
+// ==========================================================================
+//  Mixins
+// ==========================================================================
+
+// Color Mixins
+@mixin software-color {
+    background-color: #67809f;
+}
+@mixin software-btn-color {
+    background-color: #f7b322; // Note: This seems inconsistent with the color name, might be intended for a specific button style
+    border-color: #f7b322;
+}
+@mixin it-support-color {
+    background-color: #4183d7;
+    border-color: #4183d7;
+}
+@mixin digital-marketing-color {
+    background-color: #2ecc71;
+    border-color: #2ecc71;
+}
+@mixin telecoms-service-color {
+    background-color: #d64541;
+    border-color: #d64541;
+}
+@mixin web-design-color {
+    background-color: #926fb1;
+    border-color: #926fb1;
+}
+@mixin cyber-security-color {
+    background-color: #f62459;
+    border-color: #f62459;
+}
+@mixin developer-training-color {
+    background-color: #ce4125;
+    border-color: #ce4125;
+}
+
+// Latest News Button Mixins (Tag Backgrounds)
+@mixin btn-latest-news {
+    color: #fff;
+    padding: 0 10px; // Adjusted from original btn definition for tags
+    font-size: .75rem;
+    line-height: 1.438rem; // Adjusted
+    text-transform: uppercase;
+}
+@mixin bus-dev-color {
+    background-color: #db8c0d;
+}
+// @mixin btn-bus-dev-color { // Redundant if used with btn-latest-news
+//     background-color: #db8c0d;
+//     border-color: #db8c0d;
+// }
+@mixin digital-color {
+    background-color: #2ecc71;
+}
+// @mixin btn-digital-color { // Redundant
+//     background-color: #2ecc71;
+//     border-color: #2ecc71;
+// }
+@mixin web-color {
+    background-color: #926fb1;
+}
+// @mixin btn-web-color { // Redundant
+//     background-color: #926fb1;
+//     border-color: #926fb1;
+// }
+
+// Case Studies Section Mixins (Tooltip Buttons)
+@mixin case-study-button {
+    margin-top: 11px;
+    font-size: 16px;
+    display: flex;
+    line-height: 35px;
+    padding: 5px 15px;
+    text-transform: uppercase;
+    border-radius: 3px;
+    font-weight: 400;
+    color: #fff;
+}
+@mixin case-study-button-color-1 {
+    background-color:#f7b322;
+    border-color: #f7b322;
+}
+@mixin case-study-button-color-2 {
+    background-color: #4183d7; 
+    border-color: #4183d7;
+}
+
+// Example Usage (These would likely be in component files)
+
+// Header Buttons
+// .btn-header-support {
+//     @include it-support-color;
+// }
+
+// Drop Down Menu Hover Backgrounds (Potentially refactorable)
+// .main-nav-ddm-1:hover .sub-menu-container { @include software-color; }
+// .main-nav-ddm-2:hover .sub-menu-container { background-color: #286abd; } // Direct color used
+// .main-nav-ddm-3:hover .sub-menu-container { background-color: #25a25a; } // Direct color used
+// ... etc ...
+
+// Drop Down Menu Icons on Hover (Redundant? Icons seem to inherit from parent hover)
+// .main-nav-ddm-1:hover .icon-software-ddm { color: #fff; } 
+// .main-nav-ddm-2:hover .icon-it-support-ddm { color: #fff; }
+// ... etc ...
+
+// Banner Section Button Backgrounds
+@mixin btn-primary-banner {
+    margin: auto;
+    color: #fff;
+    margin-top: 1.938rem;
+    margin-bottom: 1.125rem;
+    padding: 5px 20px;
+    line-height: 50px;
+    font-size: 1.25rem;
+    width: auto;
+    border-radius: 3px; // Added border-radius
+}
+
+.btn-primary-banner1 {
+    @include btn-primary-banner;
+    @include web-design-color; // Uses background + border color
+}
+
+.btn-primary-banner2 {
+    @include btn-primary-banner;
+    @include software-btn-color; // Uses background + border color
+}
+
+.btn-primary-banner3 {
+    @include btn-primary-banner;
+    @include it-support-color; // Uses background + border color
+}
+
+.btn-primary-banner4 {
+    @include btn-primary-banner;
+    @include digital-marketing-color; // Uses background + border color
+}
+
+.btn-primary-banner5 {
+    @include btn-primary-banner;
+    @include telecoms-service-color; // Uses background + border color
+}
+
+// .btn-primary-banner6 { // Duplicate definition for banner 6 (likely Web Design)
+//     @include btn-primary-banner;
+//     @include web-design-color;
+// }
+
+.btn-primary-banner7 {
+    @include btn-primary-banner;
+    @include cyber-security-color; // Uses background + border color
+}
+
+// Our Services Section Icon Backgrounds
+.software-color {
+    @include software-color; // Only sets background-color
+}
+.it-support-color {
+    @include it-support-color; // Sets background + border color
+}
+.digital-marketing-color {
+    @include digital-marketing-color; // Sets background + border color
+}
+.telecoms-service-color {
+    @include telecoms-service-color; // Sets background + border color
+}
+.web-design-color {
+    @include web-design-color; // Sets background + border color
+}
+.cyber-security-color {
+    @include cyber-security-color; // Sets background + border color
+}
+.developer-training-color {
+    @include developer-training-color; // Sets background + border color
+}
+
+// Our Services Section Buttons (Border Colors Only)
+.btn-service { // Base style for service buttons (color: #fff; padding, font-size)
+    color: #fff;
+    padding: 5px 15px;
+    font-size: 1.063rem;
+}
+.btn-software {
+    @include software-btn-color; // Sets background + border color
+}
+.btn-it-support {
+    @include it-support-color; // Sets background + border color
+}
+.btn-digital-marketing {
+    @include digital-marketing-color; // Sets background + border color
+}
+.btn-telecoms {
+    @include telecoms-service-color; // Sets background + border color
+}
+.btn-web-design {
+    @include web-design-color; // Sets background + border color
+}
+.btn-cyber-security {
+    @include cyber-security-color; // Sets background + border color
+}
+.btn-developer-training {
+    @include developer-training-color; // Sets background + border color
+}
+
+//Latest News Section (Tag Backgrounds)
+
+// Small card Buttons / Tags
+.art-btn-1 { // Business Development
+    @include btn-latest-news;
+    @include bus-dev-color;
+}
+.art-btn-2 { // Digital Marketing
+    @include btn-latest-news;
+    @include digital-color;
+}
+.art-btn-3 { // Web Design
+    @include btn-latest-news;
+    @include web-color;
+}
+
+// Case Studies Section (Tooltip Buttons)
+.case-study-btn-1 {
+    @include case-study-button;
+    @include case-study-button-color-1;
+}
+.case-study-btn-2 {
+    @include case-study-button;
+    @include case-study-button-color-2;
+}
+
+// Sidebar Icon Colors (These seem specific and might not need mixins)
+// .icon-computer-style { color: #67809f; }
+// .icon-display-style { color: #4183d7; }
+// ... etc ... 
