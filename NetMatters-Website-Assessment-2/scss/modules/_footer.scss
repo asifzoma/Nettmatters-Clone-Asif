@@ -1,0 +1,190 @@
+// ==========================================================================
+// Footer Styles
+// ==========================================================================
+
+footer {
+    background-color: #323544;
+    color: #fff;
+    padding: 30px 0 0;
+    position: relative;
+    .footer-row {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        flex-direction: column;
+        .footer-logo {
+         width: auto;
+               img {
+                  width: 100%;
+                  vertical-align: middle;
+                  border: 0;
+               }
+               h4 {
+                  font-weight: 400;
+               }
+        }
+        .footer-company-info {
+            display: flex;
+            justify-content: space-between;
+            h4 {
+               margin-top: 24px;
+            }
+         .footer-company-socials-logos {
+               display: flex;
+               flex-wrap: wrap;
+               flex-direction: row;
+                  a {
+                     margin-right: 10px;
+                     margin-bottom: 10px;
+                  }
+            }
+         }
+        .footer-menu {    
+            margin-bottom: 30px;
+               a {
+                  color: #fff;
+                  text-decoration: none;
+               }
+            h4 {
+                text-transform: uppercase;
+                font-size: 1rem;
+                font-weight: 400;
+                margin-bottom: 26px;
+                line-height: 1.1;	
+            }
+            .footer-menu-list li:hover {
+               text-decoration: underline;
+            }
+       }	
+
+       ul {
+         list-style-type: none;
+         margin: auto;
+      } 
+      
+      h4 {
+         color: #fff;
+         text-transform: uppercase;
+         font-size: 1rem;
+         margin-bottom: 26px;
+      }
+   }
+}   
+    .footer-menu-list {
+      padding-left: 0;
+      li {
+         font-size: .8125rem;
+         line-height: 1.375rem;
+      }
+    }
+
+   .footer-logo-container {
+      align-self: center;
+      margin-bottom: 30px;
+   }
+// Sticky footer element
+.container-sticky-footer {
+   width: 100%; 
+   background-color: #212330;
+   margin: 0;
+   overflow-y: hidden;
+   p {
+      padding: 5px 0 10px;
+      margin-bottom: 0;
+      margin-top: 0;
+      line-height: 1.42857143;
+   }
+   a {
+      font-size: .8125rem;
+      line-height: 1.375rem;
+   }
+}
+.sticky-footer {
+   position: relative;
+   margin-left: auto;
+   margin-right: auto;
+   bottom: 0;
+   width: 100%;
+   color: #fff;
+   text-align: left;
+   font-size: .8125rem;
+   a {
+      text-decoration: none;
+      color: #fff;
+   }
+   a:hover {
+      text-decoration: underline;
+      color: #fff;
+      list-style: none;
+   }        
+}
+
+//Media Queries 
+.container-sticky-footer {
+   @media (max-width: 767px) {
+      padding-top: 10px;
+   }
+   @media (min-width: 769px) {
+      flex-direction: row;
+      flex-wrap: wrap;
+   }
+   br {
+      @media (min-width: 769px) {
+         display: none;
+      }
+   }
+}
+footer {
+   .footer-row {
+      @media (min-width: 767px) {
+         flex-direction: row;
+      }
+   }
+}
+.sticky-footer {
+   @media (max-width: 767px) {
+      flex-direction: column;
+   }
+}
+
+.footer-menu {
+   @media (min-width: 767px) {
+      width: 50%;
+   }
+   @media (min-width: 992px) {
+      width: 25%;
+   }
+   @media (min-width: 1260px) {
+      width: 15%;
+   }
+}
+
+ .footer-company-info {
+   @media (min-width: 767px) {
+      width: 100%;
+   }
+   @media (min-width: 992px) {
+      width: 100%;
+   }
+   @media (min-width: 1260px) {
+      width:400px;
+   }
+}
+
+.footer-logo-container {
+   @media (max-width: 480px) {
+      width: 35%;
+      padding-top: 10px;
+      padding-bottom: 30px;
+      margin-bottom: 0;
+   }
+}
+
+.footer-company-socials-logos {
+   a {
+      @media (max-width: 480px) {
+         padding-right: 40px;
+         padding-left: 40px;
+      }
+   }
+}

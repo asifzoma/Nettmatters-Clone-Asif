@@ -1,0 +1,188 @@
+// ==========================================================================
+//  Side Menu Styles
+// ==========================================================================
+.sidebar {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+  height: 100%;
+  width: 275px;
+  background: #333645;
+  overflow: auto;
+  overflow-x: auto;
+  overflow-y: auto;
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+}
+
+.main-sidebar {
+  padding: 21px;
+      a {
+        border-radius: 3px;
+        display: block;
+        color: #fff;
+        text-align: center;
+        text-transform: uppercase;
+        text-decoration: none;
+      }
+}
+
+.main-sidebar-large {
+        a {
+          display: block;
+          color: #fff;
+          text-align: left;
+          text-transform: uppercase;
+          text-decoration: none;
+        }
+}
+
+.side-menu-large-viewport {
+  padding: 0 !important;
+}
+
+.side-list-item-large {
+  border: 1px solid hsla(0,0%,100%,.1);
+  outline: 1px solid rgba(0,0,0,.25);
+  align-items: center;
+  display: flex;
+}
+
+.side-list-item-large-viewport {
+  border-top: 1px solid hsla(0,0%,100%,.1);
+  border-bottom: 1px solid rgba(0,0,0,.25);
+  align-items: center;
+  display: flex;
+}
+
+.side-item-center {
+  display: block;
+  font-size: .625rem;
+}
+
+.side-menu-list-item {
+  padding: 20px 0 0;
+  a {
+    font-size: 1.125rem;
+    padding: 19px 0 18px;
+  }
+}
+
+.side-menu-list-item-large {
+  a {
+    font-size: 1rem;
+    padding: 20px;
+  }
+}
+
+.side-sub-menu-banner {
+  margin-top: 20px;
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+.side-sub-menu-banner-large {
+  overflow: hidden;
+}
+
+.side-sub-menu-item {
+  padding: 0;
+  border-top: 1px solid rgba(0,0,0,.45);
+  a {
+    font-size: 1rem;
+    line-height: 1.42857143;
+    border-top: 1px solid hsla(0,0%,100%,.05);
+    background-color: rgba(0,0,0,.25);
+    padding: 10px;
+  }
+}
+
+.side-sub-menu-item-large {
+    padding: 0;
+    border-top: 1px solid rgba(0,0,0,.45);
+    a {
+      font-size: .875rem;
+      line-height: 1.42857143;
+      border-top: 1px solid hsla(0,0%,100%,.05);
+      background-color: rgba(0,0,0,.25);
+      padding: 15px 20px;
+      letter-spacing: .4px;
+    }
+    a::before {
+      content: "\BB";
+      padding-right: 15px;
+    }
+}
+
+// Span Icons
+.side-menu-item-span {
+  display: flex;
+  flex-direction: row;
+}
+
+.icon-computer-style {
+  color: #67809f;
+  font-size: 1.438rem;
+  padding-bottom: 10px;
+  display: block;
+}
+
+.icon-display-style {
+  color: #4183d7;
+  font-size: 1.438rem;
+  padding-bottom: 10px;
+  display: block;
+}
+
+.icon-bar-graph-style {
+  color: #2ecc71;
+  font-size: 1.438rem;
+  padding-bottom: 10px;
+  display: block;
+}
+
+.icon-phone-in-talk-style {
+  color: #d64541;
+  font-size: 1.438rem;
+  padding-bottom: 10px;
+  display: block;
+}
+
+.icon-embed2-style{
+  color: #926fb1;
+  font-size: 1.438rem;
+  padding-bottom: 10px;
+  display: block;
+}
+
+.icon-security-style {
+  color: #f62459;
+  font-size: 1.438rem;
+  padding-bottom: 10px;
+  display: block;
+}
+
+.icon-school-style {
+  color: #ce4125;
+  font-size: 1.438rem;
+  padding-bottom: 10px;
+  display: block;
+}
+
+// Media Queries
+@media (min-width: 992px) {
+  .sidebar {
+    width: 350px;
+  }
+}
+
+@media (min-width: 992px) {
+  .main-sidebar {
+    display: none;
+  }
+}

@@ -1,0 +1,69 @@
+// ==========================================================================
+// Global Config
+// ==========================================================================
+
+// Font Styles
+html {
+    font-family: Poppins, sans-serif;
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+}
+
+// Global Class
+a {
+    text-decoration: none;
+}
+
+// Variables
+
+// Sidebar width
+$sidebar-width: 355px;
+
+//background
+$background-color: #323544;
+
+
+// Variables for color scheme
+$telecoms-color: #e74c3c; // Red
+$web-design-color: #7e57a0; // Purple
+$cyber-security-color: #e84393; // Pink
+$developer-training-color: #d35400; // Orange
+$inverse-color: #ffffff; // White for inverse hover
+
+// Text colors
+$text-color-light: #f5f6fa;
+$text-color-dark: #2f3640;
+$text-color-muted: #7f8fa6;
+
+// Accent colors
+$accent-color-1: #00a8ff;
+$accent-color-2: #9c88ff;
+$accent-color-3: #44bd32;
+
+// Neutral greys
+$grey-100: #f8f9fa;
+$grey-200: #e9ecef;
+$grey-300: #dee2e6;
+$grey-400: #ced4da;
+$grey-500: #adb5bd;
+$grey-600: #6c757d;
+$grey-700: #495057;
+$grey-800: #343a40;
+$grey-900: #212529;
+
+// Buttons
+$btn-news-bg: #8E44AD;    // Purple
+$btn-careers-bg: #4183D7; // Blue
+$btn-case-study-bg: #F5B041; // Gold/Yellow
+$btn-text-color: #fff;
+$btn-padding: 10px 25px;
+$btn-border-radius: 4px;
+$btn-font-size: 0.9rem;
+$btn-font-weight: 600;
+$btn-text-transform: uppercase;
+
+// Author meta
+$author-avatar-size: 40px;
+$author-text-color: #666;
+$author-name-weight: 600;
+$date-font-size: 0.85rem;

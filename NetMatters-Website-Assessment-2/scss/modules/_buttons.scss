@@ -1,0 +1,325 @@
+// ==========================================================================
+//  Buttons
+// ==========================================================================
+
+// Global Buttons
+.btn {
+    height: auto;
+    line-height: 35px;
+    text-transform: uppercase;
+    border-radius: 3px;
+}
+
+.btn {
+    display: inline-block;
+    border: 1px solid transparent;
+}
+
+// Header Section
+.btn-support-container {
+    align-self: center;
+    :hover {
+        background-color: #2a6ec6;
+        border-color: #2665b5;
+    }
+}
+
+.btn-header-support {
+    color: #fff;
+    border-color: #4183d7;
+    align-self: center;
+    padding: 5px 15px;
+    font-size: 1.125rem;
+    margin-left: 20px;
+    height: 56px;
+    line-height: 46px;
+    span {
+        font-size: 1.436rem;
+        margin-right: 5px;
+    }
+}
+
+.btn-contact-container {
+    align-self: center;
+    font-size: 1.125rem;
+    :hover {
+        background-color: #84858f;
+        border-color: #797a85;
+    }
+}
+
+.btn-header-contact {
+    color: #fff;
+    background-color: #999aa2;
+    border-color: #999aa2;
+    align-self: center;
+    padding: 5px 15px;
+    margin-left: 20px;
+    height: 56px;
+    line-height: 46px;
+    span {
+        font-size: 1.436rem;
+        margin-right: 5px;
+    }
+}
+
+
+// Our Services Section
+.view-our-work-btn {
+    color: #333645;
+}
+.view-our-work-btn:hover {
+    text-decoration: underline;
+}
+.btn-service {
+    color: #fff;
+    border-color: #f7b322;
+    padding: 5px 15px;
+    font-size: 1.063rem;
+}
+.btn-software {
+    border-color: #f7b322;
+}
+.btn-it-support {
+    border-color: #4183d7;
+}
+.btn-digital-marketing {
+    border-color: #2ecc71;
+}
+.btn-telecoms {
+    border-color: #d64541;
+}
+.btn-web-design {
+    border-color: #926fb1;
+}
+.btn-cyber-security {
+    border-color: #f62459;
+}
+.btn-developer-training {
+    border-color: #ce4125;
+}
+
+//Banner
+.banner-btn-arrow {
+    margin-left: 12px;
+    line-height: 50px;
+}
+.banner-btn-container {
+    :hover {
+        background-color: #7e57a0;
+        border-color: #735093;
+    }
+}
+.banner-btn-container2 {
+    :hover {
+        background-color: #e8a008;
+        border-color: #d49308;
+    }
+}
+.banner-btn-container3 {
+    :hover {
+        background-color: #2a6ec6;
+        border-color: #2665b5;
+    }
+}
+.banner-btn-container4 {
+    :hover {
+        background-color: #26ab5f;
+        border-color: #239a55;
+    }
+}
+.banner-btn-container5 {
+    :hover {
+        background-color: #c42e2a;
+        border-color: #b32a27;
+    }
+}
+.banner-btn-container7 {
+    :hover {
+        background-color: #e80a42;
+        border-color: #d4093c;
+    }
+}
+
+// Welcome Section
+
+.btn-google {
+    background-color: #4387f6;
+}
+
+.btn-trustpilot {
+    background-color: #00b67b;
+}
+
+.btn-primary-inverse {
+    background-color: #272936;
+    margin-bottom: 17px;
+}
+.welcome-btn-container {
+    display: flex;
+    margin-right: 10px;
+    :hover {
+        background-color: #121318;
+    }
+}
+
+.google-btn-container {
+    margin-right: 8px;
+    :hover {
+        background-color: #166af4;
+    }
+}
+
+.trustpilot-btn-container {
+    :hover {
+        background-color: #009b69;
+    }
+}
+
+.btn-google, .btn-trustpilot, .btn-primary-inverse {
+    color: #fff;
+    border-radius: 6px;
+    padding: 10px 30px;
+    font-size: 20px;
+}
+
+// Latest News Buttons
+.case-study-btn-arrow {
+    margin-left: 8px;
+    align-self: center;
+}
+
+//Footer Buttons
+
+.btn-primary {
+    color: #fff;
+    border-color: #333645;
+}
+
+//footer social buttons
+.facebook {
+    padding: 12px 22px 16px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    text-align: center;
+    text-decoration:  none;
+    font-size: 26px;
+    line-height: 26px;
+    background-color: #212330;
+    span {
+        position: relative;
+        top: 4px;
+    }
+}
+.facebook-btn-container {
+    :hover {
+        background-color: #3b5998;
+    }
+}
+
+.linkedin {
+    padding: 12px 22px 16px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    text-align: center;
+    text-decoration:  none;
+    font-size: 26px;
+    line-height: 26px;
+    background-color: #212330;
+    span {
+        position: relative;
+        top: 4px;
+    }
+}
+.linkedin-btn-container {
+    :hover {
+        background-color: #0077b5;
+    }
+}
+
+.twitter {
+    padding: 12px 22px 16px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    text-align: center;
+    text-decoration:  none;
+    font-size: 26px;
+    line-height: 26px;
+    background-color: #212330;
+    span {
+        position: relative;
+        top: 4px;
+    }
+}
+.twitter-btn-container {
+    :hover {
+        background-color: #00aced;
+    }
+}
+
+.instagram {
+    padding: 12px 22px 16px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    text-align: center;
+    text-decoration:  none;
+    font-size: 26px;
+    line-height: 26px;
+    background-color: #212330;
+    span {
+        position: relative;
+        top: 4px;
+    }
+}
+.instagram-btn-container {
+    :hover {
+        background-color: #d93175;
+    }
+}
+
+//Hover Effect 
+// Case Studies Buttons
+.case-study-button-1:hover {
+    background-color: #e8a008; 
+    border-color: #d49308;
+}
+.case-study-button-5:hover {
+    background-color: #2a6ec6;
+    border-color: #2665b5;
+}
+.case-study-button-6:hover {
+    background-color: #26ab5f;
+    border-color: #239a55;
+}
+.case-study-button-8:hover {
+    background-color: #26ab5f;
+    border-color: #239a55;
+}
+.case-study-button-9:hover {
+    background-color: #7e57a0;
+    border-color: #735093;
+}
+.case-study-button-10:hover {
+    background-color: #7e57a0;
+    border-color: #735093;
+}
+.case-study-button-11:hover {
+    background-color: #26ab5f;
+    border-color: #239a55;
+}
+
+//media queries
+
+//header section
+.btn-header-support, .btn-header-contact {
+    @media (max-width:991px) {
+        display: none;
+    }
+}
+
+// Welcome Section
+@media (max-width: 1259px) {
+    .btn-google, .btn-trustpilot{
+    margin-top: 20px;
+    }
+}

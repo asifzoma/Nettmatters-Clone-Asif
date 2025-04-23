@@ -1,0 +1,25 @@
+// ==========================================================================
+//  Partners Styles
+// ==========================================================================
+.partners {
+    display: flex;
+    flex-direction: row;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    overflow-x: hidden;
+    img {
+        width: 100%;
+        padding: 0 20px;
+        max-height: 70px;
+        width: auto !important;
+        filter: grayscale(1);
+    }
+    img:hover {
+        filter: grayscale(0);
+    }
+}
+
+.partner-item {
+    padding: 0 20px;
+    max-height: 70px;
+}

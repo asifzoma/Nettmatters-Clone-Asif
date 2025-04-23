@@ -1,264 +1,346 @@
-// Header section – Mobile-first approach with full responsive breakpoints
-.header {
-  // Base header styles (mobile-first)
-  background-color: $color-white;           // Header background from variables
-  padding: 9px 0;                          // Vertical padding for header
+// ==========================================================================
+//  Header Styles
+//  These styles control the look and layout of the top part of the page,
+//  including the logo, search, contact buttons, and menu icon.
+// ==========================================================================
 
-  // Container for header content
-  .header-content {
-    display: flex;
-    flex-direction: column;                 // Stack rows on mobile
-    padding: 10px;                          // General inner padding
-    max-width: 100%;
-  }
+// Styles for the main <header> element.
+header {
+    // Add some space above the header content.
+    padding-top:  20px;
 
-  // Top row: contains logo and icon group (phone icon and hamburger menu)
-  .header-top {
-    display: flex;
-    justify-content: space-between;         // Spread content across
-    align-items: center;
-    width: 100%;
-    margin-bottom: 10px;                    // Space below top row
-    
-    // Logo styling – ensure it has proper padding
-    .logo {
-      padding: 10px;                        // Padding around logo for breathing room
-      
-      img {
-        width: 100%;                        // Responsive scaling
-        // max-width: 200px;                   // Set max width per design (adjust as needed)
-        height: auto;
-        object-fit: contain;
-      }
-    }
-
-    // Header buttons container
-    .header-top-buttons {
-      display: none;                        // Hidden by default on mobile
-      gap: 10px;
-      align-items: center;
-
-      .btn-support {
-        @include button-support;
-        margin-left: 67px;  // Add 67px space to the left of support button
-      }
-
-      .btn-contact {
-        @include button-contact;
-        margin-left: 20px;  // Maintain existing spacing for contact button
-      }
-    }
-    
-    // Icon group: phone icon and hamburger menu
-    .icon-group {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-
-      // Phone icon styling using Font Awesome
-      .phone-icon {
-        font-size: rems(22px);              
-        color: $color-background;           
-        cursor: pointer;
-      }
-
-      // Hamburger menu 
-      .hamburger-menu {
-        background: none;                  
-        border: none;
+    // Styles for images inside the header.
+    img{
+        // Remove any default padding.
         padding: 0;
-        cursor: pointer;
-        margin-left: 20px;  // Added 20px space to the left
-        
-        // Outer container that gives the black box
-        .hamburger-box {
-          width: 63px;                     // Box width 
-          height: 56px;                    // Box height 
-          background-color: #000;          
-          border-radius: 3px;              
-          display: flex;
-          flex-direction: column;
-          justify-content: space-evenly;   // Evenly space three lines
-          align-items: center;             // Center lines horizontally
-        }
-        
-        // Each of the three horizontal lines
-        .hamburger-line {
-          width: 33px;                     // Width of each line
-          height: 4px;                     // Thickness of each line
-          background-color: $color-white;   // White lines (or use #fff)
-        }
-      }
+        // Ensure padding and border are included in the image's size.
+        box-sizing: border-box;
+        // Make the image a block-level element (takes up its own line).
+        display: block;
+        // Allow the image to shrink if needed, preventing overflow.
+        flex-shrink: 3;
+        // Center the image vertically if it's in a flex container.
+        align-self: center;
+        // Prevent the image from becoming wider than its container.
+        max-width: 100%;
     }
-  }
+}
 
-  // Search button base styles
-  .search-btn {
-    color: $color-white;
-    font-size: rems(23px);
-    padding: 0;
-    text-transform: uppercase;
-    display: none; // Hidden by default
-    width: 60px;
-    height: 56px;
-    border-radius: 3px;  // All corners rounded when standalone
-    border: none;
-    background-color: $color-button-grey;
-    cursor: pointer;
+// Styles for the background area of the header.
+.header-background {
+    // Set the background color to white.
+    background-color: #fff;
+}
+
+// Styles for rows within the header (used for alignment).
+.row {
+    // Arrange items horizontally.
+    display: flex;
+    flex-direction: row;
+    // Take up the full width available.
+    width: 100%;
+    // Distribute space between items.
+    justify-content: space-between;
+    // Add space below the row.
+    padding-bottom: 20px;
+}
+
+// Container for the logo.
+.header-logo-container {
+    // Use flexbox to align the logo.
+    display: flex;
+    // Center the logo vertically.
     align-items: center;
-    justify-content: center;
+}
 
-    i {
-      font-size: rems(23px);
+// Container for action items like buttons and search.
+.header-actions-container{
+    // Use flexbox for alignment.
+    display: flex;
+    // Add some padding top and bottom.
+    padding: 7px 0;
+}
+
+// Styles for the phone icon.
+.header-phone-icon {
+    // Ensure it doesn't exceed its container width.
+    max-width: 100%;
+    // Set the icon size.
+    font-size: 32px;
+    // Add space to the left.
+    margin-left: 15px;
+    // Set the icon color.
+    color: #333645;
+    // Center the icon vertically within its flex container.
+    align-self: center;
+}
+
+// Container for the hamburger menu icon.
+.header-icon-menu-container {
+    // Center vertically.
+    align-self: center;
+    // Add space to the left.
+    margin-left: 20px;
+    // Use flexbox (useful if more icons were added).
+    display: flex;
+
+    // Styles applied when hovering over the container.
+    :hover {
+        // Change background color on hover.
+        background-color: #22242e;
+        // Change border color on hover.
+        border-color: #191a22;
+        // Target the inner lines of the hamburger icon.
+        .hamburger-inner {
+            // Change the lines' color on hover.
+            background-color: #fff;
+        }
     }
+}
 
-    &:hover {
-      background-color: darken($color-button-grey, 8%);
-    }
-  }
+// Older style for an icon menu (might not be used with the current hamburger).
+.icon-menu {
+    // Set the line height to vertically center text/icons.
+    line-height: 46px !important; // !important overrides other styles.
+    display: flex;
+    max-width: 100%;
+    color: #fff;
+    padding: 5px 15px;
+    border-radius: 3px;
+    background-color: #333645;
+    font-size: 2rem;
+    align-self: center;
+    width: 100%;
+    height: 56px;
+}
 
-  // Search box styles
-  .search-box-1, .search-box-2 {
+// Styles for the clickable area (box) of the hamburger menu.
+.hamburger-box {
+    // Add padding inside the box.
+    padding: 5px 15px;
+    // Define the width.
+    width: 63px;
+    // Make it a block element.
+    display: block;
+    // Needed for positioning the lines inside.
     position: relative;
+    font-size: 1.438rem;
+    line-height: 45px;
+    color: #fff;
+    background-color: #333645;
+    border-color: #333645;
+    height: 56px;
+    line-height: 46px;
+    font-size: 1.125rem;
+    border-radius: 3px;
+}
+
+// Styles for the middle line of the hamburger icon.
+.hamburger-inner {
+    background-color: #fff;
+    border-radius: 0;
+    font-size: 1.438rem;
+    line-height: 45px;
+    // Dimensions of the line.
+    width: 33px;
+    height: 4px;
+    border-radius: 0;
+    // Allows precise positioning.
+    position: absolute;
+    // Smooth transition effect for changes.
+    transition-property: transform;
+    transition-duration: .15s;
+    transition-timing-function: ease;
+    display: block;
+    // Position the line in the center.
+    top: 50%;
+    margin-top: -1.5px; // Adjust slightly for perfect centering.
+    transition-duration: .22s;
+    transition-timing-function: cubic-bezier(.55,.055,.675,.19); // Custom animation curve.
+}
+
+// Styles for the top line (created using the ::before pseudo-element).
+.hamburger-inner::before {
+    // Required for pseudo-elements.
+    content: "";
+    // Position 10px above the middle line.
+    top: -10px;
+    // Inherit styles from .hamburger-inner.
+    background-color: #fff;
+    border-radius: 0;
+    width: 33px;
+    height: 4px;
+    position: absolute;
+    transition-property: transform;
+    transition-duration: .15s;
+    transition-timing-function: ease;
+    display: block;
+    // Specific transitions for animation (e.g., when menu opens).
+    transition: top .1s ease-in .25s,opacity .1s ease-in;
+}
+
+// Styles for the bottom line (created using the ::after pseudo-element).
+.hamburger-inner::after {
+    content: "";
+    // Position 10px below the middle line.
+    bottom: -10px;
+    // Inherit styles.
+    background-color: #fff;
+    border-radius: 0;
+    width: 33px;
+    height: 4px;
+    position: absolute;
+    transition-property: transform;
+    transition-duration: .15s;
+    transition-timing-function: ease;
+    display: block;
+    // Specific transitions for animation.
+    transition: bottom .1s ease-in .25s,transform .22s cubic-bezier(.55,.055,.675,.19);
+}
+
+// Styles for the small search form (visible on smaller screens).
+.header-form {
+    // Allows positioning the search icon inside.
+    position: relative;
+    // Add space above.
+    margin-top: 11px;
+    color: #888;
+    opacity: 1;
+    display: inline-block;
+    width: 100%;
+    height: 47px;
+    padding: 5px 15px;
+    background-color: rgba(0, 0, 0, .1); // Semi-transparent black background.
+    transition: none; // No transition effect.
+    outline: none; // Remove default browser outline.
+    border: 2px solid rgba(0, 0, 0, .1);
+    border-radius: 2px;
+    // Inner shadow effect.
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+    // Leave space on the right for the icon.
+    padding-right: 40px;
+}
+
+// Styles for the small search icon.
+.icon-search-small {
+    background: none;
+    color: #333645;
+    // Position inside the form container.
+    position: absolute;
+    right: 5px;
+    // Vertically center the icon.
+    line-height: 47px;
+    font-size: 30px;
+    // Add space above (adjust as needed).
+    margin-top: 20px;
+}
+
+// Container for the small search form.
+.form-container {
+    position: relative;
+    padding-bottom: 20px;
+}
+
+// Container for the larger search form (visible on larger screens).
+.large-form-container {
+    // Vertically center within the actions container.
+    align-self: center;
+    // Use flexbox.
+    display: flex;
+    // Add space to the left.
+    margin-left: 20px;
+}
+
+// Styles for the large search input field.
+.header-form-large {
+    background-color: #fff;
+    border: 1px solid #e5e5e5;
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+    font-size: 14px;
+    height: 56px;
+    margin: 0;
+    outline: none;
+    padding: 5px 15px;
+    border-color: #ccc;
+}
+
+// Container for the large search icon button.
+.large-form-icon-container {
     display: flex;
     align-items: center;
-    background-color: lighten($color-border, 15%);
-    border: 1px solid $color-border;
-    border-radius: 2px;
-    padding: 0;
+    align-self: center;
+    line-height: 0; // Remove extra space below icon.
+    outline: none;
+    background-color: #999aa2;
     height: 56px;
-    
-    input {
-      flex: 1;
-      border: none;
-      padding: 10px;
-      font-size: rems(16px);
-      background: transparent;
-      color: $color-background;
-      height: 100%;
-      &:focus {
-        outline: none;
-      }
+    font-size: 1.063rem;
+    // Round the right corners.
+    border-radius: 0 3px 3px 0;
+    border: none;
+    color: #fff;
+    padding: 7px 20px 3px;
+    // Style change on hover.
+    :hover {
+        background-color: #7e808a;
     }
+}
 
-    // When button is inside search box
-    .search-btn {
-      position: absolute;
-      right: 0;
-      top: 0;
-      border-radius: 0 3px 3px 0;  // Only right corners rounded when in search box
+// Styles for the large search icon itself.
+.icon-search-large {
+    border: 0;
+    color: #fff;
+    font-size: 23px;
+    font-weight: 400;
+    margin: 0;
+    align-self: center;
+    display: inline;
+    position: relative;
+    top: -2px; // Fine-tune vertical position.
+}
+
+// Styles when the large search input has focus (is being typed in).
+.header-form-large:focus {
+    outline: 0;
+    // Change border color when focused.
+    border-color: #5bc0de;
+    // Add a glowing effect (box shadow).
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(91,192,222,.6);
+}
+
+// Hover effect specifically for the icon container button.
+.large-form-icon-container:hover {
+    background-color: #7e808a;
+}
+
+// Media Queries: Styles that apply only at certain screen sizes.
+
+.row {
+    // When screen width is 765px or less...
+    @media (max-width:765px) {
+        // Remove the bottom padding.
+        padding-bottom: 0;
     }
-  }
+}
 
-  .search-box-1 {
-    width: 100%;
-  }
-
-  .search-box-2 {
-    display: none;
-  }
-
-  // ----------- Media Queries for Larger Viewports ------------------
-  
-  // At small breakpoint ($breakpoint-sm),.
-  @media (min-width: $breakpoint-sm) {
-    .search-box-1 {
-      display: none;
+.form-container, .header-phone-icon {
+    // When screen width is 766px or more...
+    @media (min-width:766px) {
+        // Hide the small form container and the phone icon.
+        display: none;
     }
+}
 
-    .phone-icon {
-      display: none;
+.header-form-large, .icon-search-large, .large-form-icon-container {
+    // When screen width is 765px or less...
+    @media (max-width:765px) {
+        // Hide the large search form elements.
+        display: none;
     }
+}
 
-    .search-box-2 {
-      display: flex;
-      width: 174px;
-
-      .search-btn {
-        display: flex;
-      }
+// Adjustments for the logo container on larger screens.
+.header-logo-container {
+    @media (min-width:768px) {
+        // Potentially add styles here if needed for tablets and up.
     }
-  }
-
-  // At medium breakpoint
-  @media (min-width: $breakpoint-md) {
-    .header-content {
-      flex-direction: row;
-      justify-content: space-between;
-      align-items: center;
-    }
-    
-    .header-top {
-      margin-bottom: 0;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      width: 100%;
-
-      .header-top-buttons {
-        display: flex;
-        align-items: center;
-        gap: 10px;
-      }
-
-      // Show standalone search button
-      .search-btn {
-        display: flex;
-      }
-    }
-
-    // Hide both search boxes
-    .search-box-1, .search-box-2 {
-      display: none;
-    }
-  }
-  
-  // Add specific breakpoint for 992px-1200px
-  @media (min-width: $breakpoint-md) and (max-width: $breakpoint-lg) {
-    .header-top {     
-
-        .search-btn {
-          display: flex;
-        }
-      }
-    }
-  }
-  
-  // At large breakpoint
-  @media (min-width: $breakpoint-lg) {
-    .header {
-      .header-top {
-        .logo {
-          padding: 15px;
-          
-          img {
-            width: 364px;  // Set fixed width for largest breakpoint
-            height: 64px;  // Set fixed height for largest breakpoint
-            object-fit: contain;  // Maintain aspect ratio while fitting within dimensions
-          }
-        }
-
-        .search-btn {
-          display: none;
-        }
-      }
-      
-      .search-box-2 {
-        display: flex;
-        width: 300px;
-
-        .search-btn {
-          display: flex;
-          position: absolute;
-          right: 0;
-          top: 0;
-        }
-
-        input {
-          padding-right: 70px;
-        }
-      }
-    }
-  }
-
-
+}

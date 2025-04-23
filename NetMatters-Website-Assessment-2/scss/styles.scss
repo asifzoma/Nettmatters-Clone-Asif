@@ -1,0 +1,76 @@
+// ==========================================================================
+//  Layout
+// ==========================================================================
+
+// Layout
+@import "layout/layout.scss";
+
+// ==========================================================================
+//  Modules
+// ==========================================================================
+
+// Header
+
+@import "modules/header";
+
+// Drop Down Menu
+
+@import "modules/drop-down-menu";
+
+// Banner
+
+@import "modules/banner";
+
+// Our services
+
+@import "modules/our-services";
+
+// Partners
+
+@import "modules/partners";
+
+// Welcome Section
+
+@import "modules/welcome";
+
+// Latest News
+
+@import "modules/latest-news";
+
+// Case Studies
+
+@import "modules/case-studies";
+
+// Footer
+
+@import "modules/footer.scss";
+
+// Buttons
+
+@import "modules/buttons";
+
+// Icons
+
+@import "modules/icons";
+
+// Sidebar
+@import "modules/sidebar";
+
+// ==========================================================================
+//  Utilities
+// ==========================================================================
+
+// Global config
+
+@import "utilities/config.scss";
+
+// Mixins
+
+@import "utilities/mixins";
+
+
+// ==========================================================================
+//  JavaScript Styles
+// ==========================================================================
+
+@import "modules/jsstyles.scss"

@@ -1,221 +1,93 @@
-// Base Styles
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    z-index: 1;
-}
+// ==========================================================================
+// Layout Styles
+// These are the basic styles that apply to the overall page layout.
+// ==========================================================================
 
-html, body {
-    overflow-x: hidden;
-  } // ensures no horizontal scrollbar
-  
+// First, we bring in the Poppins font from Google Fonts.
+// This font will be used for most of the text on the website.
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
-
+// Styles for the main body of the HTML document.
 body {
-    font-family: 'Open Sans', Arial, sans-serif;
-    color: #fff;
-    line-height: 1.6;
-}
-
-body {
+    // Use the Poppins font we imported, or a default sans-serif font if Poppins isn't available.
+    font-family: Poppins, sans-serif;
+    // Set the default text size to 16 pixels (1rem).
+    font-size: 1rem;
+    // Adjust the spacing between letters slightly.
+    letter-spacing: .4px;
+    // Remove the default browser margin around the body.
     margin: 0;
+    // Set the space between lines of text (line height).
+    line-height: 1.482857143;
+    // Set the default text color to a medium grey.
+    color: #666;
 }
 
+// The asterisk (*) selects ALL elements on the page.
 * {
+    // This tells the browser how to calculate the total width and height of an element.
+    // 'border-box' means padding and border are included in the element's total width and height.
     box-sizing: border-box;
 }
 
-.logo-container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.section {
-    padding-top: 50px;
-    padding-bottom: 50px;
-}
-
+// Styles for elements with the class 'container'.
+// Containers are used to center content on the page and give it a maximum width.
 .container {
+    // Automatically add margins to the left and right to center the container.
     margin-right: auto;
     margin-left: auto;
+    // Add some space (padding) inside the container on the left and right.
     padding-left: 15px;
     padding-right: 15px;
 
-    @media (min-width: $breakpoint-sm) {
-        width: 750px;
+    // These '@media' rules apply styles only when the screen size meets certain conditions.
+
+    // When the screen width is 768 pixels or wider (like tablets)...
+    @media (min-width: 768px) {
+        // Set the container width to 750 pixels.
+         width: 750px;
     }
 
-    @media (min-width: $breakpoint-md) {
+    // When the screen width is 992 pixels or wider (like small laptops)...
+    @media (min-width: 992px) {
+        // Set the container width to 970 pixels.
         width: 970px;
     }
 
-    @media (min-width: $breakpoint-lg) {
+    // When the screen width is 1260 pixels or wider (like larger desktops)...
+    @media (min-width: 1260px) {
+        // Set the container width to 1200 pixels.
         width: 1200px;
-        
-    }
-} 
-
-
-.btn {
-    display: inline-block;
-    padding: 10px 20px;
-    background-color: $primary-color;
-    color: white;
-    text-decoration: none;
-    border: none;
-    border-radius: 3px;
-    cursor: pointer;
-
-    @include transition();
-    
-    &:hover {
-        background-color: darken($primary-color, 10%);
-        color: white;
-    }
-    
-    &-large {
-        padding: 15px 30px;
-        font-size: 1.1rem;
     }
 }
 
-// Top Bar
-.top-bar {
-    background-color: white;
-    padding: 10px 0;
-    @include box-shadow();
-    
-    &-content {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-    }
-    
-    .logo img {
-        height: 50px;
-    }
-    
-    .actions {
-        display: flex;
-        align-items: center;
-        gap: 15px;
-        
-        .btn {
-            padding: 8px 15px;
-            
-            &.support-btn {
-                background-color: $success-color;
-            }
-            
-            &.contact-btn {
-                background-color: $accent-color;
-            }
-        }
-        
-        .search-box {
-            display: flex;
-            
-            input {
-                padding: 8px 15px;
-                border: 1px solid #ddd;
-                border-radius: 3px 0 0 3px;
-                width: 200px;
-            }
-            
-            button {
-                background-color: $primary-color;
-                color: white;
-                border: none;
-                padding: 0 15px;
-                border-radius: 0 3px 3px 0;
-                cursor: pointer;
-            }
-        }
-        
-        .menu-toggle {
-            display: none;
-            background: none;
-            border: none;
-            font-size: 1.5rem;
-            color: $primary-color;
-            cursor: pointer;
-        }
-    }
+// Styles for the main 'wrapper' element that contains most of the page content.
+.wrapper {
+    // Hide any content that overflows the wrapper's boundaries.
+    overflow: hidden;
+    // Set the background color to white.
+    background-color: #fff;
+    // Allows positioning child elements relative to this wrapper.
+    position: relative;
 }
 
-// Main Navigation
-.main-nav {
-    background-color: $primary-color;
-    
-    .nav-list {
-        display: flex;
-        list-style: none;
-        
-        li {
-            flex: 1;
-            
-            a {
-                display: block;
-                color: $white;
-                text-align: center;
-                padding: 15px 10px;
-                text-decoration: none;
-                @include transition();
-                
-                &:hover {
-                    background-color: $secondary-color;
-                }
-                
-                i {
-                    margin-right: 8px;
-                }
-            }
-        }
+// Styles for the container specifically used in the sticky footer.
+// It's similar to the main container but might have slight variations.
+.container-sticky-footer {
+    // Center the container.
+    margin-right: auto;
+    margin-left: auto;
+    // Remove default padding (might be added by other rules).
+    padding: 0;
+
+    // Adjust width based on screen size, similar to the main container.
+    @media (min-width: 768px) {
+         width: 750px;
+    }
+    @media (min-width: 992px) {
+        width: 970px;
+    }
+    @media (min-width: 1260px) {
+        width: 1200px;
     }
 }
-
-// Hero Section
-.hero {
-    background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('../img/hero/home-hero.jpeg');
-    background-size: cover;
-    background-position: center;
-    color: $white;
-    padding: 100px 0;
-    text-align: center;
-    
-    &-content {
-        max-width: 800px;
-        margin: 0 auto;
-        
-        h1 {
-            font-size: 2.5rem;
-            margin-bottom: 20px;
-        }
-        
-        p {
-            font-size: 1.2rem;
-            margin-bottom: 30px;
-        }
-        
-        .btn {
-            background-color: $accent-color;
-            
-            &:hover {
-                background-color: darken($accent-color, 10%);
-            }
-        }
-    }
-}
-
-// // Services Section
-// .services {
-//     padding: 60px 0;
-    
-//     &-grid {
-//         display: grid;
-//         grid-template-columns: repeat(4, 1fr);
-//         gap: 20px;
-//     }
-// }
