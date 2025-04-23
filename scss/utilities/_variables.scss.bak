@@ -24,21 +24,21 @@ $background-color: #323544; // General dark background, used in footer, welcome 
 
 
 // Variables for color scheme (Consider prefixing, e.g., $service-telecoms-color)
-$software-color: #67809f; // Bespoke Software - matches mixin color
-$it-support-color: #4183d7; // IT Support - matches mixin color
-$digital-marketing-color: #2ecc71; // Digital Marketing - matches mixin color
-$telecoms-color: #d64541; // Telecoms Services - UPDATED to match mixin color #d64541
-$web-design-color: #926fb1; // Web Design - UPDATED to match mixin color #926fb1
-$cyber-security-color: #f62459; // Cyber Security - UPDATED to match mixin color #f62459
-$developer-training-color: #ce4125; // Developer Training - UPDATED to match mixin color #ce4125
+$software-color: #67809f; // Bespoke Software
+$it-support-color: #4183d7; // IT Support
+$digital-marketing-color: #2ecc71; // Digital Marketing
+$telecoms-color: #d64541; // Telecoms Services
+$web-design-color: #926fb1; // Web Design
+$cyber-security-color: #f62459; // Cyber Security
+$developer-training-color: #ce4125; // Developer Training
 
 $inverse-color: #ffffff; // White for inverse hover etc.
 
 // Text colors
 $text-color-light: #f5f6fa;
-$text-color-dark: #666; // Main dark text color
+$text-color-dark: #333645; // Main dark text color
 $text-color-muted: #666; // Muted/grey text (used in body)
-// $text-color-author: #a3a8ac; // Commented out - Specific author color not in source _variables
+$text-color-author: #a3a8ac; // Specific for author/quote attribution
 
 // Accent colors (Not seemingly used extensively in copied modules, potentially legacy or for other pages)
 $accent-color-1: #00a8ff;
@@ -61,7 +61,7 @@ $sticky-footer-bg: #212330;
 
 // Buttons
 // News Article Tags
-$btn-news-bg: #8E44AD; // Business Development Tag Color (Corrected based on mixin usage)
+$btn-news-bg: #db8c0d; // Business Development Tag Color (Corrected based on mixin usage)
 $btn-careers-bg: #4183D7; // (Potentially unused or for other pages)
 $btn-case-study-bg: #F5B041; // (Potentially unused or for other pages)
 $btn-digital-tag-bg: $digital-marketing-color; // Digital Marketing Tag
@@ -69,18 +69,18 @@ $btn-web-tag-bg: $web-design-color; // Web Design Tag
 
 $btn-text-color: #fff;
 $btn-padding: 10px 25px;
-$btn-border-radius: 4px;
+$btn-border-radius: 3px;
 $btn-font-size: 0.9rem;
 $btn-font-weight: 600;
 $btn-text-transform: uppercase;
 
 // Author meta
 $author-avatar-size: 40px;
-$author-text-color: #666; // Use base muted color
+$author-text-color: $text-color-muted; // Use base muted color
 $author-name-weight: 600;
 $date-font-size: 0.85rem;
 
 // Breakpoints (Consider defining these based on common device widths)
-// $breakpoint-sm: 768px;
-// $breakpoint-md: 992px;
-// $breakpoint-lg: 1260px; // Custom large breakpoint used in several modules 
+$breakpoint-sm: 768px;
+$breakpoint-md: 992px;
+$breakpoint-lg: 1260px; // Custom large breakpoint used in several modules 

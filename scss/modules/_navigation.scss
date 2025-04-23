@@ -1,0 +1,11 @@
+.main-nav {
+    .main-navigation {
+        li {
+            &:hover {
+                .triangle {
+                    display: inline-flex;
+                }
+            }
+        }
+    }
+} 
