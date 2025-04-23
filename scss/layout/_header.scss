@@ -59,13 +59,6 @@ header {
     display: flex;
     // Add some padding top and bottom.
     padding: 7px 0;
-
-    .btn-header-support, .btn-header-contact {
-        i {
-            margin-right: 8px;
-            font-size: 16px;
-        }
-    }
 }
 
 // Styles for the phone icon.
@@ -80,11 +73,6 @@ header {
     color: #333645;
     // Center the icon vertically within its flex container.
     align-self: center;
-
-    i {
-        font-size: 24px;
-        color: #333645;
-    }
 }
 
 // Container for the hamburger menu icon.
@@ -251,15 +239,6 @@ header {
 .form-container {
     position: relative;
     padding-bottom: 20px;
-
-    i.icon-search-small {
-        font-size: 16px;
-        color: #999;
-        position: absolute;
-        right: 10px;
-        top: 50%;
-        transform: translateY(-50%);
-    }
 }
 
 // Container for the larger search form (visible on larger screens).
@@ -303,11 +282,6 @@ header {
     // Style change on hover.
     :hover {
         background-color: #7e808a;
-    }
-
-    i {
-        font-size: 18px;
-        color: #fff;
     }
 }
 
@@ -407,25 +381,4 @@ header {
     @media (min-width: 992px) and (max-width: 1259px) {
         border-radius: 3px;
     }
-}
-
-// Update existing styles for the search icon in mobile view
-@media (max-width: 766px) {
-    .icon-search-small {
-        display: inline-block;
-    }
-}
-
-// Make sure the Support and Contact buttons have proper styling
-.btn-header-support, .btn-header-contact {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-}
-
-// Style the search button in header
-.large-form-icon-container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
 }

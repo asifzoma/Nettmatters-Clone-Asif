@@ -23,6 +23,9 @@ const $cookies_accept = $('.modal-btn-2');
 const $cookies_manage = $('.cookie-settings-btn');
 const $cookies_settings = $('.modal-btn-1');
 
+// Case Studies Banner Variables
+const $caseStudiesBtn = $('.btn-case-studies');
+
 ////////
 // Cookie Pop Up
 ////////
@@ -91,6 +94,29 @@ function hasScrolled() {
     lastScrollTop = st;
 }
 
+////////
+// Case Studies Banner Button Animation
+////////
+
+$(document).ready(function(){
+    // Add hover animation effect for the Case Studies Banner button
+    $caseStudiesBtn.hover(
+        function() {
+            $(this).find('.btn-icon').css('transform', 'translateX(5px)');
+        },
+        function() {
+            $(this).find('.btn-icon').css('transform', 'translateX(0)');
+        }
+    );
+    
+    // Smooth scroll to case studies section when button is clicked
+    $caseStudiesBtn.on('click', function(e) {
+        e.preventDefault();
+        $('html, body').animate({
+            scrollTop: $('.case-studies').offset().top
+        }, 800);
+    });
+});
 
 ////////
 // Slick Carousel Plugin
@@ -112,45 +138,45 @@ $(document).ready(function(){
 
 // Partner Carousel
 $(document).ready(function(){
-    $('.partners .container').slick({
-        slidesToShow: 12,
-        slidesToScroll: 1,
-        autoplay: true,
-        autoplaySpeed: 3000,
-        arrows: false,
-        infinite: true,
-        variableWidth: true,
-        swipe: false,
-        draggable: false,
-        pauseOnHover: true,
-        pauseOnFocus: true,
+    $('.partners').slick({
+        slidesToShow:       3,
+        slidesToScroll:     1,
+        autoplay:           true,
+        arrows:             false,
+        infinite:           true,
+        variableWidth:      true,
+        swipe:              false,
+        draggable:          false,
+        pauseOnHover:       true,
+        pauseOnFocus:       true,
         responsive: [
             {
                 breakpoint: 1260,
                 settings: {
-                    slidesToShow: 8
+                    slidesToShow: 3
                 }
             },
             {
                 breakpoint: 992,
                 settings: {
-                    slidesToShow: 6
+                    slidesToShow: 3
                 }
             },
             {
                 breakpoint: 768,
                 settings: {
-                    slidesToShow: 4
+                    slidesToShow: 2
                 }
             },
             {
                 breakpoint: 480,
                 settings: {
-                    slidesToShow: 2
+                    slidesToShow: 1
                 }
             }
         ]
     });
+    $('.partners .slick-list').addClass('slick-list-overflowremove');
 });
 
 // Case Studies Carousel
