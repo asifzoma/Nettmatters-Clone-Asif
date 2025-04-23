@@ -1,79 +1,66 @@
 // ==========================================================================
-//  Layout
+//  Utilities (Variables, Helpers/Mixins)
 // ==========================================================================
 
-// Layout
-@import "layout/layout.scss";
+// Variables (formerly config)
+@import "utilities/variables";
+
+// Helpers (formerly mixins)
+@import "utilities/helpers";
 
 // ==========================================================================
-//  Modules
+//  Base & Layout
 // ==========================================================================
 
-// Header
+// Base Layout Styles (Body, Container, etc.)
+@import "layout/base-layout";
 
-@import "modules/header";
+// ==========================================================================
+//  Modules (Components & Sections)
+// ==========================================================================
 
-// Drop Down Menu
+// Header Styles
+@import "modules/main-header";
 
-@import "modules/drop-down-menu";
+// Navigation Dropdown Menu
+@import "modules/nav-dropdown";
 
-// Banner
-
+// Banner Styles
 @import "modules/banner";
 
-// Our services
-
+// Our Services Section
 @import "modules/our-services";
 
-// Partners
-
+// Partners Logos Section
 @import "modules/partners";
 
 // Welcome Section
-
 @import "modules/welcome";
 
-// Latest News
-
+// Latest News Section
 @import "modules/latest-news";
 
-// Case Studies
-
+// Case Studies Section
 @import "modules/case-studies";
 
-// Footer
+// Footer Styles
+@import "modules/main-footer";
 
-@import "modules/footer.scss";
+// Button Styles
+@import "modules/button-styles";
 
-// Buttons
+// Icon Font Definition
+@import "modules/icon-font";
 
-@import "modules/buttons";
-
-// Icons
-
-@import "modules/icons";
-
-// Sidebar
+// Sidebar Styles
 @import "modules/sidebar";
 
-// ==========================================================================
-//  Utilities
-// ==========================================================================
-
-// Global config
-
-@import "utilities/config.scss";
-
-// Mixins
-
-@import "utilities/mixins";
-
+// Styles applied via JavaScript
+@import "modules/js-styles";
 
 // ==========================================================================
-//  JavaScript Styles
+//  End of Imports
 // ==========================================================================
-
-@import "modules/jsstyles.scss"
 
 
     
