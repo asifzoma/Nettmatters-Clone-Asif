@@ -307,3 +307,64 @@
 // .icon-computer-style { color: #67809f; }
 // .icon-display-style { color: #4183d7; }
 // ... etc ... 
+
+// Service Container Mixins
+@mixin service-container-base {
+    display: block;
+    border: 1px solid #ccc;
+    padding: 30px;
+    box-shadow: 0 3px 35px rgba(0, 0, 0, .1);
+    border-radius: 15px;
+    text-align: center;
+    margin-top: 30px;
+    top: 0;
+    position: relative;
+    transition: .5s ease;
+}
+
+@mixin service-hover($bg-color) {
+    color: #fff;
+    border-color: transparent;
+    top: -10px;
+    transition: .5s ease;
+    background-color: $bg-color;
+    h2 {
+        color: #fff;
+    }
+    p {
+        color: #fff;
+    }
+    a {
+        background-color: #fff;
+        color: $bg-color;
+        border-color: transparent;
+    }
+    span {
+        color: $bg-color;
+        background-color: #fff;
+    }
+}
+
+@mixin service-container-std {
+    width: 100%;
+    
+    @media (min-width: 992px) {
+        width: 33.33333333%;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+}
+
+@mixin service-container-small {
+    width: 100%;
+    
+    @media (min-width: 767px) {
+        width: 50%;
+    }
+    @media (min-width: 992px) {
+        width: 50%;
+    }
+    @media (min-width: 1260px) {
+        width: 25%;
+    }
+} 

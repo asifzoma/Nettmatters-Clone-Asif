@@ -4,18 +4,14 @@
 
 .our-services {
     padding-top: 30px;
+    padding-bottom: 20px;
+    
     h2 {
-        font-size: 2.7rem;
+        font-size: 2.25rem;
         line-height: 1.1;
         color: #333645;
-        font-weight: 400;
-    }
-    h3 {
-        line-height: 1.1;
-        font-size: 1.625rem;
         font-weight: 600;
-        color: #333645;
-        text-align: right;
+        margin-bottom: 20px;
     }
 }
 
@@ -23,31 +19,44 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    h1 {
-        font-size: 2.25rem;
+    margin-bottom: 15px;
+    align-items: center;
+    
+    a {
+        display: flex;
+        align-items: center;
+        font-size: 1.625rem;
         font-weight: 600;
-        line-height: 4rem;
-        text-align: center;
+        color: #333645;
+        text-decoration: none;
+        
+        &:hover {
+            text-decoration: underline;
+        }
+        
+        svg, i {
+            margin-left: 8px;
+        }
     }
 }
+
 .our-services-icon-arrow-right {
     margin-left: 8px;
 }
+
 .service-list {
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
-    .service {
-        display: block;
-        border: 1px solid #ccc;
-        padding: 30px;
-        box-shadow: 0 3px 35px rgba(0, 0, 0, .1);
-        border-radius: 15px;
-        text-align: center;
-        margin-top: 30px;
-        top: 0;
-        position: relative;
+    
+    @media (min-width: 767px) {
+        flex-direction: row;
     }
+    
+    .service {
+        @include service-container-base;
+    }
+    
     p {
         font-size: .8125rem;
         font-weight: 400;
@@ -55,16 +64,21 @@
         line-height: 1.375rem;
         color: #333645;
     }
+    
     h2 {
         font-size: 1.3rem;
         position: relative;
         padding-bottom: 10px;
-        margin: 0 0 11px;
+        margin: 10px 0 15px;
+        font-weight: 600;
+        color: #333645;
     }
+    
     span {
-        display: block;
+        display: flex;
+        justify-content: center;
+        align-items: center;
         font-size: 2rem;
-        line-height: 62px;
         height: 65px;
         width: 65px;
         margin: 0 auto 17px;
@@ -72,8 +86,114 @@
         border-radius: 50%;
     }
 }
+
+// Service icon colors
+.software span {
+    background-color: $software-color;
+}
+
+.it-support span {
+    background-color: $it-support-color;
+}
+
+.digital-marketing span {
+    background-color: $digital-marketing-color;
+}
+
+.telecoms-service span {
+    background-color: $telecoms-color;
+}
+
+.web-design span {
+    background-color: $web-design-color;
+}
+
+.cyber-security span {
+    background-color: $cyber-security-color;
+}
+
+.developer-training span {
+    background-color: $developer-training-color;
+}
+
+// Service card button styling
+.service .btn, 
+.service .read-more {
+    display: inline-block;
+    padding: 8px 20px;
+    font-weight: 600;
+    text-transform: uppercase;
+    border-radius: 3px;
+    text-decoration: none;
+    color: #fff;
+    transition: background-color 0.3s ease;
+}
+
+.software .btn, 
+.software .read-more {
+    background-color: $software-color;
+    
+    &:hover {
+        background-color: darken($software-color, 10%);
+    }
+}
+
+.it-support .btn, 
+.it-support .read-more {
+    background-color: $it-support-color;
+    
+    &:hover {
+        background-color: darken($it-support-color, 10%);
+    }
+}
+
+.digital-marketing .btn, 
+.digital-marketing .read-more {
+    background-color: $digital-marketing-color;
+    
+    &:hover {
+        background-color: darken($digital-marketing-color, 10%);
+    }
+}
+
+.telecoms-service .btn, 
+.telecoms-service .read-more {
+    background-color: $telecoms-color;
+    
+    &:hover {
+        background-color: darken($telecoms-color, 10%);
+    }
+}
+
+.web-design .btn, 
+.web-design .read-more {
+    background-color: $web-design-color;
+    
+    &:hover {
+        background-color: darken($web-design-color, 10%);
+    }
+}
+
+.cyber-security .btn, 
+.cyber-security .read-more {
+    background-color: $cyber-security-color;
+    
+    &:hover {
+        background-color: darken($cyber-security-color, 10%);
+    }
+}
+
+.developer-training .btn, 
+.developer-training .read-more {
+    background-color: $developer-training-color;
+    
+    &:hover {
+        background-color: darken($developer-training-color, 10%);
+    }
+}
+
 .service-container {
-    width: 100%;
+    @include service-container-std;
 }
 .our-services-bottom {
     display: flex;
@@ -83,167 +203,28 @@
 
 // Flex Box Hover Effect
 .software:hover {
-    color: #fff;
-    border-color: transparent;
-    top: -10px;
-    transition: .5s ease;
-    background-color: #67809f;
-    h2 {
-        color: #fff;
-    }
-    p {
-        color: #fff;
-    }
-    a {
-        background-color: #fff;
-        color: #67809f;
-        border-color: transparent;
-    }
-    span {
-        color: #67809f;
-        background-color: #fff;
-    }
+    @include service-hover($software-color);
 }
 .it-support:hover {
-    color: #fff;
-    border-color: transparent;
-    top: -10px;
-    transition: .5s ease;
-    background-color: #4183d7;
-    h2 {
-        color: #fff;
-    }
-    p {
-        color: #fff;
-    }
-    a {
-        background-color: #fff;
-        color: #4183d7;
-        border-color: transparent;
-    }
-    span {
-        color: #4183d7;
-        background-color: #fff;
-    }
+    @include service-hover($it-support-color);
 }
 .digital-marketing:hover {
-    color: #fff;
-    border-color: transparent;
-    top: -10px;
-    transition: .5s ease;
-    background-color: #2ecc71;
-    h2 {
-        color: #fff;
-     }
-    p {
-        color: #fff;
-    }
-    a {
-        background-color: #fff;
-        color: #2ecc71;
-        border-color: transparent;
-    }
-    span {
-        color: #2ecc71;
-        background-color: #fff;
-    }
+    @include service-hover($digital-marketing-color);
 }
 .telecoms-service:hover {
-    color: #fff;
-    border-color: transparent;
-    top: -10px;
-    transition: .5s ease;
-    background-color: #d64541;
-    h2 {
-        color: #fff;
-    }
-    p {
-        color: #fff;
-    }
-    a {
-        background-color: #fff;
-        color: #d64541;
-        border-color: transparent;
-    }
-    span {
-        color: #d64541;
-        background-color: #fff;
-    }
+    @include service-hover($telecoms-color);
 }
 .web-design:hover {
-    color: #fff;
-    border-color: transparent;
-    top: -10px;
-    transition: .5s ease;
-    background-color: #926fb1;
-    h2 {
-        color: #fff;
-    }
-    p {
-        color: #fff;
-    }
-    a {
-        background-color: #fff;
-        color: #926fb1;
-        border-color: transparent;
-    }
-    span {
-        color: #926fb1;
-        background-color: #fff;
-    }    
+    @include service-hover($web-design-color);
 }
 .cyber-security:hover {
-    color: #fff;
-    border-color: transparent;
-    top: -10px;
-    transition: .5s ease;
-    background-color: #f62459;
-    h2 {
-        color: #fff;
-    }
-    p {
-        color: #fff;
-    }
-    a {
-        background-color: #fff;
-        color: #f62459;
-        border-color: transparent;
-    }
-    span {
-        color: #f62459;
-        background-color: #fff;
-    } 
+    @include service-hover($cyber-security-color);
 }
 .developer-training:hover {
-    color: #fff;
-    border-color: transparent;
-    top: -10px;
-    transition: .5s ease;
-    background-color: #ce4125;
-    h2 {
-        color: #fff;
-    }
-    p {
-        color: #fff;
-    }
-    a {
-        background-color: #fff;
-        color: #ce4125;
-        border-color: transparent;
-    }
-    span {
-        color: #ce4125;
-        background-color: #fff;
-    }    
+    @include service-hover($developer-training-color);
 }
 
 // Media Queries 
-
-.service-list {
-    @media (min-width: 767px) {
-        flex-direction: row;
-    }
-}
 
 .service-container {
     @media (min-width: 992px) {
@@ -254,17 +235,10 @@
 }
 
 .service-container-small {
-    @media (min-width: 767px) {
-        width: 50%;
-    }
-    @media (min-width: 992px) {
-        width: 50%;
-    }
-    @media (min-width: 1260px) {
-        width: 25%;
-    }
+    @include service-container-small;
 }
 
+// Small service container padding adjustments
 .service-small-1, .service-small-3 {
     @media (min-width: 767px) {
         padding-right: 15px;
