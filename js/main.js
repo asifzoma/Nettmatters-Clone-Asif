@@ -30,15 +30,18 @@ const $caseStudiesBtn = $('.btn-case-studies');
 // Cookie Pop Up
 ////////
 
-//Checks If Cookies Are Accepted
-if(localStorage.getItem('cAccepted') === null){
-    $cookies_policy.addClass('cookie-show');
-}
-else{
-    $cookies_policy.addClass('cookie-hide');
-    $cookies_manage.addClass('cookie-show');
-}
+// Initialize cookie consent on document ready
+$(document).ready(function() {
+    //Checks If Cookies Are Accepted
+    if(localStorage.getItem('cAccepted') === null){
+        $cookies_policy.addClass('cookie-show');
+    }
+    else{
+        $cookies_policy.addClass('cookie-hide');
+        $cookies_manage.addClass('cookie-show');
 
+    }
+});
 
 //Cookies Accept Function on Click
 $cookies_accept.on('click', function(){
@@ -81,12 +84,13 @@ function hasScrolled() {
     // If they scrolled down and are past the .fake-header, add class .nav-up.
     if (st > lastScrollTop && st > navbarHeight){
         // Scroll Down
-        $('.fake-header').removeClass('sticky-header');
+        $('.fake-header').removeClass('nav-down').addClass('nav-up');
         $('.header-placeholder').removeClass('header-show').addClass('header-hidden');
+        $('.drop-down-menu-main-nav-container, .main-nav').removeClass('nav-visible').addClass('nav-hidden');
     } else {
         // Scroll Up
         if(st + $(window).height() < $(document).height()) {
-            $('.fake-header').addClass('sticky-header');
+            $('.fake-header').removeClass('nav-up').addClass('nav-down');
             $('.header-placeholder').removeClass('header-hidden').addClass('header-show');
             $('.drop-down-menu-main-nav-container').removeClass('nav-hidden').addClass('nav-visible');
             // Only manage main-nav if it's visible at the current viewport
@@ -106,6 +110,11 @@ $(window).resize(function() {
 
 $(document).ready(function() {
     updateHeaderResponsiveness();
+    
+    // Initialize sticky header classes
+    $('.fake-header').addClass('nav-down');
+    $('.header-placeholder').addClass('header-show');
+    $('.drop-down-menu-main-nav-container, .main-nav').addClass('nav-visible');
 });
 
 function updateHeaderResponsiveness() {

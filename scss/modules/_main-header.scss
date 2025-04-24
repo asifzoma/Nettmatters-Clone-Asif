@@ -281,4 +281,52 @@ header {
     @media (min-width: 992px) and (max-width: 1259px) {
         border-radius: 3px;
     }
+}
+
+// Sticky Header Functionality
+.fake-header {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  transition: transform 0.3s ease-in-out;
+  
+  &.nav-up {
+    transform: translateY(-100%);
+  }
+  
+  &.nav-down {
+    transform: translateY(0);
+  }
+}
+
+.header-placeholder {
+  height: 0;
+  width: 100%;
+  transition: height 0.3s ease-in-out;
+  
+  &.header-hidden {
+    height: 0;
+  }
+  
+  &.header-show {
+    height: 90px; // Should match the height of your header
+  }
+}
+
+.drop-down-menu-main-nav-container, .main-nav {
+  transition: transform 0.3s ease-in-out, opacity 0.2s ease-in-out;
+  
+  &.nav-hidden {
+    transform: translateY(-100%);
+    opacity: 0;
+    visibility: hidden;
+  }
+  
+  &.nav-visible {
+    transform: translateY(0);
+    opacity: 1;
+    visibility: visible;
+  }
 } 

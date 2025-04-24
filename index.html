@@ -20,7 +20,9 @@
   <!-- ================= COOKIE CONSENT ================= -->
   <!-- Show this btn early so user can manage cookis before anythin else loads -->
   <button type="button" class="cookie-settings-btn btn">Manage Consent</button>
-  <div id="cookie-consent" class="cookie-modal fade-in">
+  <button type="button" id="reset-cookies" style="position: fixed; bottom: 50px; right: 20px; z-index: 999; display: none;">Reset Cookies</button>
+  <div class="cookie-overlay">
+    <div id="cookie-consent" class="fade-in">
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">
@@ -36,6 +38,7 @@
             </div>
             <div class="modal-row-item">
               <a class="btn modal-btn-2">Accept Cookies</a>
+              </div>
             </div>
           </div>
         </div>
@@ -359,14 +362,14 @@
               <h2>Bespoke Software</h2>
               <p>Bespoke software solutions for all your business needs including integrations and reporting.</p>
               <a href="#" class="read-more">READ MORE</a>
-            </div>
-          </div>
-          
+        </div>
+      </div>
+
           <!-- IT Support -->
           <div class="service-container">
             <div class="service it-support">
               <span class="it-support-color">
-                <i class="fa-solid fa-display"></i>
+              <i class="fa-solid fa-display"></i>
               </span>
               <h2>IT Support</h2>
               <p>Fully managed IT support and consultancy packages tailored to meet your exact business needs.</p>
@@ -378,19 +381,19 @@
           <div class="service-container">
             <div class="service digital-marketing">
               <span class="digital-marketing-color">
-                <i class="fa-solid fa-chart-simple"></i>
+              <i class="fa-solid fa-chart-simple"></i>
               </span>
               <h2>Digital Marketing</h2>
               <p>Driven brand awareness & ROI through creative digital marketing campaigns.</p>
               <a href="#" class="read-more">READ MORE</a>
             </div>
-          </div>
-          
-          <!-- Telecoms Services -->
+        </div>
+
+            <!-- Telecoms Services -->
           <div class="service-container-small service-small-1">
             <div class="service telecoms-service">
               <span class="telecoms-service-color">
-                <i class="fa-solid fa-phone"></i>
+              <i class="fa-solid fa-phone"></i>
               </span>
               <h2>Telecoms Services</h2>
               <p>Business telephony solutions including mobile & connectivity solutions.</p>
@@ -402,7 +405,7 @@
           <div class="service-container-small service-small-2">
             <div class="service web-design">
               <span class="web-design-color">
-                <i class="fa-solid fa-code"></i>
+              <i class="fa-solid fa-code"></i>
               </span>
               <h2>Web Design</h2>
               <p>User-centric design for businesses looking to make a lasting impression.</p>
@@ -414,7 +417,7 @@
           <div class="service-container-small service-small-3">
             <div class="service cyber-security">
               <span class="cyber-security-color">
-                <i class="fa-solid fa-shield-halved"></i>
+              <i class="fa-solid fa-shield-halved"></i>
               </span>
               <h2>Cyber Security</h2>
               <p>Prevention, testing, consultancy & breach management services.</p>
@@ -426,7 +429,7 @@
           <div class="service-container-small service-small-4">
             <div class="service developer-training">
               <span class="developer-training-color">
-                <i class="fa-solid fa-graduation-cap"></i>
+              <i class="fa-solid fa-graduation-cap"></i>
               </span>
               <h2>Developer Training</h2>
               <p>Web design & software training courses designed to secure a job in tech.</p>
@@ -530,8 +533,8 @@
                   <span class="btn-text">TRUSTPILOT REVIEWS</span>
                   <span class="arrow-container"><i class="fa-solid fa-arrow-right"></i></span>
                 </a>
-              </div>
-            </div>
+          </div>
+        </div>
           </div>
         </div>
       </div>
@@ -947,7 +950,7 @@
               <li class="side-sub-menu-item"><a href="#">SAP S/4HANA Management</a></li>
             </ul>
           </div>
-        </li>
+      </li>
         <li class="it-support-sm side-menu-list-item">
           <a class="side-list-item-large side-menu-item-span"><span class="icon-display-style icon-display"></span><small class="side-item-center">IT</small>Support</a>
           <div class="side-sub-menu-banner">
@@ -960,7 +963,7 @@
               <li class="side-sub-menu-item"><a href="#">Data Backup & Disaster Recovery</a></li>
             </ul>
           </div>
-        </li>
+      </li>
         <li class="digital-sm side-menu-list-item">
           <a class="side-list-item-large side-menu-item-span"><span class="icon-bar-graph-style icon-bar-graph"></span><small class="side-item-center">Digital</small>Marketing</a>
           <div class="side-sub-menu-banner">
@@ -973,7 +976,7 @@
               <li class="side-sub-menu-item"><a href="#">Content Marketing</a></li>
             </ul>
           </div>
-        </li>
+      </li>
         <li class="telecoms-sm side-menu-list-item">
           <a class="side-list-item-large side-menu-item-span"><span class="icon-phone-in-talk-style icon-phone_in_talk"></span><small class="side-item-center">Telecoms</small>Services</a>
           <div class="side-sub-menu-banner">
@@ -986,7 +989,7 @@
               <li class="side-sub-menu-item"><a href="#">3CX Systems</a></li>
             </ul>
           </div>
-        </li>
+      </li>
         <li class="web-design-sm side-menu-list-item">
           <a class="side-list-item-large side-menu-item-span"><span class="icon-embed2-style icon-embed2"></span><small class="side-item-center">Web</small>Design</a>
           <div class="side-sub-menu-banner">
@@ -999,7 +1002,7 @@
               <li class="side-sub-menu-item"><a href="#">Web Hosting</a></li>
             </ul>
           </div>
-        </li>
+      </li>
         <li class="cyber-security-sm side-menu-list-item">
           <a class="side-list-item-large side-menu-item-span"><span class="icon-security-style icon-security"></span><small class="side-item-center">Cyber</small>Security</a>
           <div class="side-sub-menu-banner">
@@ -1012,7 +1015,7 @@
               <li class="side-sub-menu-item"><a href="#">Hacking Prevention</a></li>
             </ul>
           </div>
-        </li>
+      </li>
         <li class="developer-training-sm side-menu-list-item">
           <a class="side-list-item-large side-menu-item-span"><span class="icon-school-style icon-school"></span><small class="side-item-center">Developer</small>Course</a>
           <div class="side-sub-menu-banner">
@@ -1023,7 +1026,7 @@
               <li class="side-sub-menu-item"><a href="#">Scion Collaborators</a></li>
             </ul>
           </div>
-        </li>
+      </li>
       </ul>
     </div>
     <div class="main-sidebar-large">
@@ -1097,7 +1100,7 @@
   </div>
 
   <!-- Overlay -->
-  <div class="overlay"></div>
+    <div class="overlay"></div>
 
     <!-- Scripts loaded at end for performance -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
