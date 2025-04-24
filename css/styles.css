@@ -2113,7 +2113,6 @@ p {
   flex-direction: row;
   padding-top: 30px;
   padding-bottom: 50px;
-  background-color: #333645;
 }
 
 .case-study-item {
@@ -3801,6 +3800,4 @@ body.no-scroll {
   line-height: 30px;
   margin-bottom: 0;
   font-weight: 400;
-}
-
-/*# sourceMappingURL=styles.css.map */
+}/*# sourceMappingURL=styles.css.map */
