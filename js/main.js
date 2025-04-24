@@ -88,6 +88,11 @@ function hasScrolled() {
         if(st + $(window).height() < $(document).height()) {
             $('.fake-header').removeClass('nav-up').addClass('nav-down');
             $('.header-placeholder').removeClass('header-hidden').addClass('header-show');
+            $('.drop-down-menu-main-nav-container').removeClass('nav-hidden').addClass('nav-visible');
+            // Only manage main-nav if it's visible at the current viewport
+            if ($(window).width() >= 1135) {
+                $('.main-nav').removeClass('nav-hidden').addClass('nav-visible');
+            }
         }
     }
     
