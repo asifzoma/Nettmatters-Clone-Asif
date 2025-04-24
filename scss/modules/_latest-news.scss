@@ -120,7 +120,7 @@
 
 .article-img-btn {
     position: absolute;
-    left: 0;
+    right: 0;
     color: #fff;
     font-size: .75rem;
     padding: 5px 15px;
@@ -130,19 +130,19 @@
     text-transform: uppercase;
     text-decoration: none;
     font-weight: bold;
-    border-radius: 0 3px 3px 0;
+    border-radius: 3px 0 0 3px;
 }
 
 .art-btn-1 {
-    background-color: #db8c0d;
+    background-color: #e67e22;
 }
 
 .art-btn-2 {
-    background-color: #2ecc71;
+    background-color: #DD4B39;
 }
 
 .art-btn-3 {
-    background-color: #926fb1;
+    background-color: #8E44AD;
 }
 
 .article-img {
@@ -205,46 +205,51 @@
     vertical-align: middle;
     cursor: pointer;
     padding: 6px 16px;
-    font-size: 0.875rem;
+    font-size: 0.8rem;
     line-height: 1.5;
     border-radius: 3px;
     transition: all 0.15s ease-in-out;
     text-transform: uppercase;
+    width: auto;
+    text-decoration: none;
+    color: #fff !important;
+    max-width: fit-content;
+    align-self: flex-start;
 }
 
 .btn-bus-dev {
     color: #fff;
-    background-color: #db8c0d;
-    border: 1px solid #db8c0d;
+    background-color: #e67e22;
+    border: 1px solid #e67e22;
     margin-bottom: 15px;
     
     &:hover {
-        background-color: #c27c0c;
-        border-color: #c27c0c;
+        background-color: darken(#e67e22, 10%);
+        border-color: darken(#e67e22, 10%);
     }
 }
 
 .btn-digital {
     color: #fff;
-    background-color: #2ecc71;
-    border: 1px solid #2ecc71;
+    background-color: #DD4B39;
+    border: 1px solid #DD4B39;
     margin-bottom: 15px;
     
     &:hover {
-        background-color: #27ae60;
-        border-color: #27ae60;
+        background-color: darken(#DD4B39, 10%);
+        border-color: darken(#DD4B39, 10%);
     }
 }
 
 .btn-web {
     color: #fff;
-    background-color: #926fb1;
-    border: 1px solid #926fb1;
+    background-color: #8E44AD;
+    border: 1px solid #8E44AD;
     margin-bottom: 15px;
     
     &:hover {
-        background-color: #7d5f99;
-        border-color: #7d5f99;
+        background-color: darken(#8E44AD, 10%);
+        border-color: darken(#8E44AD, 10%);
     }
 }
 
