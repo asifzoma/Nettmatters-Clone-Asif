@@ -12,6 +12,8 @@
   <link rel="stylesheet" href="js/slick/slick-theme.css" />
   <!-- Font Awesome for icons -->
   <script src="https://kit.fontawesome.com/ad99ca8d44.js" crossorigin="anonymous"></script>
+  <!-- Added icon font for sidebar compatibility -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/icomoon-icons@1.0.0/style.css">
   <title>Netmatters Clone</title>
 </head>
 <body>
@@ -491,14 +493,15 @@
           <!-- About Section -->
           <div class="about">
             <h2 class="about-title">Welcome To Netmatters</h2>
-            <p>Netmatters is a leading Bespoke Software, IT Support, and Digital Marketing company based in the East of England with offices in London, Cambridge, Wymondham, and Great Yarmouth.</p>
-            <p>We're an experienced team of web designers, developers, and marketers passionate about delivering high-quality, reliable solutions for businesses of all sizes.</p>
+            <p>Netmatters is a leading Bespoke Software, IT Support, and Digital Marketing company based in the East of England with offices in Cambridge, Wymondham, and Great Yarmouth.</p>
+            <p>We aren't tied into contracts with third-party providers, so you know that our recommendations for your business are based purely with one benefit in mind: to help improve your business with the most appropriate solutions.</p>
+            <p>We pride ourselves on being an ethical business and have a unique business offering and cost model that ensures you get the most from our relationship in an upfront manner.</p>
             <div class="welcome-section-btn-container">
               <div class="welcome-btn-container">
-                <a href="#" class="btn-primary-inverse">WHY CHOOSE US <span class="icon-arrow-right2 welcome-arrow"></span></a>
+                <a href="#" class="btn-primary-inverse">WHY CHOOSE US? <i class="fa-solid fa-arrow-right welcome-arrow"></i></a>
               </div>
               <div class="welcome-btn-container">
-                <a href="#" class="btn-primary-inverse">OUR CULTURE <span class="icon-arrow-right2 welcome-arrow"></span></a>
+                <a href="#" class="btn-primary-inverse">OUR CULTURE <i class="fa-solid fa-arrow-right welcome-arrow"></i></a>
               </div>
             </div>
           </div>
@@ -506,23 +509,29 @@
           <!-- Client Testimonials Section -->
           <div class="what-our-clients-think">
             <h2 class="about-title">What Our Clients Think</h2>
-            <div>
-              <span class="icon-star-full welcome-star"></span>
-              <span class="icon-star-full welcome-star"></span>
-              <span class="icon-star-full welcome-star"></span>
-              <span class="icon-star-full welcome-star"></span>
-              <span class="icon-star-full welcome-star"></span>
+            <div class="star-rating">
+              <i class="fa-solid fa-star welcome-star"></i>
+              <i class="fa-solid fa-star welcome-star"></i>
+              <i class="fa-solid fa-star welcome-star"></i>
+              <i class="fa-solid fa-star welcome-star"></i>
+              <i class="fa-solid fa-star welcome-star"></i>
             </div>
-            <p class="customer-quote">"Netmatters stood out from the start. Great guys who know their stuff."</p>
-            <p class="customer-quote-author">Eleanor Bishop, Head of HR - Ashcroft Partnership LLP</p>
+            <p class="customer-quote">Netmatters stood out from the start. Great guys and very easy to work with. Both the build and digital marketing teams are clearly skilled -they know their stuff! They delivered a website to our (high!) expectations and went over and above to ensure we were satisfied clients - and we are!</p>
+            <p class="customer-quote-author">Eleanor Bishop, Head of Marketing - Ashcroft Partnership LLP</p>
             <div class="welcome-section-btn-container-2">
               <div class="google-btn-container">
-                <a href="#" class="btn-google">GOOGLE REVIEWS <span class="icon-arrow-right2 welcome-arrow"></span></a>
+                <a href="#" class="btn-review btn-google">
+                  <span class="btn-text">GOOGLE REVIEWS</span>
+                  <span class="arrow-container"><i class="fa-solid fa-arrow-right"></i></span>
+                </a>
               </div>
               <div class="trustpilot-btn-container">
-                <a href="#" class="btn-trustpilot">TRUSTPILOT REVIEWS <span class="icon-arrow-right2 welcome-arrow"></span></a>
-          </div>
-        </div>
+                <a href="#" class="btn-review btn-trustpilot">
+                  <span class="btn-text">TRUSTPILOT REVIEWS</span>
+                  <span class="arrow-container"><i class="fa-solid fa-arrow-right"></i></span>
+                </a>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -814,6 +823,26 @@
     <footer>
       <div class="container">
         <div class="footer-row">
+          <!-- Company Info (Logo, Follow Text, Social) -->
+          <div class="footer-company-info">
+            <div class="footer-logo-container">
+              <div class="footer-logo">
+                <a href="#"><img src="img/logo.png" alt="Netmatters Logo"></a>
+              </div>
+            </div>
+            
+            <!-- Follow Us Text -->
+            <div class="follow-us-text">FOLLOW US ON:</div>
+            
+            <!-- Social Media Icons -->
+            <div class="footer-company-socials-logos">
+              <a class="facebook" href="#"><i class="fa-brands fa-facebook-f"></i></a>
+              <a class="linkedin" href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+              <a class="twitter" href="#"><i class="fa-brands fa-twitter"></i></a>
+              <a class="instagram" href="#"><i class="fa-brands fa-instagram"></i></a>
+            </div>
+          </div>
+          
           <!-- About Menu -->
           <div class="footer-menu">
             <h4>About Netmatters</h4>
@@ -821,11 +850,13 @@
               <li><a href="#">News</a></li>
               <li><a href="#">Our Careers</a></li>
               <li><a href="#">Our Team</a></li>
+              <li><a href="#">Contact Us</a></li>
               <li><a href="#">Privacy Policy</a></li>
               <li><a href="#">Cookie Policy</a></li>
-              <li><a href="#">Terms & Conditions</a></li>
+              <li><a href="#">Data Retention</a></li>
+              <li><a href="#">CCTV Policy</a></li>
               <li><a href="#">Environmental Policy</a></li>
-              <li><a href="#">Contact Us</a></li>
+              <li><a href="#">Terms & Conditions</a></li>
             </ul>
           </div>
 
@@ -850,10 +881,12 @@
               <li><a href="#">Financial Services</a></li>
               <li><a href="#">Construction</a></li>
               <li><a href="#">Retail & E-Commerce</a></li>
-              <li><a href="#">Non-Profit</a></li>
+              <li><a href="#">Non-Profits</a></li>
               <li><a href="#">SME's</a></li>
               <li><a href="#">Healthcare</a></li>
               <li><a href="#">Education & Training</a></li>
+              <li><a href="#">Travel & Leisure</a></li>
+              <li><a href="#">Manufacturing & Offshore</a></li>
             </ul>
           </div>
 
@@ -861,38 +894,10 @@
           <div class="footer-menu">
             <h4>Locations</h4>
             <ul class="footer-menu-list">
-              <li><a href="#">London Office</a></li>
               <li><a href="#">Cambridge Office</a></li>
               <li><a href="#">Wymondham Office</a></li>
               <li><a href="#">Great Yarmouth Office</a></li>
             </ul>
-          </div>
-
-          <!-- Company Info -->
-          <div class="footer-company-info">
-            <div class="footer-logo-container">
-              <div class="footer-logo">
-                <a href="#"><img src="img/logo.png" alt="Netmatters Logo"></a>
-                <h4>© Copyright Netmatters Ltd. 2023</h4>
-                <h4>All rights reserved</h4>
-              </div>
-            </div>
-
-            <!-- Social Media Icons -->
-            <div class="footer-company-socials-logos">
-              <div class="facebook-btn-container">
-                <a class="facebook" href="#"><i class="fa-brands fa-facebook-f"></i></a>
-              </div>
-              <div class="twitter-btn-container">
-                <a class="twitter" href="#"><i class="fa-brands fa-twitter"></i></a>
-              </div>
-              <div class="instagram-btn-container">
-                <a class="instagram" href="#"><i class="fa-brands fa-instagram"></i></a>
-              </div>
-              <div class="linkedin-btn-container">
-                <a class="linkedin" href="#"><i class="fa-brands fa-linkedin-in"></i></a>
-              </div>
-            </div>
           </div>
         </div>
       </div>
@@ -903,8 +908,8 @@
       <div class="container">
         <div class="sticky-footer">
           <p>
-            <a href="#">Sitemap</a> | 
-            <a href="#" target="_blank">Netmatters Ltd is a <strong>software development and IT support company</strong> based in the East of England</a> with offices in <a href="#">London</a>, <a href="#">Cambridge</a>, <a href="#">Wymondham</a> & <a href="#">Great Yarmouth</a>.<br>
+            © Copyright Netmatters 2025. All rights reserved. - 
+            <a href="#">Sitemap</a>
           </p>
         </div>
       </div>
@@ -912,79 +917,181 @@
   </div> <!-- End of .wrapper wrapper-center -->
 
   <!-- Sidebar -->
-  <div class="sidebar">
-      <ul class="sidebar-links">
-      <!-- Bespoke Software -->
-      <li class="sidebar-item">
-        <a href="#" class="sidebar-link">
-          <i class="fa-solid fa-desktop"></i>
-          <small>Bespoke</small>
-          Software
-        </a>
-      </li>
-      
-      <!-- IT Support -->
-      <li class="sidebar-item">
-        <a href="#" class="sidebar-link">
-          <i class="fa-solid fa-display"></i>
-          <small>IT</small>
-          Support
-        </a>
-      </li>
-      
-      <!-- Digital Marketing -->
-      <li class="sidebar-item">
-        <a href="#" class="sidebar-link">
-          <i class="fa-solid fa-chart-simple"></i>
-          <small>Digital</small>
-          Marketing
-        </a>
-      </li>
-      
-      <!-- Telecoms Services -->
-      <li class="sidebar-item">
-        <a href="#" class="sidebar-link">
-          <i class="fa-solid fa-phone"></i>
-          <small>Telecoms</small>
-          Services
-        </a>
-      </li>
-      
-      <!-- Web Design -->
-      <li class="sidebar-item">
-        <a href="#" class="sidebar-link">
-          <i class="fa-solid fa-code"></i>
-          <small>Web</small>
-          Design
-        </a>
-      </li>
-      
-      <!-- Cyber Security -->
-      <li class="sidebar-item">
-        <a href="#" class="sidebar-link">
-          <i class="fa-solid fa-shield-halved"></i>
-          <small>Cyber</small>
-          Security
-        </a>
-      </li>
-      
-      <!-- Developer Course -->
-      <li class="sidebar-item">
-        <a href="#" class="sidebar-link">
-          <i class="fa-solid fa-graduation-cap"></i>
-          <small>Developer</small>
-          Course
-        </a>
-      </li>
+  <div class="sidebar hide-sidebar">
+    <!-- Main Sidebar (Mobile) -->
+    <div class="main-sidebar">
+      <ul class="side-menu-item side-menu-mobile">
+        <li class="side-menu-list-item"><a class="side-list-item-large" href="#">Contact Us</a></li> 
+        <li class="software-sm side-menu-list-item">
+          <a class="side-list-item-large side-menu-item-span"><span class="icon-computer-style icon-computer"></span><small class="side-item-center">Bespoke</small>Software</a>
+          <div class="side-sub-menu-banner">
+            <ul class="side-sub-menu">
+              <li class="side-sub-menu-item"><a href="#">Bespoke CRM</a></li>
+              <li class="side-sub-menu-item"><a href="#">Business Automation</a></li>
+              <li class="side-sub-menu-item"><a href="#">Software Integrations</a></li>
+              <li class="side-sub-menu-item"><a href="#">Mobile App Development</a></li>
+              <li class="side-sub-menu-item"><a href="#">Bespoke Databases</a></li>
+              <li class="side-sub-menu-item"><a href="#">Sharepoint Development</a></li>
+              <li class="side-sub-menu-item"><a href="#">Operational Systems</a></li>
+              <li class="side-sub-menu-item"><a href="#">Business Central Implementation</a></li>
+              <li class="side-sub-menu-item"><a href="#">Internet of Things (IoT) Software</a></li>
+              <li class="side-sub-menu-item"><a href="#">Intranet Development</a></li>
+              <li class="side-sub-menu-item"><a href="#">Customer Portal Development</a></li>
+              <li class="side-sub-menu-item"><a href="#">Reporting Hub</a></li>
+              <li class="side-sub-menu-item"><a href="#">SAP S/4HANA Management</a></li>
+            </ul>
+          </div>
+        </li>
+        <li class="it-support-sm side-menu-list-item">
+          <a class="side-list-item-large side-menu-item-span"><span class="icon-display-style icon-display"></span><small class="side-item-center">IT</small>Support</a>
+          <div class="side-sub-menu-banner">
+            <ul class="side-sub-menu">
+              <li class="side-sub-menu-item"><a href="#">Managed IT Support</a></li>
+              <li class="side-sub-menu-item"><a href="#">Business IT Support</a></li>
+              <li class="side-sub-menu-item"><a href="#">Office 365 for Business</a></li>
+              <li class="side-sub-menu-item"><a href="#">IT Consultancy</a></li>
+              <li class="side-sub-menu-item"><a href="#">Cloud Service Provider</a></li>
+              <li class="side-sub-menu-item"><a href="#">Data Backup & Disaster Recovery</a></li>
+            </ul>
+          </div>
+        </li>
+        <li class="digital-sm side-menu-list-item">
+          <a class="side-list-item-large side-menu-item-span"><span class="icon-bar-graph-style icon-bar-graph"></span><small class="side-item-center">Digital</small>Marketing</a>
+          <div class="side-sub-menu-banner">
+            <ul class="side-sub-menu">
+              <li class="side-sub-menu-item"><a href="#">Search Engine Optimisation</a></li>
+              <li class="side-sub-menu-item"><a href="#">Pay Per Click Advertising (PPC)</a></li>
+              <li class="side-sub-menu-item"><a href="#">Conversion Rate Optimisation</a></li>
+              <li class="side-sub-menu-item"><a href="#">Email Marketing</a></li>
+              <li class="side-sub-menu-item"><a href="#">Social Media Marketing</a></li>
+              <li class="side-sub-menu-item"><a href="#">Content Marketing</a></li>
+            </ul>
+          </div>
+        </li>
+        <li class="telecoms-sm side-menu-list-item">
+          <a class="side-list-item-large side-menu-item-span"><span class="icon-phone-in-talk-style icon-phone_in_talk"></span><small class="side-item-center">Telecoms</small>Services</a>
+          <div class="side-sub-menu-banner">
+            <ul class="side-sub-menu">
+              <li class="side-sub-menu-item"><a href="#">Business Mobile</a></li>
+              <li class="side-sub-menu-item"><a href="#">Hosted VoIP Provider</a></li>
+              <li class="side-sub-menu-item"><a href="#">Business VoIP Systems</a></li>
+              <li class="side-sub-menu-item"><a href="#">Business Broadband</a></li>
+              <li class="side-sub-menu-item"><a href="#">Leased Lines Provider</a></li>
+              <li class="side-sub-menu-item"><a href="#">3CX Systems</a></li>
+            </ul>
+          </div>
+        </li>
+        <li class="web-design-sm side-menu-list-item">
+          <a class="side-list-item-large side-menu-item-span"><span class="icon-embed2-style icon-embed2"></span><small class="side-item-center">Web</small>Design</a>
+          <div class="side-sub-menu-banner">
+            <ul class="side-sub-menu">
+              <li class="side-sub-menu-item"><a href="#">Bespoke Website Design</a></li>
+              <li class="side-sub-menu-item"><a href="#">eCommerce Website Design</a></li>
+              <li class="side-sub-menu-item"><a href="#">Pay Monthly Websites</a></li>
+              <li class="side-sub-menu-item"><a href="#">Branding & Design</a></li>
+              <li class="side-sub-menu-item"><a href="#">Mobile App Development</a></li>
+              <li class="side-sub-menu-item"><a href="#">Web Hosting</a></li>
+            </ul>
+          </div>
+        </li>
+        <li class="cyber-security-sm side-menu-list-item">
+          <a class="side-list-item-large side-menu-item-span"><span class="icon-security-style icon-security"></span><small class="side-item-center">Cyber</small>Security</a>
+          <div class="side-sub-menu-banner">
+            <ul class="side-sub-menu">
+              <li class="side-sub-menu-item"><a href="#">Cyber Security Assessment</a></li>
+              <li class="side-sub-menu-item"><a href="#">Cyber Security Management</a></li>
+              <li class="side-sub-menu-item"><a href="#">Cyber Penetration Testing</a></li>
+              <li class="side-sub-menu-item"><a href="#">Cyber Essentials Certification</a></li>
+              <li class="side-sub-menu-item"><a href="#">PCI Compliance</a></li>
+              <li class="side-sub-menu-item"><a href="#">Hacking Prevention</a></li>
+            </ul>
+          </div>
+        </li>
+        <li class="developer-training-sm side-menu-list-item">
+          <a class="side-list-item-large side-menu-item-span"><span class="icon-school-style icon-school"></span><small class="side-item-center">Developer</small>Course</a>
+          <div class="side-sub-menu-banner">
+            <ul class="side-sub-menu">
+              <li class="side-sub-menu-item"><a href="#">Train For A Career In Tech</a></li>
+              <li class="side-sub-menu-item"><a href="#">Skills Bootcamp</a></li>
+              <li class="side-sub-menu-item"><a href="#">Scion Scheme Frequently Asked Questions</a></li>
+              <li class="side-sub-menu-item"><a href="#">Scion Collaborators</a></li>
+            </ul>
+          </div>
+        </li>
       </ul>
-    
-    <div class="sidebar-contact">
-      <a href="#" class="sidebar-btn">Contact Us</a>
+    </div>
+    <div class="main-sidebar-large">
+      <ul class="side-menu-item side-menu-large-viewport">
+        <li class="side-menu-list-item-large">
+          <a class="side-list-item-large-viewport">Our Work</a>
+          <div class="side-sub-menu-banner-large">
+            <ul class="side-sub-menu">
+              <li class="side-sub-menu-item-large"><a href="#">Case Studies</a></li>
+              <li class="side-sub-menu-item-large"><a href="#">Our Digital Marketing Clients</a></li>
+              <li class="side-sub-menu-item-large"><a href="#">Our Website Clients</a></li>
+              <li class="side-sub-menu-item-large"><a href="#">Our IT Clients</a></li>
+              <li class="side-sub-menu-item-large"><a href="#">Our Bespoke Software Clients</a></li>
+              <li class="side-sub-menu-item-large"><a href="#">Our Telecoms Clients</a></li>
+            </ul>
+          </div>
+        </li>
+        <li class="side-menu-list-item-large">
+          <a class="side-list-item-large-viewport">Our Knowledge</a>
+          <div class="side-sub-menu-banner-large">
+            <ul class="side-sub-menu">
+              <li class="side-sub-menu-item-large"><a href="#">Technologies</a></li>
+              <li class="side-sub-menu-item-large"><a href="#">Industries</a></li>
+              <li class="side-sub-menu-item-large"><a href="#">News</a></li>
+              <li class="side-sub-menu-item-large"><a href="#">Insights</a></li>
+            </ul>
+          </div>
+        </li>
+        <li class="side-menu-list-item-large">
+          <a class="side-list-item-large-viewport">Training</a>
+          <div class="side-sub-menu-banner-large">
+            <ul class="side-sub-menu">
+              <li class="side-sub-menu-item-large"><a href="#">Train For A career In Tech</a></li>
+              <li class="side-sub-menu-item-large"><a href="#">Skills Bootcamp</a></li>
+              <li class="side-sub-menu-item-large"><a href="#">SCS Frequently Asked Questions</a></li>
+              <li class="side-sub-menu-item-large"><a href="#">Scion Collaborators</a></li>
+            </ul>
+          </div>
+        </li>
+        <li class="side-menu-list-item-large">
+          <a class="side-list-item-large-viewport">Our Company</a>
+          <div class="side-sub-menu-banner-large">
+            <ul class="side-sub-menu">
+              <li class="side-sub-menu-item-large"><a href="#">Why Choose Us?</a></li>
+              <li class="side-sub-menu-item-large"><a href="#">Our Culture</a></li>
+              <li class="side-sub-menu-item-large"><a href="#">Our Team</a></li>
+              <li class="side-sub-menu-item-large"><a href="#">Our Careers</a></li>
+              <li class="side-sub-menu-item-large"><a href="#">Our Benefits</a></li>
+              <li class="side-sub-menu-item-large"><a href="#">Our Accreditations</a></li>
+            </ul>
+          </div>
+        </li>
+        <li class="side-menu-list-item-large">
+          <a class="side-list-item-large-viewport">Contact Us</a>
+          <div class="side-sub-menu-banner-large">
+            <ul class="side-sub-menu">
+              <li class="side-sub-menu-item-large"><a href="#">Cambridge Office</a></li>
+              <li class="side-sub-menu-item-large"><a href="#">Wymondham Office</a></li>
+              <li class="side-sub-menu-item-large"><a href="#">Great Yarmouth Office</a></li>
+            </ul>
+          </div>
+        </li>
+        <li class="side-menu-list-item-large">
+          <a class="side-list-item-large-viewport">COVID Risk Assessments</a>
+        </li>
+        <li class="side-menu-list-item-large">
+          <a class="side-list-item-large-viewport">Support</a>
+        </li>
+      </ul>
     </div>
   </div>
 
   <!-- Overlay -->
-    <div class="overlay"></div>
+  <div class="overlay"></div>
 
     <!-- Scripts loaded at end for performance -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>

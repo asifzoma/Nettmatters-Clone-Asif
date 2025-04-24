@@ -13,7 +13,7 @@ var delta = 5;
 var navbarHeight = $('.fake-header').outerHeight();
 
 // Side Menu Variables
-const $sidebar = $('.sidebar');
+const sideMenu = document.querySelector('.sidebar');
 const $overlay = $('.overlay');
 const $hamburger = $('.hamburger-inner');
 
@@ -259,22 +259,38 @@ $(document).ready(function(){
 // Side Menu
 ////////
 
-// Toggle sidebar
+// Side menu show/hide on click
+// Animation for the wrapper moving the page content and burger animation on click of the burger menu
+
 $(document).ready(function() {
-    // Toggle sidebar on hamburger click
-    $('.header-icon-menu-container').on('click', function() {
-        $sidebar.toggleClass('active');
-        $overlay.toggleClass('active');
-        $hamburger.toggleClass('active');
-        $('body').toggleClass('no-scroll');
+    $('.header-icon-menu-container').click(function(e) {
+        var mySideBar = $('.sidebar');
+        mySideBar.addClass('active-sidebar').removeClass('hide-sidebar');
+        $('.wrapper').addClass('wrapper-right').removeClass('wrapper-center');
+        $('.hamburger-box').addClass('burger-active');
+        $('body').addClass('no-scroll');
+        
+        $('.wrapper').click(function() {
+            $('.active-sidebar').removeClass('active-sidebar');
+            $('.wrapper').addClass('wrapper-center').removeClass('wrapper-right');
+            $('.hamburger-box').removeClass('burger-active');
+            $('body').removeClass('no-scroll');
+            
+            $('.wrapper').off('click'); // cancel the wrappers click handler when it's used
+        });
+        e.stopPropagation(); 
     });
     
-    // Close sidebar when clicking on overlay
-    $overlay.on('click', function() {
-        $sidebar.removeClass('active');
-        $overlay.removeClass('active');
-        $hamburger.removeClass('active');
-        $('body').removeClass('no-scroll');
+    // Toggle sub-menus in sidebar
+    $('.side-menu-list-item > a').click(function(e) {
+        e.preventDefault();
+        $(this).siblings('.side-sub-menu-banner').slideToggle(300);
+    });
+    
+    // Toggle sub-menus in desktop sidebar
+    $('.side-menu-list-item-large > a').click(function(e) {
+        e.preventDefault();
+        $(this).siblings('.side-sub-menu-banner-large').slideToggle(300);
     });
 });
 

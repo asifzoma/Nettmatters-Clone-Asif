@@ -79,6 +79,60 @@ p {
 .welcome-section-btn-container-2 {
     display: flex;
     flex-direction: column;
+    gap: 25px;
+    margin-top: 25px;
+    
+    .google-btn-container {
+        margin-top: 0; // First button should not have extra margin
+        
+        .btn-google {
+            width: 100%;
+        }
+    }
+    
+    .trustpilot-btn-container {
+        margin-top: 25px;
+        
+        .btn-trustpilot {
+            width: 100%;
+        }
+    }
+    
+    // Make sure buttons look good on all screen sizes
+    .btn-review {
+        justify-content: center;
+        padding: 12px 20px;
+        
+        .btn-text {
+            font-weight: 600;
+        }
+        
+        .arrow-container {
+            transition: transform 0.3s ease;
+        }
+        
+        &:hover .arrow-container {
+            transform: translateX(5px);
+        }
+    }
+    
+    @media (min-width: 600px) {
+        .trustpilot-btn-container {
+            margin-top: 0; // No margin needed in row layout
+        }
+    }
+    
+    @media (min-width: 992px) {
+        .trustpilot-btn-container {
+            margin-top: 25px; // Restore margin in column layout
+        }
+    }
+    
+    @media (min-width: 1260px) {
+        .trustpilot-btn-container {
+            margin-top: 0; // No margin needed in row layout
+        }
+    }
 }
 //Media Queries
 .about-row {

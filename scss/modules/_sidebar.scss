@@ -2,23 +2,21 @@
 //  Side Menu Styles
 // ==========================================================================
 .sidebar {
-  height: 100%;
-  width: 30rem;
   position: fixed;
   top: 0;
-  right: -30rem;
-  background-color: #333645;
-  overflow-x: hidden;
-  visibility: hidden;
-  transition: 0.3s;
-  z-index: 10001;
-  padding: 0;
-  color: white;
-  margin-top: 0;
-  
-  &.active {
-    right: 0;
-    visibility: visible;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+  height: 100%;
+  width: 275px;
+  background: #333645;
+  overflow: auto;
+  overflow-x: auto;
+  overflow-y: auto;
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
   }
 }
 
@@ -189,6 +187,85 @@
   }
 }
 
+// Sidebar visibility classes
+.active-sidebar {
+  z-index: 1000;
+}
+
+.hide-sidebar {
+  z-index: -1;
+}
+
+// Wrapper positioning for sidebar
+.wrapper-center {
+  position: relative;
+  right: 0;
+  transition: 0.3s;
+}
+
+.wrapper-right {
+  position: relative;
+  right: 275px;
+  transition: 0.3s;
+  
+  @media (min-width: 992px) {
+    right: 350px;
+  }
+}
+
+// Hamburger animation
+.burger-active {
+  .hamburger-inner {
+    transform: rotate(45deg);
+    transition: transform 0.25s ease-in-out;
+    
+    &::before {
+      opacity: 0;
+    }
+    
+    &::after {
+      transform: rotate(-90deg);
+      bottom: 0;
+    }
+  }
+}
+
+// Service specific backgrounds for hover effects
+.software-sm a:hover,
+.software-sm a:focus {
+  background-color: #67809f;
+}
+
+.it-support-sm a:hover,
+.it-support-sm a:focus {
+  background-color: #4183d7;
+}
+
+.digital-sm a:hover,
+.digital-sm a:focus {
+  background-color: #2ecc71;
+}
+
+.telecoms-sm a:hover,
+.telecoms-sm a:focus {
+  background-color: #d64541;
+}
+
+.web-design-sm a:hover,
+.web-design-sm a:focus {
+  background-color: #926fb1;
+}
+
+.cyber-security-sm a:hover,
+.cyber-security-sm a:focus {
+  background-color: #f62459;
+}
+
+.developer-training-sm a:hover,
+.developer-training-sm a:focus {
+  background-color: #ce4125;
+}
+
 // Sidebar links styling
 .sidebar-links {
   list-style: none;
@@ -302,20 +379,6 @@
   
   &.active {
     display: block;
-  }
-}
-
-// Hamburger animation
-.hamburger-inner.active {
-  transform: rotate(45deg);
-  
-  &::before {
-    opacity: 0;
-  }
-  
-  &::after {
-    transform: rotate(-90deg);
-    bottom: 0;
   }
 }
 
