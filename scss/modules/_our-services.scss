@@ -375,3 +375,16 @@
         background-color: darken($developer-training-color, 10%);
     }
 } 
+
+// Ensure small service containers match standard containers on mobile
+@media (max-width: 767px) {
+  .service-container-small {
+    display: block;
+  }
+  .service-container-small .service {
+    display: block;
+    height: auto;
+    padding: 30px; // match service-container-base padding
+    margin-top: 30px; // match base mixin
+  }
+} 

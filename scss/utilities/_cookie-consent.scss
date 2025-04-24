@@ -1,0 +1,151 @@
+// Cookie Consent Styles
+
+// Prevent background scroll when modal is open
+.no-scroll {
+  overflow: hidden;
+}
+
+// Overlay behind the modal, now a flex container
+.cookie-overlay {
+  position: fixed;
+  inset: 0;                     // shorthand for top/left/right/bottom: 0
+  display: flex;                // centre children
+  align-items: center;         
+  justify-content: center;
+
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 10000;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease;
+
+  &.show {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+// Cookie modal container
+#cookie-consent {
+  display: none;
+  position: relative;           // no more top/left transforms
+  background: #fff;
+  width: 90%;
+  max-width: 500px;
+  max-height: 90vh;             // cap at 90% of viewport height
+  overflow-y: auto;             // scroll only the modal if it needs to
+  border-radius: 5px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  z-index: 10001;
+  padding: 20px;
+  text-align: left;
+
+  &.cookie-show {
+    display: block;
+  }
+  &.cookie-hide {
+    display: none;
+  }
+}
+
+#cookie-consent .modal-header {
+  border-bottom: 1px solid #e5e5e5;
+  margin-bottom: 15px;
+}
+
+#cookie-consent .modal-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #333;
+  margin: 0;
+}
+
+#cookie-consent .modal-body p {
+  font-size: 0.9rem;
+  color: #555;
+  line-height: 1.5;
+  margin: 0 0 20px;
+}
+
+#cookie-consent .modal-body p a {
+  color: #333;
+  text-decoration: underline;
+}
+
+#cookie-consent .modal-body p a:hover {
+  color: #555;
+}
+
+#cookie-consent .modal-footer {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+}
+
+#cookie-consent .modal-btn-1 {
+  background: #e5e5e5;
+  color: #333;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 3px;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+#cookie-consent .modal-btn-1:hover {
+  background: #d5d5d5;
+}
+
+#cookie-consent .modal-btn-2 {
+  background: #8e44ad;
+  color: #fff;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 3px;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+#cookie-consent .modal-btn-2:hover {
+  background: #7e3ca0;
+}
+
+// Fade-in animation
+.fade-in {
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+// Manage Consent button styling
+.cookie-settings-btn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 10001;
+  background: #e5e5e5;
+  color: #333;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 3px;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  cursor: pointer;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  opacity: 0;
+  transition: opacity 0.3s ease, background 0.3s ease;
+  
+  &.cookie-show {
+    opacity: 1;
+  }
+}
+.cookie-settings-btn:hover {
+  background: #d5d5d5;
+} 
