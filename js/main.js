@@ -81,22 +81,76 @@ function hasScrolled() {
     // If they scrolled down and are past the .fake-header, add class .nav-up.
     if (st > lastScrollTop && st > navbarHeight){
         // Scroll Down
-        $('.fake-header').removeClass('nav-down').addClass('nav-up');
+        $('.fake-header').removeClass('sticky-header');
         $('.header-placeholder').removeClass('header-show').addClass('header-hidden');
     } else {
         // Scroll Up
         if(st + $(window).height() < $(document).height()) {
-            $('.fake-header').removeClass('nav-up').addClass('nav-down');
+            $('.fake-header').addClass('sticky-header');
             $('.header-placeholder').removeClass('header-hidden').addClass('header-show');
             $('.drop-down-menu-main-nav-container').removeClass('nav-hidden').addClass('nav-visible');
             // Only manage main-nav if it's visible at the current viewport
-            if ($(window).width() >= 1135) {
+            if ($(window).width() >= 992) {
                 $('.main-nav').removeClass('nav-hidden').addClass('nav-visible');
             }
         }
     }
     
     lastScrollTop = st;
+}
+
+// Make sure header responsive elements are visible/hidden at the right breakpoints
+$(window).resize(function() {
+    updateHeaderResponsiveness();
+});
+
+$(document).ready(function() {
+    updateHeaderResponsiveness();
+});
+
+function updateHeaderResponsiveness() {
+    const width = $(window).width();
+    
+    // Phone icon visibility - only visible on mobile
+    if (width < 766) {
+        $('.header-phone-icon').show();
+    } else {
+        $('.header-phone-icon').hide();
+    }
+    
+    // Support and contact buttons visibility
+    if (width < 992) {
+        $('.btn-header-support, .btn-header-contact').hide();
+    } else {
+        $('.btn-header-support, .btn-header-contact').show();
+    }
+    
+    // Search form visibility
+    if (width < 766) {
+        $('.form-container').show();
+        $('.large-form-container').hide();
+    } else if (width >= 766 && width < 992) {
+        $('.form-container').hide();
+        $('.large-form-container').show();
+        $('.header-form-large').show();
+    } else if (width >= 992 && width < 1260) {
+        $('.form-container').hide();
+        $('.large-form-container').show();
+        $('.header-form-large').hide();
+        $('.large-form-icon-container').css('border-radius', '3px');
+    } else {
+        $('.form-container').hide();
+        $('.large-form-container').show();
+        $('.header-form-large').show();
+        $('.large-form-icon-container').css('border-radius', '0 3px 3px 0');
+    }
+    
+    // Main navigation visibility
+    if (width < 992) {
+        $('.drop-down-menu-main-nav-container').hide();
+    } else {
+        $('.drop-down-menu-main-nav-container').show();
+    }
 }
 
 ////////

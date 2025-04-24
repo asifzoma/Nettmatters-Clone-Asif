@@ -322,18 +322,21 @@ header {
     }
 }
 
-.form-container, .header-phone-icon {
-    // When screen width is 766px or more...
+// Phone icon visibility - make it explicit for each breakpoint
+.header-phone-icon {
+    // Default (mobile) - visible
+    display: inline-block;
+    
+    // Hide on tablet and desktop screens
     @media (min-width:766px) {
-        // Hide the small form container and the phone icon.
         display: none;
     }
 }
 
-// Make phone icon visible again on large screens
-.header-phone-icon {
-    @media (min-width:1260px) {
-        display: inline-block;
+// Form container is hidden on larger screens
+.form-container {
+    @media (min-width:766px) {
+        display: none;
     }
 }
 
