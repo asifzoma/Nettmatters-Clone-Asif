@@ -1293,6 +1293,11 @@ header img {
   color: #fff;
   border-radius: 50%;
 }
+@media (min-width: 767px) {
+  .service-list .service-container-small {
+    margin-top: 15px;
+  }
+}
 
 .software span {
   background-color: #67809f;
@@ -1322,81 +1327,6 @@ header img {
   background-color: #ce4125;
 }
 
-.service .btn,
-.service .read-more {
-  display: inline-block;
-  padding: 8px 20px;
-  font-weight: 600;
-  text-transform: uppercase;
-  border-radius: 3px;
-  text-decoration: none;
-  color: #fff;
-  transition: background-color 0.3s ease;
-}
-
-.software .btn,
-.software .read-more {
-  background-color: #67809f;
-}
-.software .btn:hover,
-.software .read-more:hover {
-  background-color: #526781;
-}
-
-.it-support .btn,
-.it-support .read-more {
-  background-color: #4183d7;
-}
-.it-support .btn:hover,
-.it-support .read-more:hover {
-  background-color: #286abd;
-}
-
-.digital-marketing .btn,
-.digital-marketing .read-more {
-  background-color: #2ecc71;
-}
-.digital-marketing .btn:hover,
-.digital-marketing .read-more:hover {
-  background-color: #25a25a;
-}
-
-.telecoms-service .btn,
-.telecoms-service .read-more {
-  background-color: #d64541;
-}
-.telecoms-service .btn:hover,
-.telecoms-service .read-more:hover {
-  background-color: #bc2c28;
-}
-
-.web-design .btn,
-.web-design .read-more {
-  background-color: #926fb1;
-}
-.web-design .btn:hover,
-.web-design .read-more:hover {
-  background-color: #79539a;
-}
-
-.cyber-security .btn,
-.cyber-security .read-more {
-  background-color: #f62459;
-}
-.cyber-security .btn:hover,
-.cyber-security .read-more:hover {
-  background-color: #de093f;
-}
-
-.developer-training .btn,
-.developer-training .read-more {
-  background-color: #ce4125;
-}
-.developer-training .btn:hover,
-.developer-training .read-more:hover {
-  background-color: #a3331d;
-}
-
 .service-container {
   width: 100%;
 }
@@ -1406,6 +1336,15 @@ header img {
     padding-left: 15px;
     padding-right: 15px;
   }
+}
+.service-container .service {
+  padding-bottom: 20px;
+}
+.service-container .service p {
+  margin-bottom: 15px;
+}
+.service-container .service .read-more {
+  margin-bottom: 0;
 }
 
 .our-services-bottom {
@@ -1585,6 +1524,7 @@ header img {
 
 .service-container-small {
   width: 100%;
+  display: flex;
 }
 @media (min-width: 767px) {
   .service-container-small {
@@ -1601,7 +1541,48 @@ header img {
     width: 25%;
   }
 }
+.service-container-small .service {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding-bottom: 20px;
+}
+.service-container-small .service span {
+  margin-bottom: 15px;
+}
+.service-container-small .service h2 {
+  margin-top: 10px;
+  margin-bottom: 15px;
+  min-height: 2.6rem;
+}
+.service-container-small .service p {
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+  min-height: 3.5rem;
+}
+.service-container-small .service .read-more {
+  margin-top: auto;
+  align-self: flex-start;
+  width: auto;
+  margin-bottom: 0;
+}
 
+@media (min-width: 767px) {
+  .service-list {
+    align-items: stretch;
+  }
+  .service-small-1,
+  .service-small-2,
+  .service-small-3,
+  .service-small-4 {
+    display: flex;
+  }
+  .service-container-small .service {
+    width: 100%;
+  }
+}
 @media (min-width: 767px) {
   .service-small-1, .service-small-3 {
     padding-right: 15px;
@@ -1642,6 +1623,86 @@ header img {
   .our-services-bottom {
     display: none;
   }
+}
+
+.service {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+.service span {
+  margin-bottom: 15px;
+}
+.service h2 {
+  margin-bottom: 15px;
+}
+.service p {
+  margin-bottom: 20px;
+}
+.service .read-more {
+  align-self: flex-start;
+}
+
+.service .read-more {
+  display: inline-block;
+  padding: 8px 20px;
+  font-weight: 600;
+  text-transform: uppercase;
+  border-radius: 3px;
+  text-decoration: none;
+  color: #fff;
+  transition: background-color 0.3s ease;
+  font-size: 0.875rem;
+  line-height: 1.5;
+}
+
+.software .read-more {
+  background-color: #f5b041;
+}
+.software .read-more:hover {
+  background-color: #f29c11;
+}
+
+.it-support .read-more {
+  background-color: #4183d7;
+}
+.it-support .read-more:hover {
+  background-color: #286abd;
+}
+
+.digital-marketing .read-more {
+  background-color: #2ecc71;
+}
+.digital-marketing .read-more:hover {
+  background-color: #25a25a;
+}
+
+.telecoms-service .read-more {
+  background-color: #d64541;
+}
+.telecoms-service .read-more:hover {
+  background-color: #bc2c28;
+}
+
+.web-design .read-more {
+  background-color: #926fb1;
+}
+.web-design .read-more:hover {
+  background-color: #79539a;
+}
+
+.cyber-security .read-more {
+  background-color: #f62459;
+}
+.cyber-security .read-more:hover {
+  background-color: #de093f;
+}
+
+.developer-training .read-more {
+  background-color: #ce4125;
+}
+.developer-training .read-more:hover {
+  background-color: #a3331d;
 }
 
 .partners {
