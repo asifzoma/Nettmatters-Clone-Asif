@@ -15,18 +15,24 @@ footer {
         flex-direction: row;
         
         .footer-company-info {
-            display: flex;
-            flex-direction: column;
-            order: 1;
+            display: block;
             width: 25%;
             margin-right: 30px;
-            align-items: flex-start;
+            text-align: center;
+            
+            .footer-content-wrapper {
+                width: 100%;
+            }
             
             .footer-logo-container {
-                margin-bottom: 20px;
+                display: block;
+                margin: 0 auto 15px;
+                width: 100%;
                 
                 .footer-logo {
-                    width: auto;
+                    width: 100%;
+                    text-align: center;
+                    
                     img {
                         width: 100%;
                         max-width: 200px;
@@ -37,19 +43,29 @@ footer {
                 }
             }
             
+            .footer-social-section {
+                width: 100%;
+                display: block;
+            }
+            
             .follow-us-text {
+                display: block;
+                width: 100%;
                 font-size: 0.9rem;
                 font-weight: 600;
-                margin-bottom: 15px;
-                margin-top: 10px;
+                margin: 0 0 10px;
                 text-transform: uppercase;
                 color: #fff;
+                text-align: center;
             }
             
             .footer-company-socials-logos {
                 display: flex;
                 flex-direction: row;
                 margin-top: 0;
+                justify-content: center;
+                width: 100%;
+                clear: both;
                 
                 a {
                     margin-right: 10px;
@@ -126,7 +142,7 @@ footer {
 
 .footer-logo-container {
    align-self: center;
-   margin-bottom: 30px;
+   margin-bottom: 15px;
 }
 
 // Sticky footer element
@@ -184,19 +200,14 @@ footer {
             flex-direction: column;
             
             .footer-company-info {
-                order: 1;
                 width: 100%;
                 margin-right: 0;
                 margin-bottom: 30px;
-                align-items: center;
                 text-align: center;
                 
-                .footer-logo-container {
-                    align-self: center;
-                }
-                
-                .footer-company-socials-logos {
-                    justify-content: center;
+                .footer-logo-container, .follow-us-text, .footer-company-socials-logos {
+                    width: 100%;
+                    text-align: center;
                 }
             }
             
@@ -251,10 +262,10 @@ footer {
 
 .footer-logo-container {
    @media (max-width: 480px) {
-      width: 35%;
-      padding-top: 10px;
-      padding-bottom: 30px;
-      margin-bottom: 0;
+      width: auto;
+      max-width: 200px;
+      padding-bottom: 15px;
+      margin-bottom: 5px;
    }
 }
 
@@ -263,6 +274,8 @@ footer {
       @media (max-width: 480px) {
          padding-right: 5px;
          padding-left: 5px;
+         margin-top: 0;
+         margin-bottom: 10px;
       }
    }
 }
@@ -305,4 +318,36 @@ footer {
 
 .linkedin:hover {
     background-color: #0e76a8 !important;
+}
+
+.footer-content-wrapper {
+    display: block;
+    width: 100%;
+}
+
+.footer-social-section {
+    display: block;
+    width: 100%;
+    margin-top: 10px;
+}
+
+// Media queries
+@media (max-width: 991px) {
+    .footer-content-wrapper {
+        max-width: 300px;
+        margin: 0 auto;
+    }
+    
+    footer .footer-row .footer-company-info {
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 30px;
+        text-align: center;
+    }
+}
+
+@media (max-width: 767px) {
+    .footer-content-wrapper {
+        max-width: 250px;
+    }
 } 
