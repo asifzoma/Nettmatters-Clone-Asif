@@ -375,3 +375,22 @@
         background-color: darken($developer-training-color, 10%);
     }
 } 
+
+// Mobile-specific styles for small services to match dimensions of .service-small-1
+@media (max-width: 767px) {
+    .service-small-2 {
+        width: 100%;
+        padding: 0;
+        margin: 0;
+    }
+} 
+
+// Mobile adjustments: match service-small-2 to service-small-1 dimensions
+@media (max-width: 767px) {
+    .service-container-small.service-small-2 .service {
+        padding: 30px;
+        padding-bottom: 20px;
+        margin-top: 30px;
+        height: auto;
+    }
+} 

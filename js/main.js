@@ -10,7 +10,7 @@
 var didScroll;
 var lastScrollTop = 0;
 var delta = 5;
-var navbarHeight = $('.fake-header').outerHeight();
+var navbarHeight = $('header').outerHeight();
 
 // Side Menu Variables
 const sideMenu = document.querySelector('.sidebar');
@@ -74,28 +74,17 @@ setInterval(function() {
 }, 250);
 
 function hasScrolled() {
-    var st = $(this).scrollTop();
-    if(Math.abs(lastScrollTop - st) <= delta)
-        return;
-    
-    // If they scrolled down and are past the .fake-header, add class .nav-up.
-    if (st > lastScrollTop && st > navbarHeight){
-        // Scroll Down
-        $('.fake-header').removeClass('sticky-header');
-        $('.header-placeholder').removeClass('header-show').addClass('header-hidden');
-    } else {
-        // Scroll Up
-        if(st + $(window).height() < $(document).height()) {
-            $('.fake-header').addClass('sticky-header');
-            $('.header-placeholder').removeClass('header-hidden').addClass('header-show');
-            $('.drop-down-menu-main-nav-container').removeClass('nav-hidden').addClass('nav-visible');
-            // Only manage main-nav if it's visible at the current viewport
-            if ($(window).width() >= 992) {
-                $('.main-nav').removeClass('nav-hidden').addClass('nav-visible');
-            }
-        }
+    var st = $(window).scrollTop();
+    if (Math.abs(lastScrollTop - st) <= delta) return;
+
+    if (st > lastScrollTop && st > navbarHeight) {
+        // Scrolling down: hide header
+        $('header').addClass('hidden').removeClass('visible');
+    } else if (st + $(window).height() < $(document).height()) {
+        // Scrolling up: show header
+        $('header').addClass('visible').removeClass('hidden');
     }
-    
+
     lastScrollTop = st;
 }
 
