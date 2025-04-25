@@ -80,6 +80,11 @@ $(window).resize(function() {
     updateHeaderResponsiveness();
 });
 
+// Run responsive updates on page load
+$(document).ready(function() {
+    updateHeaderResponsiveness();
+});
+
 function updateHeaderResponsiveness() {
     const width = $(window).width();
     
