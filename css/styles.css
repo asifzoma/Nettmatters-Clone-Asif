@@ -372,6 +372,21 @@ a {
   border-color: #2ecc71;
 }
 
+a, button, .btn,
+[role=button],
+.clickable,
+.hamburger-box,
+.icon-menu,
+.icon-search-small,
+.icon-search-large,
+.large-form-icon-container,
+.service,
+.service .read-more,
+.view-our-work,
+.header-phone-icon {
+  cursor: pointer !important;
+}
+
 body {
   font-family: Poppins, sans-serif;
   font-size: 1rem;
@@ -1282,6 +1297,16 @@ header img {
 .our-services-top a svg, .our-services-top a i {
   margin-left: 8px;
 }
+@media (max-width: 767px) {
+  .our-services-top h1 {
+    display: none;
+  }
+}
+@media (max-width: 786px) {
+  .our-services-top .view-our-work {
+    display: none;
+  }
+}
 
 .our-services-icon-arrow-right {
   margin-left: 8px;
@@ -1393,6 +1418,11 @@ header img {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+}
+.our-services-bottom .view-our-work {
+  font-weight: bold;
+  color: #000000;
+  margin-top: 8px;
 }
 
 .software:hover {

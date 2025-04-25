@@ -371,4 +371,20 @@
     @media (min-width: 1260px) {
         width: 25%;
     }
+}
+
+// Add cursor pointer to all clickable elements
+a, button, .btn, 
+[role="button"], 
+.clickable,
+.hamburger-box,
+.icon-menu,
+.icon-search-small,
+.icon-search-large,
+.large-form-icon-container,
+.service,
+.service .read-more,
+.view-our-work,
+.header-phone-icon {
+    cursor: pointer !important;
 } 

@@ -38,6 +38,18 @@
             margin-left: 8px;
         }
     }
+    
+    h1 {
+        @media (max-width: 767px){
+            display: none;
+        }
+    }
+    
+    .view-our-work {
+        @media (max-width: 786px) {
+            display: none;
+        }
+    }
 }
 
 .our-services-icon-arrow-right {
@@ -144,6 +156,12 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    
+    .view-our-work {
+        font-weight: bold;
+        color: #000000;
+        margin-top: 8px;
+    }
 }
 
 // Flex Box Hover Effect

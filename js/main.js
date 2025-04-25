@@ -1,16 +1,11 @@
-// ==========================================================================
+// ==========================
 //  Main JavaScript 
-// ==========================================================================
 
-////////
 // Global Variables 
-////////
+
 
 // Sticky Header Variables 
-var didScroll;
-var lastScrollTop = 0;
-var delta = 5;
-var navbarHeight = $('.fake-header').outerHeight();
+
 
 // Side Menu Variables
 const sideMenu = document.querySelector('.sidebar');
@@ -59,52 +54,29 @@ $cookies_settings.on('click', function(){
 });
 
 ////////
-// Sticky Header
+// Sticky Header: removed per request, now using nav hide/show only
 ////////
 
-$(window).scroll(function(event){
-    didScroll = true;
-});
+// New nav hide/show on scroll
+const $nav = $('nav');
+let lastScrollTop = 0;
 
-setInterval(function() {
-    if (didScroll) {
-        hasScrolled();
-        didScroll = false;
-    }
-}, 250);
+$(window).on('scroll', function() {
+    const st = $(this).scrollTop();
 
-function hasScrolled() {
-    var st = $(this).scrollTop();
-    if(Math.abs(lastScrollTop - st) <= delta)
-        return;
-    
-    // If they scrolled down and are past the .fake-header, add class .nav-up.
-    if (st > lastScrollTop && st > navbarHeight){
-        // Scroll Down
-        $('.fake-header').removeClass('sticky-header');
-        $('.header-placeholder').removeClass('header-show').addClass('header-hidden');
+    if (st > lastScrollTop) {
+        // scrolling down: hide nav
+        $nav.addClass('hidden').removeClass('visible');
     } else {
-        // Scroll Up
-        if(st + $(window).height() < $(document).height()) {
-            $('.fake-header').addClass('sticky-header');
-            $('.header-placeholder').removeClass('header-hidden').addClass('header-show');
-            $('.drop-down-menu-main-nav-container').removeClass('nav-hidden').addClass('nav-visible');
-            // Only manage main-nav if it's visible at the current viewport
-            if ($(window).width() >= 992) {
-                $('.main-nav').removeClass('nav-hidden').addClass('nav-visible');
-            }
-        }
+        // scrolling up: show nav
+        $nav.addClass('visible').removeClass('hidden');
     }
-    
+
     lastScrollTop = st;
-}
+});
 
 // Make sure header responsive elements are visible/hidden at the right breakpoints
 $(window).resize(function() {
-    updateHeaderResponsiveness();
-});
-
-$(document).ready(function() {
     updateHeaderResponsiveness();
 });
 

@@ -288,8 +288,8 @@ footer {
     width: 40px;
     height: 40px;
     border-radius: 3px;
-    background-color: #212330;
-    color: #fff;
+    background-color: #ffffff;
+    color: #212330;
     font-size: 1.2rem;
     transition: background-color 0.3s ease;
     text-decoration: none;
@@ -306,18 +306,22 @@ footer {
 // Social media specific hover styles (overriding default)
 .facebook:hover {
     background-color: #3b5998 !important;
+    color: #ffffff !important;
 }
 
 .twitter:hover {
     background-color: #00acee !important;
+    color: #ffffff !important;
 }
 
 .instagram:hover {
     background-color: #d6249f !important;
+    color: #ffffff !important;
 }
 
 .linkedin:hover {
     background-color: #0e76a8 !important;
+    color: #ffffff !important;
 }
 
 .footer-content-wrapper {
