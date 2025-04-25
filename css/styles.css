@@ -2564,426 +2564,27 @@ p {
   filter: grayscale(0);
 }
 
-.case-study-description-1 {
-  overflow: hidden;
-  display: none;
-  position: absolute;
-  margin: auto;
-  bottom: 50%;
-  left: -80px;
-  text-align: center;
-  width: 280px;
-  margin-bottom: 60px;
-}
-
-.case-study-tooltip-1 {
-  background-color: #333645;
-  color: #fff;
-  padding: 20px;
-  font-size: 0.875rem;
-  width: 100%;
-  max-width: 280px;
-}
-.case-study-tooltip-1 h3 {
-  position: relative;
-  font-size: 1.125rem;
-  padding-bottom: 17px;
-  margin: 0;
-  font-weight: 400;
-  line-height: 1.1;
-}
-.case-study-tooltip-1 p {
-  font-size: 0.8125rem;
-  line-height: 1.375rem;
-  margin-bottom: 0;
-}
-
-.case-study-description-2 {
-  overflow: hidden;
-  display: none;
-  position: absolute;
-  margin: auto;
-  bottom: 40%;
-  left: -50px;
-  text-align: center;
-  width: 280px;
-  margin-bottom: 60px;
-}
-
-.case-study-tooltip-2 {
-  background-color: #333645;
-  color: #fff;
-  padding: 20px;
-  font-size: 0.875rem;
-  width: 100%;
-  max-width: 280px;
-}
-.case-study-tooltip-2 h3 {
-  position: relative;
-  font-size: 1.125rem;
-  padding-bottom: 17px;
-  margin: 0;
-  font-weight: 400;
-  line-height: 1.1;
-}
-.case-study-tooltip-2 p {
-  font-size: 0.8125rem;
-  line-height: 1.375rem;
-  margin-bottom: 0;
-}
-
-.case-study-description-3 {
-  overflow: hidden;
-  display: none;
-  position: absolute;
-  margin: auto;
-  bottom: 40%;
-  left: -80px;
-  text-align: center;
-  width: 280px;
-  margin-bottom: 60px;
-}
-
-.case-study-tooltip-3 {
-  background-color: #333645;
-  color: #fff;
-  padding: 20px;
-  font-size: 0.875rem;
-  width: 100%;
-  max-width: 280px;
-}
-.case-study-tooltip-3 h3 {
-  position: relative;
-  font-size: 1.125rem;
-  padding-bottom: 17px;
-  margin: 0;
-  font-weight: 400;
-  line-height: 1.1;
-}
-.case-study-tooltip-3 p {
-  font-size: 0.8125rem;
-  line-height: 1.375rem;
-  margin-bottom: 0;
-}
-
-.case-study-description-4 {
-  overflow: hidden;
-  display: none;
-  position: absolute;
-  margin: auto;
-  bottom: 40%;
-  left: -80px;
-  text-align: center;
-  width: 280px;
-  margin-bottom: 60px;
-}
-
-.case-study-tooltip-4 {
-  background-color: #333645;
-  color: #fff;
-  padding: 20px;
-  font-size: 0.875rem;
-  width: 100%;
-  max-width: 280px;
-}
-.case-study-tooltip-4 h3 {
-  position: relative;
-  font-size: 1.125rem;
-  padding-bottom: 17px;
-  margin: 0;
-  font-weight: 400;
-  line-height: 1.1;
-}
-.case-study-tooltip-4 p {
-  font-size: 0.8125rem;
-  line-height: 1.375rem;
-  margin-bottom: 0;
-}
-
-.case-study-description-5 {
-  overflow: hidden;
-  display: none;
-  position: absolute;
-  margin: auto;
-  bottom: 40%;
-  left: -50px;
-  text-align: center;
-  width: 280px;
-  margin-bottom: 60px;
-}
-
-.case-study-tooltip-5 {
-  background-color: #333645;
-  color: #fff;
-  padding: 20px;
-  font-size: 0.875rem;
-  width: 100%;
-  max-width: 280px;
-}
-.case-study-tooltip-5 h3 {
-  position: relative;
-  font-size: 1.125rem;
-  padding-bottom: 17px;
-  margin: 0;
-  font-weight: 400;
-  line-height: 1.1;
-}
-.case-study-tooltip-5 p {
-  font-size: 0.8125rem;
-  line-height: 1.375rem;
-  margin-bottom: 0;
-}
-
-.case-study-description-6 {
-  overflow: hidden;
-  display: none;
-  position: absolute;
-  margin: auto;
-  bottom: 40%;
-  left: -50px;
-  text-align: center;
-  width: 280px;
-  margin-bottom: 60px;
-}
-
-.case-study-tooltip-6 {
-  background-color: #333645;
-  color: #fff;
-  padding: 20px;
-  font-size: 0.875rem;
-  width: 100%;
-  max-width: 280px;
-}
-.case-study-tooltip-6 h3 {
-  position: relative;
-  font-size: 1.125rem;
-  padding-bottom: 17px;
-  margin: 0;
-  font-weight: 400;
-  line-height: 1.1;
-}
-.case-study-tooltip-6 p {
-  font-size: 0.8125rem;
-  line-height: 1.375rem;
-  margin-bottom: 0;
-}
-
-.case-study-description-7 {
-  overflow: hidden;
-  display: none;
-  position: absolute;
-  margin: auto;
-  bottom: 40%;
-  left: -50px;
-  text-align: center;
-  width: 280px;
-  margin-bottom: 60px;
-}
-
-.case-study-tooltip-7 {
-  background-color: #333645;
-  color: #fff;
-  padding: 20px;
-  font-size: 0.875rem;
-  width: 100%;
-  max-width: 280px;
-}
-.case-study-tooltip-7 h3 {
-  position: relative;
-  font-size: 1.125rem;
-  padding-bottom: 17px;
-  margin: 0;
-  font-weight: 400;
-  line-height: 1.1;
-}
-.case-study-tooltip-7 p {
-  font-size: 0.8125rem;
-  line-height: 1.375rem;
-  margin-bottom: 0;
-}
-
-.case-study-description-8 {
-  overflow: hidden;
-  display: none;
-  position: absolute;
-  margin: auto;
-  bottom: 50%;
-  left: -80px;
-  text-align: center;
-  width: 280px;
-  margin-bottom: 60px;
-}
-
-.case-study-tooltip-8 {
-  background-color: #333645;
-  color: #fff;
-  padding: 20px;
-  font-size: 0.875rem;
-  width: 100%;
-  max-width: 280px;
-}
-.case-study-tooltip-8 h3 {
-  position: relative;
-  font-size: 1.125rem;
-  padding-bottom: 17px;
-  margin: 0;
-  font-weight: 400;
-  line-height: 1.1;
-}
-.case-study-tooltip-8 p {
-  font-size: 0.8125rem;
-  line-height: 1.375rem;
-  margin-bottom: 0;
-}
-
-.case-study-description-9 {
-  overflow: hidden;
-  display: none;
-  position: absolute;
-  margin: auto;
-  bottom: 50%;
-  left: -80px;
-  text-align: center;
-  width: 280px;
-  margin-bottom: 60px;
-}
-
-.case-study-tooltip-9 {
-  background-color: #333645;
-  color: #fff;
-  padding: 20px;
-  font-size: 0.875rem;
-  width: 100%;
-  max-width: 280px;
-}
-.case-study-tooltip-9 h3 {
-  position: relative;
-  font-size: 1.125rem;
-  padding-bottom: 17px;
-  margin: 0;
-  font-weight: 400;
-  line-height: 1.1;
-}
-.case-study-tooltip-9 p {
-  font-size: 0.8125rem;
-  line-height: 1.375rem;
-  margin-bottom: 0;
-}
-
-.case-study-description-10 {
-  overflow: hidden;
-  display: none;
-  position: absolute;
-  margin: auto;
-  bottom: 40%;
-  left: -50px;
-  text-align: center;
-  width: 280px;
-  margin-bottom: 60px;
-}
-
-.case-study-tooltip-10 {
-  background-color: #333645;
-  color: #fff;
-  padding: 20px;
-  font-size: 0.875rem;
-  width: 100%;
-  max-width: 280px;
-}
-.case-study-tooltip-10 h3 {
-  position: relative;
-  font-size: 1.125rem;
-  padding-bottom: 17px;
-  margin: 0;
-  font-weight: 400;
-  line-height: 1.1;
-}
-.case-study-tooltip-10 p {
-  font-size: 0.8125rem;
-  line-height: 1.375rem;
-  margin-bottom: 0;
-}
-
-.case-study-description-11 {
-  overflow: hidden;
-  display: none;
-  position: absolute;
-  margin: auto;
-  bottom: 40%;
-  left: -50px;
-  text-align: center;
-  width: 280px;
-  margin-bottom: 60px;
-}
-
-.case-study-tooltip-11 {
-  background-color: #333645;
-  color: #fff;
-  padding: 20px;
-  font-size: 0.875rem;
-  width: 100%;
-  max-width: 280px;
-}
-.case-study-tooltip-11 h3 {
-  position: relative;
-  font-size: 1.125rem;
-  padding-bottom: 17px;
-  margin: 0;
-  font-weight: 400;
-  line-height: 1.1;
-}
-.case-study-tooltip-11 p {
-  font-size: 0.8125rem;
-  line-height: 1.375rem;
-  margin-bottom: 0;
-}
-
-.case-study-description-12 {
-  overflow: hidden;
-  display: none;
-  position: absolute;
-  margin: auto;
-  bottom: 40%;
-  left: -50px;
-  text-align: center;
-  width: 280px;
-  margin-bottom: 60px;
-}
-
-.case-study-tooltip-12 {
-  background-color: #333645;
-  color: #fff;
-  padding: 20px;
-  font-size: 0.875rem;
-  width: 100%;
-  max-width: 280px;
-}
-.case-study-tooltip-12 h3 {
-  position: relative;
-  font-size: 1.125rem;
-  padding-bottom: 17px;
-  margin: 0;
-  font-weight: 400;
-  line-height: 1.1;
-}
-.case-study-tooltip-12 p {
-  font-size: 0.8125rem;
-  line-height: 1.375rem;
-  margin-bottom: 0;
-}
-
+.case-study-description-1, .case-study-description-2, .case-study-description-3,
+.case-study-description-4, .case-study-description-5, .case-study-description-6,
+.case-study-description-7, .case-study-description-8, .case-study-description-9,
+.case-study-description-10, .case-study-description-11, .case-study-description-12,
 .case-study-description-13 {
-  overflow: hidden;
+  overflow: visible; /* Allow the triangle to be visible outside the container */
   display: none;
   position: absolute;
   margin: auto;
-  bottom: 40%;
-  left: -80px;
+  bottom: 120%; /* Position further above the item */
+  left: 50%;
+  transform: translateX(-50%); /* Center it horizontally */
   text-align: center;
   width: 280px;
-  margin-bottom: 60px;
+  z-index: 10; /* Ensure tooltip appears above other elements */
 }
 
+.case-study-tooltip-1, .case-study-tooltip-2, .case-study-tooltip-3,
+.case-study-tooltip-4, .case-study-tooltip-5, .case-study-tooltip-6,
+.case-study-tooltip-7, .case-study-tooltip-8, .case-study-tooltip-9,
+.case-study-tooltip-10, .case-study-tooltip-11, .case-study-tooltip-12,
 .case-study-tooltip-13 {
   background-color: #333645;
   color: #fff;
@@ -2991,7 +2592,13 @@ p {
   font-size: 0.875rem;
   width: 100%;
   max-width: 280px;
+  position: relative;
+  margin-bottom: 0; /* Remove space for the triangle */
 }
+.case-study-tooltip-1 h3, .case-study-tooltip-2 h3, .case-study-tooltip-3 h3,
+.case-study-tooltip-4 h3, .case-study-tooltip-5 h3, .case-study-tooltip-6 h3,
+.case-study-tooltip-7 h3, .case-study-tooltip-8 h3, .case-study-tooltip-9 h3,
+.case-study-tooltip-10 h3, .case-study-tooltip-11 h3, .case-study-tooltip-12 h3,
 .case-study-tooltip-13 h3 {
   position: relative;
   font-size: 1.125rem;
@@ -3000,179 +2607,32 @@ p {
   font-weight: 400;
   line-height: 1.1;
 }
+.case-study-tooltip-1 p, .case-study-tooltip-2 p, .case-study-tooltip-3 p,
+.case-study-tooltip-4 p, .case-study-tooltip-5 p, .case-study-tooltip-6 p,
+.case-study-tooltip-7 p, .case-study-tooltip-8 p, .case-study-tooltip-9 p,
+.case-study-tooltip-10 p, .case-study-tooltip-11 p, .case-study-tooltip-12 p,
 .case-study-tooltip-13 p {
   font-size: 0.8125rem;
   line-height: 1.375rem;
   margin-bottom: 0;
 }
 
-.triangle-case-study-1 {
-  display: inline-block;
-  position: absolute;
-  bottom: 40px;
-  left: 120px;
-  width: 0px;
-  height: 0px;
-  border-style: solid;
-  border-width: 20px 20px 0 20px;
-  border-color: #333645 transparent transparent transparent;
-  transform: rotate(0deg);
-}
-
-.triangle-case-study-2 {
-  display: inline-block;
-  position: absolute;
-  bottom: 40px;
-  left: 120px;
-  width: 0px;
-  height: 0px;
-  border-style: solid;
-  border-width: 20px 20px 0 20px;
-  border-color: #333645 transparent transparent transparent;
-  transform: rotate(0deg);
-}
-
-.triangle-case-study-3 {
-  display: inline-block;
-  position: absolute;
-  bottom: 40px;
-  left: 120px;
-  width: 0px;
-  height: 0px;
-  border-style: solid;
-  border-width: 20px 20px 0 20px;
-  border-color: #333645 transparent transparent transparent;
-  transform: rotate(0deg);
-}
-
-.triangle-case-study-4 {
-  display: inline-block;
-  position: absolute;
-  bottom: 40px;
-  left: 120px;
-  width: 0px;
-  height: 0px;
-  border-style: solid;
-  border-width: 20px 20px 0 20px;
-  border-color: #333645 transparent transparent transparent;
-  transform: rotate(0deg);
-}
-
-.triangle-case-study-5 {
-  display: inline-block;
-  position: absolute;
-  bottom: 40px;
-  left: 120px;
-  width: 0px;
-  height: 0px;
-  border-style: solid;
-  border-width: 20px 20px 0 20px;
-  border-color: #333645 transparent transparent transparent;
-  transform: rotate(0deg);
-}
-
-.triangle-case-study-6 {
-  display: inline-block;
-  position: absolute;
-  bottom: 40px;
-  left: 120px;
-  width: 0px;
-  height: 0px;
-  border-style: solid;
-  border-width: 20px 20px 0 20px;
-  border-color: #333645 transparent transparent transparent;
-  transform: rotate(0deg);
-}
-
-.triangle-case-study-7 {
-  display: inline-block;
-  position: absolute;
-  bottom: 40px;
-  left: 120px;
-  width: 0px;
-  height: 0px;
-  border-style: solid;
-  border-width: 20px 20px 0 20px;
-  border-color: #333645 transparent transparent transparent;
-  transform: rotate(0deg);
-}
-
-.triangle-case-study-8 {
-  display: inline-block;
-  position: absolute;
-  bottom: 40px;
-  left: 120px;
-  width: 0px;
-  height: 0px;
-  border-style: solid;
-  border-width: 20px 20px 0 20px;
-  border-color: #333645 transparent transparent transparent;
-  transform: rotate(0deg);
-}
-
-.triangle-case-study-9 {
-  display: inline-block;
-  position: absolute;
-  bottom: 40px;
-  left: 120px;
-  width: 0px;
-  height: 0px;
-  border-style: solid;
-  border-width: 20px 20px 0 20px;
-  border-color: #333645 transparent transparent transparent;
-  transform: rotate(0deg);
-}
-
-.triangle-case-study-10 {
-  display: inline-block;
-  position: absolute;
-  bottom: 40px;
-  left: 120px;
-  width: 0px;
-  height: 0px;
-  border-style: solid;
-  border-width: 20px 20px 0 20px;
-  border-color: #333645 transparent transparent transparent;
-  transform: rotate(0deg);
-}
-
-.triangle-case-study-11 {
-  display: inline-block;
-  position: absolute;
-  bottom: 40px;
-  left: 120px;
-  width: 0px;
-  height: 0px;
-  border-style: solid;
-  border-width: 20px 20px 0 20px;
-  border-color: #333645 transparent transparent transparent;
-  transform: rotate(0deg);
-}
-
-.triangle-case-study-12 {
-  display: inline-block;
-  position: absolute;
-  bottom: 40px;
-  left: 120px;
-  width: 0px;
-  height: 0px;
-  border-style: solid;
-  border-width: 20px 20px 0 20px;
-  border-color: #333645 transparent transparent transparent;
-  transform: rotate(0deg);
-}
-
+.triangle-case-study-1, .triangle-case-study-2, .triangle-case-study-3,
+.triangle-case-study-4, .triangle-case-study-5, .triangle-case-study-6,
+.triangle-case-study-7, .triangle-case-study-8, .triangle-case-study-9,
+.triangle-case-study-10, .triangle-case-study-11, .triangle-case-study-12,
 .triangle-case-study-13 {
-  display: inline-block;
+  display: block;
   position: absolute;
-  bottom: 40px;
-  left: 120px;
-  width: 0px;
-  height: 0px;
+  bottom: -19px; /* Position it just below the tooltip */
+  left: 50%;
+  width: 0;
+  height: 0;
   border-style: solid;
   border-width: 20px 20px 0 20px;
   border-color: #333645 transparent transparent transparent;
-  transform: rotate(0deg);
+  transform: translateX(-50%); /* Center horizontally */
+  z-index: 11; /* Make sure it's above the tooltip */
 }
 
 .item-1:hover .case-study-description-1,
