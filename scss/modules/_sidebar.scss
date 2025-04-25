@@ -125,53 +125,57 @@
   flex-direction: row;
 }
 
-.icon-computer-style {
-  color: #67809f;
+// Add icon styling classes for sidebar
+.icon-paper-plane-style, 
+.icon-computer-style,
+.icon-display-style,
+.icon-chart-simple-style,
+.icon-phone-style,
+.icon-code-style,
+.icon-shield-style,
+.icon-graduation-style {
   font-size: 1.438rem;
   padding-bottom: 10px;
   display: block;
+}
+
+.icon-paper-plane-style {
+  color: #333645;
+}
+
+.icon-computer-style {
+  color: #67809f;
 }
 
 .icon-display-style {
   color: #4183d7;
-  font-size: 1.438rem;
-  padding-bottom: 10px;
-  display: block;
 }
 
-.icon-bar-graph-style {
+.icon-chart-simple-style {
   color: #2ecc71;
-  font-size: 1.438rem;
-  padding-bottom: 10px;
-  display: block;
 }
 
-.icon-phone-in-talk-style {
+.icon-phone-style {
   color: #d64541;
-  font-size: 1.438rem;
-  padding-bottom: 10px;
-  display: block;
 }
 
-.icon-embed2-style{
+.icon-code-style {
   color: #926fb1;
-  font-size: 1.438rem;
-  padding-bottom: 10px;
-  display: block;
 }
 
-.icon-security-style {
+.icon-shield-style {
   color: #f62459;
-  font-size: 1.438rem;
-  padding-bottom: 10px;
-  display: block;
 }
 
-.icon-school-style {
+.icon-graduation-style {
   color: #ce4125;
-  font-size: 1.438rem;
-  padding-bottom: 10px;
-  display: block;
+}
+
+// Use this class for proper spacing
+.side-menu-item-span span {
+  margin-right: 10px;
+  width: 25px;
+  text-align: center;
 }
 
 // Media Queries
