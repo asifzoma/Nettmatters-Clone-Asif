@@ -117,12 +117,13 @@
 
 // moves the body wrapper when the side bar is active
 .wrapper-center {
-    transition: 0.3s;
-    transition-timing-function: linear;
+    transition: right 0.3s linear !important;
+    position: relative;
+    right: 0;
 }
 .wrapper-right {
-    transition: 0.3s;
-    transition-timing-function: linear;
+    transition: right 0.3s linear !important;
+    position: relative;
     right: 275px;
 }
 
@@ -144,18 +145,19 @@
     }
 }
 
-.wrapper-right::before{
-    width: 100%;
-    height: 100%;
-    opacity: 1;
-    transition: opacity 0.3s;
-    position: absolute;
-    top: 0;
-    right: 0;
-    background: rgba(0,0,0,.4);
-    z-index: 30;
-    content: ""; 
-}
+// Remove the ::before pseudo-element since we're using a dedicated overlay element
+// .wrapper-right::before{
+//     width: 100%;
+//     height: 100%;
+//     opacity: 1;
+//     transition: opacity 0.3s;
+//     position: absolute;
+//     top: 0;
+//     right: 0;
+//     background: rgba(0,0,0,.4);
+//     z-index: 30;
+//     content: ""; 
+// }
 
 ////////
 // Cookie Pop Up Styles
@@ -319,14 +321,14 @@
     font-weight: 400;
 }
 
-// Add header scroll behavior styles
+// Header scroll behavior with proper sidebar interaction
 header {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  z-index: 1000;
-  transition: transform 0.4s ease;
+  z-index: 20; // Lower than overlay (30) and sidebar (40)
+  transition: transform 0.4s ease, right 0.3s linear, left 0.3s linear;
   background-color: #fff;
   
   &.header-hidden {
@@ -336,6 +338,53 @@ header {
   &.header-visible {
     transform: translateY(0);
   }
+}
+
+// When sidebar is open, disable the scroll-based transform
+header.sidebar-open {
+  transform: none !important;
+  transition: right 0.3s linear, left 0.3s linear !important;
+}
+
+// Synchronized movement of header with the wrapper
+.wrapper-center ~ header {
+  right: 0;
+  left: 0;
+  transition: transform 0.4s ease, right 0.3s linear, left 0.3s linear;
+}
+
+.wrapper-right ~ header {
+  right: 275px;
+  left: -275px;
+}
+
+@media (min-width: 992px) {
+  .wrapper-right ~ header {
+    right: 350px;
+    left: -350px;
+  }
+}
+
+// Improved overlay that covers everything except the sidebar
+.overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: 30; // Higher than header, lower than sidebar
+  transition: opacity 0.3s;
+}
+
+.overlay-active {
+  display: block;
+}
+
+// Sidebar must be at highest z-index
+.sidebar {
+  z-index: 40;
 }
 
 // Add padding to body to compensate for the fixed header

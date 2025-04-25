@@ -67,17 +67,20 @@ const $nav = $('nav');
 window.addEventListener('scroll', function() {
   const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
   
-  // Check if we've scrolled past the threshold
-  if (scrollTop > scrollThreshold) {
-    // Scrolling down
-    if (scrollTop > lastScrollTop) {
-      header.classList.add('header-hidden');
-      header.classList.remove('header-visible');
-    } 
-    // Scrolling up
-    else {
-      header.classList.remove('header-hidden');
-      header.classList.add('header-visible');
+  // Don't apply header transformations if sidebar is open
+  if (!$('header').hasClass('sidebar-open')) {
+    // Check if we've scrolled past the threshold
+    if (scrollTop > scrollThreshold) {
+      // Scrolling down
+      if (scrollTop > lastScrollTop) {
+        header.classList.add('header-hidden');
+        header.classList.remove('header-visible');
+      } 
+      // Scrolling up
+      else {
+        header.classList.remove('header-hidden');
+        header.classList.add('header-visible');
+      }
     }
   }
   
@@ -249,22 +252,57 @@ $(document).ready(function(){
 // Animation for the wrapper moving the page content and burger animation on click of the burger menu
 
 $(document).ready(function() {
-    $('.header-icon-menu-container').click(function(e) {
-        var mySideBar = $('.sidebar');
-        mySideBar.addClass('active-sidebar').removeClass('hide-sidebar');
-        $('.wrapper').addClass('wrapper-right').removeClass('wrapper-center');
-        $('.hamburger-box').addClass('burger-active');
-        $('body').addClass('no-scroll');
+    // Add overlay div if it doesn't exist
+    if ($('.overlay').length === 0) {
+        $('body').append('<div class="overlay"></div>');
+    }
+    
+    var $sideBar = $('.sidebar');
+    var $wrapper = $('.wrapper');
+    var $hamburger = $('.hamburger-box');
+    var $overlay = $('.overlay');
+    var $header = $('header');
+    
+    // Function to close sidebar - ensure synchronized movement
+    function closeSidebar() {
+        $sideBar.removeClass('active-sidebar').addClass('hide-sidebar');
+        $wrapper.removeClass('wrapper-right').addClass('wrapper-center');
+        $hamburger.removeClass('burger-active');
+        $('body').removeClass('no-scroll');
+        $overlay.removeClass('overlay-active');
         
-        $('.wrapper').click(function() {
-            $('.active-sidebar').removeClass('active-sidebar');
-            $('.wrapper').addClass('wrapper-center').removeClass('wrapper-right');
-            $('.hamburger-box').removeClass('burger-active');
-            $('body').removeClass('no-scroll');
-            
-            $('.wrapper').off('click'); // cancel the wrappers click handler when it's used
-        });
-        e.stopPropagation(); 
+        // Re-enable header scroll behavior after transition completes
+        setTimeout(function() {
+            $header.removeClass('sidebar-open');
+        }, 300);
+    }
+    
+    // Function to open sidebar - ensure synchronized movement
+    function openSidebar() {
+        $sideBar.addClass('active-sidebar').removeClass('hide-sidebar');
+        $wrapper.addClass('wrapper-right').removeClass('wrapper-center');
+        $hamburger.addClass('burger-active');
+        $('body').addClass('no-scroll');
+        $overlay.addClass('overlay-active');
+        
+        // Disable header scroll behavior by adding the sidebar-open class
+        $header.addClass('sidebar-open');
+    }
+    
+    // Toggle sidebar on hamburger click
+    $('.header-icon-menu-container').click(function(e) {
+        e.stopPropagation();
+        
+        if ($sideBar.hasClass('active-sidebar')) {
+            closeSidebar();
+        } else {
+            openSidebar();
+        }
+    });
+    
+    // Close sidebar when clicking the overlay
+    $overlay.click(function() {
+        closeSidebar();
     });
     
     // Toggle sub-menus in sidebar
