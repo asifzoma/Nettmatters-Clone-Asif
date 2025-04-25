@@ -5,6 +5,9 @@
 
 
 // Sticky Header Variables 
+let lastScrollTop = 0;
+const header = document.querySelector('header');
+const scrollThreshold = 50; // Amount of scroll before header hides/shows
 
 
 // Side Menu Variables
@@ -59,20 +62,26 @@ $cookies_settings.on('click', function(){
 
 // New nav hide/show on scroll
 const $nav = $('nav');
-let lastScrollTop = 0;
 
-$(window).on('scroll', function() {
-    const st = $(this).scrollTop();
-
-    if (st > lastScrollTop) {
-        // scrolling down: hide nav
-        $nav.addClass('hidden').removeClass('visible');
-    } else {
-        // scrolling up: show nav
-        $nav.addClass('visible').removeClass('hidden');
+// Add header scroll behavior
+window.addEventListener('scroll', function() {
+  const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+  
+  // Check if we've scrolled past the threshold
+  if (scrollTop > scrollThreshold) {
+    // Scrolling down
+    if (scrollTop > lastScrollTop) {
+      header.classList.add('header-hidden');
+      header.classList.remove('header-visible');
+    } 
+    // Scrolling up
+    else {
+      header.classList.remove('header-hidden');
+      header.classList.add('header-visible');
     }
-
-    lastScrollTop = st;
+  }
+  
+  lastScrollTop = scrollTop;
 });
 
 // Make sure header responsive elements are visible/hidden at the right breakpoints
