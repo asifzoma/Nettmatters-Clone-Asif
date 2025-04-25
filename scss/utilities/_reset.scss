@@ -1,0 +1,122 @@
+// ==========================================================================
+// Reset Styles
+// ==========================================================================
+
+// Remove margin and padding from all elements
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+// Set base font styles
+html {
+  font-size: 16px;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+}
+
+// Reset body styling
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+// Make images and embedded objects responsive
+img, 
+picture, 
+video, 
+canvas, 
+svg {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+// Remove list styling
+ul, 
+ol {
+  list-style: none;
+}
+
+// Reset headings
+h1, h2, h3, h4, h5, h6 {
+  font-weight: inherit;
+  font-size: inherit;
+}
+
+// Reset links styling
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+// Override webkit default link color
+a:-webkit-any-link {
+  color: inherit;
+}
+
+// Reset button styling
+button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font: inherit;
+  color: inherit;
+}
+
+// Override form element styling
+input, 
+textarea, 
+select, 
+button {
+  font: inherit;
+  color: inherit;
+}
+
+// Make sure text inputs are properly wrapped
+input, 
+textarea {
+  width: 100%;
+}
+
+// Override default webkit and mozilla form styling
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+// Fix text overflow
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+
+// Ensure footer social icons are always white
+footer .footer-company-socials-logos a,
+footer .footer-company-socials-logos a:-webkit-any-link,
+footer .footer-company-socials-logos a:link,
+footer .footer-company-socials-logos a:visited,
+footer .footer-company-socials-logos a:hover,
+footer .footer-company-socials-logos a:active {
+  color: white !important;
+}
+
+footer .footer-company-socials-logos a i,
+footer .footer-company-socials-logos a:hover i {
+  color: white !important;
+}
+
+// Ensure accessibility outline only shows for keyboard navigation
+*:focus {
+  outline: none;
+}
+
+*:focus-visible {
+  outline: 2px solid #333645;
+} 

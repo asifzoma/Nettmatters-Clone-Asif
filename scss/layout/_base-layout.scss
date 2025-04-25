@@ -13,7 +13,24 @@ body {
 }
 
 * {
-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+/* Override webkit browser default link styling */
+a:-webkit-any-link {
+    color: inherit; /* Use the inherited color instead of webkit default */
+}
+
+/* Ensure footer social icons are always white */
+footer .footer-company-socials-logos a,
+footer .footer-company-socials-logos a:-webkit-any-link,
+footer .footer-company-socials-logos a:link,
+footer .footer-company-socials-logos a:visited {
+    color: white !important;
+}
+
+footer .footer-company-socials-logos a i {
+    color: white !important;
 }
 
 .container {

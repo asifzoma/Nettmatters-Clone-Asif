@@ -2,6 +2,9 @@
 //  Utilities (Variables, Helpers/Mixins)
 // ==========================================================================
 
+// Reset styles (should come first)
+@import "utilities/reset";
+
 // Variables (formerly config)
 @import "utilities/variables";
 
