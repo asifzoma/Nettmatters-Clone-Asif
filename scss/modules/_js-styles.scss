@@ -317,4 +317,28 @@
     line-height: 30px;
     margin-bottom: 0;
     font-weight: 400;
+}
+
+// Add header scroll behavior styles
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  transition: transform 0.4s ease;
+  background-color: #fff;
+  
+  &.header-hidden {
+    transform: translateY(-100%);
+  }
+  
+  &.header-visible {
+    transform: translateY(0);
+  }
+}
+
+// Add padding to body to compensate for the fixed header
+body {
+  padding-top: 150px; // Adjust based on your header height
 } 
