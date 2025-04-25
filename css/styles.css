@@ -3784,38 +3784,22 @@ footer .footer-row h4 {
 }
 
 .software-sm a:hover,
-.software-sm a:focus {
-  background-color: #67809f;
-}
-
+.software-sm a:focus,
 .it-support-sm a:hover,
-.it-support-sm a:focus {
-  background-color: #4183d7;
-}
-
+.it-support-sm a:focus,
 .digital-sm a:hover,
-.digital-sm a:focus {
-  background-color: #2ecc71;
-}
-
+.digital-sm a:focus,
 .telecoms-sm a:hover,
-.telecoms-sm a:focus {
-  background-color: #d64541;
-}
-
+.telecoms-sm a:focus,
 .web-design-sm a:hover,
-.web-design-sm a:focus {
-  background-color: #926fb1;
-}
-
+.web-design-sm a:focus,
 .cyber-security-sm a:hover,
-.cyber-security-sm a:focus {
-  background-color: #f62459;
-}
-
+.cyber-security-sm a:focus,
 .developer-training-sm a:hover,
-.developer-training-sm a:focus {
-  background-color: #ce4125;
+.developer-training-sm a:focus,
+.side-menu-list-item a:hover,
+.side-menu-list-item a:focus {
+  background-color: #5e6480;
 }
 
 .sidebar-links {
@@ -3855,32 +3839,15 @@ footer .footer-row h4 {
   margin-bottom: 2px;
 }
 
-.sidebar-item:nth-child(1) .sidebar-link:hover {
-  background-color: #67809f;
-}
-
-.sidebar-item:nth-child(2) .sidebar-link:hover {
-  background-color: #4183d7;
-}
-
-.sidebar-item:nth-child(3) .sidebar-link:hover {
-  background-color: #2ecc71;
-}
-
-.sidebar-item:nth-child(4) .sidebar-link:hover {
-  background-color: #d64541;
-}
-
-.sidebar-item:nth-child(5) .sidebar-link:hover {
-  background-color: #926fb1;
-}
-
-.sidebar-item:nth-child(6) .sidebar-link:hover {
-  background-color: #f62459;
-}
-
+.sidebar-item .sidebar-link:hover,
+.sidebar-item:nth-child(1) .sidebar-link:hover,
+.sidebar-item:nth-child(2) .sidebar-link:hover,
+.sidebar-item:nth-child(3) .sidebar-link:hover,
+.sidebar-item:nth-child(4) .sidebar-link:hover,
+.sidebar-item:nth-child(5) .sidebar-link:hover,
+.sidebar-item:nth-child(6) .sidebar-link:hover,
 .sidebar-item:nth-child(7) .sidebar-link:hover {
-  background-color: #ce4125;
+  background-color: #5e6480;
 }
 
 .sidebar-contact {

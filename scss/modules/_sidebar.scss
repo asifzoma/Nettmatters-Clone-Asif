@@ -236,38 +236,22 @@
 
 // Service specific backgrounds for hover effects
 .software-sm a:hover,
-.software-sm a:focus {
-  background-color: #67809f;
-}
-
+.software-sm a:focus,
 .it-support-sm a:hover,
-.it-support-sm a:focus {
-  background-color: #4183d7;
-}
-
+.it-support-sm a:focus,
 .digital-sm a:hover,
-.digital-sm a:focus {
-  background-color: #2ecc71;
-}
-
+.digital-sm a:focus,
 .telecoms-sm a:hover,
-.telecoms-sm a:focus {
-  background-color: #d64541;
-}
-
+.telecoms-sm a:focus,
 .web-design-sm a:hover,
-.web-design-sm a:focus {
-  background-color: #926fb1;
-}
-
+.web-design-sm a:focus,
 .cyber-security-sm a:hover,
-.cyber-security-sm a:focus {
-  background-color: #f62459;
-}
-
+.cyber-security-sm a:focus,
 .developer-training-sm a:hover,
-.developer-training-sm a:focus {
-  background-color: #ce4125;
+.developer-training-sm a:focus,
+.side-menu-list-item a:hover,
+.side-menu-list-item a:focus {
+  background-color: lighten(#333645, 20%);
 }
 
 // Sidebar links styling
@@ -312,39 +296,16 @@
   }
 }
 
-// Software
-.sidebar-item:nth-child(1) .sidebar-link:hover {
-  background-color: #67809f;
-}
-
-// IT Support
-.sidebar-item:nth-child(2) .sidebar-link:hover {
-  background-color: #4183d7;
-}
-
-// Digital Marketing
-.sidebar-item:nth-child(3) .sidebar-link:hover {
-  background-color: #2ecc71;
-}
-
-// Telecoms
-.sidebar-item:nth-child(4) .sidebar-link:hover {
-  background-color: #d64541;
-}
-
-// Web Design
-.sidebar-item:nth-child(5) .sidebar-link:hover {
-  background-color: #926fb1;
-}
-
-// Cyber Security
-.sidebar-item:nth-child(6) .sidebar-link:hover {
-  background-color: #f62459;
-}
-
-// Developer Training
+// Sidebar hover effects (common effect instead of specific colors)
+.sidebar-item .sidebar-link:hover,
+.sidebar-item:nth-child(1) .sidebar-link:hover,
+.sidebar-item:nth-child(2) .sidebar-link:hover,
+.sidebar-item:nth-child(3) .sidebar-link:hover,
+.sidebar-item:nth-child(4) .sidebar-link:hover,
+.sidebar-item:nth-child(5) .sidebar-link:hover,
+.sidebar-item:nth-child(6) .sidebar-link:hover,
 .sidebar-item:nth-child(7) .sidebar-link:hover {
-  background-color: #ce4125;
+  background-color: lighten(#333645, 20%);
 }
 
 // Contact button
