@@ -56,6 +56,8 @@ function safe_include($file) {
 
     <!-- ================= PAGE WRAPPER ================= -->
     <div class="wrapper wrapper-center">
+        <!-- Include sidebar -->
+        <?php safe_include('includes/sidebar.php'); ?>
         <!-- Include header -->
         <?php safe_include('includes/header.php'); ?>
 

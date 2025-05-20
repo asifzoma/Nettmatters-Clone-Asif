@@ -27,13 +27,8 @@ $cookies_accepted = isset($_SESSION['cookies_accepted']) ? $_SESSION['cookies_ac
 $current_settings = isset($_SESSION['cookie_settings']) ? $_SESSION['cookie_settings'] : $cookie_settings;
 ?>
 
-<!-- Cookie Settings Button -->
-<button type="button" class="cookie-settings-btn btn" onclick="document.getElementById('cookie-consent').classList.add('show')">
-    Manage Consent
-</button>
-
-<!-- Cookie Consent Modal -->
-<div id="cookie-consent" class="cookie-modal <?php echo !$cookies_accepted ? 'fade-in' : ''; ?>">
+<!-- Cookie Consent Banner -->
+<div id="cookie-consent" class="cookie-modal fade-in">
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
@@ -42,9 +37,31 @@ $current_settings = isset($_SESSION['cookie_settings']) ? $_SESSION['cookie_sett
             </div>
             <div class="modal-body">
                 <p>Our website uses cookies. This helps us provide you with a good experience on our website. To see what cookies we use and what they do, and to opt-in on non-essential cookies click "change settings". For a detailed explanation, click on "<a href="privacy-policy.php">Privacy Policy</a>" otherwise click "Accept Cookies" to enter.</p>
-                
-                <?php if (isset($_POST['show_settings'])): ?>
-                <form method="POST" class="cookie-settings-form">
+            </div>
+            <div class="modal-footer">
+                <div class="modal-row">
+                    <div class="modal-row-item modal-top-btn">
+                        <button type="button" id="change-settings-btn" class="btn modal-btn-1">Change Settings</button>
+                    </div>
+                    <div class="modal-row-item">
+                        <button type="button" id="accept-cookies-btn" class="btn modal-btn-2">Accept Cookies</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Cookie Settings Modal (hidden by default, shown when 'Change Settings' is clicked) -->
+<div id="cookie-settings-modal" class="cookie-modal">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 class="modal-title">Cookie Settings</h3>
+                <button type="button" class="close-btn" onclick="document.getElementById('cookie-settings-modal').classList.remove('show')">&times;</button>
+            </div>
+            <div class="modal-body">
+                <form id="cookie-settings-form">
                     <div class="cookie-option">
                         <label>
                             <input type="checkbox" name="necessary" checked disabled>
@@ -52,74 +69,71 @@ $current_settings = isset($_SESSION['cookie_settings']) ? $_SESSION['cookie_sett
                         </label>
                         <p class="cookie-description">Essential cookies that enable core functionality.</p>
                     </div>
-                    
                     <div class="cookie-option">
                         <label>
-                            <input type="checkbox" name="analytics" <?php echo $current_settings['analytics'] ? 'checked' : ''; ?>>
+                            <input type="checkbox" name="analytics">
                             Analytics Cookies
                         </label>
                         <p class="cookie-description">Help us understand how visitors interact with our website.</p>
                     </div>
-                    
                     <div class="cookie-option">
                         <label>
-                            <input type="checkbox" name="marketing" <?php echo $current_settings['marketing'] ? 'checked' : ''; ?>>
+                            <input type="checkbox" name="marketing">
                             Marketing Cookies
                         </label>
                         <p class="cookie-description">Used to track visitors across websites for marketing purposes.</p>
                     </div>
-                    
                     <div class="cookie-option">
                         <label>
-                            <input type="checkbox" name="preferences" <?php echo $current_settings['preferences'] ? 'checked' : ''; ?>>
+                            <input type="checkbox" name="preferences">
                             Preference Cookies
                         </label>
                         <p class="cookie-description">Remember your settings and preferences for a better experience.</p>
                     </div>
-                    
                     <div class="modal-footer">
-                        <button type="submit" name="save_cookie_settings" class="btn modal-btn-1">Save Settings</button>
+                        <button type="submit" class="btn modal-btn-1">Save Settings</button>
                     </div>
                 </form>
-                <?php endif; ?>
             </div>
-            
-            <?php if (!isset($_POST['show_settings'])): ?>
-            <div class="modal-footer">
-                <div class="modal-row">
-                    <div class="modal-row-item modal-top-btn">
-                        <form method="POST">
-                            <button type="submit" name="show_settings" class="btn modal-btn-1">Change Settings</button>
-                        </form>
-                    </div>
-                    <div class="modal-row-item">
-                        <form method="POST">
-                            <button type="submit" name="accept_cookies" class="btn modal-btn-2">Accept Cookies</button>
-                        </form>
-                    </div>
-                </div>
-            </div>
-            <?php endif; ?>
         </div>
     </div>
 </div>
 
 <script>
-// Add cookie consent JavaScript
+// Cookie Consent JavaScript (relies on js/cookie-consent.js for full logic)
 document.addEventListener('DOMContentLoaded', function() {
-    const cookieConsent = document.getElementById('cookie-consent');
-    const closeBtn = document.querySelector('.close-btn');
-    
-    if (closeBtn) {
-        closeBtn.addEventListener('click', function() {
-            cookieConsent.classList.remove('show');
+    const consentModal = document.getElementById('cookie-consent');
+    const settingsModal = document.getElementById('cookie-settings-modal');
+    const changeSettingsBtn = document.getElementById('change-settings-btn');
+    const acceptCookiesBtn = document.getElementById('accept-cookies-btn');
+    const settingsForm = document.getElementById('cookie-settings-form');
+
+    if (changeSettingsBtn) {
+        changeSettingsBtn.addEventListener('click', function() {
+            consentModal.classList.remove('show');
+            settingsModal.classList.add('show');
         });
     }
-    
-    // Close modal when clicking outside
+    if (acceptCookiesBtn) {
+        acceptCookiesBtn.addEventListener('click', function() {
+            // This will be handled by js/cookie-consent.js
+            consentModal.classList.remove('show');
+        });
+    }
+    if (settingsForm) {
+        settingsForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            // This will be handled by js/cookie-consent.js
+            settingsModal.classList.remove('show');
+        });
+    }
+    // Close modals when clicking outside
     window.addEventListener('click', function(event) {
-        if (event.target === cookieConsent) {
-            cookieConsent.classList.remove('show');
+        if (event.target === consentModal) {
+            consentModal.classList.remove('show');
+        }
+        if (event.target === settingsModal) {
+            settingsModal.classList.remove('show');
         }
     });
 });
