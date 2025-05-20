@@ -24,6 +24,22 @@ const $cookies_settings = $('.modal-btn-1');
 // Case Studies Banner Variables
 const $caseStudiesBtn = $('.btn-case-studies');
 
+// Navigation Variables
+const $navItems = $('.main-nav-ddm');
+const $subMenuContainers = $('.sub-menu-container');
+const $triangles = $('.triangle');
+
+// Service Variables
+const $serviceCards = $('.service');
+const $serviceLinks = $('.service a');
+
+// Button Variables
+const $buttons = $('.btn');
+const $buttonArrows = $('.btn i');
+
+// Social Media Variables
+const $socialIcons = $('.social-icons a');
+
 ////////
 // Cookie Pop Up
 ////////
@@ -55,6 +71,167 @@ $cookies_settings.on('click', function(){
     $cookies_policy.removeClass('cookie-show').addClass('cookie-hide');
     $cookies_manage.addClass('cookie-show');
 });
+
+////////
+// Navigation Hover Effects
+////////
+
+// Add hover effects for navigation items
+$navItems.hover(
+    function() {
+        const $this = $(this);
+        const $subMenu = $this.find('.sub-menu-container');
+        const $triangle = $this.find('.triangle');
+        
+        // Ensure proper z-index and visibility
+        $subMenu.css({
+            'z-index': '1000',
+            'visibility': 'visible',
+            'opacity': '1'
+        });
+        
+        // Animate triangle
+        $triangle.css({
+            'visibility': 'visible',
+            'opacity': '1',
+            'transform': 'translateY(0)'
+        });
+        
+        // Add active class for styling
+        $this.addClass('active');
+    },
+    function() {
+        const $this = $(this);
+        const $subMenu = $this.find('.sub-menu-container');
+        const $triangle = $this.find('.triangle');
+        
+        // Hide submenu with transition
+        $subMenu.css({
+            'opacity': '0',
+            'visibility': 'hidden'
+        });
+        
+        // Hide triangle with transition
+        $triangle.css({
+            'opacity': '0',
+            'visibility': 'hidden',
+            'transform': 'translateY(-10px)'
+        });
+        
+        // Remove active class
+        $this.removeClass('active');
+    }
+);
+
+// Add hover effects for submenu items
+$('.sub-menu li a').hover(
+    function() {
+        $(this).css({
+            'color': '#fff',
+            'text-decoration': 'underline'
+        });
+    },
+    function() {
+        $(this).css({
+            'color': '',
+            'text-decoration': 'none'
+        });
+    }
+);
+
+// Add hover effects for service cards
+$serviceCards.hover(
+    function() {
+        $(this).css({
+            'transform': 'translateY(-10px)',
+            'box-shadow': '0 5px 15px rgba(0,0,0,0.1)'
+        });
+    },
+    function() {
+        $(this).css({
+            'transform': 'translateY(0)',
+            'box-shadow': 'none'
+        });
+    }
+);
+
+// Add hover effects for buttons
+$buttons.hover(
+    function() {
+        const $this = $(this);
+        const $arrow = $this.find('i');
+        
+        $this.css({
+            'opacity': '0.9',
+            'transform': 'translateY(-2px)'
+        });
+        
+        if ($arrow.length) {
+            $arrow.css('transform', 'translateX(5px)');
+        }
+    },
+    function() {
+        const $this = $(this);
+        const $arrow = $this.find('i');
+        
+        $this.css({
+            'opacity': '1',
+            'transform': 'translateY(0)'
+        });
+        
+        if ($arrow.length) {
+            $arrow.css('transform', 'translateX(0)');
+        }
+    }
+);
+
+// Add hover effects for social media icons
+$socialIcons.hover(
+    function() {
+        $(this).css({
+            'transform': 'translateY(-3px)',
+            'color': '#fff'
+        });
+    },
+    function() {
+        $(this).css({
+            'transform': 'translateY(0)',
+            'color': ''
+        });
+    }
+);
+
+// Add hover effects for news articles
+$('.news-article').hover(
+    function() {
+        $(this).css({
+            'transform': 'translateY(-5px)',
+            'box-shadow': '0 5px 15px rgba(0,0,0,0.1)'
+        });
+    },
+    function() {
+        $(this).css({
+            'transform': 'translateY(0)',
+            'box-shadow': 'none'
+        });
+    }
+);
+
+// Add hover effects for case study items
+$('.case-study-item').hover(
+    function() {
+        $(this).find('.case-study-tooltip').css({
+            'opacity': '1',
+            'visibility': 'visible'
+        });
+    },
+    function() {
+        $(this).find('.case-study-tooltip').css({
+            'opacity': '0',
+            'visibility': 'hidden'
+        });
+    }
+);
 
 ////////
 // Sticky Header: removed per request, now using nav hide/show only
@@ -230,19 +407,40 @@ $(document).ready(function(){
 // Case Studies Carousel
 $(document).ready(function(){
      $('.case-studies').slick({
-        slidesToShow:       3,
-        slidesToScroll:     1,
-        autoplay:           true,
-        arrows:             false,
-        infinite:           true,
-        variableWidth:      true,
-        swipe:              false,
-        draggable:          false,
-        pauseOnHover:       true,
-        pauseOnFocus:       true,
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        autoplay: true,
+        autoplaySpeed: 3000,
+        arrows: true,
+        infinite: true,
+        variableWidth: false,
+        swipe: true,
+        draggable: true,
+        pauseOnHover: true,
+        pauseOnFocus: true,
+        responsive: [
+            {
+                breakpoint: 1260,
+                settings: {
+                    slidesToShow: 2
+                }
+            },
+            {
+                breakpoint: 992,
+                settings: {
+                    slidesToShow: 2
+                }
+            },
+            {
+                breakpoint: 768,
+                settings: {
+                    slidesToShow: 1
+                }
+            }
+        ]
     });
-    $('.case-studies .slick-list').addClass('slick-list-overflowremove')
- });
+    $('.case-studies .slick-list').addClass('slick-list-overflowremove');
+});
 
 ////////
 // Side Menu
@@ -321,4 +519,59 @@ $(document).ready(function() {
 // Prevent clicking inside the sidebar from closing it
 $('.sidebar').click(function(e) {
     e.stopPropagation();
+});
+
+// Add hover effects for navigation items
+$(document).ready(function() {
+    // Navigation hover effects
+    $('.main-nav-ddm').hover(
+        function() {
+            $(this).find('.sub-menu-container').stop().fadeIn(200);
+            $(this).find('.triangle').stop().fadeIn(200);
+        },
+        function() {
+            $(this).find('.sub-menu-container').stop().fadeOut(200);
+            $(this).find('.triangle').stop().fadeOut(200);
+        }
+    );
+
+    // Service hover effects
+    $('.service').hover(
+        function() {
+            $(this).stop().animate({
+                transform: 'translateY(-10px)'
+            }, 200);
+        },
+        function() {
+            $(this).stop().animate({
+                transform: 'translateY(0)'
+            }, 200);
+        }
+    );
+
+    // Button hover effects
+    $('.btn').hover(
+        function() {
+            $(this).css({
+                'opacity': '0.9',
+                'transform': 'translateY(-2px)'
+            });
+        },
+        function() {
+            $(this).css({
+                'opacity': '1',
+                'transform': 'translateY(0)'
+            });
+        }
+    );
+
+    // Social media hover effects
+    $('.social-icon').hover(
+        function() {
+            $(this).css('transform', 'translateY(-3px)');
+        },
+        function() {
+            $(this).css('transform', 'translateY(0)');
+        }
+    );
 });

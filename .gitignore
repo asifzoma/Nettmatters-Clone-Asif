@@ -1,0 +1,45 @@
+# Hey! These are the environment files we want to keep private
+.env                 
+
+.env.*               
+# This catches any other environment files I might create
+!.env.example       
+# But I DO want to share my example env file so others know what variables they need
+
+# PHP stuff I don't want to track
+/vendor/             
+# This is where Composer puts all my dependencies, no need to track these
+composer.lock        
+# This locks my dependency versions, but others can generate it themselves
+*.log                
+# Don't track any log files
+error_log           
+# Specifically ignore PHP error logs
+php_errors.log      
+# And any other PHP error logs
+
+# IDE and editor files - these are just my personal settings
+.idea/              
+# PHPStorm/IntelliJ settings
+.vscode/            
+# Visual Studio Code settings
+*.sublime-workspace 
+# Sublime Text workspace files
+*.sublime-project   
+# Sublime Text project files
+
+# System files that Windows and Mac create - don't need these in git
+.DS_Store           
+# Mac's way of storing folder view options
+.DS_Store?          
+# Sometimes Mac creates these with a question mark
+._*                 
+# Mac's resource fork files
+.Spotlight-V100     
+# Mac's Spotlight index files
+.Trashes            
+# Mac's trash folder info
+ehthumbs.db         
+# Windows thumbnail cache
+Thumbs.db           
+# Windows thumbnail database 
