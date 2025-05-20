@@ -1,5 +1,5 @@
 <?php
-// Start output buffering
+// Start output buffering...
 ob_start();
 
 // Include configuration
