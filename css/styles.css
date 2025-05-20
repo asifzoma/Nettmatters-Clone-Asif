@@ -13,6 +13,7 @@ html {
 }
 
 body {
+  overflow: auto !important;
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -545,7 +546,7 @@ footer .footer-company-socials-logos a i {
 }
 
 .wrapper {
-  overflow: hidden;
+  /* overflow: hidden; */
   background-color: #fff;
   position: relative;
 }
