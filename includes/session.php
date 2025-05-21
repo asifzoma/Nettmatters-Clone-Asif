@@ -1,10 +1,5 @@
 <?php
-// Start session if not already started
-if (session_status() === PHP_SESSION_NONE) {
-    session_start();
-}
-
-// Set session cookie parameters
+// Set session cookie parameters BEFORE starting the session
 $session_lifetime = 3600; // 1 hour
 $session_path = '/';
 $session_domain = '';
@@ -18,6 +13,11 @@ session_set_cookie_params(
     $session_secure,
     $session_httponly
 );
+
+// Start session if not already started
+if (session_status() === PHP_SESSION_NONE) {
+    session_start();
+}
 
 // Regenerate session ID periodically to prevent session fixation
 if (!isset($_SESSION['last_regeneration'])) {
