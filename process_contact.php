@@ -42,7 +42,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 
     // Prepare email content
-    $to = "asif.ahmad@netmatters-scs.com"; // Replace with your email
+    $to = "to@example.com"; // Mailpit catch-all address for local development
     $email_subject = "New Contact Form Submission: $subject";
     $email_body = "You have received a new message from your website contact form.\n\n" .
         "Here are the details:\n\n" .

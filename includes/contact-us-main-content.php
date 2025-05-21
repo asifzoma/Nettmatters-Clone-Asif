@@ -70,6 +70,23 @@
     <!-- Contact Form -->
     <div class="contact-form-container">
       <form class="contact-form" action="process_contact.php" method="POST" autocomplete="off">
+        <?php if (isset($_SESSION['success'])): ?>
+            <div class="alert alert-success">
+                <?php 
+                echo $_SESSION['success']; 
+                unset($_SESSION['success']); // Clear the message after displaying
+                ?>
+            </div>
+        <?php endif; ?>
+
+        <?php if (isset($_SESSION['error'])): ?>
+            <div class="alert alert-error">
+                <?php 
+                echo $_SESSION['error']; 
+                unset($_SESSION['error']); // Clear the message after displaying
+                ?>
+            </div>
+        <?php endif; ?>
         <div class="form-row">
           <div class="form-group">
             <label for="name">Your Name *</label>
@@ -95,7 +112,7 @@
           <textarea id="message" name="message" rows="4" required></textarea>
         </div>
         <div class="form-group checkbox-group">
-          <input type="checkbox" id="marketing" name="marketing" required>
+          <input type="checkbox" id="marketing" name="marketing">
           <label for="marketing">
             Please tick this box if you wish to receive marketing information from us.<br>
             Please see our <a href="#">Privacy Policy</a> for more information on how we keep your data safe.
