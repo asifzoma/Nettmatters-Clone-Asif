@@ -19,8 +19,29 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         exit();
     }
 
+    // Insert form data into the database
+    try {
+        // Use the global PDO connection
+        global $pdo;
+        $stmt = $pdo->prepare("INSERT INTO Contact_us_data (name, company, email, telephone, message, marketing) VALUES (?, ?, ?, ?, ?, ?)");
+        $stmt->execute([
+            $name,
+            isset($_POST['company']) ? trim($_POST['company']) : null,
+            $email,
+            $telephone,
+            $message,
+            $marketing ? 1 : 0
+        ]);
+    } catch (PDOException $e) {
+        // Log error and show user-friendly message
+        error_log('Contact form DB insert error: ' . $e->getMessage());
+        $_SESSION['error'] = "Sorry, there was an error saving your message. Please try again later.";
+        header("Location: contact.php");
+        exit();
+    }
+
     // Prepare email content
-    $to = "your-email@example.com"; // Replace with your email
+    $to = "asif.ahmad@netmatters-scs.com"; // Replace with your email
     $email_subject = "New Contact Form Submission: $subject";
     $email_body = "You have received a new message from your website contact form.\n\n" .
         "Here are the details:\n\n" .
