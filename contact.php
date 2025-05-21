@@ -67,12 +67,6 @@ function safe_include($file) {
 
     <!-- Include footer -->
     <?php safe_include('includes/footer.php'); ?>
-
-    <!-- Include JavaScript files -->
-    <script src="js/jquery-3.7.1.min.js"></script>
-    <script src="js/slick/slick.min.js"></script>
-    <script src="js/cookie-consent.js"></script>
-    <script src="js/main.js"></script>
 </body>
 </html>
 <?php
