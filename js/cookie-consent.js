@@ -7,6 +7,7 @@ document.addEventListener('DOMContentLoaded', function() {
   const settingsBtn = document.getElementById('change-settings-btn');
   const settingsModal = document.getElementById('cookie-settings-modal');
   const settingsForm = document.getElementById('cookie-settings-form');
+  const manageConsentBtn = document.querySelector('.cookie-settings-btn');
   
   // Cookie functions
   function setCookie(name, value, days) {
@@ -26,7 +27,8 @@ document.addEventListener('DOMContentLoaded', function() {
   
   // Show the modal if consent hasn't been given
   if (consentModal && !getCookie('cookiesAccepted')) {
-    consentModal.classList.add('show');
+    consentModal.classList.remove('cookie-hide');
+    consentModal.classList.add('cookie-show');
     document.body.style.overflow = 'hidden'; // Prevent scrolling when popup is shown
   }
   
@@ -34,16 +36,19 @@ document.addEventListener('DOMContentLoaded', function() {
   if (acceptBtn) {
     acceptBtn.addEventListener('click', function() {
       setCookie('cookiesAccepted', 'true', 365); // Set cookie for a year
-      consentModal.classList.remove('show');
-      document.body.style.overflow = ''; // Re-enable scrolling
+      consentModal.classList.remove('cookie-show');
+      consentModal.classList.add('cookie-hide');
+      document.body.style.overflow = '';
     });
   }
   
   // Handle settings button click (opens settings modal)
   if (settingsBtn && settingsModal) {
     settingsBtn.addEventListener('click', function() {
-      consentModal.classList.remove('show');
-      settingsModal.classList.add('show');
+      consentModal.classList.remove('cookie-show');
+      consentModal.classList.add('cookie-hide');
+      settingsModal.classList.remove('cookie-hide');
+      settingsModal.classList.add('cookie-show');
     });
   }
   
@@ -52,8 +57,18 @@ document.addEventListener('DOMContentLoaded', function() {
     settingsForm.addEventListener('submit', function(e) {
       e.preventDefault();
       setCookie('cookiesAccepted', 'true', 365);
-      settingsModal.classList.remove('show');
+      settingsModal.classList.remove('cookie-show');
+      settingsModal.classList.add('cookie-hide');
       document.body.style.overflow = '';
+    });
+  }
+
+  // Manage Consent Button (show modal again)
+  if (manageConsentBtn) {
+    manageConsentBtn.addEventListener('click', function() {
+      consentModal.classList.remove('cookie-hide');
+      consentModal.classList.add('cookie-show');
+      document.body.style.overflow = 'hidden';
     });
   }
 }); 

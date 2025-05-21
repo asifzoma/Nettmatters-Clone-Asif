@@ -4174,3 +4174,6 @@ body {
     width: 100%;
   }
 }
+
+.cookie-show { display: block !important; }
+.cookie-hide { display: none !important; }

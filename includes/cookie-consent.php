@@ -27,13 +27,15 @@ $cookies_accepted = isset($_SESSION['cookies_accepted']) ? $_SESSION['cookies_ac
 $current_settings = isset($_SESSION['cookie_settings']) ? $_SESSION['cookie_settings'] : $cookie_settings;
 ?>
 
+<!-- Manage Consent Button -->
+<button type="button" class="cookie-settings-btn btn">Manage Consent</button>
+
 <!-- Cookie Consent Banner -->
-<div id="cookie-consent" class="cookie-modal fade-in">
+<div id="cookie-consent" class="cookie-modal fade-in cookie-hide">
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
                 <h3 class="modal-title">Cookies Policy</h3>
-                <button type="button" class="close-btn" onclick="document.getElementById('cookie-consent').classList.remove('show')">&times;</button>
             </div>
             <div class="modal-body">
                 <p>Our website uses cookies. This helps us provide you with a good experience on our website. To see what cookies we use and what they do, and to opt-in on non-essential cookies click "change settings". For a detailed explanation, click on "<a href="privacy-policy.php">Privacy Policy</a>" otherwise click "Accept Cookies" to enter.</p>
@@ -41,10 +43,10 @@ $current_settings = isset($_SESSION['cookie_settings']) ? $_SESSION['cookie_sett
             <div class="modal-footer">
                 <div class="modal-row">
                     <div class="modal-row-item modal-top-btn">
-                        <button type="button" id="change-settings-btn" class="btn modal-btn-1">Change Settings</button>
+                        <a class="btn modal-btn-1" id="change-settings-btn">Change Settings</a>
                     </div>
                     <div class="modal-row-item">
-                        <button type="button" id="accept-cookies-btn" class="btn modal-btn-2">Accept Cookies</button>
+                        <a class="btn modal-btn-2" id="accept-cookies-btn">Accept Cookies</a>
                     </div>
                 </div>
             </div>
@@ -53,12 +55,11 @@ $current_settings = isset($_SESSION['cookie_settings']) ? $_SESSION['cookie_sett
 </div>
 
 <!-- Cookie Settings Modal (hidden by default, shown when 'Change Settings' is clicked) -->
-<div id="cookie-settings-modal" class="cookie-modal">
+<div id="cookie-settings-modal" class="cookie-modal cookie-hide">
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
                 <h3 class="modal-title">Cookie Settings</h3>
-                <button type="button" class="close-btn" onclick="document.getElementById('cookie-settings-modal').classList.remove('show')">&times;</button>
             </div>
             <div class="modal-body">
                 <form id="cookie-settings-form">
@@ -110,30 +111,30 @@ document.addEventListener('DOMContentLoaded', function() {
 
     if (changeSettingsBtn) {
         changeSettingsBtn.addEventListener('click', function() {
-            consentModal.classList.remove('show');
-            settingsModal.classList.add('show');
+            consentModal.classList.remove('cookie-hide');
+            settingsModal.classList.add('cookie-hide');
         });
     }
     if (acceptCookiesBtn) {
         acceptCookiesBtn.addEventListener('click', function() {
             // This will be handled by js/cookie-consent.js
-            consentModal.classList.remove('show');
+            consentModal.classList.add('cookie-hide');
         });
     }
     if (settingsForm) {
         settingsForm.addEventListener('submit', function(e) {
             e.preventDefault();
             // This will be handled by js/cookie-consent.js
-            settingsModal.classList.remove('show');
+            settingsModal.classList.add('cookie-hide');
         });
     }
     // Close modals when clicking outside
     window.addEventListener('click', function(event) {
         if (event.target === consentModal) {
-            consentModal.classList.remove('show');
+            consentModal.classList.add('cookie-hide');
         }
         if (event.target === settingsModal) {
-            settingsModal.classList.remove('show');
+            settingsModal.classList.add('cookie-hide');
         }
     });
 });
