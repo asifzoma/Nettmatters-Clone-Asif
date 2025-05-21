@@ -217,7 +217,7 @@ $services = [
                     <div class="article-img-container">
                         <a href="#" class="article-img-btn art-btn-1">Business</a>
                         <div class="article-img">
-                            <img src="img/news/news-1.jpg" alt="News Article 1">
+                            <img src="img/News/News1.webp" alt="News Article 1">
                         </div>
                     </div>
                     <div class="article-block">
@@ -243,7 +243,7 @@ $services = [
                     <div class="article-img-container">
                         <a href="#" class="article-img-btn art-btn-2">Digital</a>
                         <div class="article-img">
-                            <img src="img/news/news-2.jpg" alt="News Article 2">
+                            <img src="img/News/News2.png" alt="News Article 2">
                         </div>
                     </div>
                     <div class="article-block">
@@ -269,7 +269,7 @@ $services = [
                     <div class="article-img-container">
                         <a href="#" class="article-img-btn art-btn-3">Web Design</a>
                         <div class="article-img">
-                            <img src="img/news/news-3.jpg" alt="News Article 3">
+                            <img src="img/News/News3.webp" alt="News Article 3">
                         </div>
                     </div>
                     <div class="article-block">
