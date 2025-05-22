@@ -270,6 +270,23 @@ $services = [
             $pdo = $GLOBALS['pdo'];
             $stmt = $pdo->query("SELECT * FROM news_posts ORDER BY date DESC LIMIT 3");
             while ($post = $stmt->fetch(PDO::FETCH_ASSOC)):
+                // Category to class mapping
+                $categoryClass = 'art-btn-1';
+                $buttonClass = 'btn-bus-dev';
+                switch ($post['category']) {
+                    case 'Careers':
+                        $categoryClass = 'art-btn-1';
+                        $buttonClass = 'btn-bus-dev';
+                        break;
+                    case 'Case Studies':
+                        $categoryClass = 'art-btn-2';
+                        $buttonClass = 'btn-digital';
+                        break;
+                    case 'News':
+                        $categoryClass = 'art-btn-3';
+                        $buttonClass = 'btn-web';
+                        break;
+                }
                 // User image logic
                 if ($post['author'] === 'Bethany Shakespeare') {
                     $userImg = 'img/News/Bethany.webp';
@@ -297,7 +314,7 @@ $services = [
             <div class="news-article">
                 <article class="article">
                     <div class="article-img-container">
-                        <a href="#" class="article-img-btn art-btn-1"><?php echo htmlspecialchars($post['category']); ?></a>
+                        <a href="#" class="article-img-btn <?php echo $categoryClass; ?>"><?php echo htmlspecialchars($post['category']); ?></a>
                         <a href="#" class="article-img">
                             <img src="<?php echo htmlspecialchars($post['image']); ?>" alt="<?php echo htmlspecialchars($post['title']); ?>">
                         </a>
@@ -305,7 +322,7 @@ $services = [
                     <div class="article-block">
                         <h3><a href="#"><?php echo htmlspecialchars($post['title']); ?></a></h3>
                         <p><?php echo htmlspecialchars($post['content']); ?></p>
-                        <a href="#" class="btn btn-bus-dev">READ MORE</a>
+                        <a href="#" class="btn <?php echo $buttonClass; ?>">READ MORE</a>
                         <div class="user">
                             <div class="user-img">
                                 <img src="<?php echo $userImg; ?>" alt="<?php echo $userAlt; ?>" width="40" height="40">
