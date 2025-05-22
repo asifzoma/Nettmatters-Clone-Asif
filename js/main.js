@@ -543,3 +543,27 @@ $(document).ready(function() {
         }
     );
 });
+
+// Accordion functionality for Out of Hours IT Support
+
+document.addEventListener('DOMContentLoaded', function() {
+  var toggles = document.querySelectorAll('.accordion-toggle');
+  toggles.forEach(function(toggle) {
+    toggle.addEventListener('click', function() {
+      // Toggle active class
+      this.classList.toggle('active');
+      // Toggle content
+      var content = this.nextElementSibling;
+      var arrow = this.querySelector('.accordion-arrow');
+      if (content.style.display === 'block') {
+        content.style.display = 'none';
+        this.setAttribute('aria-expanded', 'false');
+        if (arrow) arrow.innerHTML = '\u25B6'; // ►
+      } else {
+        content.style.display = 'block';
+        this.setAttribute('aria-expanded', 'true');
+        if (arrow) arrow.innerHTML = '\u25BC'; // ▼
+      }
+    });
+  });
+});
