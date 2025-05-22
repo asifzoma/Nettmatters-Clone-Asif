@@ -54,16 +54,70 @@ $services = [
 ?>
 
 <!-- Banner Section -->
-<div class="banner-outer-container">
-    <div class="banner-background banner-background-1">
-        <div class="banner">
-                    <h1>Bespoke Software</h1>
-                    <p>Delivering expert bespoke software solutions across a range of industries.</p>
-            <div class="banner-btn-container">
-                <a href="#" class="btn btn-primary-banner1">Find Out More <i class="fa-solid fa-arrow-right banner-btn-arrow"></i></a>
-            </div>
-        </div>
+<div class="banner-slider">
+  <div class="banner-background banner-background-1">
+    <div class="container">
+      <div class="banner">
+        <h1>The East Of England's Leading<br><span>Technology Company</span></h1>
+        <p>Performance-driven digital and technology services<br>with complete transparency.</p>
+        <a href="#" class="btn-primary-banner1">WHY CHOOSE US? <span class="icon-arrow-right2 banner-btn-arrow"></span></a>
+      </div>
     </div>
+  </div>
+  <div class="banner-background banner-background-2">
+    <div class="container">
+      <div class="banner">
+        <h1>Bespoke Software<br><span>Solutions</span></h1>
+        <p>Delivering expert solutions for your business needs</p>
+        <a href="#" class="btn-primary-banner2">FIND OUT MORE <span class="icon-arrow-right2 banner-btn-arrow"></span></a>
+      </div>
+    </div>
+  </div>
+  <div class="banner-background banner-background-3">
+    <div class="container">
+      <div class="banner">
+        <h1>IT Support<br><span>Services</span></h1>
+        <p>Fast and reliable support when you need it most</p>
+        <a href="#" class="btn-primary-banner3">FIND OUT MORE <span class="icon-arrow-right2 banner-btn-arrow"></span></a>
+      </div>
+    </div>
+  </div>
+  <div class="banner-background banner-background-4">
+    <div class="container">
+      <div class="banner">
+        <h1>Digital Marketing<br><span>Services</span></h1>
+        <p>Driving your online presence and business growth</p>
+        <a href="#" class="btn-primary-banner4">FIND OUT MORE <span class="icon-arrow-right2 banner-btn-arrow"></span></a>
+      </div>
+    </div>
+  </div>
+  <div class="banner-background banner-background-5">
+    <div class="container">
+      <div class="banner">
+        <h1>Telecoms Services<br><span>Solutions</span></h1>
+        <p>Connecting your business with advanced communication</p>
+        <a href="#" class="btn-primary-banner5">FIND OUT MORE <span class="icon-arrow-right2 banner-btn-arrow"></span></a>
+      </div>
+    </div>
+  </div>
+  <div class="banner-background banner-background-6">
+    <div class="container">
+      <div class="banner">
+        <h1>Web Design<br><span>Solutions</span></h1>
+        <p>Creating stunning websites that deliver results</p>
+        <a href="#" class="btn-primary-banner6">FIND OUT MORE <span class="icon-arrow-right2 banner-btn-arrow"></span></a>
+      </div>
+    </div>
+  </div>
+  <div class="banner-background banner-background-7">
+    <div class="container">
+      <div class="banner">
+        <h1>Cyber Security<br><span>Services</span></h1>
+        <p>Protecting your business from digital threats</p>
+        <a href="#" class="btn-primary-banner7">FIND OUT MORE <span class="icon-arrow-right2 banner-btn-arrow"></span></a>
+      </div>
+    </div>
+  </div>
 </div>
 
 <!-- Services Section -->
