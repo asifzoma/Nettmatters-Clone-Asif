@@ -282,10 +282,16 @@ $services = [
                         <a href="#" class="btn btn-bus-dev">Read More</a>
                         <div class="user">
                             <div class="user-img">
-                                <img src="img/team/team-1.jpg" alt="Team Member">
+                                <?php if ($post['author'] === 'Bethany Shakespeare'): ?>
+                                    <img src="img/News/Bethany.webp" alt="Bethany Shakespeare" width="40" height="40">
+                                <?php elseif ($post['author'] === 'Netmatters'): ?>
+                                    <img src="img/News/netmatters-xs.webp" alt="Netmatters Ltd" width="40" height="40">
+                                <?php else: ?>
+                                    <img src="img/team/default-user.png" alt="<?php echo htmlspecialchars($post['author']); ?>" width="40" height="40">
+                                <?php endif; ?>
                             </div>
                             <div class="article-date">
-                                <strong>Posted by John Smith</strong><br>
+                                <strong>Posted by Bethany Shakespeare</strong><br>
                                 15th March 2024
                             </div>
                         </div>
@@ -311,7 +317,7 @@ $services = [
                                 <img src="img/team/team-2.jpg" alt="Team Member">
                             </div>
                             <div class="article-date">
-                                <strong>Posted by Jane Doe</strong><br>
+                                <strong>Posted by Netmatters</strong><br>
                                 10th March 2024
                             </div>
                         </div>
@@ -337,7 +343,7 @@ $services = [
                                 <img src="img/team/team-3.jpg" alt="Team Member">
                             </div>
                             <div class="article-date">
-                                <strong>Posted by Mike Johnson</strong><br>
+                                <strong>Posted by Netmatters</strong><br>
                                 5th March 2024
                             </div>
                         </div>
@@ -545,4 +551,5 @@ $services = [
     <div class="view-all-mobile">
         <h3><a href="#">View All <span class="icon-arrow-right2"></span></a></h3>
     </div>
+</div> 
 </div> 
