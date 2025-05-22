@@ -266,93 +266,62 @@ $services = [
             <h3><a href="#">View All</a></h3>
         </div>
         <div class="news-list">
+            <?php
+            $pdo = $GLOBALS['pdo'];
+            $stmt = $pdo->query("SELECT * FROM news_posts ORDER BY date DESC LIMIT 3");
+            while ($post = $stmt->fetch(PDO::FETCH_ASSOC)):
+                // User image logic
+                if ($post['author'] === 'Bethany Shakespeare') {
+                    $userImg = 'img/News/Bethany.webp';
+                    $userAlt = 'Bethany Shakespeare';
+                } elseif ($post['author'] === 'Netmatters') {
+                    $userImg = 'img/News/netmatters-xs.webp';
+                    $userAlt = 'Netmatters Ltd';
+                } else {
+                    $userImg = 'img/team/default-user.png';
+                    $userAlt = htmlspecialchars($post['author']);
+                }
+                // Format date (e.g., 22nd April 2025)
+                $dateObj = new DateTime($post['date']);
+                $day = $dateObj->format('j');
+                $daySuffix = 'th';
+                if (!in_array(($day % 100), [11,12,13])) {
+                    switch ($day % 10) {
+                        case 1: $daySuffix = 'st'; break;
+                        case 2: $daySuffix = 'nd'; break;
+                        case 3: $daySuffix = 'rd'; break;
+                    }
+                }
+                $formattedDate = $day . $daySuffix . ' ' . $dateObj->format('F Y');
+            ?>
             <div class="news-article">
-                <div class="article">
+                <article class="article">
                     <div class="article-img-container">
-                        <a href="#" class="article-img-btn art-btn-1">Business</a>
-                        <div class="article-img">
-                            <img src="img/News/News1.webp" alt="News Article 1">
-                        </div>
+                        <a href="#" class="article-img-btn art-btn-1"><?php echo htmlspecialchars($post['category']); ?></a>
+                        <a href="#" class="article-img">
+                            <img src="<?php echo htmlspecialchars($post['image']); ?>" alt="<?php echo htmlspecialchars($post['title']); ?>">
+                        </a>
                     </div>
                     <div class="article-block">
-                        <a href="#">
-                            <h3 class="h3-1">What's the difference between Microsoft 365 Business Premium and Microsoft 365 Business Standard?</h3>
-                        </a>
-                        <p>Microsoft 365 Business Premium and Microsoft 365 Business Standard are both subscription-based services that provide access to Microsoft's productivity tools and services. However, there are some key differences between the two plans...</p>
-                        <a href="#" class="btn btn-bus-dev">Read More</a>
+                        <h3><a href="#"><?php echo htmlspecialchars($post['title']); ?></a></h3>
+                        <p><?php echo htmlspecialchars($post['content']); ?></p>
+                        <a href="#" class="btn btn-bus-dev">READ MORE</a>
                         <div class="user">
                             <div class="user-img">
-                                <?php if ($post['author'] === 'Bethany Shakespeare'): ?>
-                                    <img src="img/News/Bethany.webp" alt="Bethany Shakespeare" width="40" height="40">
-                                <?php elseif ($post['author'] === 'Netmatters'): ?>
-                                    <img src="img/News/netmatters-xs.webp" alt="Netmatters Ltd" width="40" height="40">
-                                <?php else: ?>
-                                    <img src="img/team/default-user.png" alt="<?php echo htmlspecialchars($post['author']); ?>" width="40" height="40">
-                                <?php endif; ?>
+                                <img src="<?php echo $userImg; ?>" alt="<?php echo $userAlt; ?>" width="40" height="40">
                             </div>
                             <div class="article-date">
-                                <strong>Posted by Bethany Shakespeare</strong><br>
-                                15th March 2024
+                                <strong>Posted by <?php echo htmlspecialchars($post['author']); ?></strong><br>
+                                <?php echo $formattedDate; ?>
                             </div>
                         </div>
                     </div>
-                </div>
+                </article>
             </div>
-            <div class="news-article">
-                <div class="article">
-                    <div class="article-img-container">
-                        <a href="#" class="article-img-btn art-btn-2">Digital</a>
-                        <div class="article-img">
-                            <img src="img/News/News2.png" alt="News Article 2">
-                        </div>
-                    </div>
-                    <div class="article-block">
-                        <a href="#">
-                            <h3 class="h3-2">The Benefits of Cloud Computing for Small Businesses</h3>
-                        </a>
-                        <p>Cloud computing has revolutionized the way businesses operate, offering numerous advantages for small businesses looking to streamline their operations and reduce costs...</p>
-                        <a href="#" class="btn btn-digital">Read More</a>
-                        <div class="user">
-                            <div class="user-img">
-                                <img src="img/team/team-2.jpg" alt="Team Member">
-                            </div>
-                            <div class="article-date">
-                                <strong>Posted by Netmatters</strong><br>
-                                10th March 2024
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="news-article">
-                <div class="article">
-                    <div class="article-img-container">
-                        <a href="#" class="article-img-btn art-btn-3">Web Design</a>
-                        <div class="article-img">
-                            <img src="img/News/News3.webp" alt="News Article 3">
-                        </div>
-                    </div>
-                    <div class="article-block">
-                        <a href="#">
-                            <h3 class="h3-3">The Importance of Responsive Web Design in 2024</h3>
-                        </a>
-                        <p>With the increasing use of mobile devices, responsive web design has become more important than ever. Learn why your website needs to be mobile-friendly and how it can impact your business...</p>
-                        <a href="#" class="btn btn-web">Read More</a>
-                        <div class="user">
-                            <div class="user-img">
-                                <img src="img/team/team-3.jpg" alt="Team Member">
-                            </div>
-                            <div class="article-date">
-                                <strong>Posted by Netmatters</strong><br>
-                                5th March 2024
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            <?php endwhile; ?>
         </div>
     </div>
-</section> 
+</section>
 
 <!-- Case Studies Banner -->
 <section class="case-studies-banner">
@@ -551,5 +520,6 @@ $services = [
     <div class="view-all-mobile">
         <h3><a href="#">View All <span class="icon-arrow-right2"></span></a></h3>
     </div>
+</div> 
 </div> 
 </div> 
