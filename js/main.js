@@ -557,12 +557,12 @@ document.addEventListener('DOMContentLoaded', function() {
       // Toggle content
       var content = this.nextElementSibling;
       var arrow = this.querySelector('.accordion-arrow');
-      if (content.style.display === 'block') {
-        content.style.display = 'none';
+      if (content.classList.contains('open')) {
+        content.classList.remove('open');
         this.setAttribute('aria-expanded', 'false');
         if (arrow) arrow.innerHTML = '\u25B6'; // ►
       } else {
-        content.style.display = 'block';
+        content.classList.add('open');
         this.setAttribute('aria-expanded', 'true');
         if (arrow) arrow.innerHTML = '\u25BC'; // ▼
       }

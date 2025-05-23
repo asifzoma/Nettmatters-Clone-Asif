@@ -4310,3 +4310,15 @@ header.header-move-with-wrapper {
 body.sidebar-header-relative {
   padding-top: 0 !important;
 }
+
+.accordion-content {
+  display: block;
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: max-height 0.4s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.3s ease;
+}
+.accordion-content.open {
+  max-height: 500px; /* adjust as needed for content */
+  opacity: 1;
+}
