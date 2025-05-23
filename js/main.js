@@ -436,7 +436,8 @@ $(document).ready(function() {
         $hamburger.removeClass('burger-active');
         $('body').removeClass('no-scroll');
         $overlay.removeClass('overlay-active');
-        
+        $header.removeClass('header-move-with-wrapper');
+        $('body').removeClass('sidebar-header-relative');
         // Re-enable header scroll behavior after transition completes
         setTimeout(function() {
             $header.removeClass('sidebar-open');
@@ -450,7 +451,8 @@ $(document).ready(function() {
         $hamburger.addClass('burger-active');
         $('body').addClass('no-scroll');
         $overlay.addClass('overlay-active');
-        
+        $header.addClass('header-move-with-wrapper');
+        $('body').addClass('sidebar-header-relative');
         // Disable header scroll behavior by adding the sidebar-open class
         $header.addClass('sidebar-open');
     }

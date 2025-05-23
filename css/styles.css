@@ -4286,3 +4286,27 @@ body {
     background-color: #f8d7da;
     border-color: #f5c6cb;
 }
+
+header.header-move-with-wrapper {
+  position: relative !important;
+  left: 0 !important;
+  right: 0 !important;
+  width: 100%;
+  z-index: 20;
+  transition: right 0.3s linear, left 0.3s linear;
+}
+
+/* .wrapper-right ~ header {
+  right: 275px;
+  left: -275px;
+}
+@media (min-width: 992px) {
+  .wrapper-right ~ header {
+    right: 350px;
+    left: -350px;
+  }
+} */
+
+body.sidebar-header-relative {
+  padding-top: 0 !important;
+}
