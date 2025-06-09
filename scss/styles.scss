@@ -1,0 +1,70 @@
+// ==========================================================================
+//  Utilities (Variables, Helpers/Mixins)
+// ==========================================================================
+
+// Reset styles (should come first)
+@import "utilities/reset";
+
+// Variables (formerly config)
+@import "utilities/variables";
+
+// Helpers (formerly mixins)
+@import "utilities/helpers";
+
+// ==========================================================================
+//  Base & Layout
+// ==========================================================================
+
+// Base Layout Styles (Body, Container, etc.)
+@import "layout/base-layout";
+
+// ==========================================================================
+//  Modules (Components & Sections)
+// ==========================================================================
+
+// Header Styles
+@import "modules/main-header";
+
+// Navigation Dropdown Menu
+@import "modules/nav-dropdown";
+
+// Banner Styles
+@import "modules/banner";
+
+// Our Services Section
+@import "modules/our-services";
+
+// Partners Logos Section
+@import "modules/partners";
+
+// Welcome Section
+@import "modules/welcome";
+
+// Latest News Section
+@import "modules/latest-news";
+
+// Case Studies Banner Section
+@import "modules/case-studies-banner";
+
+// Case Studies Section
+@import "modules/case-studies";
+
+// Footer Styles
+@import "modules/main-footer";
+
+// Button Styles
+@import "modules/button-styles";
+
+// Sidebar Styles
+@import "modules/sidebar";
+
+// Styles applied via JavaScript
+@import "modules/js-styles";
+
+// ==========================================================================
+//  End of Imports
+// ==========================================================================
+
+
+    
+    

@@ -1,0 +1,395 @@
+// ==========================================================================
+//  Our Services Styles
+// ==========================================================================
+
+.our-services {
+    padding-top: 30px;
+    padding-bottom: 20px;
+    
+    h2 {
+        font-size: 2.25rem;
+        line-height: 1.1;
+        color: #333645;
+        font-weight: 600;
+        margin-bottom: 20px;
+    }
+}
+
+.our-services-top {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 15px;
+    align-items: center;
+    
+    a {
+        display: flex;
+        align-items: center;
+        font-size: 1.625rem;
+        font-weight: 600;
+        color: #333645;
+        text-decoration: none;
+        
+        &:hover {
+            text-decoration: underline;
+        }
+        
+        svg, i {
+            margin-left: 8px;
+        }
+    }
+    
+    h1 {
+        @media (max-width: 767px){
+            display: none;
+        }
+    }
+    
+    .view-our-work {
+        @media (max-width: 786px) {
+            display: none;
+        }
+    }
+}
+
+.our-services-icon-arrow-right {
+    margin-left: 8px;
+}
+
+.service-list {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    
+    @media (min-width: 767px) {
+        flex-direction: row;
+    }
+    
+    .service {
+        @include service-container-base;
+    }
+    
+    p {
+        font-size: .8125rem;
+        font-weight: 400;
+        margin-bottom: 13px;
+        line-height: 1.375rem;
+        color: #333645;
+    }
+    
+    h2 {
+        font-size: 1.3rem;
+        position: relative;
+        padding-bottom: 10px;
+        margin: 10px 0 15px;
+        font-weight: 600;
+        color: #333645;
+    }
+    
+    span {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 2rem;
+        height: 65px;
+        width: 65px;
+        margin: 0 auto 17px;
+        color: #fff;
+        border-radius: 50%;
+    }
+
+    // Create a separate row for small services
+    .service-container-small {
+        @media (min-width: 767px) {
+            margin-top: 15px;
+        }
+    }
+}
+
+// Service icon colors
+.software span {
+    background-color: $software-color;
+}
+
+.it-support span {
+    background-color: $it-support-color;
+}
+
+.digital-marketing span {
+    background-color: $digital-marketing-color;
+}
+
+.telecoms-service span {
+    background-color: $telecoms-color;
+}
+
+.web-design span {
+    background-color: $web-design-color;
+}
+
+.cyber-security span {
+    background-color: $cyber-security-color;
+}
+
+.developer-training span {
+    background-color: $developer-training-color;
+}
+
+// Service container styling (for the standard/larger cards)
+.service-container {
+    @include service-container-std;
+    
+    .service {
+        padding-bottom: 20px;
+        
+        p {
+            margin-bottom: 15px;
+        }
+        
+        .read-more {
+            margin-bottom: 0;
+        }
+    }
+}
+
+.our-services-bottom {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    
+    .view-our-work {
+        font-weight: bold;
+        color: #000000;
+        margin-top: 8px;
+    }
+}
+
+// Flex Box Hover Effect
+.software:hover {
+    @include service-hover($software-color);
+}
+.it-support:hover {
+    @include service-hover($it-support-color);
+}
+.digital-marketing:hover {
+    @include service-hover($digital-marketing-color);
+}
+.telecoms-service:hover {
+    @include service-hover($telecoms-color);
+}
+.web-design:hover {
+    @include service-hover($web-design-color);
+}
+.cyber-security:hover {
+    @include service-hover($cyber-security-color);
+}
+.developer-training:hover {
+    @include service-hover($developer-training-color);
+}
+
+// Media Queries 
+
+.service-container {
+    @media (min-width: 992px) {
+        width: 33.33333333%;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+}
+
+// Service container small styling
+.service-container-small {
+    @include service-container-small;
+    display: flex;
+    
+    .service {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        padding-bottom: 20px;
+        
+        span {
+            margin-bottom: 15px;
+        }
+        
+        h2 {
+            margin-top: 10px;
+            margin-bottom: 15px;
+            min-height: 2.6rem;
+        }
+        
+        p {
+            flex-grow: 1;
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+            min-height: 3.5rem;
+        }
+        
+        .read-more {
+            margin-top: auto;
+            align-self: flex-start;
+            width: auto;
+            margin-bottom: 0;
+        }
+    }
+}
+
+// Fix for flexbox alignment in small service containers
+@media (min-width: 767px) {
+    .service-list {
+        align-items: stretch;
+    }
+    
+    .service-small-1, 
+    .service-small-2,
+    .service-small-3,
+    .service-small-4 {
+        display: flex;
+    }
+    
+    .service-container-small .service {
+        width: 100%;
+    }
+}
+
+// Small service container padding adjustments
+.service-small-1, .service-small-3 {
+    @media (min-width: 767px) {
+        padding-right: 15px;
+    }
+}
+.service-small-2, .service-small-4 {
+    @media (min-width: 767px) {
+        padding-left: 15px;
+    }
+}
+.service-small-1, .service-small-3 {
+    @media (min-width: 992px) {
+        padding-left: 15px;
+    }
+}
+.service-small-2, .service-small-4 {
+    @media (min-width: 992px) {
+        padding-right: 15px;
+    }
+}
+.service-small-4 {
+    @media (min-width:1260px) {
+        padding-right: 13px;
+    }
+} 
+
+.our-services-top {
+    h1 {
+        @media (max-width: 767px){
+            display: none;
+        }
+    }
+}
+
+.our-services-bottom {
+    @media (min-width: 767px) {
+        display: none;
+    }
+} 
+
+// Ensure consistent spacing between elements in all service cards
+.service {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    
+    span {
+        margin-bottom: 15px;
+    }
+    
+    h2 {
+        margin-bottom: 15px;
+    }
+    
+    p {
+        margin-bottom: 20px;
+    }
+    
+    .read-more {
+        align-self: flex-start;
+    }
+} 
+
+// Button styling for all service cards
+.service .read-more {
+    display: inline-block;
+    padding: 8px 20px;
+    font-weight: 600;
+    text-transform: uppercase;
+    border-radius: 3px;
+    text-decoration: none;
+    color: #fff;
+    transition: background-color 0.3s ease;
+    font-size: 0.875rem;
+    line-height: 1.5;
+}
+
+// Software card button (yellow/gold)
+.software .read-more {
+    background-color: $software-btn-color;
+    
+    &:hover {
+        background-color: darken($software-btn-color, 10%);
+    }
+}
+
+// IT Support card button (blue)
+.it-support .read-more {
+    background-color: $it-support-color;
+    
+    &:hover {
+        background-color: darken($it-support-color, 10%);
+    }
+}
+
+// Digital Marketing card button (green)
+.digital-marketing .read-more {
+    background-color: $digital-marketing-color;
+    
+    &:hover {
+        background-color: darken($digital-marketing-color, 10%);
+    }
+}
+
+// Telecoms Services card button (red)
+.telecoms-service .read-more {
+    background-color: $telecoms-color;
+    
+    &:hover {
+        background-color: darken($telecoms-color, 10%);
+    }
+}
+
+// Web Design card button (purple)
+.web-design .read-more {
+    background-color: $web-design-color;
+    
+    &:hover {
+        background-color: darken($web-design-color, 10%);
+    }
+}
+
+// Cyber Security card button (pink)
+.cyber-security .read-more {
+    background-color: $cyber-security-color;
+    
+    &:hover {
+        background-color: darken($cyber-security-color, 10%);
+    }
+}
+
+// Developer Training card button (orange)
+.developer-training .read-more {
+    background-color: $developer-training-color;
+    
+    &:hover {
+        background-color: darken($developer-training-color, 10%);
+    }
+} 

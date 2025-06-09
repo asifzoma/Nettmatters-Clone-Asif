@@ -1,0 +1,353 @@
+// ==========================================================================
+//  Side Menu Styles
+// ==========================================================================
+.sidebar {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+  height: 100%;
+  width: 275px;
+  background: #333645;
+  overflow: auto;
+  overflow-x: auto;
+  overflow-y: auto;
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+}
+
+.main-sidebar {
+  padding: 21px;
+      a {
+        border-radius: 3px;
+        display: block;
+        color: #fff;
+        text-align: center;
+        text-transform: uppercase;
+        text-decoration: none;
+      }
+}
+
+.main-sidebar-large {
+        a {
+          display: block;
+          color: #fff;
+          text-align: left;
+          text-transform: uppercase;
+          text-decoration: none;
+        }
+}
+
+.side-menu-large-viewport {
+  padding: 0 !important;
+}
+
+.side-list-item-large {
+  border: 1px solid hsla(0,0%,100%,.1);
+  outline: 1px solid rgba(0,0,0,.25);
+  align-items: center;
+  display: flex;
+}
+
+.side-list-item-large-viewport {
+  border-top: 1px solid hsla(0,0%,100%,.1);
+  border-bottom: 1px solid rgba(0,0,0,.25);
+  align-items: center;
+  display: flex;
+}
+
+.side-item-center {
+  display: block;
+  font-size: .625rem;
+}
+
+.side-menu-list-item {
+  padding: 20px 0 0;
+  a {
+    font-size: 1.125rem;
+    padding: 19px 0 18px;
+  }
+}
+
+.side-menu-list-item-large {
+  a {
+    font-size: 1rem;
+    padding: 20px;
+  }
+}
+
+.side-sub-menu-banner {
+  margin-top: 20px;
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+.side-sub-menu-banner-large {
+  overflow: hidden;
+}
+
+.side-sub-menu-item {
+  padding: 0;
+  border-top: 1px solid rgba(0,0,0,.45);
+  a {
+    font-size: 1rem;
+    line-height: 1.42857143;
+    border-top: 1px solid hsla(0,0%,100%,.05);
+    background-color: rgba(0,0,0,.25);
+    padding: 10px;
+  }
+}
+
+.side-sub-menu-item-large {
+    padding: 0;
+    border-top: 1px solid rgba(0,0,0,.45);
+    a {
+      font-size: .875rem;
+      line-height: 1.42857143;
+      border-top: 1px solid hsla(0,0%,100%,.05);
+      background-color: rgba(0,0,0,.25);
+      padding: 15px 20px;
+      letter-spacing: .4px;
+    }
+    a::before {
+      content: "\BB";
+      padding-right: 15px;
+    }
+}
+
+// Span Icons
+.side-menu-item-span {
+  display: flex;
+  flex-direction: row;
+}
+
+// Add icon styling classes for sidebar
+.icon-paper-plane-style, 
+.icon-computer-style,
+.icon-display-style,
+.icon-chart-simple-style,
+.icon-phone-style,
+.icon-code-style,
+.icon-shield-style,
+.icon-graduation-style {
+  font-size: 1.438rem;
+  padding-bottom: 10px;
+  display: block;
+}
+
+.icon-paper-plane-style {
+  color: #333645;
+}
+
+.icon-computer-style {
+  color: #67809f;
+}
+
+.icon-display-style {
+  color: #4183d7;
+}
+
+.icon-chart-simple-style {
+  color: #2ecc71;
+}
+
+.icon-phone-style {
+  color: #d64541;
+}
+
+.icon-code-style {
+  color: #926fb1;
+}
+
+.icon-shield-style {
+  color: #f62459;
+}
+
+.icon-graduation-style {
+  color: #ce4125;
+}
+
+// Use this class for proper spacing
+.side-menu-item-span span {
+  margin-right: 10px;
+  width: 25px;
+  text-align: center;
+}
+
+// Media Queries
+@media (min-width: 992px) {
+  .sidebar {
+    width: 350px;
+  }
+}
+
+@media (min-width: 992px) {
+  .main-sidebar {
+    display: none;
+  }
+}
+
+// Sidebar visibility classes
+.active-sidebar {
+  z-index: 1000;
+}
+
+.hide-sidebar {
+  z-index: -1;
+}
+
+// Wrapper positioning for sidebar
+.wrapper-center {
+  position: relative;
+  right: 0;
+  transition: 0.3s;
+}
+
+.wrapper-right {
+  position: relative;
+  right: 275px;
+  transition: 0.3s;
+  
+  @media (min-width: 992px) {
+    right: 350px;
+  }
+}
+
+// Hamburger animation
+.burger-active {
+  .hamburger-inner {
+    transform: rotate(45deg);
+    transition: transform 0.25s ease-in-out;
+    
+    &::before {
+      opacity: 0;
+    }
+    
+    &::after {
+      transform: rotate(-90deg);
+      bottom: 0;
+    }
+  }
+}
+
+// Service specific backgrounds for hover effects
+.software-sm a:hover,
+.software-sm a:focus,
+.it-support-sm a:hover,
+.it-support-sm a:focus,
+.digital-sm a:hover,
+.digital-sm a:focus,
+.telecoms-sm a:hover,
+.telecoms-sm a:focus,
+.web-design-sm a:hover,
+.web-design-sm a:focus,
+.cyber-security-sm a:hover,
+.cyber-security-sm a:focus,
+.developer-training-sm a:hover,
+.developer-training-sm a:focus,
+.side-menu-list-item a:hover,
+.side-menu-list-item a:focus {
+  background-color: lighten(#333645, 20%);
+}
+
+// Sidebar links styling
+.sidebar-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar-item {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  border-top: 1px solid rgba(0, 0, 0, 0.25);
+  
+  &:first-child {
+    border-top: none;
+  }
+  
+  &:last-child {
+    border-bottom: none;
+  }
+}
+
+.sidebar-link {
+  display: block;
+  padding: 15px;
+  color: #fff;
+  text-decoration: none;
+  text-align: center;
+  transition: background-color 0.3s ease;
+  
+  span {
+    display: block;
+    font-size: 24px;
+    margin-bottom: 5px;
+  }
+  
+  small {
+    display: block;
+    font-size: 10px;
+    text-transform: uppercase;
+    margin-bottom: 2px;
+  }
+}
+
+// Sidebar hover effects (common effect instead of specific colors)
+.sidebar-item .sidebar-link:hover,
+.sidebar-item:nth-child(1) .sidebar-link:hover,
+.sidebar-item:nth-child(2) .sidebar-link:hover,
+.sidebar-item:nth-child(3) .sidebar-link:hover,
+.sidebar-item:nth-child(4) .sidebar-link:hover,
+.sidebar-item:nth-child(5) .sidebar-link:hover,
+.sidebar-item:nth-child(6) .sidebar-link:hover,
+.sidebar-item:nth-child(7) .sidebar-link:hover {
+  background-color: lighten(#333645, 20%);
+}
+
+// Contact button
+.sidebar-contact {
+  padding: 20px;
+}
+
+.sidebar-btn {
+  display: block;
+  width: 100%;
+  padding: 12px 0;
+  background-color: #999aa2;
+  color: #fff;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 3px;
+  font-weight: 600;
+  text-transform: uppercase;
+  transition: background-color 0.3s ease;
+  
+  &:hover {
+    background-color: #7e808a;
+  }
+}
+
+// Overlay
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 9998;
+  display: none;
+  
+  &.active {
+    display: block;
+  }
+}
+
+// Body lock when sidebar is active
+body.no-scroll {
+  overflow: hidden;
+} 

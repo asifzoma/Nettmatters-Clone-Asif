@@ -1,137 +1,467 @@
+// ==========================================================================
+//  Drop Down Menu Styles
+//  These styles handle the main navigation bar that appears below the header
+//  on larger screens, including the hover effects that show sub-menus.
+// ==========================================================================
 
-/* Main Navigation Styling */
-.main-nav {
-    background: #000000; /* Black background */
-    border-bottom: 4px solid #eeeeee;
-    padding: 15px 0;
-    max-height: 100px;
+// Styles for the container holding the main navigation bar.
+.drop-down-menu-main-nav-container {
+    // Set the background color for the main nav bar.
+    background-color: #333645;
+    // Remove any bottom margin.
+    margin-bottom: 0;
 }
 
-.nav-list {
+// Styles for the row inside the main navigation container.
+.drop-down-menu-row {
+    // Arrange the main navigation items (Software, IT Support, etc.) horizontally.
     display: flex;
+    flex-direction: row;
+    // Distribute space evenly between the items.
+    justify-content: space-between;
+}
+
+// Styles for each individual main navigation item container.
+.main-nav {
+    // Make each navigation item take up an equal amount of space.
+    width: 100%;
+}
+
+// Styles for the clickable area within each main navigation item.
+.main-nav-ddm {
+    // Arrange the icon, small text, and main text vertically.
+    display: flex;
+    flex-direction: column;
+    // Add padding top and bottom.
+    padding: 19px 0 18px;
+    // Set the text color to white.
+    color: #fff;
+    // Center the text horizontally.
+    text-align: center;
+    // Ensure it takes the full width of its container (.main-nav).
+    width: 100%;
+    // Set the font size for the main text (Software, IT Support, etc.).
+    font-size: 1.2rem;
+    // Make the text uppercase.
+    text-transform: uppercase;
+
+    // Styles for the small text (Bespoke, IT, Digital, etc.).
+    small {
+        // Set the font size for the small text.
+        font-size: 10px;
+        // Make it uppercase.
+        text-transform: uppercase;
+        // Remove any default margin.
+        margin: 0;
+    }
+}
+
+// Styles for the arrow pointer (triangle) that appears below the main nav item when hovering.
+.triangle {
+    // Make it an inline-block element so it sits correctly.
+    display: inline-block;
+    // Position it relative to its normal flow.
+  position: relative;
+    // Ensure the triangle appears above the sub-menu background but below the main nav bar.
+    z-index: 20;
+    // Create the triangle shape using borders.
+    width: 0px;
+    height: 0px;
+    border-style: solid;
+    // The top border creates the visible part of the triangle.
+    // The left and right borders are transparent, creating the angled sides.
+    border-width: 40px 83px 0 83px;
+    border-color: #FF4532 transparent transparent transparent; // Initial color (will be overridden on hover).
+    // Ensure it points upwards.
+    transform: rotate(0deg);
+    // Position adjustments.
+    left: 0;
+    top: -32px;
+    margin-top: 12px;
+    // Hide the triangle by default.
+    display: none;
+    // Center the triangle horizontally within its parent.
+    align-self: center;
+ }
+
+// Container for the sub-menu that appears on hover.
+.sub-menu-container {
+    // Hide the sub-menu by default.
+    display: none;
+    // Ensure the sub-menu appears above page content but below the triangle.
+    z-index: 10;
+    // Position it absolutely, relative to the nearest positioned ancestor (likely the header or wrapper).
+    position: absolute;
+    padding: 0;
+    // Make the sub-menu span the full width of the viewport.
+    min-width: 100%;
+    left: 0; // Align to the left edge of the viewport.
+    // Add padding top and bottom.
+    padding-top: 20px;
+    padding-bottom: 50px;
+    // Position it below the main navigation bar.
+    margin-top: 82px;
+}
+
+// Styles for the unordered list (<ul>) inside the sub-menu.
+.sub-menu {
+    // Use flexbox to arrange the list items.
+    display: flex;
+    // Allow items to wrap onto multiple lines if needed.
+    flex-wrap: wrap;
+    // Remove default list bullet points.
+    list-style: none;
+    // Align items vertically.
+    align-items: center;
+    // Align text to the left.
+    text-align: left;
+
+    // Styles for icons (<span>) within list items.
+    span {
+        // Add space to the right of the icon.
+        margin-right: 10px;
+    }
+
+    // Styles for list items (<li>).
+    li {
+        // Make each list item take up roughly one-third of the container width.
+        width: 33%;
+        // Add space above each list item.
+        margin-top: 15px;
+    }
+
+    // Styles for the title within the sub-menu (e.g., "Our Bespoke Software Services").
+    .sub-menu-title {
+        // Don't use uppercase.
+        text-transform: none;
+        // Make the title span the full width.
+        width: 100%;
+        // Set text color (important overrides other potential styles).
+        color: #fff !important;
+        // Add space below the title.
+        margin-bottom: 10px;
+        // Add space above the title.
+        margin-top: 15px;
+        // Make the text slightly bolder.
+        font-weight: 500;
+        // Set the font size for the title.
+        font-size: 2rem;
+    }
+
+    // Styles for links (<a>) within the sub-menu that should have an underline on hover.
+    .sub-menu-a-underline:hover {
+        // Add an underline when the mouse hovers over the link.
+        text-decoration: underline;
+    }
+}
+
+// Hover Effects for each main navigation item.
+// These sections define the background color of the sub-menu and triangle when hovering.
+
+// Hover effect for the first main nav item (Bespoke Software).
+.main-nav-ddm-1 {
+    // Styles applied when hovering over this specific nav item.
+    :hover {
+        // Keep the main nav item text white.
+        color: #fff;
+        // Target the sub-menu container within this item.
+        .sub-menu-container {
+            // Set the background color for the software sub-menu.
+            background-color: #526781;
+            // Show the sub-menu.
+            display: block;
+        }
+        // Ensure all elements within the sub-menu inherit the background color.
+        ul,li,a,span {
+            background-color: #526781;
+        }
+        // Keep the icon color white.
+        .icon-software-ddm {
+            color: #fff;
+        }
+        // Styles for links within the sub-menu.
+        a {
+            text-transform: none; // Don't use uppercase.
+            color: #fff;
+        }
+        // Target the triangle specific to this item.
+        .triangle-1 {
+            // Show the triangle.
+            display: inline-flex;
+            // Set the triangle color to match the sub-menu background.
+            border-color: #67809f transparent transparent transparent;
+        }
+    }
+}
+
+// Hover effect for the second main nav item (IT Support).
+.main-nav-ddm-2 {
+    :hover {
+        color: #fff;
+        .sub-menu-container {
+            background-color: #286abd;
+            display: block;
+        }
+        ul,li,a,span {
+            background-color: #286abd;
+        }
+        .icon-it-support-ddm {
+            color: #fff;
+        }
+        a {
+            text-transform: none;
+            color: #fff;
+        }
+        .triangle-2 {
+            display: inline-flex;
+            border-color: #4183d7 transparent transparent transparent;
+        }
+    }
+}
+
+// Hover effect for the third main nav item (Digital Marketing).
+.main-nav-ddm-3 {
+    :hover {
+        color: #fff;
+        .sub-menu-container {
+            background-color: #25a25a;
+            display: block;
+        }
+        ul,li,a,span {
+            background-color: #25a25a;
+        }
+        .icon-digital-marketing-ddm {
+            color: #fff;
+        }
+        a {
+            text-transform: none;
+            color: #fff;
+        }
+        // Note: This targets the generic .triangle class. It assumes triangle-3 exists in HTML.
+        .triangle {
+            display: inline-flex;
+            border-color: #2ecc71 transparent transparent transparent;
+        }
+    }
+}
+
+// Hover effect for the fourth main nav item (Telecoms Services).
+.main-nav-ddm-4 {
+    :hover {
+        // Set the background color of the main nav item itself on hover.
+        background-color: #d64541;
+        color: #fff;
+        .sub-menu-container {
+            background-color: #bc2c28;
+            display: block;
+        }
+        ul,li,a,span {
+            background-color: #bc2c28;
+        }
+        // Ensure icon background/color is set correctly.
+        .icon-telecoms-service-ddm {
+            background-color: #d64541; // Inherits from main item hover.
+            color: #fff;
+        }
+        a {
+            text-transform: none;
+            color: #fff;
+        }
+        .triangle {
+            display: inline-flex;
+            border-color: #d64541 transparent transparent transparent;
+        }
+    }
+}
+
+// Hover effect for the fifth main nav item (Web Design).
+.main-nav-ddm-5 {
+    :hover {
+        color: #fff;
+        .sub-menu-container {
+            background-color: #79539a;
+      display: block;
+        }
+        ul,li,a,span {
+            background-color: #79539a;
+        }
+        .icon-web-design-ddm {
+            color: #fff;
+        }
+        a {
+            text-transform: none;
+            color: #fff;
+        }
+        .triangle {
+            display: inline-flex;
+            border-color: #926fb1 transparent transparent transparent;
+        }
+    }
+}
+
+// Hover effect for the sixth main nav item (Cyber Security).
+.main-nav-ddm-6 {
+    :hover {
+        color: #fff;
+        .sub-menu-container {
+            background-color: #de093f;
+            display: block;
+        }
+        ul,li,a,span {
+            background-color: #de093f;
+        }
+        .icon-cyber-security-ddm {
+            color: #fff;
+        }
+        a {
+            text-transform: none;
+            color: #fff;
+        }
+        .triangle {
+            display: inline-flex;
+            border-color: #f62459 transparent transparent transparent;
+        }
+    }
+}
+
+// Hover effect for the seventh main nav item (Developer Course).
+.main-nav-ddm-7 {
+    :hover {
+        color: #fff;
+        .sub-menu-container {
+            background-color: #a3331d;
+            display: block;
+        }
+        ul,li,a,span {
+            background-color: #a3331d;
+        }
+        .icon-developer-training-ddm {
+            color: #fff;
+        }
+        a {
+            text-transform: none;
+            color: #fff;
+        }
+        .triangle {
+            display: inline-flex;
+            border-color: #cf442a transparent transparent transparent;
+        }
+    }
+}
+
+// Media Queries for Responsive Design
+
+// When screen width is 1200px or less...
+@media (max-width:1200px) {
+    // Make the sub-menu list items take up half the width (2 per row).
+    .sub-menu li {
+        width: 50%;
+    }
+}
+
+// When screen width is 992px or less (tablets and smaller)...
+@media (max-width: 992px) {
+    // Hide the main drop-down navigation container.
+    .drop-down-menu-main-nav-container {
+        display: none;
+    }
+}
+
+// Main navigation background color
+.drop-down-menu-main-nav-container {
+  background-color: #333645;
+  margin-bottom: 0;
+}
+
+// Navigation item colors for the main nav
+.main-nav-ddm-1 {
+  background-color: #67809f;
+}
+
+.main-nav-ddm-2 {
+  background-color: #4183d7;
+}
+
+.main-nav-ddm-3 {
+  background-color: #2ecc71;
+}
+
+.main-nav-ddm-4 {
+  background-color: #d64541;
+}
+
+.main-nav-ddm-5 {
+  background-color: #926fb1;
+}
+
+.main-nav-ddm-6 {
+  background-color: #f62459;
+}
+
+.main-nav-ddm-7 {
+  background-color: #ce4125;
+}
+
+// Main nav styling used for the second nav implementation
+.main-nav {
+  ul {
+    display: flex;
+    list-style: none;
     justify-content: space-between;
     margin: 0;
     padding: 0;
-    list-style: none;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-.nav-item {
-    text-align: center;
-    position: relative;
+    background-color: #333645;
+  }
+  
+  .nav-item {
     flex: 1;
-}
-
-.nav-item a {
-    text-decoration: none;
-    display: block;
-    padding: 15px 10px;
-    transition: all 0.3s ease;
-    color: #ffffff; /* White text */
-}
-
-/* Netmatters Color Scheme */
-.nav-item.software a:hover,
-.nav-item.software.active a {
-    background: #2c9cdb; /* Blue */
-    border-bottom: 4px solid #2c9cdb;
-}
-
-.nav-item.support a:hover,
-.nav-item.support.active a {
-    background: #2d9d2c; /* Green */
-    border-bottom: 4px solid #2d9d2c;
-}
-
-.nav-item.digital a:hover,
-.nav-item.digital.active a {
-    background: #d22d89; /* Pink */
-    border-bottom: 4px solid #d22d89;
-}
-
-.nav-item.telecoms a:hover,
-.nav-item.telecoms.active a {
-    background: #e67e22; /* Orange */
-    border-bottom: 4px solid #e67e22;
-}
-
-.nav-item.web a:hover,
-.nav-item.web.active a {
-    background: #9b59b6; /* Purple */
-    border-bottom: 4px solid #9b59b6;
-}
-
-.nav-item.cyber a:hover,
-.nav-item.cyber.active a {
-    background: #3498db; /* Light Blue */
-    border-bottom: 4px solid #3498db;
-}
-
-.nav-item.developer a:hover,
-.nav-item.developer.active a {
-    background: #e74c3c; /* Red */
-    border-bottom: 4px solid #e74c3c;
-}
-
-/* Icon Styling */
-.nav-item .fas {
-    font-size: 24px;
-    display: block;
-    margin-bottom: 8px;
-    color: #ffffff;
-    transition: color 0.3s ease;
-}
-
-/* Text Styling */
-.nav-item span {
-    display: block;
-    font-weight: 600;
-    text-transform: uppercase;
-    font-size: 14px;
-    line-height: 1.2;
-}
-
-.nav-item small {
-    display: block;
-    font-size: 10px;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-    margin-bottom: 2px;
-}
-
-/* Hover Effects */
-.nav-item:hover a {
-    color: #ffffff;
-}
-
-/* Active State */
-.nav-item.active {
-    border-bottom: 4px solid;
-}
-
-/* Responsive Design */
-@media (max-width: 1200px) {
-    .nav-list {
-        flex-wrap: wrap;
+    text-align: center;
+    
+    a {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      color: #fff;
+      text-decoration: none;
+      padding: 15px 0;
+      
+      small {
+        font-size: 0.625rem;
+        text-transform: uppercase;
+      }
+      
+      span {
+        text-transform: uppercase;
+        font-weight: 600;
+      }
     }
     
-    .nav-item {
-        flex: 1 1 25%;
-        padding: 10px 0;
-    }
-}
-
-@media (max-width: 768px) {
-    .nav-item {
-        flex: 1 1 33%;
+    &.software a:hover {
+      background-color: #67809f;
     }
     
-    .nav-item span {
-        font-size: 12px;
+    &.support a:hover {
+      background-color: #4183d7;
     }
     
-    .nav-item .fas {
-        font-size: 20px;
+    &.digital a:hover {
+      background-color: #2ecc71;
     }
-}
+    
+    &.telecoms a:hover {
+      background-color: #d64541;
+    }
+    
+    &.web a:hover {
+      background-color: #926fb1;
+    }
+    
+    &.cyber a:hover {
+      background-color: #f62459;
+    }
+    
+    &.developer a:hover {
+      background-color: #ce4125;
+    }
+  }
+} 
