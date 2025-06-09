@@ -1,4 +1,5 @@
 {
     "editor.wordWrap": "on",
-    "cursor.chat.terminalShowHoverHint": false
+    "cursor.chat.terminalShowHoverHint": false,
+    "liveSassCompile.settings.forceBaseDirectory": ""
 }

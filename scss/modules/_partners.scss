@@ -1,0 +1,38 @@
+// ==========================================================================
+//  Partners Styles
+// ==========================================================================
+.partners {
+    display: flex;
+    flex-direction: row;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    overflow-x: hidden;
+}
+
+.partner-item {
+    display: flex;
+    position: relative;
+}
+
+.partner-item img {
+    display: block;
+    align-self: center;
+    margin-right: 50px;
+    width: 100%;
+    padding: 0 20px;
+    max-height: 70px;
+    height: auto;
+    width: auto !important;
+    max-width: 200px;
+    filter: grayscale(1);
+    transition: filter 0.3s ease;
+}
+
+.partner-item img:hover {
+    filter: grayscale(0);
+}
+
+// Add slick list overflow handling similar to case studies
+.slick-list-overflowremove {
+    overflow: visible !important;
+} 

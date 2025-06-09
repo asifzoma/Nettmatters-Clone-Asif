@@ -1,0 +1,390 @@
+// ==========================================================================
+//  Mixins
+// ==========================================================================
+
+// Color Mixins
+@mixin software-color {
+    background-color: #67809f;
+}
+@mixin software-btn-color {
+    background-color: #f7b322;
+}
+@mixin it-support-color {
+    background-color: #4183d7;
+}
+@mixin digital-marketing-color {
+    background-color: #2ecc71;
+}
+@mixin telecoms-service-color {
+    background-color: #d64541;
+}
+@mixin web-design-color {
+    background-color: #926fb1;
+}
+@mixin cyber-security-color {
+    background-color: #f62459;
+}
+@mixin developer-training-color {
+    background-color: #ce4125;
+}
+
+// Latest News Button Mixins
+@mixin btn-latest-news {
+    color: #fff;
+    padding: 5px 15px;
+    font-size: 1.063rem;
+}
+@mixin bus-dev-color {
+    background-color: #db8c0d;
+}
+@mixin btn-bus-dev-color {
+    background-color: #db8c0d;
+    border-color: #db8c0d;
+}
+@mixin digital-color {
+    background-color: #2ecc71;
+}
+@mixin btn-digital-color {
+    background-color: #2ecc71;
+    border-color: #2ecc71;
+}
+@mixin web-color {
+    background-color: #926fb1;
+}
+@mixin btn-web-color {
+    background-color: #926fb1;
+    border-color: #926fb1;
+}
+
+// Case Studies Section Mixins
+@mixin case-study-button {
+    margin-top: 11px;
+    font-size: 16px;
+    display: flex;
+    line-height: 35px;
+    padding: 5px 15px;
+    text-transform: uppercase;
+    border-radius: 3px;
+    font-weight: 400;
+    color: #fff;
+}
+@mixin case-study-button-color-1 {
+    background-color:#f7b322;
+    border-color: #f7b322;
+}
+@mixin case-study-button-color-2 {
+    background-color: #4183d7; 
+    border-color: #4183d7;
+}
+
+// Header Buttons
+.btn-header-support {
+    @include it-support-color;
+}
+
+// Drop Down Menu
+.main-nav-ddm-1 {
+    :hover {
+        @include software-color;
+        .icon-software-ddm {
+            @include software-color;
+        }
+    }
+}
+
+.main-nav-ddm-2 {
+    :hover {
+        @include it-support-color;
+        .icon-it-support-ddm {
+            @include it-support-color;
+        }
+    }
+}
+
+.main-nav-ddm-3 {
+    :hover {
+        @include digital-marketing-color;
+        .icon-digital-marketing-ddm {
+            @include digital-marketing-color;
+        }
+    }
+}
+
+.main-nav-ddm-4 {
+    :hover {
+        @include telecoms-service-color;
+        .icon-telecoms-service-ddm {
+            @include telecoms-service-color;
+        }
+    }
+}
+
+.main-nav-ddm-5 {
+    :hover {
+        @include web-design-color;
+        .icon-web-design-ddm {
+            @include web-design-color;
+        }
+    }
+}
+
+.main-nav-ddm-6 {
+    :hover {
+        @include cyber-security-color;
+        .icon-cyber-security-ddm {
+            @include cyber-security-color;
+        }
+    }
+}
+
+.main-nav-ddm-7 {
+    :hover {
+        @include developer-training-color;
+        .icon-developer-training-ddm {
+            @include developer-training-color;
+        }
+    }
+}
+
+// Banner Section
+@mixin btn-primary-banner {
+    color: #fff;
+    margin-top: 1.938rem;
+    margin-bottom: 1.125rem;
+    padding: 5px 20px;
+    line-height: 50px;
+    font-size: 1.25rem;
+    width: auto;
+    margin: auto; // Center for mobile screens
+    
+    @media (min-width: 576px) {
+        margin: 1.938rem 0 1.125rem 0; // Left align for larger screens
+    }
+}
+
+.btn-primary-banner1 {
+    @include btn-primary-banner;
+    @include web-design-color;
+}
+
+.btn-primary-banner2 {
+    @include btn-primary-banner;
+    @include software-btn-color;
+}
+
+.btn-primary-banner3 {
+    @include btn-primary-banner;
+    @include it-support-color;
+}
+
+.btn-primary-banner4 {
+    @include btn-primary-banner;
+    @include digital-marketing-color;
+}
+
+.btn-primary-banner5 {
+    @include btn-primary-banner;
+    @include telecoms-service-color;
+}
+
+.btn-primary-banner6 {
+    @include btn-primary-banner;
+    @include web-design-color;
+}
+
+.btn-primary-banner7 {
+    @include btn-primary-banner;
+    @include cyber-security-color;
+}
+
+// Our Services Section
+.software-color {
+    @include software-color;
+}
+.it-support-color {
+    @include it-support-color;
+}
+.digital-marketing-color {
+    @include digital-marketing-color;
+}
+.telecoms-service-color {
+    @include telecoms-service-color;
+}
+.web-design-color {
+    @include web-design-color;
+}
+.cyber-security-color {
+    @include cyber-security-color;
+}
+.developer-training-color {
+    @include developer-training-color;
+}
+
+// Our Services Buttons
+.btn-software {
+    @include software-btn-color;
+}
+.btn-it-support {
+    @include it-support-color;
+}
+.btn-digital-marketing {
+    @include digital-marketing-color;
+}
+.btn-telecoms {
+    @include telecoms-service-color;
+}
+.btn-web-design {
+    @include web-design-color;
+}
+.btn-cyber-security {
+    @include cyber-security-color;
+}
+.btn-developer-training {
+    @include developer-training-color;
+}
+
+//Latest News Section 
+
+// Small card Buttons
+.art-btn-1 {
+    @include bus-dev-color;
+}
+.art-btn-2 {
+    @include digital-color;
+}
+.art-btn-3 {
+    @include web-color;
+}
+
+// Latest News Buttons
+.btn-bus-dev {
+    @include btn-latest-news;
+    @include btn-bus-dev-color;
+}
+
+.btn-digital {
+    @include btn-latest-news;
+    @include btn-digital-color;
+}
+
+.btn-web {
+    @include btn-latest-news;
+    @include btn-web-color;
+}
+
+// Case Studies Section 
+.case-study-button-1 {
+    @include case-study-button;
+    @include case-study-button-color-1;
+}
+.case-study-button-5 {
+    @include case-study-button;
+    @include case-study-button-color-2;
+}
+
+.case-study-button-6 {
+    @include case-study-button;
+    @include btn-digital-color;
+}
+
+.case-study-button-8 {
+    @include case-study-button;
+    @include btn-digital-color;
+}
+
+.case-study-button-9 {
+    @include case-study-button;
+    @include btn-web-color;
+}
+
+.case-study-button-10 {
+    @include case-study-button;
+    @include btn-web-color;
+}
+
+.case-study-button-11 {
+    @include case-study-button;
+    @include btn-digital-color;
+}
+
+// Sidebar Icon Colors (These seem specific and might not need mixins)
+// .icon-computer-style { color: #67809f; }
+// .icon-display-style { color: #4183d7; }
+// ... etc ... 
+
+// Service Container Mixins
+@mixin service-container-base {
+    display: block;
+    border: 1px solid #ccc;
+    padding: 30px;
+    box-shadow: 0 3px 35px rgba(0, 0, 0, .1);
+    border-radius: 15px;
+    text-align: center;
+    margin-top: 30px;
+    top: 0;
+    position: relative;
+    transition: .5s ease;
+}
+
+@mixin service-hover($bg-color) {
+    color: #fff;
+    border-color: transparent;
+    top: -10px;
+    transition: .5s ease;
+    background-color: $bg-color;
+    h2 {
+        color: #fff;
+    }
+    p {
+        color: #fff;
+    }
+    a {
+        background-color: #fff;
+        color: $bg-color;
+        border-color: transparent;
+    }
+    span {
+        color: $bg-color;
+        background-color: #fff;
+    }
+}
+
+@mixin service-container-std {
+    width: 100%;
+    
+    @media (min-width: 992px) {
+        width: 33.33333333%;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+}
+
+@mixin service-container-small {
+    width: 100%;
+    
+    @media (min-width: 767px) {
+        width: 50%;
+    }
+    @media (min-width: 992px) {
+        width: 50%;
+    }
+    @media (min-width: 1260px) {
+        width: 25%;
+    }
+}
+
+// Add cursor pointer to all clickable elements
+a, button, .btn, 
+[role="button"], 
+.clickable,
+.hamburger-box,
+.icon-menu,
+.icon-search-small,
+.icon-search-large,
+.large-form-icon-container,
+.service,
+.service .read-more,
+.view-our-work,
+.header-phone-icon {
+    cursor: pointer !important;
+} 

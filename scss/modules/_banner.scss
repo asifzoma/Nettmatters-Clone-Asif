@@ -1,0 +1,102 @@
+// ==========================================================================
+// Banner Styles
+// ==========================================================================
+
+.banner-outer-container {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    margin: 0;
+    padding: 0;
+}
+
+.banner-background {
+    display: flex !important;
+    background-size: cover;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: auto;
+    min-height: 550px !important;
+    background-position: center;
+    background-repeat: no-repeat;
+    //background-image: linear-gradient(270deg, transparent 25%, #000), url('../img/banner-img/home-YLei.png');
+}
+
+.banner {
+    color: #fff;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    text-align: center;
+    
+    a {
+        text-decoration: none;
+        display: inline-block;
+    }
+    
+    h1 {
+        font-size: 2.5rem;
+        line-height: 3rem;
+        margin: 0 0 1.25rem;
+        font-weight: 600;
+    }
+    
+    p {
+        margin-bottom: .375rem;
+        font-size: 1.25rem;
+        line-height: 1.75rem;
+        font-weight: 600;
+    }
+    
+    @media (min-width: 576px) {
+        text-align: left;
+        align-items: flex-start;
+    }
+    
+    @media (min-width: 992px) {
+        text-align: left;
+        h1 {
+            font-size: 4rem;
+            line-height: 5rem;
+            margin: 0 0 1.25rem;
+            font-weight: 600;
+        }
+        p {
+            font-size: 1.625rem;
+            line-height: 2.5rem;
+            font-weight: 600;
+        }
+    }
+}
+
+// Banner Backgrounds 
+.banner-background-1 {
+    background-image: linear-gradient(270deg, transparent 25%, #000), url('../img/Slides/slide1.webp');
+}
+
+.banner-background-2 {
+    background-image: linear-gradient(270deg, transparent 25%, #000), url('../img/Slides/slide2.webp');
+}
+
+.banner-background-3 {
+    background-image: linear-gradient(270deg, transparent 25%, #000), url('../img/Slides/slide3.webp');
+}
+
+.banner-background-4 {
+    background-image: linear-gradient(270deg, transparent 25%, #000), url('../img/Slides/slide4.webp');
+}
+
+.banner-background-5 {
+    background-image: linear-gradient(270deg, transparent 25%, #000), url('../img/Slides/slide5.webp');
+}
+
+.banner-background-6 {
+    background-image: linear-gradient(270deg, transparent 25%, #000), url('../img/Slides/slide6.webp');
+}
+
+.banner-background-7 {
+    background-image: linear-gradient(270deg, transparent 25%, #000), url('../img/Slides/slide7.webp');
+} 

@@ -1,0 +1,120 @@
+// ==========================================================================
+//  Case Studies Styles
+// ==========================================================================
+.case-studies {
+    display: flex;
+    flex-direction: row;
+    padding-top: 30px;
+    padding-bottom: 50px;
+}
+
+.case-study-item {
+    display: flex;
+    position: relative;
+}
+.case-study-image-container {
+    display: flex;
+    overflow: hidden;
+    height: 120px;
+    img {
+        display: block;
+        align-self: center;
+        margin-right: 50px;
+        width: 100%;
+        padding: 0 20px;
+        max-height: 70px;
+        height: auto;
+        width: auto !important;
+        max-width: 200px;
+        filter: grayscale(1);
+        overflow: hidden;
+    }
+    img:hover {
+        filter: grayscale(0);
+    }  
+}
+
+// ToolTips
+.case-study-description-1, .case-study-description-2, .case-study-description-3,
+.case-study-description-4, .case-study-description-5, .case-study-description-6,
+.case-study-description-7, .case-study-description-8, .case-study-description-9,
+.case-study-description-10, .case-study-description-11, .case-study-description-12,
+.case-study-description-13 {
+    overflow: visible; /* Allow the triangle to be visible outside the container */
+    display: none;
+    position: absolute;
+    margin: auto;
+    bottom: 120%; /* Position further above the item */
+    left: 50%;
+    transform: translateX(-50%); /* Center it horizontally */
+    text-align: center;
+    width: 280px;
+    z-index: 10; /* Ensure tooltip appears above other elements */
+}
+
+.case-study-tooltip-1, .case-study-tooltip-2, .case-study-tooltip-3,
+.case-study-tooltip-4, .case-study-tooltip-5, .case-study-tooltip-6,
+.case-study-tooltip-7, .case-study-tooltip-8, .case-study-tooltip-9,
+.case-study-tooltip-10, .case-study-tooltip-11, .case-study-tooltip-12,
+.case-study-tooltip-13 {
+    background-color: #333645;
+    color: #fff;
+    padding: 20px;
+    font-size: .875rem;
+    width: 100%;
+    max-width: 280px;
+    position: relative;
+    margin-bottom: 0; /* Remove space for the triangle */
+    
+    h3 {
+        position: relative;
+        font-size: 1.125rem;
+        padding-bottom: 17px;
+        margin: 0;
+        font-weight: 400;
+        line-height: 1.1;
+    }
+    p {
+        font-size: .8125rem;
+        line-height: 1.375rem;
+        margin-bottom: 0;
+    }
+}
+
+// Arrow styles
+
+.triangle-case-study-1, .triangle-case-study-2, .triangle-case-study-3,
+.triangle-case-study-4, .triangle-case-study-5, .triangle-case-study-6,
+.triangle-case-study-7, .triangle-case-study-8, .triangle-case-study-9,
+.triangle-case-study-10, .triangle-case-study-11, .triangle-case-study-12,
+.triangle-case-study-13 {
+    display: block;
+    position: absolute;
+    bottom: -19px; /* Position it just below the tooltip */
+    left: 50%;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 20px 20px 0 20px;
+    border-color: #333645 transparent transparent transparent;
+    transform: translateX(-50%); /* Center horizontally */
+    z-index: 11; /* Make sure it's above the tooltip */
+}
+
+// Show Tooltip On Hover
+
+.item-1:hover .case-study-description-1,
+.item-2:hover .case-study-description-2,
+.item-3:hover .case-study-description-3,
+.item-4:hover .case-study-description-4,
+.item-5:hover .case-study-description-5,
+.item-6:hover .case-study-description-6,
+.item-7:hover .case-study-description-7,
+.item-8:hover .case-study-description-8,
+.item-9:hover .case-study-description-9,
+.item-10:hover .case-study-description-10,
+.item-11:hover .case-study-description-11,
+.item-12:hover .case-study-description-12,
+.item-13:hover .case-study-description-13 {
+    display: block;
+} 

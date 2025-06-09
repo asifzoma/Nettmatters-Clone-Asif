@@ -1,0 +1,361 @@
+// ==========================================================================
+// Footer Styles
+// ==========================================================================
+
+footer {
+    background-color: #333645;
+    color: #fff;
+    padding: 40px 0 0;
+    position: relative;
+    
+    .footer-row {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        flex-direction: row;
+        
+        .footer-company-info {
+            display: block;
+            width: 25%;
+            margin-right: 30px;
+            text-align: center;
+            
+            .footer-content-wrapper {
+                width: 100%;
+            }
+            
+            .footer-logo-container {
+                display: block;
+                margin: 0 auto 15px;
+                width: 100%;
+                
+                .footer-logo {
+                    width: 100%;
+                    text-align: center;
+                    
+                    img {
+                        width: 100%;
+                        max-width: 200px;
+                        vertical-align: middle;
+                        border: 0;
+                        filter: brightness(0) invert(1);
+                    }
+                }
+            }
+            
+            .footer-social-section {
+                width: 100%;
+                display: block;
+            }
+            
+            .follow-us-text {
+                display: block;
+                width: 100%;
+                font-size: 0.9rem;
+                font-weight: 600;
+                margin: 0 0 10px;
+                text-transform: uppercase;
+                color: #fff;
+                text-align: center;
+            }
+            
+            .footer-company-socials-logos {
+                display: flex;
+                flex-direction: row;
+                margin-top: 0;
+                justify-content: center;
+                width: 100%;
+                clear: both;
+                
+                a {
+                    margin-right: 10px;
+                    margin-bottom: 10px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    width: 40px;
+                    height: 40px;
+                    border-radius: 3px;
+                    background-color: #212330;
+                    color: #fff;
+                    font-size: 1.2rem;
+                    transition: background-color 0.3s ease;
+                    text-decoration: none;
+                    
+                    i {
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        color: inherit;
+                    }
+                }
+            }
+        }
+        
+        .footer-menu {    
+            margin-bottom: 30px;
+            order: 2;
+            width: 16.6%;
+            a {
+                color: #fff;
+                text-decoration: none;
+                
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+            h4 {
+                text-transform: uppercase;
+                font-size: 1rem;
+                font-weight: 600;
+                margin-bottom: 26px;
+                line-height: 1.1;	
+            }
+            .footer-menu-list li:hover a {
+               text-decoration: underline;
+            }
+        }
+
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding-left: 0;
+        } 
+        
+        h4 {
+            color: #fff;
+            text-transform: uppercase;
+            font-size: 1rem;
+            margin-bottom: 26px;
+        }
+    }
+}   
+
+.footer-menu-list {
+    padding-left: 0;
+    li {
+        font-size: .8125rem;
+        line-height: 1.375rem;
+        margin-bottom: 7px;
+    }
+}
+
+.footer-logo-container {
+   align-self: center;
+   margin-bottom: 15px;
+}
+
+// Sticky footer element
+.container-sticky-footer {
+    width: 100%; 
+    background-color: #212330;
+    margin: 0;
+    overflow-y: hidden;
+    padding: 15px 0;
+    p {
+        margin-bottom: 0;
+        margin-top: 0;
+        line-height: 1.42857143;
+        font-size: 0.8125rem;
+        color: #ccc;
+    }
+    a {
+        font-size: .8125rem;
+        line-height: 1.375rem;
+        color: #fff;
+        text-decoration: none;
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+}
+
+.sticky-footer {
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    bottom: 0;
+    width: 100%;
+    color: #ccc;
+    text-align: left;
+    font-size: .8125rem;
+    .container & {
+        text-align: left;
+    }
+    a {
+        text-decoration: none;
+        color: #fff;
+    }
+    a:hover {
+        text-decoration: underline;
+        color: #fff;
+        list-style: none;
+    }        
+}
+
+//Media Queries 
+footer {
+    .footer-row {
+        @media (max-width: 991px) {
+            flex-direction: column;
+            
+            .footer-company-info {
+                width: 100%;
+                margin-right: 0;
+                margin-bottom: 30px;
+                text-align: center;
+                
+                .footer-logo-container, .follow-us-text, .footer-company-socials-logos {
+                    width: 100%;
+                    text-align: center;
+                }
+            }
+            
+            .footer-menu {
+                order: 2;
+                width: 48%;
+                margin-bottom: 30px;
+                text-align: center;
+                ul {
+                    align-items: center;
+                }
+            }
+            
+            @media (max-width: 767px) {
+                .footer-menu {
+                    width: 100%;
+                    text-align: center;
+                }
+            }
+        }
+    }
+}
+
+.sticky-footer {
+    @media (max-width: 767px) {
+        .container & {
+            text-align: center;
+        }
+        p {
+            text-align: center;
+        }
+    }
+}
+
+.footer-menu {
+    @media (min-width: 992px) {
+        width: 17%;
+    }
+    @media (min-width: 1260px) {
+        width: 15%;
+    }
+}
+
+.footer-company-info {
+    @media (min-width: 992px) {
+        width: 30%;
+    }
+    @media (min-width: 1260px) {
+        width: 25%;
+    }
+}
+
+.footer-logo-container {
+   @media (max-width: 480px) {
+      width: auto;
+      max-width: 200px;
+      padding-bottom: 15px;
+      margin-bottom: 5px;
+   }
+}
+
+.footer-company-socials-logos {
+   a {
+      @media (max-width: 480px) {
+         padding-right: 5px;
+         padding-left: 5px;
+         margin-top: 0;
+         margin-bottom: 10px;
+      }
+   }
+}
+
+// Social media specific hover styles
+.facebook, .linkedin, .twitter, .instagram {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 3px;
+    background-color: #212330;
+    color: #ffffff !important;
+    font-size: 1.2rem;
+    transition: background-color 0.3s ease;
+    text-decoration: none;
+    margin-right: 5px;
+    
+    i {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #ffffff !important;
+    }
+    
+    &:link, &:visited, &:-webkit-any-link {
+        color: #ffffff !important;
+    }
+}
+
+// Social media specific hover styles (overriding default)
+.facebook:hover {
+    background-color: #3b5998 !important;
+    color: #ffffff !important;
+}
+
+.twitter:hover {
+    background-color: #00acee !important;
+    color: #ffffff !important;
+}
+
+.instagram:hover {
+    background-color: #d6249f !important;
+    color: #ffffff !important;
+}
+
+.linkedin:hover {
+    background-color: #0e76a8 !important;
+    color: #ffffff !important;
+}
+
+.footer-content-wrapper {
+    display: block;
+    width: 100%;
+}
+
+.footer-social-section {
+    display: block;
+    width: 100%;
+    margin-top: 10px;
+}
+
+// Media queries
+@media (max-width: 991px) {
+    .footer-content-wrapper {
+        max-width: 300px;
+        margin: 0 auto;
+    }
+    
+    footer .footer-row .footer-company-info {
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 30px;
+        text-align: center;
+    }
+}
+
+@media (max-width: 767px) {
+    .footer-content-wrapper {
+        max-width: 250px;
+    }
+} 

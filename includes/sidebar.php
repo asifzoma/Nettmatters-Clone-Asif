@@ -169,7 +169,6 @@
         <a class="side-list-item-large-viewport">Our Company</a>
         <div class="side-sub-menu-banner-large">
           <ul class="side-sub-menu">
-            <li class="side-sub-menu-item-large"><a href="#about-accordion" id="sidebar-about-me-link">About Me</a></li>
             <li class="side-sub-menu-item-large"><a href="#">Why Choose Us?</a></li>
             <li class="side-sub-menu-item-large"><a href="#">Our Culture</a></li>
             <li class="side-sub-menu-item-large"><a href="#">Our Team</a></li>

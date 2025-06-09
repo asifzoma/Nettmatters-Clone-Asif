@@ -1,0 +1,236 @@
+// ==========================================================================
+//  Icons
+// ==========================================================================
+@font-face {
+    font-family: 'icomoon';
+    src:  url('../fonts/icomoon.eot?ky9gej');
+    src:  url('../fonts/icomoon.eot?ky9gej#iefix') format('embedded-opentype'),
+      url('../fonts/icomoon.ttf?ky9gej') format('truetype'),
+      url('../fonts/icomoon.woff?ky9gej') format('woff'),
+      url('../fonts/icomoon.svg?ky9gej#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: block;
+  }
+  
+  [class^="icon-"], [class*=" icon-"] {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: 'icomoon' !important;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+  
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  .icon {
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+    stroke-width: 0;
+    stroke: currentColor;
+    fill: currentColor;
+    color: #fff;
+  } 
+
+// Header Section
+.icon-phone_in_talk:before {
+  content: "\e900";
+}
+.icon-menu:before {
+  content: "\e9bd";
+}
+.icon-search:before {
+  content: "\e904";
+}
+
+// Header Buttons
+.icon-mouse:before {
+  content: "\e906";
+}
+.icon-paperplane:before {
+  content: "\e907";
+}
+
+// Banner Section
+.icon-arrow-right2:before {
+  content: "\ea3c";
+}
+
+// Our Services Section
+.icon-laptop:before {
+  content: "\e957";
+}
+.icon-computer:before {
+  content: "\e90e";
+}
+.icon-display:before {
+  content: "\e956";
+}
+.icon-bar-graph:before {
+  content: "\e901";
+}
+.icon-phone_in_talk:before {
+  content: "\e900";
+}
+.icon-embed2:before {
+  content: "\ea80";
+}
+.icon-security:before {
+  content: "\e903";
+}
+.icon-school:before {
+  content: "\e902";
+}
+
+//Welcome Section
+.icon-star-full:before {
+  content: "\e9d9";
+}
+
+//Footer Section
+.icon-facebook:before {
+  content: "\ea90";
+}
+.icon-instagram:before {
+  content: "\ea92";
+}
+.icon-twitter:before {
+  content: "\ea96";
+}
+.icon-linkedin2:before {
+  content: "\eaca";
+}
+
+// Navigation Icon Colors
+.drop-down-menu-main-nav-container {
+  .icon-computer, .icon-software-ddm {
+    color: #67809f;
+    font-size: 28px;
+    margin-bottom: 5px;
+    display: block;
+  }
+  
+  .icon-display, .icon-it-support-ddm {
+    color: #4183d7;
+    font-size: 28px;
+    margin-bottom: 5px;
+    display: block;
+  }
+  
+  .icon-bar-graph, .icon-digital-marketing-ddm {
+    color: #2ecc71;
+    font-size: 28px;
+    margin-bottom: 5px;
+    display: block;
+  }
+  
+  .icon-phone_in_talk, .icon-telecoms-service-ddm {
+    color: #d64541;
+    font-size: 28px;
+    margin-bottom: 5px;
+    display: block;
+  }
+  
+  .icon-embed2, .icon-web-design-ddm {
+    color: #926fb1;
+    font-size: 28px;
+    margin-bottom: 5px;
+    display: block;
+  }
+  
+  .icon-security, .icon-cyber-security-ddm {
+    color: #f62459;
+    font-size: 28px;
+    margin-bottom: 5px;
+    display: block;
+  }
+  
+  .icon-school, .icon-developer-training-ddm {
+    color: #ce4125;
+    font-size: 28px;
+    margin-bottom: 5px;
+    display: block;
+  }
+}
+
+// Main Nav Icon Colors
+.main-nav {
+  .nav-item.software i {
+    color: #67809f;
+    font-size: 30px;
+    margin-bottom: 8px;
+    display: block;
+  }
+  
+  .nav-item.support i {
+    color: #4183d7;
+    font-size: 30px;
+    margin-bottom: 8px;
+    display: block;
+  }
+  
+  .nav-item.digital i {
+    color: #2ecc71;
+    font-size: 30px;
+    margin-bottom: 8px;
+    display: block;
+  }
+  
+  .nav-item.telecoms i {
+    color: #d64541;
+    font-size: 30px;
+    margin-bottom: 8px;
+    display: block;
+  }
+  
+  .nav-item.web i {
+    color: #926fb1;
+    font-size: 30px;
+    margin-bottom: 8px;
+    display: block;
+  }
+  
+  .nav-item.cyber i {
+    color: #f62459;
+    font-size: 30px;
+    margin-bottom: 8px;
+    display: block;
+  }
+  
+  .nav-item.developer i {
+    color: #ce4125;
+    font-size: 30px;
+    margin-bottom: 8px;
+    display: block;
+  }
+}
+
+// Header icon styles
+.header-phone-icon {
+  color: #333645 !important;
+  font-size: 32px !important;
+}
+
+.btn-header-support span {
+  color: white;
+  font-size: 22px !important;
+  margin-right: 5px;
+  vertical-align: middle;
+}
+
+.btn-header-contact span {
+  color: white;
+  font-size: 22px !important;
+  margin-right: 5px;
+  vertical-align: middle;
+}
+
+.icon-search-large, .icon-search-small {
+  color: white;
+  font-size: 18px;
+} 
