@@ -269,7 +269,9 @@ $services = [
             <?php
             $pdo = $GLOBALS['pdo'];
             $stmt = $pdo->query("SELECT * FROM news_posts ORDER BY date DESC LIMIT 3");
+            $articleCount = 0;
             while ($post = $stmt->fetch(PDO::FETCH_ASSOC)):
+                $articleCount++;
                 // Category to class mapping
                 $categoryClass = 'art-btn-1';
                 $buttonClass = 'btn-bus-dev';
@@ -311,7 +313,7 @@ $services = [
                 }
                 $formattedDate = $day . $daySuffix . ' ' . $dateObj->format('F Y');
             ?>
-            <div class="news-article">
+            <div class="news-article <?php echo ($articleCount === 3) ? 'article-hidden' : ''; ?>">
                 <article class="article">
                     <div class="article-img-container">
                         <a href="#" class="article-img-btn <?php echo $categoryClass; ?>"><?php echo htmlspecialchars($post['category']); ?></a>
