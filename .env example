@@ -1,0 +1,14 @@
+# Database Configuration
+DB_HOST=localhost
+DB_NAME=database_name
+DB_USER=database_user
+DB_PASS=database_password
+
+# Environment
+ENVIRONMENT=development
+
+# Example credentials (replace with actual values)
+SMTP_HOST=smtp.example.com
+SMTP_PORT=587
+SMTP_USERNAME=example@email.com
+SMTP_PASSWORD=smtp_password
