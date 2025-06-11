@@ -67,6 +67,9 @@ function safe_include($file) {
 
     <!-- Include footer -->
     <?php safe_include('includes/footer.php'); ?>
+    
+    <!-- Accordion functionality for contact page -->
+    <script src="js/accordion.js"></script>
 </body>
 </html>
 <?php
