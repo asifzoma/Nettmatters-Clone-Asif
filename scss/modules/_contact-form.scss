@@ -106,31 +106,58 @@
         }
         
         &.checkbox-group {
-            display: flex;
-            align-items: flex-start;
-            gap: 0.75rem;
+            display: table;
+            width: 100%;
+            margin: 1rem 0;
             
             input[type="checkbox"] {
+                display: table-cell;
+                vertical-align: top;
                 width: auto;
-                margin: 0;
-                margin-top: 0.25rem;
-                flex-shrink: 0;
+                margin-top: 8px;
+                margin-right: 10px;
+                cursor: pointer;
             }
             
             label {
-                margin: 0;
-                font-weight: 400;
-                font-size: 0.9rem;
-                line-height: 1.5;
+                display: table-cell;
+                vertical-align: top;
+                width: 10000px;
+                line-height: 1.6;
+                cursor: pointer;
+                font-weight: 700;
+                color: #333645;
+                font-size: 14px;
+                font-family: Poppins, sans-serif;
+                letter-spacing: 0.4px;
                 
                 a {
-                    color: #8e6dc5;
-                    text-decoration: none;
+                    color: #333645;
+                    text-decoration: underline;
+                    font-weight: 700;
                     
                     &:hover {
-                        text-decoration: underline;
+                        color: #926ba8;
                     }
                 }
+            }
+        }
+    }
+    
+    // Separate reCAPTCHA note
+    .recaptcha-note {
+        font-size: 0.85rem;
+        color: #888;
+        text-align: center;
+        margin: 2rem 0;
+        line-height: 1.4;
+        
+        a {
+            color: #8e6dc5;
+            text-decoration: none;
+            
+            &:hover {
+                text-decoration: underline;
             }
         }
     }
@@ -317,6 +344,7 @@
         .contact-details-grid {
             gap: 2rem;
         }
+
     }
     
     .contact-form-container {

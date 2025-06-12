@@ -111,20 +111,28 @@
           <label for="message">Message *</label>
           <textarea id="message" name="message" rows="4" required></textarea>
         </div>
+        
         <div class="form-group checkbox-group">
           <input type="checkbox" id="marketing" name="marketing">
           <label for="marketing">
             Please tick this box if you wish to receive marketing information from us.<br>
             Please see our <a href="#">Privacy Policy</a> for more information on how we keep your data safe.
           </label>
+          <br>  
         </div>
-        <div class="form-footer">
-          <button type="submit" class="btn contact-btn">SEND ENQUIRY</button>
-          <span class="fields-required">* Fields Required</span>
+
+        <div class="recaptcha-note">
+            <p>
+              This site is protected by reCAPTCHA and the Google <a href="#">Privacy Policy</a> and <a href="#">Terms of Service</a> apply.
+            </p>
         </div>
-        <p class="recaptcha-note">
-          This site is protected by reCAPTCHA and the Google <a href="#">Privacy Policy</a> and <a href="#">Terms of Service</a> apply.
-        </p>
+
+      <div class="form-footer">
+         
+        <button type="submit" class="btn contact-btn">SEND ENQUIRY</button>
+        <span class="fields-required">* Fields Required</span>
+        </div>
+        
       </form>
     </div>
     <!-- Contact Details -->
