@@ -59,6 +59,12 @@ $current_page = basename($_SERVER['PHP_SELF']);
             </div>
         </div>
         <?php include 'navigation.php'; ?>
+        <?php 
+// Only show breadcrumb on contact page
+if ($current_page === 'contact.php') {
+    include 'breadcrumb.php';
+}
+?>
     </header>
 </body>
 </html> 
