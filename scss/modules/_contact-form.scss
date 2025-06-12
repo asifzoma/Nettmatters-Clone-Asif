@@ -93,21 +93,38 @@
         input, textarea {
             width: 100%;
             padding: 0.75rem 1rem;
-            border: 2px solid #e1e5e9;
+            border: 2px solid transparent;
             border-radius: 6px;
             font-size: 1rem;
-            transition: border-color 0.3s ease, box-shadow 0.3s ease;
+            transition: all 0.3s ease;
             font-family: inherit;
+            background-color: #fff;
             
             &:focus {
                 outline: none;
-                border-color: #8e6dc5;
-                box-shadow: 0 0 0 3px rgba(142, 109, 197, 0.1);
+            }
+            
+            // Valid input styling - light blue glow
+            &.valid-input {
+                border-color: #4A90E2;
+                box-shadow: 0 0 0 3px rgba(74, 144, 226, 0.1);
+            }
+            
+            // Invalid input styling - red border and glow for all required fields
+            &.invalid-input {
+                border-color: #ff0000;
+                box-shadow: 0 0 0 3px rgba(255, 0, 0, 0.1);
             }
             
             &:required:invalid {
                 border-color: #e1e5e9;
             }
+        }
+        
+        // Special handling for email field - red glow while invalid
+        input[type="email"].invalid-input {
+            border-color: #ff0000;
+            box-shadow: 0 0 0 3px rgba(255, 0, 0, 0.1);
         }
         
         textarea {

@@ -70,6 +70,8 @@ function safe_include($file) {
     
     <!-- Accordion functionality for contact page -->
     <script src="js/accordion.js"></script>
+    <!-- Contact form validation -->
+    <script src="js/contact-form.js"></script>
 </body>
 </html>
 <?php
