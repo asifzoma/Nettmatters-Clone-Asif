@@ -3080,36 +3080,34 @@ p {
 }
 
 .accordion {
-  margin-top: 1.5rem;
-  overflow: hidden;
-  flex: 0 0 auto;
-  max-width: 100%;
+  margin-top: 0;
 }
 .accordion .accordion-toggle {
-  width: 100%;
-  background: #fff;
+  background: none;
   border: none;
-  padding: 1rem 1.25rem;
+  padding: 0;
   text-align: left;
   font-weight: 600;
   color: #333645;
   cursor: pointer;
-  display: flex;
-  justify-content: space-between;
+  display: inline-flex;
   align-items: center;
-  transition: background-color 0.3s ease;
+  gap: 0.5rem;
+  font-size: inherit;
 }
 .accordion .accordion-toggle:hover {
-  background: #f8f9fa;
+  text-decoration: underline;
+  background: none;
 }
 .accordion .accordion-toggle[aria-expanded=true] {
-  background: #f8f9fa;
+  text-decoration: underline;
+  background: none;
 }
 .accordion .accordion-toggle[aria-expanded=true] .accordion-arrow {
   transform: rotate(90deg);
 }
 .accordion .accordion-toggle .accordion-arrow {
-  color: #8e6dc5;
+  color: inherit;
   font-size: 0.8rem;
   transition: transform 0.3s ease;
 }
@@ -3117,14 +3115,15 @@ p {
   max-height: 0;
   overflow: hidden;
   transition: max-height 0.3s ease;
-  background: #fff;
+  background: none;
 }
 .accordion .accordion-content.active {
   max-height: 300px;
 }
 .accordion .accordion-content p {
-  padding: 0 1.25rem;
+  padding: 0;
   margin: 1rem 0;
+  color: #333645;
 }
 .accordion .accordion-content p:first-child {
   margin-top: 1rem;

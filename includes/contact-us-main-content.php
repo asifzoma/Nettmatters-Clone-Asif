@@ -148,7 +148,6 @@
       <p class="contact-highlight"><a href="tel:01603515007">01603 515007</a></p>
       <p><strong>Business hours</strong></p>
       <p>Monday – Friday 07:00 – 18:00</p>
-      <p><strong>Out of Hours IT Support</strong></p>
       <!-- Accordion for Out of Hours IT Support -->
       <div class="accordion">
         <button class="accordion-toggle" type="button" aria-expanded="false">
