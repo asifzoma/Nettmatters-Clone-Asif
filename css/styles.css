@@ -2740,11 +2740,6 @@ p {
   display: flex;
   flex-direction: column;
   height: 100%;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-.offices-section .offices-item:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
 }
 .offices-section .office-img {
   width: 100%;
