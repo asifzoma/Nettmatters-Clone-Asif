@@ -89,7 +89,7 @@
         <?php endif; ?>
         <div class="form-row">
           <div class="form-group">
-            <label for="name">Your Name <span class="required-asterisk">*</span></label>
+            <label for="name">Your Name<span class="required-asterisk">*</span></label>
             <input type="text" id="name" name="name" required>
             <span class="validation-message"></span>
           </div>
@@ -101,18 +101,18 @@
         </div>
         <div class="form-row">
           <div class="form-group">
-            <label for="email">Your Email <span class="required-asterisk">*</span></label>
+            <label for="email">Your Email<span class="required-asterisk">*</span></label>
             <input type="email" id="email" name="email" required>
             <span class="validation-message"></span>
           </div>
           <div class="form-group">
-            <label for="telephone">Your Telephone Number <span class="required-asterisk">*</span></label>
+            <label for="telephone">Your Telephone Number<span class="required-asterisk">*</span></label>
             <input type="tel" id="telephone" name="telephone" required>
             <span class="validation-message"></span>
           </div>
         </div>
         <div class="form-group">
-          <label for="message">Message <span class="required-asterisk">*</span></label>
+          <label for="message">Message<span class="required-asterisk">*</span></label>
           <textarea id="message" name="message" rows="4" required></textarea>
           <span class="validation-message"></span>
         </div>

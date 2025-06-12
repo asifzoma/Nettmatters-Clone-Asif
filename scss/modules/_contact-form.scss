@@ -79,15 +79,7 @@
             color: #333645;
             font-size: 0.95rem;
             
-            &[for="name"]::after,
-            &[for="email"]::after,
-            &[for="telephone"]::after,
-            &[for="message"]::after {
-                content: "*";
-                color: #ff0000;
-                margin-left: 4px;
-                display: inline-block;
-            }
+            // Required field styling handled by required-asterisk span
         }
         
         input, textarea {
