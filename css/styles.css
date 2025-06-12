@@ -2908,6 +2908,12 @@ p {
   color: #333645;
   font-size: 0.95rem;
 }
+.contact-form .form-group label[for=name]::after, .contact-form .form-group label[for=email]::after, .contact-form .form-group label[for=telephone]::after, .contact-form .form-group label[for=message]::after {
+  content: "*";
+  color: #ff0000;
+  margin-left: 4px;
+  display: inline-block;
+}
 .contact-form .form-group input, .contact-form .form-group textarea {
   width: 100%;
   padding: 0.75rem 1rem;
@@ -3012,6 +3018,9 @@ p {
   font-size: 0.9rem;
   color: #666;
   font-style: italic;
+}
+.contact-form .form-footer .fields-required .required-asterisk {
+  color: #ff0000;
 }
 @media (max-width: 767px) {
   .contact-form .form-footer .fields-required {

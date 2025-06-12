@@ -78,6 +78,16 @@
             font-weight: 600;
             color: #333645;
             font-size: 0.95rem;
+            
+            &[for="name"]::after,
+            &[for="email"]::after,
+            &[for="telephone"]::after,
+            &[for="message"]::after {
+                content: "*";
+                color: #ff0000;
+                margin-left: 4px;
+                display: inline-block;
+            }
         }
         
         input, textarea {
@@ -199,6 +209,10 @@
             font-size: 0.9rem;
             color: #666;
             font-style: italic;
+            
+            .required-asterisk {
+                color: #ff0000;
+            }
             
             @media (max-width: 767px) {
                 text-align: center;
